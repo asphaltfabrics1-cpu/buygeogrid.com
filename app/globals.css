@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -8,19 +10,68 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Geogrid hexagonal pattern background */
+.bg-geogrid-pattern {
+  background-color: #f8f9fa;
+  background-image:
+    linear-gradient(30deg, #e0e0e0 12%, transparent 12.5%, transparent 87%, #e0e0e0 87.5%, #e0e0e0),
+    linear-gradient(150deg, #e0e0e0 12%, transparent 12.5%, transparent 87%, #e0e0e0 87.5%, #e0e0e0),
+    linear-gradient(30deg, #e0e0e0 12%, transparent 12.5%, transparent 87%, #e0e0e0 87.5%, #e0e0e0),
+    linear-gradient(150deg, #e0e0e0 12%, transparent 12.5%, transparent 87%, #e0e0e0 87.5%, #e0e0e0),
+    linear-gradient(60deg, rgba(2, 179, 74, 0.03) 25%, transparent 25.5%, transparent 75%, rgba(2, 179, 74, 0.03) 75%, rgba(2, 179, 74, 0.03)),
+    linear-gradient(60deg, rgba(2, 179, 74, 0.03) 25%, transparent 25.5%, transparent 75%, rgba(2, 179, 74, 0.03) 75%, rgba(2, 179, 74, 0.03));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+/* Alternative diamond geogrid pattern */
+@layer utilities {
+  .bg-geogrid-diamond {
+    background-color: #ffffff;
+    background-image:
+      repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0,0,0,.08) 35px, rgba(0,0,0,.08) 37px),
+      repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(0,0,0,.08) 35px, rgba(0,0,0,.08) 37px),
+      repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(2,179,74,.05) 35px, rgba(2,179,74,.05) 37px),
+      repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(2,179,74,.05) 35px, rgba(2,179,74,.05) 37px);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
 }
