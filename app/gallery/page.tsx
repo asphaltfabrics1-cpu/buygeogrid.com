@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import GalleryGrid from '@/components/GalleryGrid';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -77,40 +78,8 @@ export default function Gallery() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Installation Projects</h2>
             </div>
 
-            {/* Projects Grid (placeholder) */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded border border-gray-200 overflow-hidden hover:border-[#00c97e] transition-all duration-200 hover:shadow-lg"
-                >
-                  <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center p-8">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="max-w-full h-auto opacity-70"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="text-sm text-[#00c97e] font-semibold mb-2">
-                      {project.category}
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      {project.title}
-                    </h3>
-                    <div className="text-sm text-gray-600 mb-3 flex items-center gap-2">
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                      </svg>
-                      {project.location}
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            {/* Projects Grid with Lightbox */}
+            <GalleryGrid projects={projects} />
 
             {/* CTA Box */}
             <div className="mt-16 bg-[#1a1a1a] text-white rounded p-12 text-center">
