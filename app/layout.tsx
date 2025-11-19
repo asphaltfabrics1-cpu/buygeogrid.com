@@ -213,6 +213,17 @@ export default function RootLayout({
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+
+        {/* Gideon AI Chat Widget */}
+        <Script
+          src="/widget/gideon-chat.js"
+          strategy="afterInteractive"
+          data-site-id="buygeogrid"
+          data-brand-name="BuyGeogrid Assistant"
+          data-color="#00c97e"
+          data-api-url="https://gideon-framework.vercel.app"
+          data-greeting="Hi! I can help you learn about our geogrid and interlayer products. What would you like to know?"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

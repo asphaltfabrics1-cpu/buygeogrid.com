@@ -1,0 +1,315 @@
+/**
+ * Gideon AI Chat Widget Styles
+ */
+
+/* Variables */
+.gideon-widget {
+  --primary-color: #00c97e;
+  --primary-hover: #00b371;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --bg-white: #ffffff;
+  --bg-gray: #f9fafb;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Reset widget-specific styles */
+.gideon-widget * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Chat Button */
+.gideon-chat-button {
+  position: fixed;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xl);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.gideon-chat-button:hover {
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.gideon-chat-button.bottom-right {
+  bottom: 24px;
+  right: 24px;
+}
+
+.gideon-chat-button.bottom-left {
+  bottom: 24px;
+  left: 24px;
+}
+
+/* Badge */
+.gideon-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Chat Window */
+.gideon-chat-window {
+  position: fixed;
+  z-index: 9999;
+  width: 380px;
+  height: 600px;
+  max-height: calc(100vh - 100px);
+  background: var(--bg-white);
+  border-radius: 16px;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.gideon-chat-window.bottom-right {
+  bottom: 24px;
+  right: 24px;
+}
+
+.gideon-chat-window.bottom-left {
+  bottom: 24px;
+  left: 24px;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .gideon-chat-window {
+    width: calc(100vw - 32px);
+    height: calc(100vh - 100px);
+    bottom: 16px !important;
+    right: 16px !important;
+    left: 16px !important;
+  }
+}
+
+/* Header */
+.gideon-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gideon-header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gideon-avatar {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gideon-brand-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.gideon-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.gideon-status-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.gideon-close-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.gideon-close-button:hover {
+  opacity: 1;
+}
+
+/* Messages */
+.gideon-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: var(--bg-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gideon-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.gideon-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.gideon-messages::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.gideon-message {
+  display: flex;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gideon-message-user {
+  justify-content: flex-end;
+}
+
+.gideon-message-bot {
+  justify-content: flex-start;
+}
+
+.gideon-message-content {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.gideon-message-user .gideon-message-content {
+  background: var(--primary-color);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.gideon-message-bot .gideon-message-content {
+  background: var(--bg-white);
+  color: var(--text-primary);
+  border-bottom-left-radius: 4px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Input */
+.gideon-input-container {
+  padding: 16px 20px;
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.gideon-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.gideon-input:focus {
+  border-color: var(--primary-color);
+}
+
+.gideon-send-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.gideon-send-button:hover {
+  background: var(--primary-hover);
+}
+
+.gideon-send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.gideon-footer {
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+  background: var(--bg-white);
+  border-radius: 0 0 16px 16px;
+}
+
+.gideon-footer span {
+  opacity: 0.7;
+}
