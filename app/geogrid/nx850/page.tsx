@@ -21,7 +21,7 @@ export default function NX850() {
   const features = [
     { text: 'Heavy-duty base reinforcement' },
     { text: 'Reduces aggregate requirements up to 40%' },
-    { text: 'Extends pavement life 2-3x' },
+    { text: 'Could help extend pavement life 2-3x' },
     { text: 'Multi-axial structure for optimal performance' },
   ];
 
@@ -38,7 +38,7 @@ export default function NX850() {
       <main className="flex-grow">
         <PageHero
           title="Tensar InterAx® NX850™ Geogrid"
-          description="Heavy-duty base reinforcement Geogrid for roads, parking lots, and industrial applications. Reduce aggregate requirements and extend pavement life."
+          description="Heavy-duty base reinforcement Geogrid for roads, parking lots, and industrial applications. Reduce aggregate requirements and could help extend pavement life."
           ctaText="Request a Quote"
           ctaLink="/contact"
           secondaryCtaText="Download Spec Sheet"

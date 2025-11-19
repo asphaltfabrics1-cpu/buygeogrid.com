@@ -30,7 +30,7 @@ export default function FAQ() {
     },
     {
       question: 'What is an interlayer?',
-      answer: 'An interlayer is a specialty paving fabric installed between layers of asphalt to help prevent cracking and moisture penetration. It acts as a moisture barrier and stress-relief layer, extending the life of pavements and reducing reflective cracking.',
+      answer: 'An interlayer is a specialty paving fabric installed between layers of asphalt to help prevent cracking and moisture penetration. It acts as a moisture barrier and stress-relief layer, could help extend the life of pavements and reducing reflective cracking.',
     },
     {
       question: 'What types of Geogrids do you sell?',

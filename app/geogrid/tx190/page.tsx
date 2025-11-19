@@ -22,7 +22,7 @@ export default function TX190() {
     { text: 'Advanced TriAx technology with triangular apertures' },
     { text: 'Superior aggregate interlock' },
     { text: 'Reduces aggregate requirements up to 50%' },
-    { text: 'Extends pavement life 3x or more' },
+    { text: 'Could help extend pavement life 3x or more' },
   ];
 
   const applications = [

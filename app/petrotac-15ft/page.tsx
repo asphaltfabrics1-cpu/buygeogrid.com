@@ -8,18 +8,18 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Petrotac 1.5ft Roll Paving Interlayer Ohio | Wider Crack Prevention',
-  description: 'Petrotac 1.5ft roll paving interlayer available in Ohio. Wider format helps prevent reflective cracking in asphalt overlays. Serving Cleveland and Akron. Download spec sheet.',
+  description: 'Petrotac 1.5ft roll paving interlayer available in Ohio. Wider format could help prevent reflective cracking in asphalt overlays. Serving Cleveland and Akron. Download spec sheet.',
   keywords: ['Petrotac', 'paving interlayer', 'crack prevention', 'asphalt overlay', 'Cleveland', 'Akron'],
   openGraph: {
     title: 'Petrotac 1.5ft Roll Paving Interlayer | Ohio',
-    description: 'Wider format helps prevent reflective cracking in asphalt overlays. Northern Ohio distributor.',
+    description: 'Wider format could help prevent reflective cracking in asphalt overlays. Northern Ohio distributor.',
     images: ['/images/products/petrotac.jpg'],
   },
 };
 
 export default function Petrotac15ft() {
   const features = [
-    { text: 'Helps prevent reflective cracking' },
+    { text: 'Could help prevent reflective cracking' },
     { text: '1.5-foot wide rolls for wider coverage' },
     { text: 'Self-adhesive backing' },
     { text: 'Enhanced waterproofing' },

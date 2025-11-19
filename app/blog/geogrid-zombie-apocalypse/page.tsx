@@ -117,8 +117,8 @@ export default function GeogridZombieApocalypse() {
                 </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>✓ <strong>Retaining Walls:</strong> Keep soil (and the undead) firmly in place</li>
-                  <li>✓ <strong>Driveways &amp; Patios:</strong> Help prevent cracking and settling</li>
-                  <li>✓ <strong>Parking Lots:</strong> Extend pavement life by 2-3x</li>
+                  <li>✓ <strong>Driveways &amp; Patios:</strong> Could help prevent cracking and settling</li>
+                  <li>✓ <strong>Parking Lots:</strong> Could help extend pavement life by 2-3x</li>
                   <li>✓ <strong>Walkways &amp; Paths:</strong> Stop erosion before it starts</li>
                   <li>✓ <strong>Shed &amp; Deck Foundations:</strong> Solid support for any structure</li>
                   <li>✓ <strong>Cemetery Containment:</strong> For when you <em>really</em> need to keep things underground*</li>
@@ -176,7 +176,7 @@ export default function GeogridZombieApocalypse() {
               <div className="border-t border-gray-300 pt-8 mt-12 text-sm text-gray-600">
                 <p className="italic">
                   *Disclaimer: While Tensar Geogrid is proven to stabilize soil, prevent erosion,
-                  and extend pavement life, its effectiveness against actual zombies has not been
+                  and help extend pavement life, its effectiveness against actual zombies has not been
                   scientifically verified. Use at your own risk during apocalyptic scenarios.
                   Asphalt Fabrics &amp; Supply is not responsible for zombie-related incidents,
                   though we&apos;re pretty sure it would work. 🧟‍♂️

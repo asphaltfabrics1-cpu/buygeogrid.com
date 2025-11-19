@@ -20,7 +20,7 @@ export default function Hero() {
 
           <p>
             Whether you&apos;re reducing aggregate costs, increasing load-bearing
-            strength, or extending pavement life, our geosynthetic solutions are
+            strength, or could help extend pavement life, our geosynthetic solutions are
             built to deliver long-lasting performance.
           </p>
         </div>

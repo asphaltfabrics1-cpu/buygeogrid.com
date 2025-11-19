@@ -21,7 +21,7 @@ export default function NX750() {
   const features = [
     { text: 'Medium-duty base reinforcement' },
     { text: 'Reduces aggregate requirements up to 35%' },
-    { text: 'Extends pavement life 2x' },
+    { text: 'Could help extend pavement life 2x' },
     { text: 'Multi-axial structure for optimal performance' },
   ];
 
