@@ -8,18 +8,18 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Petrotac 1ft Roll Paving Interlayer Ohio | Crack Prevention',
-  description: 'Petrotac 1ft roll paving interlayer available in Ohio. Prevents reflective cracking in asphalt overlays. Serving Cleveland and Akron. Download spec sheet.',
+  description: 'Petrotac 1ft roll paving interlayer available in Ohio. Helps prevent reflective cracking in asphalt overlays. Serving Cleveland and Akron. Download spec sheet.',
   keywords: ['Petrotac', 'paving interlayer', 'crack prevention', 'asphalt overlay', 'Cleveland', 'Akron'],
   openGraph: {
     title: 'Petrotac 1ft Roll Paving Interlayer | Ohio',
-    description: 'Prevents reflective cracking in asphalt overlays. Northern Ohio distributor.',
+    description: 'Helps prevent reflective cracking in asphalt overlays. Northern Ohio distributor.',
     images: ['/images/products/petrotac.jpg'],
   },
 };
 
 export default function Petrotac1ft() {
   const features = [
-    { text: 'Prevents reflective cracking' },
+    { text: 'Helps prevent reflective cracking' },
     { text: '1-foot wide rolls for easy installation' },
     { text: 'Self-adhesive backing' },
     { text: 'Waterproofing properties' },
@@ -38,7 +38,7 @@ export default function Petrotac1ft() {
       <main className="flex-grow">
         <PageHero
           title="Petrotac 1ft Roll Paving Interlayer"
-          description="Self-adhesive paving interlayer that prevents reflective cracking in asphalt overlays. Easy-to-install 1-foot wide rolls for crack and joint treatment."
+          description="Self-adhesive paving interlayer that helps prevent reflective cracking in asphalt overlays. Easy-to-install 1-foot wide rolls for crack and joint treatment."
           ctaText="Request a Quote"
           ctaLink="/contact"
           secondaryCtaText="Download Spec Sheet"

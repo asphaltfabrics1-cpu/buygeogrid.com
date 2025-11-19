@@ -7,7 +7,7 @@ import type { Metadata} from 'next';
 
 export const metadata: Metadata = {
   title: 'Propex Petrotac Interlayers Ohio | Pavement Fabric | Cleveland Akron',
-  description: 'Propex Petrotac paving interlayers in Ohio. Prevent reflective cracking and extend pavement life. Expert installation guidance for Cleveland and Akron area projects.',
+  description: 'Propex Petrotac paving interlayers in Ohio. Help prevent reflective cracking and extend pavement life. Expert installation guidance for Cleveland and Akron area projects.',
   keywords: ['Propex Petrotac Ohio', 'paving interlayer', 'pavement fabric', 'crack prevention', 'Cleveland paving', 'Ohio asphalt'],
   openGraph: {
     title: 'Propex Petrotac Interlayers | Pavement Solutions Ohio',

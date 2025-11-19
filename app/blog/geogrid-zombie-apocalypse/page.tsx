@@ -117,7 +117,7 @@ export default function GeogridZombieApocalypse() {
                 </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>✓ <strong>Retaining Walls:</strong> Keep soil (and the undead) firmly in place</li>
-                  <li>✓ <strong>Driveways &amp; Patios:</strong> Prevent cracking and settling</li>
+                  <li>✓ <strong>Driveways &amp; Patios:</strong> Help prevent cracking and settling</li>
                   <li>✓ <strong>Parking Lots:</strong> Extend pavement life by 2-3x</li>
                   <li>✓ <strong>Walkways &amp; Paths:</strong> Stop erosion before it starts</li>
                   <li>✓ <strong>Shed &amp; Deck Foundations:</strong> Solid support for any structure</li>
