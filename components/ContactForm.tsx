@@ -139,11 +139,12 @@ export default function ContactForm() {
             disabled={isSubmitting}
             className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-[#00c97e] focus:border-[#00c97e] transition-all disabled:bg-gray-100"
           >
-            <option value="">Select a product</option>
+            <option value="">Select a product/service</option>
             <option value="Geogrids">Geogrids</option>
             <option value="Woven Fabrics">Woven Fabrics</option>
             <option value="Non-Woven Fabrics">Non-Woven Fabrics</option>
             <option value="Interlayers">Interlayers</option>
+            <option value="Lunch & Learn Request">Lunch & Learn Request</option>
             <option value="Other">Other</option>
           </select>
         </div>

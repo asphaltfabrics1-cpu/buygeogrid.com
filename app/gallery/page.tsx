@@ -15,32 +15,12 @@ export const metadata: Metadata = {
 };
 
 export default function Gallery() {
-  // Featured fun content
-  const featuredArt = [
-    {
-      title: 'Geogrid Installation: So Easy, Even Zombies Can Do It!',
-      location: 'Halloween 2025',
-      description: 'Our creative take on how simple Geogrid installation really is. Check out the full Halloween blog post!',
-      image: '/images/zombie-geogrid-installation.jpeg',
-      category: 'Fun Content',
-      link: '/blog/geogrid-zombie-apocalypse',
-    },
-    {
-      title: 'Geogrid Holds Back More Than Just Soft Soil!',
-      location: 'Halloween 2025',
-      description: 'It can also hold back the cursed undead! A fun look at Geogrid\'s unexpected uses.',
-      image: '/images/geogrid-holds-back-undead.jpeg',
-      category: 'Fun Content',
-      link: '/blog/geogrid-zombie-apocalypse',
-    },
-  ];
-
   // Real projects - owner can add real photos later
   const projects = [
     {
       title: 'Coming Soon: Your Projects Here!',
       location: 'Northern Ohio',
-      description: 'We\'re building our gallery with real installation photos from projects across Ohio.',
+      description: 'We\'re building our gallery with real installation photos from projects across Cleveland, Akron, Toledo, and Northern Ohio.',
       image: '/images/logos/afsupplylogo_transparent.png',
       category: 'All Projects',
     },
@@ -84,59 +64,6 @@ export default function Gallery() {
         {/* Gallery Grid */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-7xl mx-auto">
-
-            {/* Featured Art Section */}
-            <div className="mb-16">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-3xl font-bold text-gray-900">Featured Content</h2>
-                <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                  🎃 Halloween Special
-                </span>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8">
-                {featuredArt.map((art, index) => (
-                  <Link
-                    key={index}
-                    href={art.link}
-                    className="bg-white rounded border border-gray-200 overflow-hidden hover:border-orange-500 transition-all duration-200 hover:shadow-xl group"
-                  >
-                    <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
-                      <img
-                        src={art.image}
-                        alt={art.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <div className="text-sm text-orange-600 font-semibold mb-2">
-                        {art.category}
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
-                        {art.title}
-                      </h3>
-                      <div className="text-sm text-gray-600 mb-3 flex items-center gap-2">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                        </svg>
-                        {art.location}
-                      </div>
-                      <p className="text-gray-700 leading-relaxed mb-4">
-                        {art.description}
-                      </p>
-                      <div className="flex items-center text-orange-600 font-semibold">
-                        Read Full Story
-                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Divider */}
-            <div className="border-t border-gray-300 my-16"></div>
 
             {/* Real Projects Section */}
             <div className="mb-12">

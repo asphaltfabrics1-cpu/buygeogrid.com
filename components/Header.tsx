@@ -6,11 +6,15 @@ import { useState } from 'react';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [geogridsOpen, setGeogridsOpen] = useState(false);
+  const [wovenOpen, setWovenOpen] = useState(false);
+  const [nonWovenOpen, setNonWovenOpen] = useState(false);
+  const [interlayersOpen, setInterlayersOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
 
   return (
     <>
       {/* Combined Header & Navigation */}
-      <header className="bg-[#1a1a1a] text-white py-3 px-4">
+      <header className="bg-[#1a1a1a] text-white py-3 px-4 border-b-[3px] border-[#00c97e]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between gap-4">
             {/* Left Logo */}
@@ -28,7 +32,7 @@ export default function Header() {
             <nav className="hidden md:block flex-1">
               <ul className="flex justify-center items-center gap-0">
             <li>
-              <Link href="/" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Home
               </Link>
             </li>
@@ -39,7 +43,7 @@ export default function Header() {
               onMouseEnter={() => setGeogridsOpen(true)}
               onMouseLeave={() => setGeogridsOpen(false)}
             >
-              <Link href="/geogrid" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/geogrid" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Geogrids ▾
               </Link>
               {geogridsOpen && (
@@ -85,40 +89,119 @@ export default function Header() {
               )}
             </li>
 
-            <li>
-              <Link href="/woven-fabrics" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
-                Woven Fabrics
+            {/* Woven Fabrics Dropdown */}
+            <li
+              className="relative group"
+              onMouseEnter={() => setWovenOpen(true)}
+              onMouseLeave={() => setWovenOpen(false)}
+            >
+              <Link href="/woven-fabrics" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+                Woven Fabrics ▾
               </Link>
+              {wovenOpen && (
+                <div
+                  className="md:absolute relative top-full left-0 bg-[#2a2a2a] border border-gray-700 shadow-lg py-2 min-w-[220px] z-50"
+                  onMouseEnter={() => setWovenOpen(true)}
+                  onMouseLeave={() => setWovenOpen(false)}
+                >
+                  <Link href="/500x" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Mirafi® 500X
+                  </Link>
+                  <Link href="/600x" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Mirafi® 600X
+                  </Link>
+                </div>
+              )}
             </li>
-            <li>
-              <Link href="/nonwoven-fabrics" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
-                Non-Woven Fabrics
+
+            {/* Non-Woven Fabrics Dropdown */}
+            <li
+              className="relative group"
+              onMouseEnter={() => setNonWovenOpen(true)}
+              onMouseLeave={() => setNonWovenOpen(false)}
+            >
+              <Link href="/nonwoven-fabrics" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+                Non-Woven Fabrics ▾
               </Link>
+              {nonWovenOpen && (
+                <div
+                  className="md:absolute relative top-full left-0 bg-[#2a2a2a] border border-gray-700 shadow-lg py-2 min-w-[220px] z-50"
+                  onMouseEnter={() => setNonWovenOpen(true)}
+                  onMouseLeave={() => setNonWovenOpen(false)}
+                >
+                  <Link href="/135n" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Mirafi® 135N
+                  </Link>
+                  <Link href="/140n" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Mirafi® 140N
+                  </Link>
+                  <Link href="/180n" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Mirafi® 180N
+                  </Link>
+                </div>
+              )}
             </li>
-            <li>
-              <Link href="/interlayers" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
-                Interlayers
+
+            {/* Interlayers Dropdown */}
+            <li
+              className="relative group"
+              onMouseEnter={() => setInterlayersOpen(true)}
+              onMouseLeave={() => setInterlayersOpen(false)}
+            >
+              <Link href="/interlayers" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+                Interlayers ▾
               </Link>
+              {interlayersOpen && (
+                <div
+                  className="md:absolute relative top-full left-0 bg-[#2a2a2a] border border-gray-700 shadow-lg py-2 min-w-[220px] z-50"
+                  onMouseEnter={() => setInterlayersOpen(true)}
+                  onMouseLeave={() => setInterlayersOpen(false)}
+                >
+                  <Link href="/petrotac-1ft" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Petrotac 1ft Roll
+                  </Link>
+                  <Link href="/petrotac-15ft" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Petrotac 1.5ft Roll
+                  </Link>
+                </div>
+              )}
             </li>
+
             <li>
-              <Link href="/contact" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/contact" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Contact Us
               </Link>
             </li>
-            <li>
-              <Link href="/faq" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
-                FAQ
+
+            {/* Resources Dropdown */}
+            <li
+              className="relative group"
+              onMouseEnter={() => setResourcesOpen(true)}
+              onMouseLeave={() => setResourcesOpen(false)}
+            >
+              <Link href="/resources" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+                Resources ▾
               </Link>
-            </li>
-            <li>
-              <Link href="/blog" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link href="/gallery" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
-                Gallery
-              </Link>
+              {resourcesOpen && (
+                <div
+                  className="md:absolute relative top-full left-0 bg-[#2a2a2a] border border-gray-700 shadow-lg py-2 min-w-[220px] z-50"
+                  onMouseEnter={() => setResourcesOpen(true)}
+                  onMouseLeave={() => setResourcesOpen(false)}
+                >
+                  <Link href="/faq" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    FAQ
+                  </Link>
+                  <Link href="/blog" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Blog
+                  </Link>
+                  <Link href="/gallery" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Gallery
+                  </Link>
+                  <Link href="/lunch-and-learn" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Lunch & Learn
+                  </Link>
+                </div>
+              )}
             </li>
           </ul>
         </nav>
@@ -150,48 +233,53 @@ export default function Header() {
         <nav className="md:hidden mt-4 border-t border-white/10 pt-4">
           <ul className="flex flex-col gap-0">
             <li>
-              <Link href="/" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Home
               </Link>
             </li>
             <li className="relative">
-              <Link href="/geogrid" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/geogrid" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Geogrids
               </Link>
             </li>
             <li>
-              <Link href="/woven-fabrics" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/woven-fabrics" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Woven Fabrics
               </Link>
             </li>
             <li>
-              <Link href="/nonwoven-fabrics" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/nonwoven-fabrics" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Non-Woven Fabrics
               </Link>
             </li>
             <li>
-              <Link href="/interlayers" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/interlayers" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Interlayers
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/contact" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/faq" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/blog" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/gallery" className="block px-4 py-3 hover:bg-white/10 transition-colors font-semibold">
+              <Link href="/gallery" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
                 Gallery
+              </Link>
+            </li>
+            <li>
+              <Link href="/lunch-and-learn" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+                Lunch & Learn
               </Link>
             </li>
           </ul>

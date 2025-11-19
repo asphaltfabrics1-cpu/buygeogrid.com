@@ -10,6 +10,9 @@ interface PageHeroProps {
   badge?: string;
   image?: string;
   imageAlt?: string;
+  logo?: string;
+  logoLink?: string;
+  logoAlt?: string;
 }
 
 export default function PageHero({
@@ -22,12 +25,17 @@ export default function PageHero({
   badge,
   image,
   imageAlt,
+  logo,
+  logoLink,
+  logoAlt,
 }: PageHeroProps) {
+  const hasRightColumn = image || logo;
+
   return (
     <section className="relative bg-[#1a1a1a] text-white py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className={image ? "grid md:grid-cols-2 gap-12 items-center" : ""}>
-          <div className={image ? "" : "max-w-3xl"}>
+        <div className={hasRightColumn ? "grid md:grid-cols-2 gap-12 items-center" : ""}>
+          <div className={hasRightColumn ? "" : "max-w-3xl"}>
             {badge && (
               <div className="inline-block bg-[#00c97e] text-white px-4 py-2 rounded text-sm font-semibold mb-4">
                 {badge}
@@ -62,14 +70,33 @@ export default function PageHero({
             )}
           </div>
           {image && (
-            <div className="flex justify-center">
+            <div className="flex justify-center items-start">
               <div className="bg-white rounded-lg p-8 shadow-lg">
                 <img
                   src={image}
                   alt={imageAlt || title}
-                  className="w-full max-w-md h-auto"
+                  className="w-full max-w-md h-auto max-h-[280px] object-contain"
                 />
               </div>
+            </div>
+          )}
+          {logo && !image && (
+            <div className="flex justify-center items-center">
+              {logoLink ? (
+                <Link href={logoLink} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <img
+                    src={logo}
+                    alt={logoAlt || 'Company Logo'}
+                    className="w-full max-w-sm h-auto"
+                  />
+                </Link>
+              ) : (
+                <img
+                  src={logo}
+                  alt={logoAlt || 'Company Logo'}
+                  className="w-full max-w-sm h-auto"
+                />
+              )}
             </div>
           )}
         </div>

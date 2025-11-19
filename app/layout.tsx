@@ -16,19 +16,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://buygeogrid.com'),
   title: {
-    default: 'Tensar Geogrids & Solmax Mirafi Fabrics | Ohio Distributor | BuyGeogrid.com',
+    default: 'Geogrid Ohio | Tensar Geogrids & Solmax Mirafi | #1 Ohio Geogrid Distributor',
     template: '%s | BuyGeogrid.com'
   },
-  description: 'Authorized Ohio distributor of Tensar Geogrids and Solmax Mirafi geotextiles. Leading geosynthetics supplier with expert soil stabilization solutions, competitive pricing, and free DCP testing. Serving Cleveland, Columbus, Cincinnati, Akron, Toledo, Youngstown, Dayton, and all of Ohio.',
-  keywords: ['Tensar Geogrids Ohio', 'Solmax Mirafi Ohio', 'Geogrid Ohio', 'geotextile fabrics', 'soil stabilization', 'Cleveland Geogrid', 'Akron Geogrid', 'Columbus Geogrid', 'Cincinnati Geogrid', 'Toledo Geogrid', 'Youngstown Geogrid', 'Dayton Geogrid', 'Northern Ohio distributor', 'civil engineering fabrics', 'pavement reinforcement', 'InterAx Geogrid', 'TriAx Geogrid', 'woven geotextile', 'nonwoven fabric', 'Solon Ohio', 'DCP testing', 'Paramount Materials alternative', 'Hanes Geo Components', 'Titan Environmental', 'HUESKER Geogrid', 'Geogrid supplier Ohio', 'geosynthetics distributor'],
+  description: 'Northern Ohio Geogrid distributor - Authorized Tensar Geogrids and Solmax Mirafi Geotextiles dealer. Expert soil stabilization solutions, competitive pricing, and free DCP testing. Proudly serving Cleveland, Akron, Toledo, Youngstown, and Northern Ohio communities.',
+  keywords: ['Cleveland Geogrid', 'Geogrid Cleveland', 'Northern Ohio Geogrid', 'Geogrid Ohio', 'Ohio Geogrid', 'Tensar Geogrids Cleveland', 'Tensar Geogrids', 'Akron Geogrid', 'Toledo Geogrid', 'Youngstown Geogrid', 'Geogrid distributor Ohio', 'Solmax Mirafi Ohio', 'Geotextile fabrics', 'soil stabilization', 'civil engineering fabrics', 'pavement reinforcement', 'InterAx Geogrid', 'TriAx Geogrid', 'Biaxial Geogrid', 'woven Geotextile', 'Solon Ohio Geogrid', 'DCP testing Ohio', 'Geogrid supplier Cleveland', 'Geosynthetics distributor', 'Buy Geogrid Ohio', 'BuyGeogrid'],
   authors: [{ name: 'Asphalt Fabrics & Supply' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://buygeogrid.com',
     siteName: 'BuyGeogrid.com',
-    title: 'Tensar Geogrids & Solmax Mirafi Fabrics | Ohio Authorized Distributor',
-    description: 'Authorized Ohio distributor of Tensar geogrids and Solmax Mirafi geotextiles. Expert solutions for soil stabilization and pavement reinforcement. Serving all of Ohio from Solon.',
+    title: 'Geogrid Ohio | Tensar Geogrids & Solmax Mirafi | #1 Ohio Geogrid Distributor',
+    description: 'Geogrid Ohio - Authorized distributor of Tensar Geogrids and Solmax Mirafi Geotextiles. Ohio\'s #1 Geogrid supplier for soil stabilization and pavement reinforcement. Serving all of Ohio.',
     images: [
       {
         url: '/images/logos/afsupplylogo_transparent.png',

@@ -85,6 +85,9 @@ export default function Geogrid() {
           ctaLink="/contact"
           secondaryCtaText="Call (440) 368-1420"
           secondaryCtaLink="tel:4403681420"
+          logo="/images/logos/tensar.png"
+          logoLink="https://tensarcorp.com"
+          logoAlt="Tensar International"
         />
 
         {/* Products Grid */}

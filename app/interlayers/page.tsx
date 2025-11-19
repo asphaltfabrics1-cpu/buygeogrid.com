@@ -40,6 +40,9 @@ export default function Interlayers() {
           ctaLink="/contact"
           secondaryCtaText="Call (440) 368-1420"
           secondaryCtaLink="tel:4403681420"
+          logo="/images/logos/solmax.png"
+          logoLink="https://www.solmax.com"
+          logoAlt="Solmax - Petrotac"
         />
 
         {/* Products Grid */}
