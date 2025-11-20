@@ -64,6 +64,19 @@ export default function ComparisonPage() {
 
   const newFeatures = [
     {
+      title: 'AI-Powered Customer Support Chatbot',
+      image: '/screenshots/new-home-chatbot.png',
+      description: 'Intelligent AI assistant powered by Gideon AI that answers customer questions 24/7 about products, applications, and technical specifications.',
+      highlights: [
+        'Instant answers about geogrids and geotextiles',
+        'Product recommendations based on project needs',
+        'Explains DCP testing and other services',
+        'Available 24/7 - never miss a customer inquiry',
+        'Learns from your business knowledge base',
+        'Reduces phone calls for basic questions',
+      ],
+    },
+    {
       title: 'Lunch & Learn Program Page',
       image: '/screenshots/new-lunch-learn.png',
       description: 'Brand new educational program page with video integration, detailed program information, and interactive registration form.',
@@ -175,6 +188,7 @@ export default function ComparisonPage() {
               <div className="text-5xl mb-4">💡</div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">New Capabilities</h3>
               <ul className="space-y-2 text-gray-800">
+                <li className="flex items-start"><span className="text-blue-600 mr-2">→</span><span>AI chatbot answers customer questions 24/7</span></li>
                 <li className="flex items-start"><span className="text-blue-600 mr-2">→</span><span>Lunch & Learn program page with video</span></li>
                 <li className="flex items-start"><span className="text-blue-600 mr-2">→</span><span>Interactive project gallery showcase</span></li>
                 <li className="flex items-start"><span className="text-blue-600 mr-2">→</span><span>Unlimited customization - no template limits</span></li>
