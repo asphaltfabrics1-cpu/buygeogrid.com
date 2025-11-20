@@ -113,14 +113,20 @@
 
 ## 🚀 Future Enhancements
 
+> **Note:** Phase 4-5 features are provided by **Gideon Codeworks platform** (platform.usegideon.com), not built into individual client sites. BuyGeogrid accesses these services through the Gideon platform dashboard.
+
 ### Phase 1: Chatbot Intelligence (Q1 2026)
+**Client Site Features:**
 - [ ] **Automatic Site Crawling:** Implement automated crawling to keep chatbot knowledge up-to-date
 - [ ] **Vector Database Integration:** Upgrade from hardcoded configs to vector database for better search
-- [ ] **Conversation History:** Store and analyze customer conversations for insights
 - [ ] **Product Recommendations:** AI suggests best products based on project description
 - [ ] **Lead Capture:** Collect contact info from chatbot conversations
 
+**Platform Features (Gideon Codeworks):**
+- [ ] **Conversation History:** Store and analyze customer conversations for insights
+
 ### Phase 2: E-Commerce Integration (Q2 2026)
+**Client Site Features:**
 - [ ] **Online Quoting System:** Automated quote generation based on project specs
 - [ ] **Inventory Integration:** Real-time stock availability in chatbot responses
 - [ ] **Order Tracking:** Customers can check order status via chatbot
@@ -128,6 +134,7 @@
 - [ ] **Shopping Cart:** Enable direct online ordering for small quantities
 
 ### Phase 3: Customer Portal (Q3 2026)
+**Client Site Features:**
 - [ ] **Account Management:** Customer login for order history and invoices
 - [ ] **Project Documentation:** Store DCP test results and recommendations
 - [ ] **Recurring Orders:** Easy reordering for repeat customers
@@ -135,13 +142,15 @@
 - [ ] **Support Tickets:** Track service requests and technical support
 
 ### Phase 4: Analytics & Optimization (Q4 2026)
-- [ ] **SEO Dashboard:** Real-time keyword ranking tracking
+**Provided by Gideon Codeworks Platform:**
+- [ ] **SEO Dashboard:** Real-time keyword ranking tracking (accessed via platform.usegideon.com)
 - [ ] **Chatbot Analytics:** Conversation analysis, common questions, conversion rate
 - [ ] **A/B Testing:** Test different chatbot personalities and responses
 - [ ] **Heat Maps:** Track user behavior and optimize page layouts
 - [ ] **Conversion Funnel:** Identify and fix drop-off points
 
 ### Phase 5: Marketing Automation (2027)
+**Provided by Gideon Codeworks Platform:**
 - [ ] **Email Campaigns:** Automated follow-ups for quote requests
 - [ ] **CRM Integration:** Sync chatbot leads with Gideon CRM
 - [ ] **Retargeting Ads:** Show ads to visitors who didn't convert
