@@ -17,13 +17,6 @@ export const metadata: Metadata = {
 export default function Blog() {
   const posts = [
     {
-      title: 'Geogrid Installation: So Easy, Even Zombies Can Do It! 🎃',
-      date: 'October 31, 2025',
-      excerpt: 'Happy Halloween! Discover why Tensar Geogrid is so easy to install, even the undead can do it. Plus, learn how Geogrid holds back more than just soft soil!',
-      url: '/blog/geogrid-zombie-apocalypse',
-      featured: true,
-    },
-    {
       title: 'Top 5 Uses for Tensar Geogrid in Residential Projects',
       date: 'June 30, 2025',
       excerpt: 'Explore the most common residential applications of Tensar Geogrid and why contractors prefer it.',

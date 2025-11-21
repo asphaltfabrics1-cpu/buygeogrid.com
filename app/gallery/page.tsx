@@ -17,22 +17,7 @@ export const metadata: Metadata = {
 
 export default function Gallery() {
   // Installation projects and featured images
-  const projects = [
-    {
-      title: 'Zombie-Proof Geogrid Installation',
-      location: 'Halloween Special',
-      description: 'Geogrid installation so easy, even zombies can do it! This Halloween demonstration shows just how simple Tensar Geogrid installation really is.',
-      image: '/images/zombie-geogrid-installation.jpeg',
-      category: 'Featured',
-    },
-    {
-      title: 'Geogrid Retaining Wall Application',
-      location: 'Undead Containment Project',
-      description: 'Demonstrating Geogrid\'s versatility beyond soft soil stabilization - including retaining walls and containment applications.',
-      image: '/images/geogrid-holds-back-undead.jpeg',
-      category: 'Featured',
-    },
-  ];
+  const projects: any[] = [];
 
   return (
     <div className="min-h-screen flex flex-col bg-white">

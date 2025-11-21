@@ -97,7 +97,6 @@ export default function ComparisonPage() {
         'Mobile swipe navigation',
         'Keyboard navigation support',
         'Project descriptions and locations',
-        'Halloween zombie-themed content',
       ],
     },
   ];
