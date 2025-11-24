@@ -5,13 +5,17 @@ import Script from 'next/script';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Geogrid Ohio | Tensar Geogrids Cleveland | Northern Ohio Distributor',
-  description: 'Cleveland Geogrid - Buy Tensar Geogrids from Northern Ohio\'s #1 authorized distributor. InterAx, TriAx, Biaxial Geogrids in stock. Expert soil stabilization, free DCP testing. Proudly serving Cleveland, Akron, Toledo, and Northern Ohio. Shop Geogrid products at BuyGeogrid.com.',
+  title: 'Geogrid Ohio | Tensar Distributor | BuyGeogrid',
+  description: 'Northern Ohio Geogrid distributor. Tensar & Solmax authorized dealer. Expert soil stabilization, free DCP testing. Serving Cleveland, Akron, Toledo.',
   keywords: ['Geogrid Cleveland', 'Cleveland Geogrid', 'Geogrid Ohio', 'Tensar Geogrids Cleveland', 'Tensar Geogrids', 'Geogrid Northern Ohio', 'Northern Ohio Geogrid', 'Geogrid Akron', 'Geogrid Toledo', 'Buy Tensar Geogrid', 'Geogrid distributor Ohio', 'InterAx Geogrid', 'TriAx Geogrid', 'Biaxial Geogrid', 'Tensar authorized distributor', 'soil stabilization Ohio', 'Geogrid supplier Cleveland', 'NX850 Geogrid', 'TX190 Geogrid', 'BuyGeogrid'],
+  alternates: {
+    canonical: 'https://buygeogrid.com',
+  },
   openGraph: {
-    title: 'Geogrid Ohio | Tensar Geogrids | #1 Ohio Geogrid Distributor',
-    description: 'Geogrid Ohio - Buy Tensar Geogrids direct from Ohio\'s #1 authorized Geogrid distributor. Free DCP testing, expert support, competitive pricing.',
+    title: 'Geogrid Ohio | Tensar Distributor | BuyGeogrid',
+    description: 'Northern Ohio Geogrid distributor. Tensar & Solmax authorized dealer. Expert soil stabilization, free DCP testing.',
     images: ['/images/logos/afsupplylogo_transparent.png'],
+    url: 'https://buygeogrid.com',
   },
   other: {
     'google-site-verification': 'your-verification-code-here',

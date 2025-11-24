@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://buygeogrid.com'),
   title: {
-    default: 'Geogrid Ohio | Tensar Geogrids & Solmax Mirafi | #1 Ohio Geogrid Distributor',
+    default: 'Geogrid Ohio | Tensar Distributor | BuyGeogrid',
     template: '%s | BuyGeogrid.com'
   },
-  description: 'Northern Ohio Geogrid distributor - Authorized Tensar Geogrids and Solmax Mirafi Geotextiles dealer. Expert soil stabilization solutions, competitive pricing, and free DCP testing. Proudly serving Cleveland, Akron, Toledo, Youngstown, and Northern Ohio communities.',
+  description: 'Northern Ohio Geogrid distributor. Tensar & Solmax authorized dealer. Expert soil stabilization, free DCP testing. Serving Cleveland, Akron, Toledo.',
   keywords: ['Cleveland Geogrid', 'Geogrid Cleveland', 'Northern Ohio Geogrid', 'Geogrid Ohio', 'Ohio Geogrid', 'Tensar Geogrids Cleveland', 'Tensar Geogrids', 'Akron Geogrid', 'Toledo Geogrid', 'Youngstown Geogrid', 'Geogrid distributor Ohio', 'Solmax Mirafi Ohio', 'Geotextile fabrics', 'soil stabilization', 'civil engineering fabrics', 'pavement reinforcement', 'InterAx Geogrid', 'TriAx Geogrid', 'Biaxial Geogrid', 'woven Geotextile', 'Solon Ohio Geogrid', 'DCP testing Ohio', 'Geogrid supplier Cleveland', 'Geosynthetics distributor', 'Buy Geogrid Ohio', 'BuyGeogrid'],
   authors: [{ name: 'Asphalt Fabrics & Supply' }],
   openGraph: {
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://buygeogrid.com',
     siteName: 'BuyGeogrid.com',
-    title: 'Geogrid Ohio | Tensar Geogrids & Solmax Mirafi | #1 Ohio Geogrid Distributor',
-    description: 'Geogrid Ohio - Authorized distributor of Tensar Geogrids and Solmax Mirafi Geotextiles. Ohio\'s #1 Geogrid supplier for soil stabilization and pavement reinforcement. Serving all of Ohio.',
+    title: 'Geogrid Ohio | Tensar Distributor | BuyGeogrid',
+    description: 'Northern Ohio Geogrid distributor. Tensar & Solmax authorized dealer. Expert soil stabilization, free DCP testing.',
     images: [
       {
         url: '/images/logos/afsupplylogo_transparent.png',
@@ -204,6 +204,7 @@ export default function RootLayout({
         <noscript>
           <img height="1" width="1" style={{display: 'none'}}
             src="https://www.facebook.com/tr?id=314192535267336&ev=PageView&noscript=1"
+            alt=""
           />
         </noscript>
 
