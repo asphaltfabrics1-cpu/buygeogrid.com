@@ -59,17 +59,8 @@ export default function Blog() {
               {posts.map((post, index) => (
                 <div
                   key={index}
-                  className={`bg-white rounded border p-8 hover:border-[#00c97e] transition-colors duration-200 ${
-                    post.featured ? 'border-orange-400 border-2 bg-orange-50/30' : 'border-gray-200'
-                  }`}
+                  className="bg-white rounded border border-gray-200 p-8 hover:border-[#00c97e] transition-colors duration-200"
                 >
-                  {post.featured && (
-                    <div className="mb-3">
-                      <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        🎃 HALLOWEEN SPECIAL
-                      </span>
-                    </div>
-                  )}
                   <h2 className="text-2xl font-bold mb-2 text-gray-900">
                     {post.title}
                   </h2>
