@@ -5,12 +5,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Geogrid & Geotextile FAQ Ohio | Tensar & Solmax Questions | Expert Answers',
-  description: 'Frequently asked questions about Tensar geogrids and Solmax Mirafi fabrics in Ohio. Expert answers on soil stabilization, installation, pricing, and DCP testing from Ohio distributor.',
+  title: 'FAQ | Geogrid & Geotextile Questions Ohio',
+  description: 'Geogrid & geotextile FAQ. Tensar & Solmax questions answered. Soil stabilization, installation, pricing, DCP testing info.',
   keywords: ['Geogrid FAQ', 'geotextile questions', 'Tensar FAQ', 'soil stabilization Ohio', 'DCP testing', 'Ohio Geogrid'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/faq',
+  },
   openGraph: {
-    title: 'FAQ - Geogrid & Geotextile Questions | Ohio',
-    description: 'Expert answers to your Geogrid and geotextile questions from authorized Ohio distributor.',
+    title: 'FAQ | Geogrid & Geotextile Questions',
+    description: 'Expert answers to Geogrid and geotextile questions from authorized Ohio distributor.',
   }
 };
 

@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tensar TriAx TX Type 2 Geogrid Northern Ohio | Cleveland Airport Industrial Paving',
-  description: 'Buy Tensar TriAx TX Type 2 Geogrid in Northern Ohio. Heavy-duty for airports, ports, industrial paving. Serving Cleveland, Akron, Toledo. Free DCP testing. Call (440) 368-1420.',
+  title: 'Tensar TX Type 2 Geogrid Ohio | TriAx',
+  description: 'Tensar TriAx TX Type 2 Geogrid Ohio. Heavy-duty for airports, ports, industrial. Free DCP testing.',
   keywords: ['Tensar TX Type 2 Ohio', 'TriAx Type 2 Cleveland', 'airport Geogrid Northern Ohio', 'industrial paving Geogrid Akron', 'heavy-duty TriAx Ohio', 'port Geogrid Cleveland'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrid/tx-type-2',
+  },
   openGraph: {
-    title: 'Tensar TriAx TX Type 2 Geogrid | Northern Ohio Industrial & Airports',
-    description: 'Buy Tensar TX Type 2 for airports and heavy industrial paving. Northern Ohio distributor.',
+    title: 'Tensar TX Type 2 Geogrid Ohio | TriAx',
+    description: 'Tensar TX Type 2 for airports and industrial paving. Ohio distributor.',
     images: ['/images/products/solution-triax.png'],
   },
 };

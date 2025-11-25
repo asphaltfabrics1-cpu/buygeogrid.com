@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tensar InterAx NXL Geogrid Northern Ohio | Cleveland Akron Large Roll Format',
-  description: 'Buy Tensar InterAx NXL Geogrid in Northern Ohio. Large roll format for efficient installation on big projects. Serving Cleveland, Akron, Toledo. Free DCP testing. Call (440) 368-1420.',
+  title: 'Tensar NXL Geogrid Ohio | Large Roll',
+  description: 'Tensar InterAx NXL Geogrid Ohio. Large roll format for big projects. Free DCP testing. Cleveland, Akron.',
   keywords: ['Tensar NXL Ohio', 'InterAx NXL Cleveland', 'large roll Geogrid Northern Ohio', 'Tensar NXL Akron', 'efficient Geogrid installation Ohio'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrid/nxl',
+  },
   openGraph: {
-    title: 'Tensar InterAx NXL Geogrid | Northern Ohio Large Roll Format',
-    description: 'Buy Tensar NXL for efficient large-scale projects. Northern Ohio distributor.',
+    title: 'Tensar NXL Geogrid Ohio | Large Roll',
+    description: 'Tensar NXL for large-scale projects. Ohio distributor.',
     images: ['/images/products/solution-interax.png'],
   },
 };

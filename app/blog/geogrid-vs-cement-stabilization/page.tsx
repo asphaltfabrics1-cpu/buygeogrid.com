@@ -5,12 +5,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Geogrid vs Cement Stabilization: Which Is Better? | BuyGeogrid Ohio',
-  description: 'Compare Geogrid vs cement stabilization for soil reinforcement. Learn the pros, cons, cost, and best applications for each method from Ohio experts.',
+  title: 'Geogrid vs Cement Stabilization | Ohio',
+  description: 'Compare Geogrid vs cement stabilization. Pros, cons, cost & best applications. Ohio expert guide.',
   keywords: ['Geogrid vs cement', 'soil stabilization comparison', 'cement stabilization', 'Tensar Geogrid benefits', 'Ohio soil stabilization'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/blog/geogrid-vs-cement-stabilization',
+  },
   openGraph: {
-    title: 'Geogrid vs Cement Stabilization | Expert Comparison Ohio',
-    description: 'Compare Geogrid vs cement stabilization. Expert analysis from Northern Ohio\'s Tensar distributor.',
+    title: 'Geogrid vs Cement Stabilization | Ohio',
+    description: 'Compare Geogrid vs cement stabilization. Expert analysis from Ohio distributor.',
     type: 'article',
     publishedTime: '2025-06-16',
     authors: ['Asphalt Fabrics & Supply'],

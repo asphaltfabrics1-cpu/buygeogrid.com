@@ -5,12 +5,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Top 5 Uses for Tensar Geogrid in Residential Projects | BuyGeogrid Ohio',
-  description: 'Discover the top 5 residential applications for Tensar Geogrid including driveways, retaining walls, patios, walkways, and foundations. Expert guide from Ohio.',
+  title: 'Top 5 Geogrid Uses in Residential | Ohio',
+  description: 'Top 5 residential Geogrid uses: driveways, retaining walls, patios, walkways, foundations. Ohio guide.',
   keywords: ['Tensar Geogrid', 'residential Geogrid Ohio', 'driveway reinforcement Northern Ohio', 'retaining wall support Cleveland', 'Tensar residential applications'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/blog/geogrid-in-residential',
+  },
   openGraph: {
-    title: 'Top 5 Tensar Geogrid Uses in Residential Projects | Ohio',
-    description: 'Top 5 residential applications for Tensar Geogrid. Expert guide from Northern Ohio distributor.',
+    title: 'Top 5 Geogrid Uses in Residential | Ohio',
+    description: 'Top 5 residential Geogrid applications. Expert guide from Ohio distributor.',
     type: 'article',
     publishedTime: '2025-06-30',
     authors: ['Asphalt Fabrics & Supply'],

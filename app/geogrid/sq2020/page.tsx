@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'SQ2020 Economy Geogrid Northern Ohio | Cleveland Akron Budget-Friendly',
-  description: 'Buy SQ2020 economy geogrid in Northern Ohio. Budget-friendly for light-duty applications. Serving Cleveland, Akron, Toledo. Free DCP testing. Call (440) 368-1420.',
+  title: 'SQ2020 Economy Geogrid Ohio | Budget',
+  description: 'SQ2020 economy Geogrid Ohio. Budget-friendly for light-duty applications. Free DCP testing. Cleveland.',
   keywords: ['SQ2020 Geogrid Ohio', 'economy Geogrid Cleveland', 'budget Geogrid Northern Ohio', 'cheap Geogrid Akron', 'light-duty Geogrid Ohio'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrid/sq2020',
+  },
   openGraph: {
-    title: 'SQ2020 Economy Geogrid | Northern Ohio Budget Solution',
-    description: 'Buy SQ2020 for budget-friendly light-duty applications. Northern Ohio distributor.',
+    title: 'SQ2020 Economy Geogrid Ohio | Budget',
+    description: 'SQ2020 for budget-friendly light-duty applications. Ohio distributor.',
     images: ['/images/products/solution-biaxial.png'],
   },
 };

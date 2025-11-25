@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tensar InterAx NX650 Geogrid Northern Ohio | Cleveland Akron Walkways Patios',
-  description: 'Buy Tensar InterAx NX650 Geogrid in Northern Ohio. Light-duty base for driveways, walkways, patios. Serving Cleveland, Akron, Toledo. Free DCP testing. Call (440) 368-1420.',
+  title: 'Tensar NX650 Geogrid Ohio | InterAx',
+  description: 'Tensar InterAx NX650 Geogrid Ohio. Light-duty for driveways, walkways, patios. Free DCP testing. Cleveland.',
   keywords: ['Tensar NX650 Ohio', 'InterAx NX650 Cleveland', 'NX650 driveway Ohio', 'Tensar NX650 Akron', 'patio Geogrid Northern Ohio', 'walkway reinforcement Cleveland'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrid/nx650',
+  },
   openGraph: {
-    title: 'Tensar InterAx NX650 Geogrid | Northern Ohio Driveways & Patios',
-    description: 'Buy Tensar NX650 for residential driveways and patios. Northern Ohio distributor.',
+    title: 'Tensar NX650 Geogrid Ohio | InterAx',
+    description: 'Tensar NX650 for driveways and patios. Ohio distributor.',
     images: ['/images/products/solution-interax.png'],
   },
 };

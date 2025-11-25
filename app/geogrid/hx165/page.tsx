@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tensar H-Series HX165 Geogrid Northern Ohio | Cleveland Akron Retaining Walls MSE',
-  description: 'Buy Tensar HX165 geogrid in Northern Ohio. High-strength for tall retaining walls and MSE structures. Serving Cleveland, Akron, Toledo. Free DCP testing. Call (440) 368-1420.',
+  title: 'Tensar HX165 Geogrid Ohio | Retaining Walls',
+  description: 'Tensar HX165 Geogrid Ohio. High-strength for retaining walls & MSE structures. Free DCP testing. Cleveland.',
   keywords: ['Tensar HX165 Ohio', 'H-Series HX165 Cleveland', 'retaining wall Geogrid Northern Ohio', 'MSE wall geogrid Akron', 'Tensar retaining wall Ohio', 'uniaxial Geogrid Cleveland'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrid/hx165',
+  },
   openGraph: {
-    title: 'Tensar H-Series HX165 Geogrid | Northern Ohio Retaining Walls',
-    description: 'Buy Tensar HX165 for retaining walls and MSE structures. Northern Ohio distributor.',
+    title: 'Tensar HX165 Geogrid Ohio | Retaining Walls',
+    description: 'Tensar HX165 for retaining walls and MSE structures. Ohio distributor.',
     images: ['/images/products/solution-biaxial.png'],
   },
 };

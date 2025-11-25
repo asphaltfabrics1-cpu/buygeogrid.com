@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tensar InterAx NX850 Geogrid Northern Ohio | Cleveland Akron Toledo Distributor',
-  description: 'Buy Tensar InterAx NX850 Geogrid in Northern Ohio. Authorized distributor serving Cleveland, Akron, Toledo, Youngstown. Heavy-duty base reinforcement for roads, parking lots. Free DCP testing. Competitive pricing. Call (440) 368-1420.',
+  title: 'Tensar NX850 Geogrid Ohio | InterAx',
+  description: 'Tensar InterAx NX850 Geogrid Ohio. Heavy-duty base reinforcement. Free DCP testing. Cleveland, Akron, Toledo.',
   keywords: ['Tensar NX850 Ohio', 'InterAx NX850 Cleveland', 'NX850 Geogrid Northern Ohio', 'Tensar NX850 Akron', 'NX850 Toledo', 'buy Tensar Geogrid Ohio', 'NX850 distributor Cleveland', 'Tensar NX850 Youngstown', 'heavy-duty Geogrid Northern Ohio'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrid/nx850',
+  },
   openGraph: {
-    title: 'Tensar InterAx NX850 Geogrid | Northern Ohio Distributor',
-    description: 'Buy Tensar NX850 in Northern Ohio. Free DCP testing. Serving Cleveland, Akron, Toledo.',
+    title: 'Tensar NX850 Geogrid Ohio | InterAx',
+    description: 'Tensar NX850 in Ohio. Free DCP testing. Cleveland, Akron, Toledo.',
     images: ['/images/products/solution-interax.png'],
   },
 };

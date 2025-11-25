@@ -5,12 +5,15 @@ import GalleryGrid from '@/components/GalleryGrid';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Project Gallery | Tensar Geogrid Installations in Ohio | BuyGeogrid.com',
-  description: 'View completed Geogrid and geotextile installations across Northern Ohio. Real projects from Cleveland, Akron, Toledo featuring Tensar Geogrids and Solmax Mirafi fabrics.',
+  title: 'Project Gallery | Geogrid Installations Ohio',
+  description: 'Geogrid & geotextile installations across Ohio. Real projects from Cleveland, Akron, Toledo.',
   keywords: ['Geogrid installation photos', 'Tensar projects Ohio', 'Geogrid before after', 'Cleveland Geogrid projects', 'Akron installations'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/gallery',
+  },
   openGraph: {
-    title: 'Project Gallery | Real Geogrid Installations in Ohio',
-    description: 'See real Tensar Geogrid and geotextile projects completed across Northern Ohio.',
+    title: 'Project Gallery | Geogrid Installations Ohio',
+    description: 'Real Tensar Geogrid and geotextile projects across Northern Ohio.',
     images: ['/images/logos/afsupplylogo_transparent.png'],
   },
 };

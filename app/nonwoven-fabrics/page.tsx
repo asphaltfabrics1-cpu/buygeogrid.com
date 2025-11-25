@@ -6,12 +6,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Solmax Mirafi Nonwoven Geotextile Fabrics Ohio | 135N, 180N | Drainage',
-  description: 'Authorized Solmax Mirafi nonwoven fabric distributor in Ohio. Mirafi 135N, 140N, 180N for drainage and filtration. Expert civil engineering solutions in Cleveland and Akron area.',
+  title: 'Nonwoven Geotextile Ohio | Mirafi 135N 180N',
+  description: 'Solmax Mirafi nonwoven fabric Ohio. 135N, 140N, 180N for drainage & filtration. Cleveland, Akron distributor.',
   keywords: ['Solmax Mirafi nonwoven', 'drainage fabric Ohio', 'Mirafi 135N', 'Mirafi 180N', 'filtration geotextile', 'Cleveland drainage fabric', 'Ohio civil fabrics'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/nonwoven-fabrics',
+  },
   openGraph: {
-    title: 'Solmax Mirafi Nonwoven Fabrics Ohio | Drainage & Filtration',
-    description: 'Premium nonwoven geotextiles for drainage and filtration applications in Ohio.',
+    title: 'Nonwoven Geotextile Ohio | Mirafi 135N 180N',
+    description: 'Nonwoven geotextiles for drainage and filtration in Ohio.',
   }
 };
 

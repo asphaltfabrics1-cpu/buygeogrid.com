@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mirafi 140N Nonwoven Geotextile Ohio | Medium-Duty Drainage Fabric',
-  description: 'Mirafi 140N nonwoven geotextile available in Ohio. Medium-duty drainage and filtration fabric. Serving Cleveland and Akron. Download spec sheet.',
+  title: 'Mirafi 140N Nonwoven Geotextile Ohio',
+  description: 'Mirafi 140N nonwoven geotextile Ohio. Medium-duty drainage & filtration fabric. Cleveland, Akron.',
   keywords: ['Mirafi 140N', 'nonwoven geotextile', 'drainage fabric', 'geotextile Ohio', 'Cleveland', 'Akron'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/140n',
+  },
   openGraph: {
-    title: 'Mirafi 140N Nonwoven Geotextile | Medium-Duty Ohio',
-    description: 'Medium-duty drainage and filtration fabric. Northern Ohio distributor.',
+    title: 'Mirafi 140N Nonwoven Geotextile Ohio',
+    description: 'Medium-duty drainage and filtration fabric. Ohio distributor.',
     images: ['/images/products/mirafi-180n.jpeg'],
   },
 };

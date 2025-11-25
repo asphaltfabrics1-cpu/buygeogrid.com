@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mirafi 600X Woven Geotextile Ohio | Heavy-Duty Fabric',
-  description: 'Mirafi 600X woven geotextile available in Ohio. Heavy-duty fabric for demanding applications. Serving Cleveland and Akron. Download spec sheet.',
+  title: 'Mirafi 600X Woven Geotextile Ohio | Heavy-Duty',
+  description: 'Mirafi 600X woven geotextile Ohio. Heavy-duty fabric for demanding applications. Cleveland, Akron.',
   keywords: ['Mirafi 600X', 'woven geotextile', 'geotextile Ohio', 'heavy-duty fabric', 'Cleveland', 'Akron'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/600x',
+  },
   openGraph: {
-    title: 'Mirafi 600X Woven Geotextile | Heavy-Duty Ohio',
-    description: 'Heavy-duty woven fabric for demanding applications. Northern Ohio distributor.',
+    title: 'Mirafi 600X Woven Geotextile Ohio | Heavy-Duty',
+    description: 'Heavy-duty woven fabric for demanding applications. Ohio distributor.',
     images: ['/images/products/mirafi-600x.jpeg'],
   },
 };

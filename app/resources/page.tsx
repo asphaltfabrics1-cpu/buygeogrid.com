@@ -5,12 +5,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Resources | Geogrid & Geotextile Information | BuyGeogrid.com',
-  description: 'Access our comprehensive resources including FAQ, blog articles, project gallery, and technical information about geogrids, geotextiles, and civil engineering solutions in Ohio.',
+  title: 'Resources | Geogrid & Geotextile Info Ohio',
+  description: 'Geogrid & geotextile resources. FAQ, blog, gallery, technical info for Ohio civil engineering.',
   keywords: ['geogrid resources', 'geotextile information', 'civil engineering resources', 'geogrid FAQ', 'geotextile blog', 'project gallery', 'Ohio geogrid information'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/resources',
+  },
   openGraph: {
-    title: 'Resources | Geogrid & Geotextile Information',
-    description: 'Access FAQ, blog articles, project gallery, and technical information about geogrids and geotextiles.',
+    title: 'Resources | Geogrid & Geotextile Info',
+    description: 'FAQ, blog, gallery, and technical information about geogrids and geotextiles.',
   },
 };
 

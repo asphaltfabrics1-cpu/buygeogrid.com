@@ -4,12 +4,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tensar Geogrids Ohio | TriAx, Biaxial, Uniaxial | Northern Ohio Distributor',
-  description: 'Shop premium Tensar geogrids for soil stabilization, base reinforcement, and retaining wall support in Northern Ohio. Serving Cleveland, Akron, Toledo, Youngstown. Expert design support, free DCP testing, and competitive pricing. Call (440) 368-1420.',
+  title: 'Tensar Geogrids Ohio | TriAx & Biaxial',
+  description: 'Tensar geogrids for soil stabilization in Ohio. TriAx, Biaxial, Uniaxial. Free DCP testing. Cleveland, Akron, Toledo.',
   keywords: ['Tensar Geogrids Ohio', 'TriAx Geogrid Cleveland', 'Biaxial Geogrid Akron', 'Uniaxial Geogrid Toledo', 'soil stabilization Northern Ohio', 'base reinforcement Ohio', 'retaining wall Geogrid Cleveland', 'Geogrid distributor Ohio'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrids',
+  },
   openGraph: {
-    title: 'Tensar Geogrids Ohio | Northern Ohio Authorized Distributor',
-    description: 'Premium Tensar geogrids for soil stabilization and base reinforcement in Northern Ohio. Free DCP testing and expert support.',
+    title: 'Tensar Geogrids Ohio | TriAx & Biaxial',
+    description: 'Tensar geogrids for soil stabilization in Ohio. Free DCP testing. Cleveland, Akron, Toledo.',
     images: ['/images/logos/afsupplylogo_transparent.png'],
   },
 };

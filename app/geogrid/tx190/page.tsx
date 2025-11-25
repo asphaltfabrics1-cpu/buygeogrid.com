@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tensar TriAx TX190L Geogrid Northern Ohio | Cleveland Akron Heavy Traffic Roads',
-  description: 'Buy Tensar TriAx TX190L Geogrid in Northern Ohio. Advanced triangular aperture for roads, highways, heavy traffic. Serving Cleveland, Akron, Toledo. Free DCP testing. Call (440) 368-1420.',
+  title: 'Tensar TX190L Geogrid Ohio | TriAx',
+  description: 'Tensar TriAx TX190L Geogrid Ohio. Roads, highways, heavy traffic. Free DCP testing. Cleveland, Akron.',
   keywords: ['Tensar TX190L Ohio', 'TriAx TX190L Cleveland', 'TX190 Geogrid Northern Ohio', 'Tensar TriAx Akron', 'heavy traffic Geogrid Ohio', 'triangular aperture Geogrid Cleveland'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrid/tx190',
+  },
   openGraph: {
-    title: 'Tensar TriAx TX190L Geogrid | Northern Ohio Roads & Highways',
-    description: 'Buy Tensar TX190L for roads and heavy traffic areas. Northern Ohio distributor.',
+    title: 'Tensar TX190L Geogrid Ohio | TriAx',
+    description: 'Tensar TX190L for roads and heavy traffic. Ohio distributor.',
     images: ['/images/products/solution-triax.png'],
   },
 };

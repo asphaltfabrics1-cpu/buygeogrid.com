@@ -5,8 +5,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Free Lunch & Learn Sessions | Geogrid Training with PDH Credits | Ohio',
-  description: 'Schedule a free lunch and learn session on Tensar geogrids and geotextiles. We provide lunch, expert training, and PDH credits for engineers in Cleveland, Akron, Columbus, and throughout Ohio.',
+  title: 'Free Lunch & Learn | Geogrid Training Ohio',
+  description: 'Free lunch & learn sessions on geogrids. PDH credits for engineers. Cleveland, Akron, Columbus.',
   keywords: [
     'free lunch and learn Ohio',
     'geogrid training',
@@ -19,9 +19,12 @@ export const metadata: Metadata = {
     'professional development hours',
     'Ohio civil engineering PDH'
   ],
+  alternates: {
+    canonical: 'https://buygeogrid.com/lunch-and-learn',
+  },
   openGraph: {
-    title: 'Free Lunch & Learn Sessions | Geogrid Training with PDH Credits',
-    description: 'Free lunch, expert training on geogrids and geotextiles, plus PDH credits for engineers in Ohio.',
+    title: 'Free Lunch & Learn | Geogrid Training Ohio',
+    description: 'Free lunch, expert training on geogrids, plus PDH credits for engineers.',
     images: ['/images/lunch-and-learn/lunch-and-learn-hero.jpg'],
   },
 };

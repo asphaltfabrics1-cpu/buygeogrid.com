@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Petrotac 1.5ft Roll Paving Interlayer Ohio | Wider Crack Prevention',
-  description: 'Petrotac 1.5ft roll paving interlayer available in Ohio. Wider format could help prevent reflective cracking in asphalt overlays. Serving Cleveland and Akron. Download spec sheet.',
+  title: 'Petrotac 1.5ft Roll Ohio | Paving Interlayer',
+  description: 'Petrotac 1.5ft roll paving interlayer Ohio. Wider crack prevention for asphalt. Cleveland, Akron.',
   keywords: ['Petrotac', 'paving interlayer', 'crack prevention', 'asphalt overlay', 'Cleveland', 'Akron'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/petrotac-15ft',
+  },
   openGraph: {
-    title: 'Petrotac 1.5ft Roll Paving Interlayer | Ohio',
-    description: 'Wider format could help prevent reflective cracking in asphalt overlays. Northern Ohio distributor.',
+    title: 'Petrotac 1.5ft Roll Ohio | Paving Interlayer',
+    description: 'Wider crack prevention for asphalt overlays. Ohio distributor.',
     images: ['/images/products/petrotac.jpg'],
   },
 };

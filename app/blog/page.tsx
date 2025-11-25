@@ -5,12 +5,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Geogrid & Geotextile Blog Ohio | Soil Stabilization Tips | Construction Insights',
-  description: 'Expert articles on Tensar geogrids, Solmax fabrics, and soil stabilization for Ohio construction projects. Real-world tips from Ohio civil engineering experts.',
+  title: 'Blog | Geogrid & Soil Stabilization Tips',
+  description: 'Expert geogrid & soil stabilization articles. Tensar, Solmax tips for Ohio construction. Real-world insights.',
   keywords: ['Geogrid blog', 'soil stabilization tips', 'construction Ohio', 'Tensar articles', 'civil engineering blog'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/blog',
+  },
   openGraph: {
-    title: 'Blog - Build Smarter from the Ground Up | Ohio',
-    description: 'Expert insights on Geogrids, geotextiles, and construction best practices.',
+    title: 'Blog | Geogrid & Soil Stabilization Tips',
+    description: 'Expert insights on geogrids, geotextiles, and construction best practices.',
   }
 };
 

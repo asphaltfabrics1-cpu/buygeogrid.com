@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'BX1200 Biaxial Geogrid Northern Ohio | Cleveland Akron Cost-Effective Base',
-  description: 'Buy BX1200 biaxial Geogrid in Northern Ohio. Cost-effective base reinforcement for roads, parking lots. Serving Cleveland, Akron, Toledo. Free DCP testing. Call (440) 368-1420.',
+  title: 'BX1200 Biaxial Geogrid Ohio | Cost-Effective',
+  description: 'BX1200 biaxial Geogrid Ohio. Cost-effective base reinforcement for roads, parking lots. Free DCP testing.',
   keywords: ['BX1200 Geogrid Ohio', 'biaxial Geogrid Cleveland', 'BX1200 Northern Ohio', 'cost-effective Geogrid Akron', 'budget Geogrid Ohio'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrid/bx1200',
+  },
   openGraph: {
-    title: 'BX1200 Biaxial Geogrid | Northern Ohio Cost-Effective Solution',
-    description: 'Buy BX1200 for roads and parking lots. Northern Ohio distributor.',
+    title: 'BX1200 Biaxial Geogrid Ohio',
+    description: 'BX1200 for roads and parking lots. Ohio distributor.',
     images: ['/images/products/solution-biaxial.png'],
   },
 };

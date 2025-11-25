@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mirafi 500X Woven Geotextile Ohio | High-Strength Fabric',
-  description: 'Mirafi 500X woven geotextile available in Ohio. High-strength fabric for separation and stabilization. Serving Cleveland and Akron. Download spec sheet.',
+  title: 'Mirafi 500X Woven Geotextile Ohio',
+  description: 'Mirafi 500X woven geotextile Ohio. High-strength fabric for separation & stabilization. Cleveland, Akron.',
   keywords: ['Mirafi 500X', 'woven geotextile', 'geotextile Ohio', 'separation fabric', 'Cleveland', 'Akron'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/500x',
+  },
   openGraph: {
-    title: 'Mirafi 500X Woven Geotextile | Ohio Distributor',
-    description: 'High-strength woven fabric for separation and stabilization. Northern Ohio distributor.',
+    title: 'Mirafi 500X Woven Geotextile Ohio',
+    description: 'High-strength woven fabric for separation and stabilization. Ohio distributor.',
     images: ['/images/products/mirafi-500x.jpeg'],
   },
 };

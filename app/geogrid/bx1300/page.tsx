@@ -7,12 +7,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'BX1300 Biaxial Geogrid Ohio | Heavy-Duty Base Reinforcement',
-  description: 'BX1300 biaxial Geogrid available in Ohio. Heavy-duty base reinforcement for roads and industrial applications. Free DCP testing in Cleveland and Akron. Download spec sheet.',
+  title: 'BX1300 Biaxial Geogrid Ohio | Heavy-Duty',
+  description: 'BX1300 biaxial Geogrid Ohio. Heavy-duty base reinforcement for roads & industrial. Free DCP testing.',
   keywords: ['BX1300 geogrid', 'biaxial Geogrid', 'Geogrid Ohio', 'heavy-duty Geogrid', 'Cleveland', 'Akron'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/geogrid/bx1300',
+  },
   openGraph: {
-    title: 'BX1300 Biaxial Geogrid | Heavy-Duty Ohio',
-    description: 'Heavy-duty base reinforcement for roads and industrial applications. Northern Ohio distributor.',
+    title: 'BX1300 Biaxial Geogrid Ohio | Heavy-Duty',
+    description: 'Heavy-duty base reinforcement for roads and industrial. Ohio distributor.',
     images: ['/images/products/solution-biax.png'],
   },
 };

@@ -5,12 +5,15 @@ import ContactForm from '@/components/ContactForm';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Tensar & Solmax Distributor Ohio | Solon | (440) 368-1420',
-  description: 'Contact Asphalt Fabrics & Supply in Solon, Ohio for Tensar geogrids and Solmax Mirafi fabrics. Serving Cleveland, Akron, Toledo, Youngstown, and Ohio. Free DCP testing and expert consultation. Call (440) 368-1420.',
+  title: 'Contact Us | Geogrid Ohio | (440) 368-1420',
+  description: 'Contact AF Supply for Tensar geogrids & Solmax fabrics in Ohio. Free DCP testing. Cleveland, Akron, Toledo. Call (440) 368-1420.',
   keywords: ['Geogrid distributor Ohio', 'Tensar supplier Cleveland', 'Solmax distributor Akron', 'Solon Ohio', 'Ohio civil engineering', 'DCP testing Ohio'],
+  alternates: {
+    canonical: 'https://buygeogrid.com/contact',
+  },
   openGraph: {
-    title: 'Contact Us | Ohio Geogrid & Geotextile Distributor',
-    description: 'Serving Cleveland, Akron, Toledo, Youngstown, and all of Ohio with Tensar and Solmax products.',
+    title: 'Contact Us | Geogrid Ohio',
+    description: 'Contact AF Supply for Tensar geogrids & Solmax fabrics. Free DCP testing. Cleveland, Akron, Toledo.',
   }
 };
 
