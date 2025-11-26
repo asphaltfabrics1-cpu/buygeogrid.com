@@ -164,6 +164,32 @@ export default function Geogrid() {
             </p>
           </div>
         </section>
+
+        {/* Serving Northern Ohio Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Serving Northern Ohio</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              We stock Tensar Geogrids at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours.
+            </p>
+          </div>
+        </section>
+
+        {/* Lunch & Learn CTA Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Want to Learn More?</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Schedule a free Lunch & Learn for your team. We provide expert training on Tensar Geogrids—plus free lunch and PDH credits for engineers.
+            </p>
+            <Link
+              href="/lunch-and-learn"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
+            >
+              Schedule a Lunch & Learn
+            </Link>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
