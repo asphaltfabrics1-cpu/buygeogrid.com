@@ -7,14 +7,15 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Nonwoven Geotextile Ohio | Mirafi 135N 180N',
-  description: 'Solmax Mirafi nonwoven fabric Ohio. 135N, 140N, 180N for drainage & filtration. Cleveland, Akron distributor.',
+  description: 'Solmax Mirafi nonwoven geotextile distributor in Northern Ohio. 135N, 140N, 180N for drainage, filtration & separation. Superior water flow. Cleveland, Akron, Toledo.',
   keywords: ['Solmax Mirafi nonwoven', 'drainage fabric Ohio', 'Mirafi 135N', 'Mirafi 180N', 'filtration geotextile', 'Cleveland drainage fabric', 'Ohio civil fabrics'],
   alternates: {
     canonical: 'https://buygeogrid.com/nonwoven-fabrics',
   },
   openGraph: {
     title: 'Nonwoven Geotextile Ohio | Mirafi 135N 180N',
-    description: 'Nonwoven geotextiles for drainage and filtration in Ohio.',
+    description: 'Solmax Mirafi nonwoven geotextile distributor in Northern Ohio. 135N, 140N, 180N for drainage, filtration & separation. Superior water flow. Cleveland, Akron, Toledo.',
+    images: ['/images/products/mirafi-135n.jpg'],
   }
 };
 
@@ -56,6 +57,7 @@ export default function NonwovenFabrics() {
         {/* Products Grid */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Browse Nonwoven Geotextile Products</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {products.map((product, index) => (
                 <ProductCard

@@ -7,8 +7,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mirafi 180N Nonwoven Geotextile Ohio | Heavy-Duty',
-  description: 'Mirafi 180N nonwoven geotextile Ohio. Heavy-duty drainage & filtration fabric. Cleveland, Akron.',
+  title: 'Mirafi 180N Nonwoven Geotextile Ohio',
+  description: 'Mirafi 180N heavy-duty nonwoven geotextile for drainage & filtration. Maximum flow capacity, superior puncture resistance. Cleveland, Akron, Toledo, Youngstown.',
   keywords: ['Mirafi 180N', 'nonwoven geotextile', 'drainage fabric', 'heavy-duty fabric', 'Cleveland', 'Akron'],
   alternates: {
     canonical: 'https://buygeogrid.com/180n',

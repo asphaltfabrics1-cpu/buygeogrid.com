@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tensar NX850 Geogrid Ohio | InterAx',
-  description: 'Tensar InterAx NX850 Geogrid Ohio. Heavy-duty base reinforcement. Free DCP testing. Cleveland, Akron, Toledo.',
+  description: 'Tensar InterAx NX850 heavy-duty Geogrid for roads, parking lots & industrial sites. Reduces aggregate up to 40%. Free DCP testing. Cleveland, Akron, Toledo distributor.',
   keywords: ['Tensar NX850 Ohio', 'InterAx NX850 Cleveland', 'NX850 Geogrid Northern Ohio', 'Tensar NX850 Akron', 'NX850 Toledo', 'buy Tensar Geogrid Ohio', 'NX850 distributor Cleveland', 'Tensar NX850 Youngstown', 'heavy-duty Geogrid Northern Ohio'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/nx850',

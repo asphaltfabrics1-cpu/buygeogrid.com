@@ -7,14 +7,15 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Woven Geotextile Ohio | Mirafi 500X 600X',
-  description: 'Solmax Mirafi woven geotextile Ohio. 500X, 600X for soil stabilization. Cleveland, Akron distributor.',
+  description: 'Solmax Mirafi woven geotextile distributor in Northern Ohio. 500X, 600X for soil stabilization, separation & reinforcement. High tensile strength. Cleveland, Akron, Toledo.',
   keywords: ['Solmax Mirafi Ohio', 'woven geotextile', 'Mirafi 500X', 'Mirafi 600X', 'civil fabrics Ohio', 'soil separation fabric', 'Cleveland geotextile', 'Ohio'],
   alternates: {
     canonical: 'https://buygeogrid.com/woven-fabrics',
   },
   openGraph: {
     title: 'Woven Geotextile Ohio | Mirafi 500X 600X',
-    description: 'Solmax Mirafi woven geotextiles for civil engineering in Ohio.',
+    description: 'Solmax Mirafi woven geotextile distributor in Northern Ohio. 500X, 600X for soil stabilization, separation & reinforcement. High tensile strength. Cleveland, Akron, Toledo.',
+    images: ['/images/products/mirafi-500x.jpeg'],
   }
 };
 
@@ -51,6 +52,7 @@ export default function WovenFabrics() {
         {/* Products Grid */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Browse Woven Geotextile Products</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {products.map((product, index) => (
                 <ProductCard

@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tensar NXL Geogrid Ohio | Large Roll',
-  description: 'Tensar InterAx NXL Geogrid Ohio. Large roll format for big projects. Free DCP testing. Cleveland, Akron.',
+  description: 'Tensar InterAx NXL Geogrid in large roll format for highways, DOT projects & major construction. Faster installation, less seams. Free DCP testing. Cleveland, Akron, Toledo.',
   keywords: ['Tensar NXL Ohio', 'InterAx NXL Cleveland', 'large roll Geogrid Northern Ohio', 'Tensar NXL Akron', 'efficient Geogrid installation Ohio'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/nxl',

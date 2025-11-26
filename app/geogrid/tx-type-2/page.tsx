@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tensar TX Type 2 Geogrid Ohio | TriAx',
-  description: 'Tensar TriAx TX Type 2 Geogrid Ohio. Heavy-duty for airports, ports, industrial. Free DCP testing.',
+  description: 'Tensar TriAx TX Type 2 heavy-duty Geogrid for airports, ports & industrial paving. Maximum load capacity. Free DCP testing. Cleveland, Akron, Toledo distributor.',
   keywords: ['Tensar TX Type 2 Ohio', 'TriAx Type 2 Cleveland', 'airport Geogrid Northern Ohio', 'industrial paving Geogrid Akron', 'heavy-duty TriAx Ohio', 'port Geogrid Cleveland'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/tx-type-2',

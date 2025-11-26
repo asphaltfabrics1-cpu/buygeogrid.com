@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   description: 'Northern Ohio\'s authorized Tensar & Solmax Mirafi distributor. Free DCP testing, soil stabilization expertise. Cleveland, Akron, Toledo, Youngstown.',
   keywords: ['Cleveland Geogrid', 'Geogrid Cleveland', 'Northern Ohio Geogrid', 'Geogrid Ohio', 'Ohio Geogrid', 'Tensar Geogrids Cleveland', 'Tensar Geogrids', 'Akron Geogrid', 'Toledo Geogrid', 'Youngstown Geogrid', 'Geogrid distributor Ohio', 'Solmax Mirafi Ohio', 'Geotextile fabrics', 'soil stabilization', 'civil engineering fabrics', 'pavement reinforcement', 'InterAx Geogrid', 'TriAx Geogrid', 'Biaxial Geogrid', 'woven Geotextile', 'Solon Ohio Geogrid', 'DCP testing Ohio', 'Geogrid supplier Cleveland', 'Geosynthetics distributor', 'Buy Geogrid Ohio', 'BuyGeogrid'],
   authors: [{ name: 'Asphalt Fabrics & Supply' }],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

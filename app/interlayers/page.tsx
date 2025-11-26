@@ -7,14 +7,15 @@ import type { Metadata} from 'next';
 
 export const metadata: Metadata = {
   title: 'Petrotac Interlayers Ohio | Paving Fabric',
-  description: 'Petrotac paving interlayers Ohio. Prevent reflective cracking, extend pavement life. Cleveland, Akron.',
+  description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Prevent reflective cracking, extend pavement life with moisture barrier technology. Cleveland, Akron, Toledo.',
   keywords: ['Propex Petrotac Ohio', 'paving interlayer', 'pavement fabric', 'crack prevention', 'Cleveland paving', 'Ohio asphalt'],
   alternates: {
     canonical: 'https://buygeogrid.com/interlayers',
   },
   openGraph: {
     title: 'Petrotac Interlayers Ohio | Paving Fabric',
-    description: 'Premium paving interlayers for crack mitigation in Ohio.',
+    description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Prevent reflective cracking, extend pavement life with moisture barrier technology. Cleveland, Akron, Toledo.',
+    images: ['/images/products/petrotac.jpg'],
   }
 };
 
@@ -51,6 +52,7 @@ export default function Interlayers() {
         {/* Products Grid */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Browse Paving Interlayer Products</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {products.map((product, index) => (
                 <ProductCard

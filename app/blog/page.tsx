@@ -6,14 +6,15 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blog | Geogrid & Soil Stabilization Tips',
-  description: 'Expert geogrid & soil stabilization articles. Tensar, Solmax tips for Ohio construction. Real-world insights.',
+  description: 'Expert geogrid and soil stabilization articles from Northern Ohio\'s trusted distributor. Tensar, Solmax tips, real-world construction insights for Cleveland, Akron contractors.',
   keywords: ['Geogrid blog', 'soil stabilization tips', 'construction Ohio', 'Tensar articles', 'civil engineering blog'],
   alternates: {
     canonical: 'https://buygeogrid.com/blog',
   },
   openGraph: {
     title: 'Blog | Geogrid & Soil Stabilization Tips',
-    description: 'Expert insights on geogrids, geotextiles, and construction best practices.',
+    description: 'Expert geogrid and soil stabilization articles from Northern Ohio\'s trusted distributor. Tensar, Solmax tips, real-world construction insights for Cleveland, Akron contractors.',
+    images: ['/images/tensar-geogrid-blog-northern-ohio.jpg'],
   }
 };
 

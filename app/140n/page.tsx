@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Mirafi 140N Nonwoven Geotextile Ohio',
-  description: 'Mirafi 140N nonwoven geotextile Ohio. Medium-duty drainage & filtration fabric. Cleveland, Akron.',
+  description: 'Solmax Mirafi 140N medium-duty nonwoven geotextile for drainage & filtration. Balanced performance and value for most applications. Cleveland, Akron, Toledo distributor.',
   keywords: ['Mirafi 140N', 'nonwoven geotextile', 'drainage fabric', 'geotextile Ohio', 'Cleveland', 'Akron'],
   alternates: {
     canonical: 'https://buygeogrid.com/140n',

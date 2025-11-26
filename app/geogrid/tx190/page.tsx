@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tensar TX190L Geogrid Ohio | TriAx',
-  description: 'Tensar TriAx TX190L Geogrid Ohio. Roads, highways, heavy traffic. Free DCP testing. Cleveland, Akron.',
+  description: 'Tensar TriAx TX190L Geogrid with triangular apertures for roads, highways & heavy traffic areas. Superior load distribution. Free DCP testing. Cleveland, Akron, Toledo.',
   keywords: ['Tensar TX190L Ohio', 'TriAx TX190L Cleveland', 'TX190 Geogrid Northern Ohio', 'Tensar TriAx Akron', 'heavy traffic Geogrid Ohio', 'triangular aperture Geogrid Cleveland'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/tx190',

@@ -6,14 +6,14 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'What is Geogrid? | How It Works | Ohio',
-  description: 'Learn what Geogrid is, how it works, and when you need it. Expert guide from Ohio distributor.',
+  description: 'Learn what Geogrid is, how it stabilizes soil, and when you need it. Complete guide covering types, applications & benefits from Northern Ohio\'s trusted distributor.',
   keywords: ['what is Geogrid', 'Geogrid explained', 'soil stabilization', 'pavement reinforcement', 'Tensar Ohio', 'Geogrid Northern Ohio'],
   alternates: {
     canonical: 'https://buygeogrid.com/blog/what-is-geogrid',
   },
   openGraph: {
     title: 'What is Geogrid? | How It Works | Ohio',
-    description: 'Learn what Geogrid is, how it works, and when you need it. Expert guide from Ohio distributor.',
+    description: 'Learn what Geogrid is, how it stabilizes soil, and when you need it. Complete guide covering types, applications & benefits from Northern Ohio\'s trusted distributor.',
     type: 'article',
     publishedTime: '2025-06-02',
     authors: ['Asphalt Fabrics & Supply'],

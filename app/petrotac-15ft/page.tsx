@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Petrotac 1.5ft Roll Ohio | Paving Interlayer',
-  description: 'Petrotac 1.5ft roll paving interlayer Ohio. Wider crack prevention for asphalt. Cleveland, Akron.',
+  description: 'Propex Petrotac 1.5ft roll paving interlayer - wider coverage for crack prevention in asphalt overlays. Moisture barrier & stress relief. Cleveland, Akron, Toledo.',
   keywords: ['Petrotac', 'paving interlayer', 'crack prevention', 'asphalt overlay', 'Cleveland', 'Akron'],
   alternates: {
     canonical: 'https://buygeogrid.com/petrotac-15ft',

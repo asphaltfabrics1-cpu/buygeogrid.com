@@ -7,14 +7,15 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tensar Geogrid Products | InterAx TriAx Ohio',
-  description: 'Tensar Geogrid distributor Ohio. InterAx NX850, TriAx TX190, Biaxial. Free DCP testing. Cleveland, Akron.',
+  description: 'Northern Ohio\'s authorized Tensar Geogrid distributor. InterAx NX850, TriAx TX190, Biaxial, H-Series for soil stabilization. Free DCP testing. Cleveland, Akron, Toledo.',
   keywords: ['Tensar Geogrids Ohio', 'InterAx Geogrid', 'TriAx Geogrid', 'Biaxial Geogrid', 'Cleveland Geogrid', 'Akron Geogrid', 'soil stabilization Ohio', 'pavement reinforcement', 'NX850', 'TX190', 'Ohio'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid',
   },
   openGraph: {
     title: 'Tensar Geogrid Products | InterAx TriAx',
-    description: 'Authorized Tensar distributor in Ohio. Full range of geogrids with expert support.',
+    description: 'Northern Ohio\'s authorized Tensar Geogrid distributor. InterAx NX850, TriAx TX190, Biaxial, H-Series for soil stabilization. Free DCP testing. Cleveland, Akron, Toledo.',
+    images: ['/images/products/solution-interax.png'],
   }
 };
 
@@ -96,6 +97,7 @@ export default function Geogrid() {
         {/* Products Grid */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Browse Tensar Geogrid Products</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {products.map((product, index) => (
                 <ProductCard
