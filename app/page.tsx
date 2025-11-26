@@ -144,10 +144,13 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Welcome to BuyGeogrid.com
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
               Your trusted source for premium geosynthetic solutions including Geogrids,
-              geotextiles, and paving interlayers. We serve contractors, engineers, and municipalities
+              Geotextiles, and paving interlayers. We serve contractors, engineers, and municipalities
               throughout Northern Ohio with expert consultation and competitive pricing.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Geogrid is a high-strength polymer mesh that mechanically stabilizes soil and aggregate bases—helping reduce rutting, prevent base failure, and potentially extend pavement life. Geotextiles provide separation, filtration, and drainage for civil projects. Paving interlayers help prevent reflective cracking in asphalt overlays. When placed correctly, these geosynthetics can save you time and money while building a stronger foundation. We help match the right product to your soil conditions and provide free DCP testing so you can see the results for yourself.
             </p>
             <div className="inline-block bg-[#00c97e] text-white px-6 py-3 rounded font-semibold">
               Free DCP Testing Available
@@ -171,6 +174,42 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Why Geogrid Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+              Why Use Geogrid?
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Geogrid is one of the most practical ways to improve base performance without overbuilding. By mechanically stabilizing aggregate, it can allow for reduced stone thickness while maintaining or improving structural capacity. This often translates to less excavation, fewer material deliveries, and shorter project timelines. Geogrid also helps prevent subgrade intrusion—when soft soils migrate into the base layer and weaken it over time. From residential driveways to commercial parking lots and municipal roadways, Geogrid offers a reliable way to build longer-lasting surfaces with fewer callbacks.
+            </p>
+          </div>
+        </section>
+
+        {/* DCP Testing Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+              What Is DCP Testing?
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              A Dynamic Cone Penetrometer (DCP) is a portable tool used to measure soil strength on-site. It works by dropping a weighted hammer onto a steel rod with a cone tip, recording how far the cone penetrates with each blow. The results correlate to California Bearing Ratio (CBR) values, which help determine how much structural support your subgrade can provide. DCP testing gives you real data about your soil conditions—so you can make informed decisions about whether Geogrid is needed and which product is right for your project. We offer free DCP testing throughout Northern Ohio.
+            </p>
+          </div>
+        </section>
+
+        {/* Service Area Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Serving Northern Ohio
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              We stock Tensar Geogrids and Solmax Mirafi Geotextiles at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours. For time-sensitive projects, call us directly and we&apos;ll work to meet your schedule. We also provide on-site DCP soil testing and technical consultations at no charge throughout Northern Ohio.
+            </p>
           </div>
         </section>
 
