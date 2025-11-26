@@ -90,8 +90,44 @@ export default function LunchAndLearn() {
           </div>
         </section>
 
-        {/* Topics Covered Section */}
+        {/* Who Is This For Section */}
         <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 text-center">
+              Who Is This For?
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed text-center">
+              Our Lunch & Learn sessions are designed for engineering firms, civil contractors, municipal public works departments, and project teams who work with pavement, site development, or earthwork. Whether you&apos;re specifying geosynthetics for the first time or looking to stay current on the latest products, we tailor the presentation to your team&apos;s experience level and project needs.
+            </p>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 text-center">
+              How It Works
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed text-center">
+              Scheduling is simple. Contact us with your preferred date, time, and location—we come to your office anywhere in Northern Ohio. Let us know your team size and any specific topics you&apos;d like covered. We handle the rest: ordering lunch, preparing the presentation, and providing PDH documentation for engineers who need continuing education credits.
+            </p>
+          </div>
+        </section>
+
+        {/* Why We Offer This Free Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 text-center">
+              Why We Offer This Free
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed text-center">
+              We believe in building long-term partnerships, not just making sales. When your team understands how geosynthetics work and when to use them, you make better decisions for your projects—and that benefits everyone. Our Lunch & Learn program is an investment in education that pays off through stronger relationships, better project outcomes, and fewer costly mistakes in the field. No sales pitch, just practical knowledge you can apply immediately.
+            </p>
+          </div>
+        </section>
+
+        {/* Topics Covered Section */}
+        <section className="py-16 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">
               Topics We Cover
