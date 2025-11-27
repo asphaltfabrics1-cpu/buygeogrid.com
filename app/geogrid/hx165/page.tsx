@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tensar HX165 Geogrid Ohio | Retaining Walls',
-  description: 'Tensar H-Series HX165 high-strength uniaxial Geogrid for retaining walls & MSE structures. Superior tensile strength for wall reinforcement. Cleveland, Akron, Toledo distributor.',
+  description: 'Tensar H-Series HX165 high-strength uniaxial Geogrid for retaining walls and MSE structures. Superior tensile strength. Cleveland, Akron, Toledo.',
   keywords: ['Tensar HX165 Ohio', 'H-Series HX165 Cleveland', 'retaining wall Geogrid Northern Ohio', 'MSE wall geogrid Akron', 'Tensar retaining wall Ohio', 'uniaxial Geogrid Cleveland'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/hx165',

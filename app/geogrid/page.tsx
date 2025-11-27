@@ -7,14 +7,14 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tensar Geogrid Products | InterAx TriAx Ohio',
-  description: 'Northern Ohio\'s authorized Tensar Geogrid distributor. InterAx NX850, TriAx TX190, Biaxial, H-Series for soil stabilization. Free DCP testing. Cleveland, Akron, Toledo.',
+  description: 'Authorized Tensar Geogrid distributor in Northern Ohio. InterAx, TriAx, Biaxial for soil stabilization. Free DCP testing. Cleveland, Akron, Toledo.',
   keywords: ['Tensar Geogrids Ohio', 'InterAx Geogrid', 'TriAx Geogrid', 'Biaxial Geogrid', 'Cleveland Geogrid', 'Akron Geogrid', 'soil stabilization Ohio', 'pavement reinforcement', 'NX850', 'TX190', 'Ohio'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid',
   },
   openGraph: {
     title: 'Tensar Geogrid Products | InterAx TriAx',
-    description: 'Northern Ohio\'s authorized Tensar Geogrid distributor. InterAx NX850, TriAx TX190, Biaxial, H-Series for soil stabilization. Free DCP testing. Cleveland, Akron, Toledo.',
+    description: 'Authorized Tensar Geogrid distributor in Northern Ohio. InterAx, TriAx, Biaxial for soil stabilization. Free DCP testing. Cleveland, Akron, Toledo.',
     images: ['/images/products/solution-interax.png'],
   }
 };

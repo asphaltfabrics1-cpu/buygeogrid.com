@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'BX1300 Biaxial Geogrid Ohio | Heavy-Duty',
-  description: 'BX1300 heavy-duty biaxial Geogrid for roads, industrial sites & commercial paving. Higher load capacity than BX1200. Free DCP testing. Cleveland, Akron, Toledo distributor.',
+  description: 'BX1300 heavy-duty biaxial Geogrid for roads, industrial sites and commercial paving. Higher load capacity. Free DCP soil testing. Cleveland, Akron.',
   keywords: ['BX1300 geogrid', 'biaxial Geogrid', 'Geogrid Ohio', 'heavy-duty Geogrid', 'Cleveland', 'Akron'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/bx1300',

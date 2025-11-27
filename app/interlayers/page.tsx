@@ -7,14 +7,14 @@ import type { Metadata} from 'next';
 
 export const metadata: Metadata = {
   title: 'Petrotac Interlayers Ohio | Paving Fabric',
-  description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Prevent reflective cracking, extend pavement life with moisture barrier technology. Cleveland, Akron, Toledo.',
+  description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Prevent reflective cracking and extend asphalt pavement life. Cleveland, Akron, Toledo.',
   keywords: ['Propex Petrotac Ohio', 'paving interlayer', 'pavement fabric', 'crack prevention', 'Cleveland paving', 'Ohio asphalt'],
   alternates: {
     canonical: 'https://buygeogrid.com/interlayers',
   },
   openGraph: {
     title: 'Petrotac Interlayers Ohio | Paving Fabric',
-    description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Prevent reflective cracking, extend pavement life with moisture barrier technology. Cleveland, Akron, Toledo.',
+    description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Prevent reflective cracking and extend asphalt pavement life. Cleveland, Akron, Toledo.',
     images: ['/images/products/petrotac.jpg'],
   }
 };

@@ -6,14 +6,14 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'What is Geogrid? | How It Works | Ohio',
-  description: 'Learn what Geogrid is, how it stabilizes soil, and when you need it. Complete guide covering types, applications & benefits from Northern Ohio\'s trusted distributor.',
+  description: 'Learn what Geogrid is, how it stabilizes soil, and when you need it. Complete guide covering types, benefits and applications from Ohio distributor.',
   keywords: ['what is Geogrid', 'Geogrid explained', 'soil stabilization', 'pavement reinforcement', 'Tensar Ohio', 'Geogrid Northern Ohio'],
   alternates: {
     canonical: 'https://buygeogrid.com/blog/what-is-geogrid',
   },
   openGraph: {
     title: 'What is Geogrid? | How It Works | Ohio',
-    description: 'Learn what Geogrid is, how it stabilizes soil, and when you need it. Complete guide covering types, applications & benefits from Northern Ohio\'s trusted distributor.',
+    description: 'Learn what Geogrid is, how it stabilizes soil, and when you need it. Complete guide covering types, benefits and applications from Ohio distributor.',
     type: 'article',
     publishedTime: '2025-06-02',
     authors: ['Asphalt Fabrics & Supply'],
@@ -56,7 +56,10 @@ export default function WhatIsGeogrid() {
                   Geogrid consists of polymer materials manufactured in a grid pattern with open apertures.
                   These materials allow soil, aggregate, or base materials to interlock through the grid.
                   Unlike standard geotextiles, Geogrid specifically reinforces materials and distributes loads
-                  effectively while reducing rutting and settlement.
+                  effectively while reducing rutting and settlement. Originally developed by Tensar in 1978,
+                  Geogrid technology has evolved significantly over the decades. Today's products feature
+                  advanced aperture geometries and polymer compositions engineered for specific applications
+                  and soil conditions.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">How It Works</h2>
@@ -64,7 +67,10 @@ export default function WhatIsGeogrid() {
                   The reinforcement mechanism relies on mechanical interlock—when materials are compacted into
                   the grid structure, they lock together to improve shear strength and prevent shifting.
                   Installation typically involves layering the grid with aggregate and sometimes pairing it
-                  with geotextile fabric.
+                  with geotextile fabric. When a load is applied to the surface, the Geogrid distributes that
+                  force laterally across a wider area, reducing the stress on any single point. This lateral
+                  confinement also prevents aggregate from spreading outward under load, which is what causes
+                  rutting and surface deformation in unstabilized bases.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Types Available</h2>
@@ -97,6 +103,26 @@ export default function WhatIsGeogrid() {
                   <li>Erosion prevention</li>
                   <li>Extended pavement lifespan</li>
                 </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">When Do You Need Geogrid?</h2>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Geogrid is particularly valuable when dealing with weak or unstable subgrade soils. If your
+                  site has clay, organic material, or high water tables, Geogrid can help create a stable base
+                  without extensive excavation and soil replacement. It's also useful when you want to reduce
+                  aggregate thickness while maintaining structural performance—potentially saving significant
+                  material and hauling costs on larger projects. In Northern Ohio, where soil conditions vary
+                  widely and freeze-thaw cycles stress pavement structures, Geogrid provides an extra layer of
+                  protection against premature failure.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Free DCP Testing</h2>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Not sure if your site needs Geogrid? We offer free Dynamic Cone Penetrometer (DCP) testing
+                  throughout Northern Ohio. This simple field test measures your soil's bearing capacity and
+                  helps determine whether Geogrid reinforcement would benefit your project. Based on the
+                  results, we can recommend the right product and installation approach for your specific
+                  conditions.
+                </p>
 
                 <div className="mt-12 bg-green-50 border-2 border-[#00c97e] rounded p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Ready to Get Started?</h3>

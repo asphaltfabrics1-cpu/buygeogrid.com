@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'SQ2020 Economy Geogrid Ohio | Budget',
-  description: 'SQ2020 economy biaxial Geogrid - budget-friendly option for light-duty residential & commercial applications. Great for patios, walkways. Free DCP testing. Cleveland, Akron, Toledo.',
+  description: 'SQ2020 economy biaxial Geogrid for light-duty residential and commercial applications. Patios, walkways, driveways. Free DCP testing. Cleveland, Akron.',
   keywords: ['SQ2020 Geogrid Ohio', 'economy Geogrid Cleveland', 'budget Geogrid Northern Ohio', 'cheap Geogrid Akron', 'light-duty Geogrid Ohio'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/sq2020',

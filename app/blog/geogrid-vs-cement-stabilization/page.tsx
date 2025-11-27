@@ -55,14 +55,22 @@ export default function GeogridVsCement() {
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Cement stabilization involves mixing Portland cement into soil. This approach requires mixing,
                   equipment, and curing time and carries a high carbon footprint due to cement production.
-                  It provides permanent, rigid support ideal for heavy-duty applications.
+                  It provides permanent, rigid support ideal for heavy-duty applications. The process typically
+                  involves spreading cement powder over the soil, mixing it to a specific depth using specialized
+                  equipment, then compacting and allowing the mixture to cure. This creates a hardite-like layer
+                  that provides excellent vertical load capacity but can be prone to cracking in areas with
+                  significant soil movement or freeze-thaw cycles.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Geogrid Reinforcement</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Geogrid reinforcement uses geosynthetic grids placed under aggregate materials. It's ideal
                   for gravel driveways, patios, roads, and parking areas with fast installation and minimal labor.
-                  This method is more eco-friendly and offers flexible, long-lasting reinforcement.
+                  This method is more eco-friendly and offers flexible, long-lasting reinforcement. The polymer
+                  grid structure interlocks with aggregate particles, creating a mechanically stabilized layer
+                  that distributes loads laterally. Unlike cement stabilization, Geogrid remains flexible and
+                  can accommodate some soil movement without cracking—a significant advantage in Northern Ohio
+                  where freeze-thaw cycles are common.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Key Comparison Points</h2>
@@ -126,6 +134,25 @@ export default function GeogridVsCement() {
                     <li>Projects where maximum vertical load capacity is critical</li>
                   </ul>
                 </div>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Cost Considerations</h2>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  While cement stabilization may seem like a straightforward solution, the total cost often
+                  exceeds Geogrid reinforcement when you factor in equipment rental, labor, curing time, and
+                  potential repairs from cracking. Geogrid installation is faster—often completed in a single
+                  day for residential projects—and requires no curing time, so you can proceed with the next
+                  phase immediately. For most residential and light commercial applications in Ohio, Geogrid
+                  provides better value and long-term performance.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">The Bottom Line</h2>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Both methods have their place in construction. Cement stabilization makes sense for permanent
+                  infrastructure projects where rigidity is essential and budgets allow for the additional cost
+                  and complexity. For driveways, parking lots, patios, and most residential applications, Geogrid
+                  offers a more practical solution with faster installation, lower cost, and better adaptability
+                  to Ohio's challenging soil and weather conditions.
+                </p>
 
                 <div className="mt-12 bg-green-50 border-2 border-[#00c97e] rounded p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Need Help Choosing?</h3>

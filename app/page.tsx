@@ -6,14 +6,14 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Geogrid Ohio | Tensar Distributor | BuyGeogrid',
-  description: 'Ohio Geogrid distributor. Tensar & Solmax dealer. Free DCP testing, expert consultation. Cleveland, Akron, Toledo.',
+  description: 'Northern Ohio Geogrid distributor. Authorized Tensar & Solmax dealer. Free DCP soil testing and expert consultation. Cleveland, Akron, Toledo.',
   keywords: ['Geogrid Cleveland', 'Cleveland Geogrid', 'Geogrid Ohio', 'Tensar Geogrids Cleveland', 'Tensar Geogrids', 'Geogrid Northern Ohio', 'Northern Ohio Geogrid', 'Geogrid Akron', 'Geogrid Toledo', 'Buy Tensar Geogrid', 'Geogrid distributor Ohio', 'InterAx Geogrid', 'TriAx Geogrid', 'Biaxial Geogrid', 'Tensar authorized distributor', 'soil stabilization Ohio', 'Geogrid supplier Cleveland', 'NX850 Geogrid', 'TX190 Geogrid', 'BuyGeogrid'],
   alternates: {
     canonical: 'https://buygeogrid.com',
   },
   openGraph: {
     title: 'Geogrid Ohio | Tensar Distributor | BuyGeogrid',
-    description: 'Ohio Geogrid distributor. Tensar & Solmax dealer. Free DCP testing, expert consultation. Cleveland, Akron, Toledo.',
+    description: 'Northern Ohio Geogrid distributor. Authorized Tensar & Solmax dealer. Free DCP soil testing and expert consultation. Cleveland, Akron, Toledo.',
     images: ['/images/logos/afsupplylogo_transparent.png'],
     url: 'https://buygeogrid.com',
   },

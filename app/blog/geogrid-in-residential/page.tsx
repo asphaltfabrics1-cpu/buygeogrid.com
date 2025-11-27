@@ -52,6 +52,10 @@ export default function GeogridInResidential() {
                   Geogrid helps distribute vehicle loads evenly, minimize settlement, and reduce the need for
                   frequent maintenance. This produces driveways with reduced cracking and gravel migration,
                   saving homeowners money on repairs and ensuring a smooth, durable surface for years.
+                  In Northern Ohio, where freeze-thaw cycles can wreak havoc on driveways, Geogrid provides
+                  the structural support needed to prevent heaving and cracking. Whether you have a gravel
+                  driveway or are installing a new asphalt surface, placing Geogrid beneath the base course
+                  creates a stable foundation that can handle daily vehicle traffic without deteriorating.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">2. Retaining Wall Support</h2>
@@ -59,6 +63,10 @@ export default function GeogridInResidential() {
                   Installing Geogrid increases wall stability and lifespan by improving drainage and movement
                   resistance. Whether you're building a new retaining wall or reinforcing an existing one,
                   Geogrid provides the structural support needed to prevent failure and extend the wall's life.
+                  For walls over three feet tall, Geogrid reinforcement is often essential to meet building
+                  codes and ensure long-term stability. The uniaxial H-Series products are specifically
+                  designed for this application, providing high tensile strength in a single direction to
+                  resist the lateral earth pressures that cause walls to lean or collapse over time.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">3. Patio and Outdoor Living Areas</h2>
@@ -66,7 +74,10 @@ export default function GeogridInResidential() {
                   Placing Geogrid beneath pavers prevents settling and shifting caused by freeze-thaw cycles
                   or heavy foot traffic, maintaining a level surface over time. This is especially important
                   for creating beautiful, long-lasting outdoor spaces that can withstand seasonal changes and
-                  regular use.
+                  regular use. Homeowners investing in outdoor kitchens, fire pit areas, or entertainment
+                  spaces want their patio to stay level and crack-free for decades. Geogrid reinforcement
+                  under the base aggregate ensures the foundation remains stable even when heavy furniture,
+                  grills, or hot tubs are placed on the surface.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">4. Walkways and Garden Paths</h2>
@@ -82,6 +93,16 @@ export default function GeogridInResidential() {
                   cost-effective foundation support. This is particularly valuable for garage floors and shed
                   foundations where soil conditions may not be ideal, helping to prevent costly foundation
                   repairs down the road.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Choosing the Right Geogrid for Your Project</h2>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Not all Geogrids are the same. For most residential applications, the InterAx NX series
+                  offers excellent performance at a reasonable cost. The NX650 works well for light-duty
+                  applications like walkways and patios, while the NX750 handles driveways and parking areas.
+                  For retaining walls, the H-Series uniaxial products provide the directional strength needed
+                  to resist lateral earth pressure. We can help you select the right product based on your
+                  specific soil conditions and project requirements.
                 </p>
 
                 <div className="mt-12 bg-blue-50 border-2 border-blue-300 rounded p-6">

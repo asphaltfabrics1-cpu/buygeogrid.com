@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tensar NX650 Geogrid Ohio | InterAx',
-  description: 'Tensar InterAx NX650 light-duty Geogrid for residential driveways, walkways & patios. Budget-friendly base stabilization. Free DCP testing. Cleveland, Akron, Toledo.',
+  description: 'Tensar InterAx NX650 light-duty Geogrid for residential driveways, walkways and patios. Budget-friendly option. Free DCP testing. Cleveland, Akron.',
   keywords: ['Tensar NX650 Ohio', 'InterAx NX650 Cleveland', 'NX650 driveway Ohio', 'Tensar NX650 Akron', 'patio Geogrid Northern Ohio', 'walkway reinforcement Cleveland'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/nx650',
