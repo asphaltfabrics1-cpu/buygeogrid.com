@@ -54,6 +54,72 @@ export default function Petrotac15ft() {
           <ProductDetail features={features} applications={applications} />
         </Section>
 
+        {/* What Is Petrotac Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What Is Petrotac?</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              Petromat Petrotac is a self-adhesive paving strip membrane geotextile designed to treat local pavement distress, joints, and cracks in asphalt surfaces. It is also used as a bridge deck moisture barrier. The 18-inch (1.5-foot) width provides wider coverage for treating joints and areas with multiple cracks.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Petrotac conforms to ASTM D-6153 for Type III Bridge Deck Waterproofing Membrane Systems. It is manufactured by TenCate Geosynthetics Americas (a Solmax company) and tested in a GAI-LAP accredited laboratory. This product meets Build America, Buy America Act requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* Mechanical Properties Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Mechanical Properties</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              Petrotac has strip tensile strength of 75 lbs/in and puncture resistance of 200 lbs. The permeance is 0.05 perms maximum, making it an effective moisture barrier. It passes pliability testing at -25°F on a 1/4" mandrel with no cracks in fabric or rubberized asphalt.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Asphalt retention exceeds 0.20 gal/yd² and the melting point is 325°F. UV resistance is 70% after 500 hours exposure. The product requires minimum asphalt overlay temperature of 280°F during installation.
+            </p>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The self-adhesive backing bonds to the existing pavement surface, creating a moisture barrier and stress-absorbing layer. When hot asphalt is applied over the Petrotac, the rubberized asphalt in the membrane bonds with the overlay, creating a waterproof seal that helps prevent reflective cracking.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The membrane absorbs stress from underlying crack movement, reducing the transfer of that movement to the new overlay. This can help extend pavement life and reduce maintenance costs.
+            </p>
+          </div>
+        </section>
+
+        {/* Roll Sizes Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Roll Sizes</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The 18-inch (1.5-foot) Petrotac rolls measure 18 inches wide by 108 feet long, covering approximately 18 square yards per roll. Each roll weighs approximately 67 lbs.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Petrotac is also available in 12-inch, 24-inch, 36-inch, and 48-inch widths for different applications. Contact us for current availability and to discuss which width is best for your project.
+            </p>
+          </div>
+        </section>
+
+        {/* When to Choose 1.5ft Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">When to Choose 1.5ft Width</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The 18-inch width is commonly used for treating wider cracks, expansion joints, and areas where multiple parallel cracks need coverage. It provides more overlap than the 12-inch width, offering better protection against moisture infiltration around joints.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              For treating individual narrow cracks, the 12-inch width may be more economical. For full-width coverage of larger areas, consider paving fabric interlayer products. Contact us to discuss your project requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-16 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Order?</h2>

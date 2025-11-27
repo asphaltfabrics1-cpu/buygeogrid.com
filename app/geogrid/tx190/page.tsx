@@ -54,16 +54,72 @@ export default function TX190() {
           <ProductDetail features={features} applications={applications} />
         </Section>
 
-        <Section background="white">
-          <div className="bg-green-50 border-2 border-[#00c97e] rounded p-6 max-w-3xl mx-auto">
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Free DCP Testing Available</h3>
-            <p className="text-gray-700">
-              Not sure which Geogrid is right for your project? We offer free Dynamic Cone Penetrometer (DCP)
-              testing to analyze your soil conditions and recommend the optimal solution.
+        {/* What Is the TX190L Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What Is the TX190L?</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The Tensar TriAx TX190L is manufactured from a punched polypropylene sheet that is oriented in three substantially equilateral directions. This process creates ribs with a high degree of molecular orientation that continues through the integral nodes, resulting in exceptional structural integrity.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The TX190L features triangular apertures with a rib pitch of 60mm (2.40 inches) and rectangular ribs. This triangular geometry distributes loads in multiple directions simultaneously, providing superior performance compared to traditional biaxial grids in applications where traffic approaches from varying angles.
             </p>
           </div>
-        </Section>
+        </section>
 
+        {/* Structural Performance Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Structural Performance</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The TX190L achieves a junction efficiency of 93%, meaning nearly all the tensile strength transfers effectively through the grid nodes. The product has an isotropic stiffness ratio of 0.6, indicating consistent performance across different loading directions. The radial stiffness at low strain (0.5%) measures 350 kN/m.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The overall flexural rigidity of 1,500,000 mg-cm gives the TX190L enough stiffness to bridge over soft spots during installation while remaining flexible enough to conform to subgrade variations. This balance makes installation straightforward even on imperfect surfaces.
+            </p>
+          </div>
+        </section>
+
+        {/* Product Durability Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Product Durability</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The TX190L offers 100% resistance to chemical degradation when subjected to aggressive environments, making it suitable for a wide range of soil conditions. It provides 70% resistance to ultraviolet light and weathering based on 500 hours of exposure testing.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Once installed and covered with aggregate, the product is protected from UV exposure and will maintain its structural properties for the life of the pavement. The polypropylene construction resists degradation from acids, alkalis, and other chemicals commonly found in soil environments.
+            </p>
+          </div>
+        </section>
+
+        {/* Roll Sizes Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Roll Sizes and Coverage</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The TX190L comes in rolls measuring 12.5 feet wide by 164 feet long. Each roll is individually identified and labeled for quality control purposes. The triangular aperture pattern allows for efficient coverage without concerns about roll orientation during installation.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Contact us for current availability and delivery lead times. We can coordinate shipments throughout Northern Ohio and arrange for direct delivery to your jobsite.
+            </p>
+          </div>
+        </section>
+
+        {/* TriAx vs Biaxial Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">TriAx vs Biaxial Geogrids</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              Traditional biaxial geogrids have rectangular apertures that provide strength in two perpendicular directions. The TriAx design with triangular apertures provides strength in six directions (three primary axes plus three intermediate directions), making it more effective when traffic loads approach from varying angles.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              For parking lots, intersections, and other areas where vehicles turn and traffic patterns vary, the TriAx geometry provides more consistent reinforcement than biaxial alternatives. For straight roadways with predictable traffic patterns, biaxial products may be equally effective at lower cost.
+            </p>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-16 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Order?</h2>

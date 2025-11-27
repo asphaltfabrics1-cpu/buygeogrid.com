@@ -54,6 +54,72 @@ export default function Mirafi135N() {
           <ProductDetail features={features} applications={applications} />
         </Section>
 
+        {/* What Is the 135N Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What Is the Mirafi 135N?</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The Mirafi 135N is a needlepunched nonwoven geotextile composed of polypropylene fibers formed into a stable network. This is the lightweight option in the Mirafi nonwoven line, designed for drainage and filtration applications where high flow rates are important.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The 135N is inert to biological degradation and resists naturally encountered chemicals, alkalis, and acids. It is manufactured by TenCate Geosynthetics Americas (a Solmax company) and tested in a GAI-LAP accredited laboratory. This product meets Build America, Buy America Act requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* Mechanical Properties Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Mechanical Properties</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The 135N provides grab tensile strength of 80 lbs in both directions with 50% elongation. Trapezoid tear strength measures 30 lbs and CBR puncture strength reaches 175 lbs. While lighter duty than the 140N and 180N, these properties are sufficient for many residential and light commercial applications.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The apparent opening size (AOS) is #50 U.S. sieve (0.30mm), providing good filtration while allowing water passage. This is the most open of the three nonwoven products.
+            </p>
+          </div>
+        </section>
+
+        {/* Drainage Properties Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Drainage Properties</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The 135N has the highest flow rate of the Mirafi nonwoven series at 155 gal/min/ft² with permittivity of 2.1 sec⁻¹. This makes it excellent for applications where maximum drainage is the priority.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The 135N retains 70% of its strength after 500 hours of UV exposure. Once buried, the fabric maintains its drainage and filtration properties for the life of the installation.
+            </p>
+          </div>
+        </section>
+
+        {/* Roll Sizes Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Roll Sizes and Coverage</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The 135N comes in rolls measuring 12.5 feet wide by 360 feet long, covering approximately 600 square yards per roll. Each roll weighs approximately 122 lbs—the lightest of the nonwoven options.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Contact us for current availability and delivery lead times. We can coordinate shipments throughout Northern Ohio.
+            </p>
+          </div>
+        </section>
+
+        {/* Comparing Nonwoven Products Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Comparing Nonwoven Products</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The 135N, 140N, and 180N differ in strength and filtration characteristics. The 135N offers the highest flow rate with the lightest weight—ideal for drainage applications where maximum water movement is needed. The 140N provides a balance of strength and flow. The 180N is the heavy-duty option with the tightest filtration.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Choose based on your application: French drains and residential drainage often work well with 135N. Commercial drainage and retaining wall applications may require 140N or 180N. Contact us to discuss your project requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-16 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Order?</h2>

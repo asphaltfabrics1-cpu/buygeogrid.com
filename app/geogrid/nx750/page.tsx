@@ -54,16 +54,72 @@ export default function NX750() {
           <ProductDetail features={features} applications={applications} />
         </Section>
 
-        <Section background="white">
-          <div className="bg-green-50 border-2 border-[#00c97e] rounded p-6 max-w-3xl mx-auto">
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Free DCP Testing Available</h3>
-            <p className="text-gray-700">
-              Not sure which Geogrid is right for your project? We offer free Dynamic Cone Penetrometer (DCP)
-              testing to analyze your soil conditions and recommend the optimal solution.
+        {/* What Is the NX750 Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What Is the NX750?</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The Tensar InterAx NX750 is manufactured from a coextruded composite polymer sheet that is punched and oriented to create a multi-aperture structure. Like all InterAx products, it features three distinct aperture geometries—hexagonal, trapezoidal, and triangular—along with an unimpeded suspended hexagon that allows aggregate to interlock from both sides.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The NX750 has rectangular ribs with a node thickness of 0.14 inches (3.5mm) and a continuous parallel rib pitch of 3.2 inches (80mm). It comes in a white/black/white color pattern for easy identification. This is the medium-duty option in the InterAx line, positioned between the lighter NX650 and the heavy-duty NX850.
             </p>
           </div>
-        </Section>
+        </section>
 
+        {/* Product Durability Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Product Durability</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The NX750 is engineered for long-term performance in buried applications. It offers 100% resistance to chemical degradation when subjected to aggressive environments, and 90% resistance to ultraviolet light and weathering. Once installed and covered with aggregate, the product is protected from UV exposure and maintains its structural properties for decades.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              The coextruded polymer construction provides consistent quality throughout the product. Each roll is tested in a GAI-LAP accredited laboratory and carries an Environmental Product Declaration (EPD) certified by UL Environment, verifying its environmental impact data.
+            </p>
+          </div>
+        </section>
+
+        {/* Roll Sizes and Coverage Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Roll Sizes and Coverage</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The NX750 comes in two roll sizes. Standard rolls measure 12.5 feet wide by 197 feet long, covering approximately 274 square yards at about 154 lbs per roll. Wide rolls measure 15 feet wide by 197 feet long, covering approximately 328 square yards at about 185 lbs per roll.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Contact us for current availability and delivery throughout Northern Ohio.
+            </p>
+          </div>
+        </section>
+
+        {/* Typical Projects Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Typical Projects</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              In Northern Ohio, the NX750 is commonly used for residential driveways, small parking lots, and light commercial applications. Contractors choose this product for projects where the NX650 may not provide enough reinforcement but the heavy-duty NX850 would be more than necessary.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Common applications include paved and gravel driveways that see regular passenger vehicle traffic, church and retail parking lots, and access roads for farms and rural properties. The NX750 provides a good balance of performance and value for moderate-traffic applications in residential and light commercial settings.
+            </p>
+          </div>
+        </section>
+
+        {/* Comparing InterAx Products Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Comparing InterAx Products</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              The InterAx line includes three main products: the NX650, NX750, and NX850. All share the same multi-aperture geometry and coextruded construction, but differ in their rib profiles and node thickness. The NX650 handles light-duty applications, the NX750 suits moderate conditions, and the NX850 is designed for heavy-duty demanding projects.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Not sure which product fits your project? We offer free DCP testing throughout Northern Ohio to measure your subgrade conditions and help you select the right product. Contact us for a site visit and recommendation based on your specific soil and traffic requirements.
+            </p>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-16 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Order?</h2>
