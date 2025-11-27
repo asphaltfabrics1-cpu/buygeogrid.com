@@ -25,7 +25,7 @@ export default function Petrotac15ft() {
     { text: 'Could help prevent reflective cracking' },
     { text: '1.5-foot wide rolls for wider coverage' },
     { text: 'Self-adhesive backing' },
-    { text: 'Enhanced waterproofing' },
+    { text: 'Enhanced moisture barrier' },
   ];
 
   const applications = [
@@ -85,7 +85,7 @@ export default function Petrotac15ft() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The self-adhesive backing bonds to the existing pavement surface, creating a moisture barrier and stress-absorbing layer. When hot asphalt is applied over the Petrotac, the rubberized asphalt in the membrane bonds with the overlay, creating a waterproof seal that helps prevent reflective cracking.
+              The self-adhesive backing bonds to the existing pavement surface, creating a moisture barrier and stress-absorbing layer. When hot asphalt is applied over the Petrotac, the rubberized asphalt in the membrane bonds with the overlay, helping prevent moisture infiltration and reflective cracking.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               The membrane absorbs stress from underlying crack movement, reducing the transfer of that movement to the new overlay. This can help extend pavement life and reduce maintenance costs.

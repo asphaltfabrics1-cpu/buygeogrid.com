@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function Home() {
   const benefits = [
     { number: '40%', label: 'Cost Reduction', desc: 'Lower aggregate costs' },
-    { number: '3x', label: 'Extended Life', desc: 'Triple pavement lifespan' },
+    { number: 'Up to 3x', label: 'Longer Life', desc: 'Could extend pavement lifespan' },
     { number: '24/7', label: 'Support', desc: 'Expert consultation' },
   ];
 
