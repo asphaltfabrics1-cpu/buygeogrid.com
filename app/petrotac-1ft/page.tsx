@@ -62,7 +62,7 @@ export default function Petrotac1ft() {
               Petromat Petrotac is a self-adhesive paving strip membrane geotextile designed to treat local pavement distress, joints, and cracks in asphalt surfaces. It is also used as a bridge deck moisture barrier. The 12-inch (1-foot) width is ideal for treating individual cracks and joints.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Petrotac conforms to ASTM D-6153 for Type III Bridge Deck Waterproofing Membrane Systems. It is manufactured by TenCate Geosynthetics Americas (a Solmax company) and tested in a GAI-LAP accredited laboratory. This product meets Build America, Buy America Act requirements.
+              It is manufactured by TenCate Geosynthetics Americas (a Solmax company) and tested in a GAI-LAP accredited laboratory. This product meets Build America, Buy America Act requirements.
             </p>
           </div>
         </section>
