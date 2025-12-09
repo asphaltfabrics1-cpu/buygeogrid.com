@@ -9,6 +9,7 @@ export default function Header() {
   const [wovenOpen, setWovenOpen] = useState(false);
   const [nonWovenOpen, setNonWovenOpen] = useState(false);
   const [interlayersOpen, setInterlayersOpen] = useState(false);
+  const [patchPacksOpen, setPatchPacksOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
 
   return (
@@ -17,22 +18,11 @@ export default function Header() {
       <header className="bg-[#1a1a1a] text-white py-3 px-4 border-b-[3px] border-[#00c97e]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between gap-4">
-            {/* Left Logo */}
-            <div className="flex-shrink-0">
-              <Link href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img
-                  src="/images/logos/logo-8.22.18.jpg"
-                  alt="Asphalt Fabrics Logo"
-                  className="h-[50px]"
-                />
-              </Link>
-            </div>
-
             {/* Center Navigation - Desktop Only */}
             <nav className="hidden md:block flex-1">
               <ul className="flex justify-center items-center gap-0">
             <li>
-              <Link href="/" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Home
               </Link>
             </li>
@@ -43,7 +33,7 @@ export default function Header() {
               onMouseEnter={() => setGeogridsOpen(true)}
               onMouseLeave={() => setGeogridsOpen(false)}
             >
-              <Link href="/geogrid" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/geogrid" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Geogrids ▾
               </Link>
               {geogridsOpen && (
@@ -95,7 +85,7 @@ export default function Header() {
               onMouseEnter={() => setWovenOpen(true)}
               onMouseLeave={() => setWovenOpen(false)}
             >
-              <Link href="/woven-fabrics" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/woven-fabrics" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Woven Fabrics ▾
               </Link>
               {wovenOpen && (
@@ -120,7 +110,7 @@ export default function Header() {
               onMouseEnter={() => setNonWovenOpen(true)}
               onMouseLeave={() => setNonWovenOpen(false)}
             >
-              <Link href="/nonwoven-fabrics" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/nonwoven-fabrics" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Non-Woven Fabrics ▾
               </Link>
               {nonWovenOpen && (
@@ -148,7 +138,7 @@ export default function Header() {
               onMouseEnter={() => setInterlayersOpen(true)}
               onMouseLeave={() => setInterlayersOpen(false)}
             >
-              <Link href="/interlayers" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/interlayers" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Interlayers ▾
               </Link>
               {interlayersOpen && (
@@ -167,8 +157,15 @@ export default function Header() {
               )}
             </li>
 
+            {/* Patch Packs */}
             <li>
-              <Link href="/contact" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/patch-packs" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
+                Patch Packs
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/contact" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Contact Us
               </Link>
             </li>
@@ -179,7 +176,7 @@ export default function Header() {
               onMouseEnter={() => setResourcesOpen(true)}
               onMouseLeave={() => setResourcesOpen(false)}
             >
-              <Link href="/resources" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/resources" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Resources ▾
               </Link>
               {resourcesOpen && (
@@ -233,52 +230,57 @@ export default function Header() {
         <nav className="md:hidden mt-4 border-t border-white/10 pt-4">
           <ul className="flex flex-col gap-0">
             <li>
-              <Link href="/" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Home
               </Link>
             </li>
             <li className="relative">
-              <Link href="/geogrid" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/geogrid" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Geogrids
               </Link>
             </li>
             <li>
-              <Link href="/woven-fabrics" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/woven-fabrics" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Woven Fabrics
               </Link>
             </li>
             <li>
-              <Link href="/nonwoven-fabrics" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/nonwoven-fabrics" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Non-Woven Fabrics
               </Link>
             </li>
             <li>
-              <Link href="/interlayers" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/interlayers" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Interlayers
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/patch-packs" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
+                Patch Packs
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/faq" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/blog" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/gallery" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/gallery" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Gallery
               </Link>
             </li>
             <li>
-              <Link href="/lunch-and-learn" className="block px-4 py-4 hover:bg-white/10 transition-colors font-semibold text-lg">
+              <Link href="/lunch-and-learn" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Lunch & Learn
               </Link>
             </li>

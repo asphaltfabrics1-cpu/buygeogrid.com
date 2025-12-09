@@ -220,10 +220,22 @@ export default function Home() {
               Authorized Distributor
             </h2>
             <p className="text-lg text-gray-700 mb-12">
-              Proud distributor of Tensar Geogrids and Solmax Mirafi Geotextiles
+              Proud distributor of Tensar Geogrids, Solmax Mirafi Geotextiles, and Patch Packs
             </p>
 
-            <div className="flex justify-center items-center gap-12 mb-12 flex-wrap">
+            <div className="flex justify-center items-center gap-8 mb-12 flex-wrap">
+              <Link
+                href="https://asphaltfabrics.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity duration-200 hover:opacity-75 p-6 bg-white rounded border border-gray-200"
+              >
+                <img
+                  src="/images/logos/logo-8.22.18.jpg"
+                  alt="Asphalt Fabrics Supply Logo"
+                  className="h-20"
+                />
+              </Link>
               <Link
                 href="https://www.tensarcorp.com/"
                 target="_blank"
@@ -245,6 +257,18 @@ export default function Home() {
                 <img
                   src="/images/logos/solmax.png"
                   alt="Solmax Logo"
+                  className="h-20"
+                />
+              </Link>
+              <Link
+                href="https://fptinfrastructure.com/products/pavement-repair-materials/patch-packs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity duration-200 hover:opacity-75 p-6 bg-white rounded border border-gray-200"
+              >
+                <img
+                  src="/images/logos/PatchPacksTM Logo 2in.png"
+                  alt="Patch Packs Logo"
                   className="h-20"
                 />
               </Link>
