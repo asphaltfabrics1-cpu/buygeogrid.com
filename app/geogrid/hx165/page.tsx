@@ -7,32 +7,32 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tensar HX165 Geogrid Ohio | Retaining Walls',
-  description: 'Tensar H-Series HX165 high-strength uniaxial Geogrid for retaining walls and MSE structures. Superior tensile strength. Cleveland, Akron, Toledo.',
-  keywords: ['Tensar HX165 Ohio', 'H-Series HX165 Cleveland', 'retaining wall Geogrid Northern Ohio', 'MSE wall geogrid Akron', 'Tensar retaining wall Ohio', 'uniaxial Geogrid Cleveland'],
+  title: 'Tensar HX165 Geogrid Ohio | Base Reinforcement',
+  description: 'Tensar H-Series HX165 Geogrid for base reinforcement and subgrade stabilization. Optimized geometry at economical pricing. Cleveland, Akron, Toledo distributor.',
+  keywords: ['Tensar HX165 Ohio', 'H-Series HX165 Cleveland', 'base reinforcement Geogrid Northern Ohio', 'subgrade stabilization Akron', 'Tensar geogrid Ohio', 'road stabilization Cleveland'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/hx165',
   },
   openGraph: {
-    title: 'Tensar HX165 Geogrid Ohio | Retaining Walls',
-    description: 'Tensar HX165 for retaining walls and MSE structures. Ohio distributor.',
-    images: ['/images/products/solution-biaxial.png'],
+    title: 'Tensar HX165 Geogrid Ohio | Base Reinforcement',
+    description: 'Tensar HX165 for base reinforcement and subgrade stabilization. Ohio distributor.',
+    images: ['/images/products/h-series.png'],
   },
 };
 
 export default function HX165() {
   const features = [
-    { text: 'High-strength uniaxial Geogrid' },
-    { text: 'Ultimate tensile strength of 165 kN/m' },
-    { text: 'Ideal for tall retaining walls' },
-    { text: 'Long-term design strength' },
+    { text: 'Optimized geometry for base reinforcement' },
+    { text: 'Higher tensile strength in H-Series line' },
+    { text: 'More economical than InterAx' },
+    { text: 'Excellent subgrade stabilization' },
   ];
 
   const applications = [
-    { text: 'Mechanically Stabilized Earth (MSE) walls' },
-    { text: 'Tall retaining walls' },
-    { text: 'Bridge abutments' },
-    { text: 'Steep slope reinforcement' },
+    { text: 'Soft subgrade stabilization' },
+    { text: 'Access road construction' },
+    { text: 'Pavement improvement' },
+    { text: 'Working platforms over weak soils' },
   ];
 
   return (
@@ -41,7 +41,7 @@ export default function HX165() {
       <main className="flex-grow">
         <PageHero
           title="Tensar H-Series™ HX165™ Geogrid"
-          description="High-strength uniaxial Geogrid for tall retaining walls and MSE structures. Provides reliable long-term performance for critical applications."
+          description="Base reinforcement geogrid with optimized geometry for stabilizing soft subgrades and improving pavement performance. A cost-effective alternative to InterAx for demanding applications."
           ctaText="Request a Quote"
           ctaLink="/contact"
           secondaryCtaText="Download Spec Sheet"
@@ -69,23 +69,23 @@ export default function HX165() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What Is the HX165?</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The Tensar H-Series HX165 is a high-strength uniaxial geogrid manufactured from a polypropylene sheet that is punched and oriented. The resulting structure consists of continuous and non-continuous ribs forming three aperture geometries: hexagon, trapezoid, and triangle, with an unimpeded suspended hexagon.
+              The Tensar H-Series HX165 is a geogrid manufactured from a coextruded polymer sheet that is punched and oriented. It features optimized geometry that enhances the interlock of fill materials, creating an efficient stabilized layer for base reinforcement applications.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              The HX165 is the heavy-duty option in the H-Series line, designed for tall retaining walls, bridge abutments, and other demanding MSE (Mechanically Stabilized Earth) applications where higher strength is required. It is manufactured by Tensar and tested in a GAI-LAP accredited laboratory, with its EPD certified by UL Environment.
+              The H-Series was designed to provide the benefits of advanced geogrid geometry at a more economical cost than InterAx. The HX165 is the higher-strength option in the H-Series line, ideal for stabilizing soft subgrades, constructing access roads, and improving pavement performance. It is manufactured by Tensar and tested in a GAI-LAP accredited laboratory.
             </p>
           </div>
         </section>
 
-        {/* Structural Properties Section */}
+        {/* Performance Benefits Section */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Structural Properties</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Performance Benefits</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The HX165 has a node thickness of 0.13 inches (3.25mm), approximately 18% thicker than the HX145. This increased material at the nodes provides greater long-term design strength for demanding applications. The continuous parallel rib pitch measures 3.2 inches (80mm) with a rib aspect ratio greater than 1.0.
+              The HX165&apos;s optimized aperture geometry provides better geogrid-fill compatibility, creating an effective stabilized layer with less fill material. This can reduce project costs and construction time while building higher performing trafficked surfaces.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              The rectangular rib shape and multi-geometry apertures (hexagonal, trapezoidal, and triangular) allow for effective soil interlock throughout the reinforced earth mass. The black color identification makes it easily distinguishable during installation.
+              The broader range of aperture shapes and sizes allows for better compatibility between the geogrid and multiple fill materials, improving particle confinement under compaction and repetitive loading. This makes it suitable for projects where soil conditions vary.
             </p>
           </div>
         </section>
@@ -95,10 +95,10 @@ export default function HX165() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Product Durability</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The HX165 provides 100% resistance to chemical degradation when subjected to chemically aggressive environments in accordance with EPA 9090 immersion testing. This makes it suitable for a variety of soil conditions including those with potentially corrosive properties.
+              Tensar geogrids are 100% UV resistant and will not rust, leach, or degrade in direct sunlight. The HX165 provides chemical resistance when subjected to aggressive environments, making it suitable for a variety of soil conditions.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              UV resistance is rated at 90% after 500 hours of ultraviolet light and aggressive weathering exposure per ASTM D4355. While the geogrid will be buried in its final application, this UV stability provides protection during the construction phase when the product may be exposed to sunlight.
+              The geogrid can withstand the rigors of construction, including being routinely excavated through and punched through for guardrail posts, bridge piers, and underground utilities without losing its reinforcement capability.
             </p>
           </div>
         </section>
@@ -108,7 +108,7 @@ export default function HX165() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Roll Sizes and Coverage</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The HX165 comes in two roll sizes. Standard width rolls measure 12.5 feet wide by 328 feet long, covering approximately 456 square yards per roll at about 233 lbs. Wide width rolls measure 15.5 feet wide by 328 feet long, covering approximately 565 square yards per roll at about 290 lbs.
+              The HX165 comes in rolls measuring 12.5 feet wide by 328 feet long, providing 4,100 square feet of coverage per roll.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Contact us for current availability and delivery throughout Northern Ohio.
@@ -121,10 +121,10 @@ export default function HX165() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">When to Choose HX165</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Choose the HX165 for tall retaining walls, bridge abutments, steep slope reinforcement, and other demanding MSE applications where maximum long-term strength is required. The thicker node structure provides greater reliability for critical infrastructure projects.
+              Choose the HX165 when you need reliable base reinforcement performance at an economical price point. It&apos;s ideal for soft subgrade stabilization, access road construction, and pavement improvement projects where InterAx may be more than what the project requires.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              For medium-height walls or less demanding applications, the HX145 may provide sufficient strength at a lower cost. Contact us to discuss your project requirements and we can help determine which H-Series product is most appropriate for your specific design loads.
+              The H-Series is fully compatible with Tensar&apos;s design software, Tensar+, which can help optimize your design and ensure reliable results. Contact us to discuss your project requirements and we can help determine whether H-Series or InterAx is most appropriate for your application.
             </p>
           </div>
         </section>

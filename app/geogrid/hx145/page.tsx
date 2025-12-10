@@ -7,32 +7,32 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tensar HX145 Geogrid Ohio | Retaining Walls',
-  description: 'Tensar H-Series HX145 medium-strength uniaxial Geogrid for retaining walls and MSE structures. Cost-effective option. Free DCP testing. Cleveland.',
-  keywords: ['Tensar HX145', 'H-Series HX145', 'Geogrid Ohio', 'retaining wall Geogrid', 'MSE wall', 'Cleveland', 'Akron'],
+  title: 'Tensar HX145 Geogrid Ohio | Base Reinforcement',
+  description: 'Tensar H-Series HX145 Geogrid for base reinforcement and subgrade stabilization. Cost-effective solution with optimized geometry. Cleveland, Akron distributor.',
+  keywords: ['Tensar HX145', 'H-Series HX145', 'Geogrid Ohio', 'base reinforcement Geogrid', 'subgrade stabilization', 'Cleveland', 'Akron'],
   alternates: {
     canonical: 'https://buygeogrid.com/geogrid/hx145',
   },
   openGraph: {
-    title: 'Tensar HX145 Geogrid Ohio | Retaining Walls',
-    description: 'Medium-strength Geogrid for retaining walls. Ohio distributor.',
+    title: 'Tensar HX145 Geogrid Ohio | Base Reinforcement',
+    description: 'Cost-effective Geogrid for base reinforcement. Ohio distributor.',
     images: ['/images/products/h-series.png'],
   },
 };
 
 export default function HX145() {
   const features = [
-    { text: 'Medium-strength uniaxial Geogrid' },
-    { text: 'Ultimate tensile strength of 145 kN/m' },
-    { text: 'Ideal for medium-height retaining walls' },
-    { text: 'Cost-effective reinforcement' },
+    { text: 'Optimized geometry for base reinforcement' },
+    { text: 'Cost-effective alternative to InterAx' },
+    { text: 'Excellent fill material interlock' },
+    { text: 'Reduces aggregate requirements' },
   ];
 
   const applications = [
-    { text: 'Medium-height retaining walls' },
-    { text: 'MSE structures' },
-    { text: 'Slope stabilization' },
-    { text: 'Embankment reinforcement' },
+    { text: 'Soft subgrade stabilization' },
+    { text: 'Access road construction' },
+    { text: 'Pavement improvement' },
+    { text: 'Working platforms' },
   ];
 
   return (
@@ -41,7 +41,7 @@ export default function HX145() {
       <main className="flex-grow">
         <PageHero
           title="Tensar H-Series™ HX145™ Geogrid"
-          description="Medium-strength uniaxial Geogrid for retaining walls and MSE structures. Cost-effective solution for medium-height applications."
+          description="Cost-effective base reinforcement geogrid with optimized geometry for stabilizing soft subgrades and improving pavement performance. Economical solution for road construction and access roads."
           ctaText="Request a Quote"
           ctaLink="/contact"
           secondaryCtaText="Download Spec Sheet"
@@ -69,23 +69,23 @@ export default function HX145() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What Is the HX145?</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The Tensar H-Series HX145 is a uniaxial geogrid manufactured from a polypropylene sheet that is punched and oriented. The resulting structure consists of continuous and non-continuous ribs forming three aperture geometries: hexagon, trapezoid, and triangle, with an unimpeded suspended hexagon.
+              The Tensar H-Series HX145 is a geogrid manufactured from a coextruded polymer sheet that is punched and oriented. It features optimized geometry that enhances the interlock of fill materials, creating an efficient stabilized layer for base reinforcement applications.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              This geogrid is part of the H-Series line designed specifically for retaining wall and MSE (Mechanically Stabilized Earth) structure applications. The HX145 provides a cost-effective solution for medium-height retaining walls where maximum strength is not required. It is manufactured by Tensar and tested in a GAI-LAP accredited laboratory.
+              The H-Series was designed to provide the benefits of advanced geogrid geometry at a more economical cost than InterAx. The HX145 is ideal for stabilizing soft subgrades, constructing access roads, and improving pavement performance where maximum strength is not required. It is manufactured by Tensar and tested in a GAI-LAP accredited laboratory.
             </p>
           </div>
         </section>
 
-        {/* Structural Properties Section */}
+        {/* Performance Benefits Section */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Structural Properties</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Performance Benefits</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The HX145 has a node thickness of 0.11 inches (2.75mm), making it the lighter-duty option in the H-Series line compared to the HX165. The continuous parallel rib pitch measures 3.2 inches (80mm) with a rib aspect ratio greater than 1.0, ensuring proper load distribution through the structure.
+              Better geogrid-fill compatibility provides an effective stabilized layer with less fill material, reducing project costs and construction time. The HX145 helps build higher performing trafficked surfaces that can withstand severe weather and challenging environmental conditions.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              The rectangular rib shape and multi-geometry apertures allow for effective soil interlock and load transfer within the reinforced soil mass. The black color identification makes it easily distinguishable during installation.
+              The broader range of aperture shapes and sizes allows for better compatibility between the geogrid and multiple fill materials, improving particle confinement under compaction and repetitive loading.
             </p>
           </div>
         </section>
@@ -95,10 +95,10 @@ export default function HX145() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Product Durability</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The HX145 provides 100% resistance to chemical degradation when subjected to chemically aggressive environments in accordance with EPA 9090 immersion testing. This makes it suitable for a wide range of soil conditions without concern for chemical attack.
+              Tensar geogrids are 100% UV resistant and will not rust, leach, or degrade in direct sunlight. The HX145 provides chemical resistance when subjected to aggressive environments, making it suitable for a wide range of soil conditions.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              UV resistance is rated at 90% after 500 hours of ultraviolet light and aggressive weathering exposure per ASTM D4355. While retaining walls are typically buried, this UV stability provides protection during storage and installation when the product may be exposed to sunlight.
+              The geogrid can withstand the rigors of construction, including being routinely excavated through and punched through for guardrail posts, bridge piers, and underground utilities without losing its reinforcement capability.
             </p>
           </div>
         </section>
@@ -108,7 +108,7 @@ export default function HX145() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Roll Sizes and Coverage</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The HX145 comes in rolls measuring 12.5 feet wide by 328 feet long, covering approximately 456 square yards per roll. Each roll weighs approximately 196 lbs and has a roll diameter of about 19.5 inches.
+              The HX145 comes in rolls measuring 12.5 feet wide by 328 feet long, providing 4,100 square feet of coverage per roll.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Contact us for current availability and delivery throughout Northern Ohio.
@@ -121,10 +121,10 @@ export default function HX145() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">When to Choose HX145</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The HX145 is appropriate for medium-height retaining walls, slope stabilization, and embankment reinforcement where the design loads do not require the higher strength of the HX165. It offers a cost-effective solution for projects where the additional node thickness of the HX165 is not necessary.
+              The HX145 is appropriate for soft subgrade stabilization, access road construction, and pavement improvement projects where you need reliable performance at an economical price. It offers a cost-effective solution compared to both InterAx and the higher-strength HX165.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              For taller walls or higher load applications, consider the HX165 with its 0.13-inch node thickness. Contact us to discuss your project requirements and we can help determine which H-Series product is most appropriate for your specific application.
+              For more demanding applications or weaker subgrade conditions, consider the HX165 or InterAx products. The H-Series is fully compatible with Tensar&apos;s design software, Tensar+. Contact us to discuss your project requirements and we can help determine which product is most appropriate for your application.
             </p>
           </div>
         </section>
