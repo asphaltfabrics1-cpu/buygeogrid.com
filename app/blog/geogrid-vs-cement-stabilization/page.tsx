@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Compare Geogrid vs cement stabilization. Pros, cons, cost & best applications. Ohio expert guide.',
   keywords: ['Geogrid vs cement', 'soil stabilization comparison', 'cement stabilization', 'Tensar Geogrid benefits', 'Ohio soil stabilization'],
   alternates: {
-    canonical: 'https://buygeogrid.com/blog/geogrid-vs-cement-stabilization',
+    canonical: 'https://www.buygeogrid.com/blog/geogrid-vs-cement-stabilization',
   },
   openGraph: {
     title: 'Geogrid vs Cement Stabilization | Ohio',

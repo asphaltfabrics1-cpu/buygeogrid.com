@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Propex Petrotac 1ft roll paving interlayer for crack prevention in asphalt overlays. Moisture barrier and stress relief. Cleveland, Akron, Toledo.',
   keywords: ['Petrotac', 'paving interlayer', 'crack prevention', 'asphalt overlay', 'Cleveland', 'Akron'],
   alternates: {
-    canonical: 'https://buygeogrid.com/petrotac-1ft',
+    canonical: 'https://www.buygeogrid.com/petrotac-1ft',
   },
   openGraph: {
     title: 'Petrotac 1ft Roll Ohio | Paving Interlayer',

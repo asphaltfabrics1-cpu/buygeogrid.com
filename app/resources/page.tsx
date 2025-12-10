@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Geogrid & geotextile resources. FAQ, blog, gallery, technical info for Ohio civil engineering.',
   keywords: ['geogrid resources', 'geotextile information', 'civil engineering resources', 'geogrid FAQ', 'geotextile blog', 'project gallery', 'Ohio geogrid information'],
   alternates: {
-    canonical: 'https://buygeogrid.com/resources',
+    canonical: 'https://www.buygeogrid.com/resources',
   },
   openGraph: {
     title: 'Resources | Geogrid & Geotextile Info',

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Solmax Mirafi 135N lightweight nonwoven geotextile for drainage and filtration applications. Excellent water flow rate. Cleveland, Akron, Toledo.',
   keywords: ['Mirafi 135N', 'nonwoven geotextile', 'drainage fabric', 'geotextile Ohio', 'Cleveland', 'Akron'],
   alternates: {
-    canonical: 'https://buygeogrid.com/135n',
+    canonical: 'https://www.buygeogrid.com/135n',
   },
   openGraph: {
     title: 'Mirafi 135N Nonwoven Geotextile Ohio',

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Tensar InterAx NX650 light-duty Geogrid for residential driveways, walkways and patios. Budget-friendly option. Free DCP testing. Cleveland, Akron.',
   keywords: ['Tensar NX650 Ohio', 'InterAx NX650 Cleveland', 'NX650 driveway Ohio', 'Tensar NX650 Akron', 'patio Geogrid Northern Ohio', 'walkway reinforcement Cleveland'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid/nx650',
+    canonical: 'https://www.buygeogrid.com/geogrid/nx650',
   },
   openGraph: {
     title: 'Tensar NX650 Geogrid Ohio | InterAx',

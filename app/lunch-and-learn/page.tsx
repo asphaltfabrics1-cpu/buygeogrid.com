@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'Ohio civil engineering PDH'
   ],
   alternates: {
-    canonical: 'https://buygeogrid.com/lunch-and-learn',
+    canonical: 'https://www.buygeogrid.com/lunch-and-learn',
   },
   openGraph: {
     title: 'Free Lunch & Learn | Geogrid Training Ohio',

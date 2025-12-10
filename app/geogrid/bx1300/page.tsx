@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'BX1300 heavy-duty biaxial Geogrid for roads, industrial sites and commercial paving. Higher load capacity. Free DCP soil testing. Cleveland, Akron.',
   keywords: ['BX1300 geogrid', 'biaxial Geogrid', 'Geogrid Ohio', 'heavy-duty Geogrid', 'Cleveland', 'Akron'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid/bx1300',
+    canonical: 'https://www.buygeogrid.com/geogrid/bx1300',
   },
   openGraph: {
     title: 'BX1300 Biaxial Geogrid Ohio | Heavy-Duty',

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Solmax Mirafi woven geotextile distributor in Northern Ohio. 500X, 600X for soil stabilization, separation and reinforcement. Cleveland, Akron, Toledo.',
   keywords: ['Solmax Mirafi Ohio', 'woven geotextile', 'Mirafi 500X', 'Mirafi 600X', 'civil fabrics Ohio', 'soil separation fabric', 'Cleveland geotextile', 'Ohio'],
   alternates: {
-    canonical: 'https://buygeogrid.com/woven-fabrics',
+    canonical: 'https://www.buygeogrid.com/woven-fabrics',
   },
   openGraph: {
     title: 'Woven Geotextile Ohio | Mirafi 500X 600X',

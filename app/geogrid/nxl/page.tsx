@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Tensar InterAx NXL Geogrid large roll format for highways and major construction projects. Faster installation. Free DCP testing. Cleveland, Akron.',
   keywords: ['Tensar NXL Ohio', 'InterAx NXL Cleveland', 'large roll Geogrid Northern Ohio', 'Tensar NXL Akron', 'efficient Geogrid installation Ohio'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid/nxl',
+    canonical: 'https://www.buygeogrid.com/geogrid/nxl',
   },
   openGraph: {
     title: 'Tensar NXL Geogrid Ohio | Large Roll',

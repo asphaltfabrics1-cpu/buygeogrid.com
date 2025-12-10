@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Geogrid & geotextile installations across Ohio. Real projects from Cleveland, Akron, Toledo.',
   keywords: ['Geogrid installation photos', 'Tensar projects Ohio', 'Geogrid before after', 'Cleveland Geogrid projects', 'Akron installations'],
   alternates: {
-    canonical: 'https://buygeogrid.com/gallery',
+    canonical: 'https://www.buygeogrid.com/gallery',
   },
   openGraph: {
     title: 'Project Gallery | Geogrid Installations Ohio',

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Tensar InterAx NX850 heavy-duty Geogrid for roads and parking lots. Reduces aggregate up to 40%. Free DCP soil testing. Cleveland, Akron, Toledo.',
   keywords: ['Tensar NX850 Ohio', 'InterAx NX850 Cleveland', 'NX850 Geogrid Northern Ohio', 'Tensar NX850 Akron', 'NX850 Toledo', 'buy Tensar Geogrid Ohio', 'NX850 distributor Cleveland', 'Tensar NX850 Youngstown', 'heavy-duty Geogrid Northern Ohio'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid/nx850',
+    canonical: 'https://www.buygeogrid.com/geogrid/nx850',
   },
   openGraph: {
     title: 'Tensar NX850 Geogrid Ohio | InterAx',

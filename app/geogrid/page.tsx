@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Authorized Tensar Geogrid distributor in Northern Ohio. InterAx, TriAx, Biaxial for soil stabilization. Free DCP testing. Cleveland, Akron, Toledo.',
   keywords: ['Tensar Geogrids Ohio', 'InterAx Geogrid', 'TriAx Geogrid', 'Biaxial Geogrid', 'Cleveland Geogrid', 'Akron Geogrid', 'soil stabilization Ohio', 'pavement reinforcement', 'NX850', 'TX190', 'Ohio'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid',
+    canonical: 'https://www.buygeogrid.com/geogrid',
   },
   openGraph: {
     title: 'Tensar Geogrid Products | InterAx TriAx',

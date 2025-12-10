@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Geogrid & geotextile FAQ. Tensar & Solmax questions answered. Soil stabilization, installation, pricing, DCP testing info.',
   keywords: ['Geogrid FAQ', 'geotextile questions', 'Tensar FAQ', 'soil stabilization Ohio', 'DCP testing', 'Ohio Geogrid'],
   alternates: {
-    canonical: 'https://buygeogrid.com/faq',
+    canonical: 'https://www.buygeogrid.com/faq',
   },
   openGraph: {
     title: 'FAQ | Geogrid & Geotextile Questions',

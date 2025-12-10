@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Contact AF Supply for Tensar geogrids & Solmax fabrics in Ohio. Free DCP testing. Cleveland, Akron, Toledo. Call (440) 368-1420.',
   keywords: ['Geogrid distributor Ohio', 'Tensar supplier Cleveland', 'Solmax distributor Akron', 'Solon Ohio', 'Ohio civil engineering', 'DCP testing Ohio'],
   alternates: {
-    canonical: 'https://buygeogrid.com/contact',
+    canonical: 'https://www.buygeogrid.com/contact',
   },
   openGraph: {
     title: 'Contact Us | Geogrid Ohio',

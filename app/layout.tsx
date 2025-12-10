@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://buygeogrid.com'),
+  metadataBase: new URL('https://www.buygeogrid.com'),
   title: {
     default: 'Geogrid Ohio | Tensar Distributor',
     template: '%s | BuyGeogrid'
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://buygeogrid.com',
+    url: 'https://www.buygeogrid.com',
     siteName: 'BuyGeogrid.com',
     title: 'Geogrid Ohio | Tensar Distributor',
     description: 'Northern Ohio\'s authorized Tensar & Solmax Mirafi distributor. Free DCP testing, soil stabilization expertise. Cleveland, Akron, Toledo, Youngstown.',
@@ -58,11 +58,11 @@ export const metadata: Metadata = {
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://buygeogrid.com',
+  '@id': 'https://www.buygeogrid.com',
   name: 'Asphalt Fabrics & Supply',
   alternateName: 'BuyGeogrid.com',
   description: 'Authorized distributor of Tensar geogrids and Solmax Mirafi geotextiles serving all of Ohio',
-  url: 'https://buygeogrid.com',
+  url: 'https://www.buygeogrid.com',
   telephone: '+1-440-368-1420',
   email: 'jstone@asphaltfabrics.com',
   address: {

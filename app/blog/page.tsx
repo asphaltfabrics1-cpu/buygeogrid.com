@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Expert geogrid and soil stabilization articles from Northern Ohio distributor. Tensar, Solmax tips and insights for Cleveland, Akron contractors.',
   keywords: ['Geogrid blog', 'soil stabilization tips', 'construction Ohio', 'Tensar articles', 'civil engineering blog'],
   alternates: {
-    canonical: 'https://buygeogrid.com/blog',
+    canonical: 'https://www.buygeogrid.com/blog',
   },
   openGraph: {
     title: 'Blog | Geogrid & Soil Stabilization Tips',

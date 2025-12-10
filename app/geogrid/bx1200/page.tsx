@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'BX1200 biaxial Geogrid for roads, parking lots and commercial projects. Cost-effective base reinforcement. Free DCP testing. Cleveland, Akron, Toledo.',
   keywords: ['BX1200 Geogrid Ohio', 'biaxial Geogrid Cleveland', 'BX1200 Northern Ohio', 'cost-effective Geogrid Akron', 'budget Geogrid Ohio'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid/bx1200',
+    canonical: 'https://www.buygeogrid.com/geogrid/bx1200',
   },
   openGraph: {
     title: 'BX1200 Biaxial Geogrid Ohio',

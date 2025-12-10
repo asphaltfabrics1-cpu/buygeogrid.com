@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Learn what Geogrid is, how it stabilizes soil, and when you need it. Complete guide covering types, benefits and applications from Ohio distributor.',
   keywords: ['what is Geogrid', 'Geogrid explained', 'soil stabilization', 'pavement reinforcement', 'Tensar Ohio', 'Geogrid Northern Ohio'],
   alternates: {
-    canonical: 'https://buygeogrid.com/blog/what-is-geogrid',
+    canonical: 'https://www.buygeogrid.com/blog/what-is-geogrid',
   },
   openGraph: {
     title: 'What is Geogrid? | How It Works | Ohio',

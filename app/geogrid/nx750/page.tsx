@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Tensar InterAx NX750 Geogrid for driveways and light commercial projects. Ideal for residential applications. Free DCP testing. Cleveland, Akron.',
   keywords: ['Tensar NX750 Ohio', 'InterAx NX750 Cleveland', 'NX750 residential driveway', 'Tensar NX750 Akron', 'Geogrid driveway Northern Ohio', 'NX750 Toledo', 'residential Geogrid Cleveland'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid/nx750',
+    canonical: 'https://www.buygeogrid.com/geogrid/nx750',
   },
   openGraph: {
     title: 'Tensar NX750 Geogrid Ohio | InterAx',

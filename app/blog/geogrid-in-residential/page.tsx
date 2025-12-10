@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Top 5 residential Geogrid uses: driveways, retaining walls, patios, walkways, foundations. Ohio guide.',
   keywords: ['Tensar Geogrid', 'residential Geogrid Ohio', 'driveway reinforcement Northern Ohio', 'retaining wall support Cleveland', 'Tensar residential applications'],
   alternates: {
-    canonical: 'https://buygeogrid.com/blog/geogrid-in-residential',
+    canonical: 'https://www.buygeogrid.com/blog/geogrid-in-residential',
   },
   openGraph: {
     title: 'Top 5 Geogrid Uses in Residential | Ohio',

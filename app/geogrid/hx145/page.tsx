@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Tensar H-Series HX145 Geogrid for base reinforcement and subgrade stabilization. Cost-effective solution with optimized geometry. Cleveland, Akron distributor.',
   keywords: ['Tensar HX145', 'H-Series HX145', 'Geogrid Ohio', 'base reinforcement Geogrid', 'subgrade stabilization', 'Cleveland', 'Akron'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid/hx145',
+    canonical: 'https://www.buygeogrid.com/geogrid/hx145',
   },
   openGraph: {
     title: 'Tensar HX145 Geogrid Ohio | Base Reinforcement',

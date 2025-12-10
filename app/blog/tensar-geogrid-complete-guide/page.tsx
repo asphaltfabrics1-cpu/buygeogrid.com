@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'geogrid distributor'
   ],
   alternates: {
-    canonical: 'https://buygeogrid.com/blog/tensar-geogrid-complete-guide',
+    canonical: 'https://www.buygeogrid.com/blog/tensar-geogrid-complete-guide',
   },
   openGraph: {
     title: 'Tensar Geogrid: Complete Guide to Types, Applications & Benefits',

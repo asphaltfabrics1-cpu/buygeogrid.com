@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Tensar geogrids for soil stabilization in Ohio. TriAx, Biaxial, Uniaxial. Free DCP testing. Cleveland, Akron, Toledo.',
   keywords: ['Tensar Geogrids Ohio', 'TriAx Geogrid Cleveland', 'Biaxial Geogrid Akron', 'Uniaxial Geogrid Toledo', 'soil stabilization Northern Ohio', 'base reinforcement Ohio', 'retaining wall Geogrid Cleveland', 'Geogrid distributor Ohio'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrids',
+    canonical: 'https://www.buygeogrid.com/geogrids',
   },
   openGraph: {
     title: 'Tensar Geogrids Ohio | TriAx & Biaxial',

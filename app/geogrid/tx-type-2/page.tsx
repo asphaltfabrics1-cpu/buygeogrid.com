@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Tensar TriAx TX Type 2 heavy-duty Geogrid for airports, ports and industrial paving. Maximum load capacity. Free DCP soil testing. Cleveland, Akron.',
   keywords: ['Tensar TX Type 2 Ohio', 'TriAx Type 2 Cleveland', 'airport Geogrid Northern Ohio', 'industrial paving Geogrid Akron', 'heavy-duty TriAx Ohio', 'port Geogrid Cleveland'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid/tx-type-2',
+    canonical: 'https://www.buygeogrid.com/geogrid/tx-type-2',
   },
   openGraph: {
     title: 'Tensar TX Type 2 Geogrid Ohio | TriAx',

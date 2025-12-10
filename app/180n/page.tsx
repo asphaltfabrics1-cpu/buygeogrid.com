@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Mirafi 180N heavy-duty nonwoven geotextile for drainage and filtration. Maximum flow capacity, puncture resistance. Cleveland, Akron, Toledo.',
   keywords: ['Mirafi 180N', 'nonwoven geotextile', 'drainage fabric', 'heavy-duty fabric', 'Cleveland', 'Akron'],
   alternates: {
-    canonical: 'https://buygeogrid.com/180n',
+    canonical: 'https://www.buygeogrid.com/180n',
   },
   openGraph: {
     title: 'Mirafi 180N Nonwoven Geotextile Ohio | Heavy-Duty',

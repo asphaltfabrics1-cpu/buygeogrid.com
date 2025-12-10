@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Tensar TriAx TX190L Geogrid with triangular apertures for roads and heavy traffic areas. Superior load distribution. Free DCP testing. Cleveland.',
   keywords: ['Tensar TX190L Ohio', 'TriAx TX190L Cleveland', 'TX190 Geogrid Northern Ohio', 'Tensar TriAx Akron', 'heavy traffic Geogrid Ohio', 'triangular aperture Geogrid Cleveland'],
   alternates: {
-    canonical: 'https://buygeogrid.com/geogrid/tx190',
+    canonical: 'https://www.buygeogrid.com/geogrid/tx190',
   },
   openGraph: {
     title: 'Tensar TX190L Geogrid Ohio | TriAx',

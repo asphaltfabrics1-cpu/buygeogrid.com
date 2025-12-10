@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'Buy Geogrid Patch Packs'
   ],
   alternates: {
-    canonical: 'https://buygeogrid.com/patch-packs',
+    canonical: 'https://www.buygeogrid.com/patch-packs',
   },
   openGraph: {
     title: 'Patch Packs Ohio | Cold Asphalt Pothole Repair Solution',
