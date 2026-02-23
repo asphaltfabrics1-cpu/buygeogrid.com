@@ -58,12 +58,19 @@ export async function POST(request: NextRequest) {
     const cityStateColumn = columns.find((col: any) => col.title === 'City/State');
     const projectColumn = columns.find((col: any) => col.title === 'Tell Us About Your Project');
     const productColumn = columns.find((col: any) => col.title === 'Product Interest');
+    const dateColumn = columns.find((col: any) => col.title === 'Date');
 
     // Create the item name
     const itemName = name;
 
     // Build column values for Monday.com
     const columnValues: any = {};
+
+    // Add today's date
+    if (dateColumn) {
+      const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+      columnValues[dateColumn.id] = { date: today };
+    }
 
     if (emailColumn && email) {
       if (emailColumn.type === 'email') {
