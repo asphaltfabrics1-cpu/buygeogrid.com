@@ -7,34 +7,116 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Patch Packs Ohio | Cold Asphalt Pothole Repair Solution | Cleveland, Akron, Toledo',
-  description: 'Patch Packs cold asphalt patch for pothole repair in Northern Ohio. All-weather emergency pavement repair with VOC-free recycled aggregate. Bridge deck repair material. Cleveland, Akron, Canton, Toledo distributor.',
+  title: 'Pothole Repair Ohio | Patch Packs Cold Asphalt Patch | Cleveland, Akron, Toledo',
+  description: 'Professional pothole repair solution for Ohio. Patch Packs cold asphalt patch delivers permanent pothole fixes in any weather. VOC-free, instant traffic-ready. Serving Cleveland, Akron, Canton, Toledo. Call (440) 368-1420.',
   keywords: [
-    'Patch Packs Ohio',
-    'pothole repair Northern Ohio',
-    'cold asphalt patch',
-    'cold patch asphalt',
-    'emergency pavement repair',
-    'all-weather pothole repair',
-    'VOC-free pothole material',
-    'recycled aggregate patch',
-    'bridge deck repair material',
+    'pothole repair Ohio',
     'pothole repair Cleveland',
     'pothole repair Akron',
     'pothole repair Toledo',
     'pothole repair Canton',
-    'asphalt repair supply Northern Ohio',
+    'pothole repair Youngstown',
+    'cold patch pothole repair',
+    'cold asphalt patch Ohio',
+    'permanent pothole fix',
     'pothole filler Ohio',
-    'Buy Geogrid Patch Packs'
+    'winter pothole repair',
+    'all-weather pothole repair',
+    'emergency pothole repair Ohio',
+    'commercial pothole repair',
+    'parking lot pothole repair',
+    'driveway pothole repair',
+    'asphalt pothole repair',
+    'cold patch asphalt',
+    'Patch Packs Ohio',
+    'VOC-free pothole material',
+    'bridge deck repair material',
+    'pothole repair material',
+    'buy pothole patch Ohio',
+    'pothole repair supplies Cleveland',
+    'municipal pothole repair'
   ],
   alternates: {
     canonical: 'https://www.buygeogrid.com/patch-packs',
   },
   openGraph: {
-    title: 'Patch Packs Ohio | Cold Asphalt Pothole Repair Solution',
-    description: 'Cold asphalt patch for pothole repair in Northern Ohio. All-weather emergency pavement repair. VOC-free, recycled aggregate. Cleveland, Akron, Toledo distributor.',
+    title: 'Pothole Repair Ohio | Patch Packs Cold Asphalt Patch Solution',
+    description: 'Professional pothole repair solution for Ohio. Cold asphalt patch that works in any weather. Instant traffic-ready. Serving Cleveland, Akron, Canton, Toledo.',
     images: ['/images/products/patch-packs.png'],
   },
+};
+
+// FAQ data for schema markup
+const faqData = [
+  {
+    question: "What is the best way to repair a pothole?",
+    answer: "The best way to repair a pothole is to clean out loose debris, fill with cold patch asphalt material like Patch Packs, and compact firmly. Cold patch asphalt works in any weather and allows immediate traffic access. For deeper potholes over 4 inches, fill in 2-inch layers, compacting each layer."
+  },
+  {
+    question: "Can you repair potholes in winter?",
+    answer: "Yes, cold asphalt patch products like Patch Packs are specifically designed for winter pothole repair. Unlike hot mix asphalt, cold patch works in freezing temperatures and wet conditions, making it ideal for emergency pothole repairs in Ohio's harsh winters."
+  },
+  {
+    question: "How long does a pothole repair last?",
+    answer: "A properly applied cold asphalt patch repair can last several years. Patch Packs use 100% recycled aggregate with a special binder that expands and contracts with temperature changes, creating a durable bond. The key to longevity is proper compaction and ensuring the pothole is clean before application."
+  },
+  {
+    question: "What size pothole can cold patch repair?",
+    answer: "Cold patch asphalt is effective for potholes 1 inch deep or deeper. For shallow surface defects, other repair methods may be more appropriate. For very deep potholes (over 4 inches), apply cold patch in multiple 2-inch layers, compacting each layer before adding the next."
+  },
+  {
+    question: "Do I need special equipment for pothole repair?",
+    answer: "No, Patch Packs cold asphalt patch requires no specialized equipment. A single person can complete repairs using basic hand tools. Simply pour, spread, and compact with a hand tamper or vehicle tire. No heating, mixing, or special training required."
+  },
+  {
+    question: "Where can I buy pothole repair material in Ohio?",
+    answer: "BuyGeogrid.com stocks Patch Packs cold asphalt patch at our Solon, Ohio warehouse. We deliver throughout Cleveland, Akron, Canton, Toledo, Youngstown, and all of Northern Ohio. Most orders ship within 24-48 hours. Call (440) 368-1420 for pricing and availability."
+  }
+];
+
+// JSON-LD Schema for Product and FAQ
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Patch Packs Cold Asphalt Pothole Repair",
+  "description": "Professional cold asphalt patch for pothole repair. VOC-free, 100% recycled aggregate. Works in all weather conditions. Immediate traffic access after application.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Patch Packs"
+  },
+  "category": "Pothole Repair Materials",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "areaServed": {
+      "@type": "State",
+      "name": "Ohio"
+    },
+    "seller": {
+      "@type": "Organization",
+      "name": "BuyGeogrid.com",
+      "telephone": "+1-440-368-1420",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Solon",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      }
+    }
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
 };
 
 export default function PatchPacks() {
@@ -57,11 +139,20 @@ export default function PatchPacks() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      {/* JSON-LD Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
       <main className="flex-grow">
         <PageHero
-          title="Patch Packs Pothole Repair Solution"
-          description="Fast and easy, all-weather emergency pavement repair for potholes, spalls, and other defects. Patch Packs combine 100% recycled aggregate with a non-volatile binder and cold asphalt for durable repairs. Authorized cold patch asphalt distributor serving Northern Ohio with competitive pricing and expert support."
+          title="Pothole Repair That Works in Any Weather"
+          description="Patch Packs cold asphalt patch delivers permanent pothole repairs year-round—even in freezing temperatures. No special equipment needed. Instant traffic access after compaction. VOC-free formula with 100% recycled aggregate. Your trusted pothole repair supplier serving Cleveland, Akron, Canton, Toledo, and all of Northern Ohio."
           ctaText="Request a Quote"
           ctaLink="/contact"
           secondaryCtaText="Call (440) 368-1420"
@@ -168,8 +259,23 @@ export default function PatchPacks() {
           </div>
         </section>
 
-        {/* Serving Northern Ohio Section */}
+        {/* FAQ Section */}
         <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pothole Repair FAQ</h2>
+            <div className="space-y-6">
+              {faqData.map((faq, index) => (
+                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Serving Northern Ohio Section */}
+        <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Pothole Repair Supplier Serving Northern Ohio</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -179,7 +285,7 @@ export default function PatchPacks() {
         </section>
 
         {/* Lunch & Learn CTA Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-16 px-6 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Want to Learn More?</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
