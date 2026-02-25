@@ -144,7 +144,8 @@
     const loadingId = addMessage('bot', '...');
 
     try {
-      const response = await fetch(`${config.apiUrl}/api/ai/concierge`, {
+      // Use local API endpoint
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -154,12 +155,6 @@
             role: m.role === 'user' ? 'user' : 'assistant',
             content: m.content
           })),
-          context: {
-            tenantSlug: config.siteId,
-            tenantName: config.brandName,
-          },
-          useCase: 'fast',
-          stream: false,
         }),
       });
 
@@ -167,13 +162,35 @@
         throw new Error('Failed to get response');
       }
 
-      const data = await response.json();
-
       // Remove loading message
       removeMessage(loadingId);
 
-      // Add bot response
-      addMessage('bot', data.content);
+      // Handle streaming response
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      const botMessageId = addMessage('bot', '');
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const text = decoder.decode(value);
+        const messageEl = document.getElementById(botMessageId);
+        if (messageEl) {
+          const contentEl = messageEl.querySelector('.gideon-message-content');
+          if (contentEl) {
+            contentEl.textContent += text;
+          }
+        }
+        // Update messages array
+        const msgIndex = messages.findIndex(m => m.id === botMessageId);
+        if (msgIndex !== -1) {
+          messages[msgIndex].content += text;
+        }
+        // Scroll to bottom
+        const messagesContainer = document.getElementById('gideon-messages');
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
 
     } catch (error) {
       console.error('Chat error:', error);
