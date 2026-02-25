@@ -1,9 +1,6 @@
 /**
  * Gideon AI Chat Widget
- * Embeddable chatbot for client websites
- *
- * Usage:
- * <script src="https://your-gideon-domain.com/widget/gideon-chat.js" data-site-id="buygeogrid"></script>
+ * Connects to Gideon Dashboard for conversation tracking
  */
 
 (function() {
@@ -11,21 +8,49 @@
 
   // Configuration
   const config = {
-    apiUrl: document.currentScript?.getAttribute('data-api-url') || 'https://gideon-framework.vercel.app',
-    siteId: document.currentScript?.getAttribute('data-site-id') || 'demo',
-    primaryColor: document.currentScript?.getAttribute('data-color') || '#00c97e',
-    position: document.currentScript?.getAttribute('data-position') || 'bottom-right',
-    greeting: document.currentScript?.getAttribute('data-greeting') || 'Hi! How can I help you today?',
-    brandName: document.currentScript?.getAttribute('data-brand-name') || 'AI Assistant',
+    apiUrl: 'https://gideon-dashboard.vercel.app',
+    domain: 'buygeogrid.com',
+    primaryColor: '#00c97e',
+    position: 'bottom-right',
   };
 
   // State
   let isOpen = false;
   let messages = [];
+  let history = [];
   let isLoading = false;
+  let sessionId = getOrCreateSessionId();
+  let botConfig = null;
+
+  // Generate or retrieve session ID
+  function getOrCreateSessionId() {
+    let id = localStorage.getItem('gideon_session_id');
+    if (!id) {
+      id = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      localStorage.setItem('gideon_session_id', id);
+    }
+    return id;
+  }
+
+  // Fetch chatbot config from Gideon Dashboard
+  async function fetchConfig() {
+    try {
+      const response = await fetch(`${config.apiUrl}/api/public/${config.domain}/chat/config`);
+      if (response.ok) {
+        botConfig = await response.json();
+        return botConfig;
+      }
+    } catch (error) {
+      console.error('Failed to fetch chatbot config:', error);
+    }
+    return null;
+  }
 
   // Create widget HTML
   function createWidget() {
+    const greeting = botConfig?.greeting || 'Hi! How can I help you today?';
+    const brandName = botConfig?.businessName || 'BuyGeogrid';
+
     const widgetHTML = `
       <div id="gideon-chat-widget" class="gideon-widget" style="--primary-color: ${config.primaryColor}">
         <!-- Chat Button -->
@@ -50,7 +75,7 @@
                 </svg>
               </div>
               <div>
-                <div class="gideon-brand-name">${config.brandName}</div>
+                <div class="gideon-brand-name">${brandName}</div>
                 <div class="gideon-status">
                   <span class="gideon-status-dot"></span>
                   <span>Online</span>
@@ -69,7 +94,7 @@
           <div id="gideon-messages" class="gideon-messages">
             <div class="gideon-message gideon-message-bot">
               <div class="gideon-message-content">
-                ${config.greeting}
+                ${greeting}
               </div>
             </div>
           </div>
@@ -106,7 +131,6 @@
   function loadCSS() {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    // For local testing, load from same directory as JS
     link.href = '/widget/gideon-chat.css';
     document.head.appendChild(link);
   }
@@ -129,12 +153,15 @@
     }
   }
 
-  // Send message to API
+  // Send message to Gideon Dashboard API
   async function sendMessage(content) {
-    if (!content.trim()) return;
+    if (!content.trim() || isLoading) return;
 
     // Add user message to UI
     addMessage('user', content);
+
+    // Add to history for API
+    history.push({ role: 'user', content: content });
 
     // Clear input
     document.getElementById('gideon-input').value = '';
@@ -144,58 +171,43 @@
     const loadingId = addMessage('bot', '...');
 
     try {
-      // Use local API endpoint
-      const response = await fetch('/api/chat', {
+      const response = await fetch(`${config.apiUrl}/api/public/${config.domain}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          messages: messages.map(m => ({
-            role: m.role === 'user' ? 'user' : 'assistant',
-            content: m.content
-          })),
+          message: content,
+          sessionId: sessionId,
+          history: history.slice(0, -1), // Send history without current message
         }),
       });
+
+      // Remove loading message
+      removeMessage(loadingId);
 
       if (!response.ok) {
         throw new Error('Failed to get response');
       }
 
-      // Remove loading message
-      removeMessage(loadingId);
+      const data = await response.json();
+      const botResponse = data.response;
 
-      // Handle streaming response
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      const botMessageId = addMessage('bot', '');
+      // Add bot response to UI
+      addMessage('bot', botResponse);
 
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
+      // Add to history
+      history.push({ role: 'assistant', content: botResponse });
 
-        const text = decoder.decode(value);
-        const messageEl = document.getElementById(botMessageId);
-        if (messageEl) {
-          const contentEl = messageEl.querySelector('.gideon-message-content');
-          if (contentEl) {
-            contentEl.textContent += text;
-          }
-        }
-        // Update messages array
-        const msgIndex = messages.findIndex(m => m.id === botMessageId);
-        if (msgIndex !== -1) {
-          messages[msgIndex].content += text;
-        }
-        // Scroll to bottom
-        const messagesContainer = document.getElementById('gideon-messages');
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      // Handle escalation
+      if (data.shouldEscalate) {
+        console.log('Chat escalated - customer needs human assistance');
       }
 
     } catch (error) {
       console.error('Chat error:', error);
       removeMessage(loadingId);
-      addMessage('bot', "I'm sorry, I'm having trouble connecting right now. Please try again in a moment.");
+      addMessage('bot', "I'm sorry, I'm having trouble connecting right now. Please call us at (440) 368-1420 or try again in a moment.");
     } finally {
       isLoading = false;
     }
@@ -203,7 +215,7 @@
 
   // Add message to UI
   function addMessage(role, content) {
-    const messageId = `msg-${Date.now()}-${Math.random()}`;
+    const messageId = `msg-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     const messagesContainer = document.getElementById('gideon-messages');
 
     const messageHTML = `
@@ -233,9 +245,18 @@
   }
 
   // Initialize widget
-  function init() {
+  async function init() {
     // Load CSS
     loadCSS();
+
+    // Fetch config from Gideon Dashboard
+    await fetchConfig();
+
+    // Check if chatbot is enabled
+    if (botConfig && !botConfig.enabled) {
+      console.log('Gideon Chat: Chatbot is disabled for this site');
+      return;
+    }
 
     // Create widget HTML
     createWidget();
@@ -255,7 +276,7 @@
       }
     });
 
-    console.log('✅ Gideon Chat Widget initialized for site:', config.siteId);
+    console.log('✅ Gideon Chat Widget initialized - connected to Gideon Dashboard');
   }
 
   // Wait for DOM to be ready
