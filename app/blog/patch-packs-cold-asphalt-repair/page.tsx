@@ -40,7 +40,7 @@ const faqData = [
   },
   {
     question: "Do I need special equipment to apply Patch Packs?",
-    answer: "No. Patch Packs require no heating, mixing, or specialized equipment. A single person can complete a repair using basic hand tools. The process is: clean the hole, pour in the material, spread it slightly above the surrounding surface, and compact with a hand tamper or vehicle tire. The repair is traffic-ready immediately after compaction."
+    answer: "No. Patch Packs require no heating, mixing, or specialized equipment. A single person can complete a repair using basic hand tools. The process is: clean the hole, place the material in, spread it slightly above the surrounding surface, and compact with a hand tamper or vehicle tire. The repair is traffic-ready immediately after compaction."
   },
   {
     question: "Where can I buy Patch Packs in Ohio?",
@@ -153,7 +153,7 @@ export default function PatchPacksBlog() {
                 </p>
                 <ol className="list-decimal pl-6 mb-6 space-y-3 text-gray-700">
                   <li><strong>Clean the hole:</strong> Remove loose debris, standing water, and any deteriorated material from the pothole.</li>
-                  <li><strong>Fill:</strong> Pour Patch Packs material into the hole, overfilling slightly above the surrounding surface level to account for compaction.</li>
+                  <li><strong>Fill:</strong> Place Patch Packs material into the hole, overfilling slightly above the surrounding surface level to account for compaction.</li>
                   <li><strong>Compact:</strong> Tamp firmly with a hand tamper, or drive a vehicle tire over the repair. For potholes deeper than 4 inches, apply in 2-inch lifts, compacting each layer before adding the next.</li>
                   <li><strong>Open to traffic:</strong> The repair is immediately ready for vehicle traffic after compaction.</li>
                 </ol>

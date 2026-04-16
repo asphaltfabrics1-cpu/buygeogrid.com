@@ -66,7 +66,7 @@ const faqData = [
   },
   {
     question: "Do I need special equipment for pothole repair?",
-    answer: "No, Patch Packs cold asphalt patch requires no specialized equipment. A single person can complete repairs using basic hand tools. Simply pour, spread, and compact with a hand tamper or vehicle tire. No heating, mixing, or special training required."
+    answer: "No, Patch Packs cold asphalt patch requires no specialized equipment. A single person can complete repairs using basic hand tools. Simply place, spread, and compact with a hand tamper or vehicle tire. No heating, mixing, or special training required."
   },
   {
     question: "Where can I buy pothole repair material in Ohio?",
