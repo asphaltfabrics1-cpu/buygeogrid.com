@@ -21,6 +21,24 @@ export const metadata: Metadata = {
 export default function Blog() {
   const posts = [
     {
+      title: 'DCP Testing & Tensar Plus: How They Work Together',
+      date: 'April 16, 2026',
+      excerpt: 'How Dynamic Cone Penetrometer testing feeds into Tensar Plus design software to engineer the right geogrid solution for your subgrade. ASTM D6951 explained.',
+      url: '/blog/dcp-testing-tensar-plus',
+    },
+    {
+      title: 'Patch Packs Cold Asphalt Patch: How It Works & When to Use It',
+      date: 'April 16, 2026',
+      excerpt: 'Everything you need to know about Patch Packs — what they are, Standard vs Flex variants, how to apply them, and why Ohio contractors rely on them year-round.',
+      url: '/blog/patch-packs-cold-asphalt-repair',
+    },
+    {
+      title: 'Tensar Geogrid: The Complete Guide',
+      date: 'July 14, 2025',
+      excerpt: 'A comprehensive guide to Tensar geogrid products, applications, and how they create mechanically stabilized layers for road and site construction.',
+      url: '/blog/tensar-geogrid-complete-guide',
+    },
+    {
       title: 'Top 5 Uses for Tensar Geogrid in Residential Projects',
       date: 'June 30, 2025',
       excerpt: 'Explore the most common residential applications of Tensar Geogrid and why contractors prefer it.',
