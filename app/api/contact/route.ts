@@ -144,6 +144,25 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Also submit to Gideon Dashboard (fire and forget)
+    try {
+      await fetch('https://dashboard.gideoncode.com/api/public/buygeogrid.com/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          visitorId: `form-${Date.now()}`,
+          visitorName: name,
+          visitorEmail: email,
+          visitorPhone: phone || undefined,
+          visitorAddress: cityState || undefined,
+          jobType: product || 'Quote Request',
+          jobDetails: message,
+        }),
+      });
+    } catch (gideonError) {
+      console.error('Failed to send to Gideon Dashboard:', gideonError);
+    }
+
     return NextResponse.json({
       success: true,
       message: 'Quote request submitted successfully',

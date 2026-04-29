@@ -221,13 +221,8 @@ export default function RootLayout({
 
         {/* Gideon AI Chat Widget */}
         <Script
-          src="/widget/gideon-chat.js"
-          strategy="afterInteractive"
-          data-site-id="buygeogrid"
-          data-brand-name="BuyGeogrid Assistant"
-          data-color="#00c97e"
-          data-api-url="https://gideon-framework.vercel.app"
-          data-greeting="Hi! I can help you learn about our geogrid and interlayer products. What would you like to know?"
+          src="https://dashboard.gideoncode.com/chat-widget.js"
+          strategy="lazyOnload"
         />
       </head>
       <body
