@@ -94,24 +94,25 @@ export default function ProofRollPage() {
             <div className="bg-white rounded border border-gray-200 p-8">
               <div className="prose prose-lg max-w-none">
 
-                <a href="/docs/tensar-2025-subgrade-pocket-card.pdf" download className="block bg-gradient-to-br from-gray-900 to-gray-800 rounded border border-gray-700 mb-8 p-6 no-underline hover:from-gray-800 hover:to-gray-700 transition-all group">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-[#00c97e] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
+                <div className="rounded border border-gray-200 mb-8 overflow-hidden">
+                  <img
+                    src="/images/tensar-2025-subgrade-pocket-card.png"
+                    alt="Tensar 2025 Subgrade Pocket Card — aggregate thickness charts and cost conversion tables"
+                    className="w-full m-0"
+                  />
+                  <div className="p-4 flex items-center justify-between bg-gray-50 border-t border-gray-200">
+                    <div>
+                      <h3 className="text-base font-bold text-gray-900 m-0">Tensar 2025 Subgrade Pocket Card</h3>
+                      <p className="text-gray-500 text-sm m-0">Aggregate thickness charts &amp; cost conversion tables</p>
                     </div>
-                    <div className="flex-grow">
-                      <h3 className="text-lg font-bold text-white mb-0.5">Tensar 2025 Subgrade Pocket Card</h3>
-                      <p className="text-gray-400 text-sm m-0">Aggregate thickness charts and cost conversion tables — PDF download</p>
-                    </div>
-                    <div className="text-[#00c97e] group-hover:translate-y-0.5 transition-transform flex-shrink-0">
-                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <a href="/docs/tensar-2025-subgrade-pocket-card.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors whitespace-nowrap no-underline">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                       </svg>
-                    </div>
+                      Download PDF
+                    </a>
                   </div>
-                </a>
+                </div>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is a Proof Roll?</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
