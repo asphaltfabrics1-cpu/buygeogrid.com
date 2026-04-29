@@ -27,10 +27,10 @@ export default function Home() {
   ];
 
   const features = [
-    { title: 'Premium Products', desc: 'Tensar & Mirafi authorized distributor' },
-    { title: 'Expert Design', desc: 'Free DCP testing & consultation' },
-    { title: 'Fast Delivery', desc: 'Quick turnaround' },
-    { title: 'Best Pricing', desc: 'Price matching & bulk discounts' },
+    { title: 'Free DCP Testing', desc: 'We come to your site and test your subgrade. Real CBR data, not guesswork.' },
+    { title: 'Tensar+ Design Support', desc: 'We run your soil data through Tensar Plus and give you an engineered recommendation.' },
+    { title: 'On-Site When You Need Us', desc: 'Failing a proof roll? We show up with a solution, not just a product.' },
+    { title: 'Lunch & Learn Training', desc: 'Free training for your team with PDH credits for engineers. We bring lunch.' },
   ];
 
   const videoSchema = {
@@ -138,23 +138,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Welcome Section */}
+        {/* What We Do Differently */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Welcome to BuyGeogrid.com
+              More Than a Supplier
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Your trusted source for premium geosynthetic solutions including Geogrids,
-              Geotextiles, and paving interlayers. We serve contractors, engineers, and municipalities
-              throughout Northern Ohio with expert consultation and competitive pricing.
+              Anyone can sell you a roll of geogrid. We help you figure out which one you actually need.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Geogrid is a high-strength polymer mesh that mechanically stabilizes soil and aggregate bases—helping reduce rutting, prevent base failure, and potentially extend pavement life. Geotextiles provide separation, filtration, and drainage for civil projects. Paving interlayers help prevent reflective cracking in asphalt overlays. When placed correctly, these geosynthetics can save you time and money while building a stronger foundation. We help match the right product to your soil conditions and provide free DCP testing so you can see the results for yourself.
+              We test your subgrade with a DCP, run the results through Tensar Plus design software, and give you an engineered recommendation — the right product and the right aggregate thickness for your actual site conditions. When you fail a proof roll, we show up with a solution. When your engineers need PDH credits, we bring lunch and training. That&apos;s the difference between a distributor and a supply house.
             </p>
-            <div className="inline-block bg-[#00c97e] text-white px-6 py-3 rounded font-semibold">
-              Free DCP Testing Available
-            </div>
+            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
+              Schedule a Free Site Assessment
+            </Link>
           </div>
         </section>
 
