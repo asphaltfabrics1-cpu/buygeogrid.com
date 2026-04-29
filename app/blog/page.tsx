@@ -21,6 +21,12 @@ export const metadata: Metadata = {
 export default function Blog() {
   const posts = [
     {
+      title: 'How to Pass a Proof Roll: Geogrid & Aggregate Thickness Guide',
+      date: 'April 29, 2026',
+      excerpt: 'Failing a proof roll? Use this chart to determine the right geogrid and aggregate thickness based on your subgrade CBR. Includes cost savings examples.',
+      url: '/blog/how-to-pass-a-proof-roll',
+    },
+    {
       title: 'DCP Testing & Tensar Plus: How They Work Together',
       date: 'April 16, 2026',
       excerpt: 'How Dynamic Cone Penetrometer testing feeds into Tensar Plus design software to engineer the right geogrid solution for your subgrade. ASTM D6951 explained.',

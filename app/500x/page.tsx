@@ -7,17 +7,80 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mirafi 500X Woven Geotextile Ohio',
-  description: 'Solmax Mirafi 500X woven geotextile for soil separation and stabilization. Superior puncture resistance, UV stabilized. Cleveland, Akron, Toledo.',
+  title: 'Buy Mirafi 500X Woven Geotextile | Ohio Distributor | BuyGeogrid',
+  description: 'Buy Solmax Mirafi 500X woven geotextile for soil separation and stabilization. 200 lbs grab tensile, 700 lbs CBR puncture strength. UV stabilized polypropylene. Ohio distributor.',
   keywords: ['Mirafi 500X', 'woven geotextile', 'geotextile Ohio', 'separation fabric', 'Cleveland', 'Akron'],
   alternates: {
     canonical: 'https://www.buygeogrid.com/500x',
   },
   openGraph: {
-    title: 'Mirafi 500X Woven Geotextile Ohio',
+    title: 'Buy Mirafi 500X Woven Geotextile | Ohio Distributor | BuyGeogrid',
     description: 'High-strength woven fabric for separation and stabilization. Ohio distributor.',
     images: ['/images/products/mirafi-500x.jpeg'],
   },
+};
+
+// FAQ data for schema markup
+const faqData = [
+  {
+    question: "What is the Mirafi 500X woven geotextile?",
+    answer: "The Mirafi 500X is a woven geotextile composed of polypropylene fibers woven into a stable network where the fibers retain their relative position. Unlike geogrids which have open apertures, woven geotextiles provide continuous fabric coverage for separation applications. It is manufactured by TenCate Geosynthetics Americas (a Solmax company) and tested in a GAI-LAP accredited laboratory."
+  },
+  {
+    question: "What is the difference between woven and nonwoven geotextiles?",
+    answer: "Woven geotextiles like the 500X are designed primarily for separation and stabilization, providing high tensile strength with low elongation (15%). Nonwoven geotextiles (like the 135N, 140N, 180N) are designed for drainage and filtration with high flow rates. Woven fabrics have lower permeability but higher strength-to-weight ratios."
+  },
+  {
+    question: "When should I use separation fabric vs drainage fabric?",
+    answer: "Use woven separation fabrics like the 500X when you need to keep soil layers separate, such as between subgrade and aggregate in road construction or parking lots. Use nonwoven drainage fabrics when water flow and filtration are the primary needs, such as French drains or retaining wall drainage."
+  },
+  {
+    question: "What are the Mirafi 500X specifications?",
+    answer: "The 500X provides 200 lbs grab tensile strength in both directions with 15% elongation, 75 lbs trapezoid tear strength, and 700 lbs CBR puncture strength. The AOS is #40 U.S. sieve (0.425mm) with permittivity of 0.05 sec⁻¹ and flow rate of 4 gal/min/ft². Rolls measure 12.5 feet wide by 432 feet long, covering approximately 600 square yards."
+  },
+  {
+    question: "When should I use the 500X vs the 600X?",
+    answer: "The 500X is the standard-duty woven separation fabric for typical road separation, parking lots, and general stabilization. The 600X is the heavy-duty option with 315 lbs grab tensile and 900 lbs CBR puncture strength for demanding applications with heavy equipment traffic or poor soil conditions. Contact us to discuss which is right for your project."
+  }
+];
+
+// JSON-LD Schema for Product and FAQ
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Mirafi 500X Woven Geotextile",
+  "description": "High-strength woven geotextile for separation and stabilization applications. 200 lbs grab tensile strength with 700 lbs CBR puncture resistance.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Solmax"
+  },
+  "category": "Woven Geotextiles",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "areaServed": {
+      "@type": "State",
+      "name": "Ohio"
+    },
+    "seller": {
+      "@type": "Organization",
+      "name": "BuyGeogrid.com",
+      "telephone": "+1-440-368-1420"
+    }
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
 };
 
 export default function Mirafi500X() {
@@ -37,6 +100,15 @@ export default function Mirafi500X() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      {/* JSON-LD Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
       <main className="flex-grow">
         <PageHero
@@ -116,6 +188,21 @@ export default function Mirafi500X() {
             <p className="text-lg text-gray-700 leading-relaxed">
               For demanding applications with heavy equipment traffic, poor soil conditions, or longer service life requirements, consider the 600X. Contact us to discuss your project requirements.
             </p>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mirafi 500X FAQ</h2>
+            <div className="space-y-6">
+              {faqData.map((faq, index) => (
+                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

@@ -7,17 +7,80 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mirafi 135N Nonwoven Geotextile Ohio',
-  description: 'Solmax Mirafi 135N lightweight nonwoven geotextile for drainage and filtration applications. Excellent water flow rate. Cleveland, Akron, Toledo.',
+  title: 'Buy Mirafi 135N Nonwoven Geotextile | Ohio Distributor | BuyGeogrid',
+  description: 'Buy Solmax Mirafi 135N nonwoven geotextile for drainage and filtration. Lightweight needlepunched polypropylene with 155 gal/min/ft² flow rate. BABA compliant. Ohio distributor serving Cleveland, Akron, Toledo.',
   keywords: ['Mirafi 135N', 'nonwoven geotextile', 'drainage fabric', 'geotextile Ohio', 'Cleveland', 'Akron'],
   alternates: {
     canonical: 'https://www.buygeogrid.com/135n',
   },
   openGraph: {
-    title: 'Mirafi 135N Nonwoven Geotextile Ohio',
-    description: 'Lightweight drainage and filtration fabric. Ohio distributor.',
+    title: 'Buy Mirafi 135N Nonwoven Geotextile | Ohio Distributor | BuyGeogrid',
+    description: 'Lightweight drainage and filtration fabric. Highest flow rate in the Mirafi nonwoven series. Ohio distributor.',
     images: ['/images/products/mirafi-135n.jpg'],
   },
+};
+
+// FAQ data for schema markup
+const faqData = [
+  {
+    question: "What is the Mirafi 135N nonwoven geotextile?",
+    answer: "The Mirafi 135N is a needlepunched nonwoven geotextile composed of polypropylene fibers formed into a stable network. It is the lightweight option in the Mirafi nonwoven line, designed for drainage and filtration applications where high flow rates are important. It is manufactured by TenCate Geosynthetics Americas (a Solmax company) and tested in a GAI-LAP accredited laboratory."
+  },
+  {
+    question: "What is the Mirafi 135N used for?",
+    answer: "The 135N is used for drainage systems, erosion control, French drains, and retaining wall drainage. Its high flow rate of 155 gal/min/ft² makes it excellent for applications where maximum water movement is the priority."
+  },
+  {
+    question: "How does the 135N compare to the 140N and 180N?",
+    answer: "The 135N offers the highest flow rate (155 gal/min/ft²) with the lightest weight, ideal for maximum drainage. The 140N provides a balance of strength and flow at 135 gal/min/ft². The 180N is the heavy-duty option with the tightest filtration at 95 gal/min/ft². Choose based on whether you need maximum flow (135N), balanced performance (140N), or maximum strength and fine filtration (180N)."
+  },
+  {
+    question: "What roll sizes does the Mirafi 135N come in?",
+    answer: "The 135N comes in rolls measuring 12.5 feet wide by 360 feet long, covering approximately 600 square yards per roll. Each roll weighs approximately 122 lbs, making it the lightest of the nonwoven options."
+  },
+  {
+    question: "Is the Mirafi 135N BABA compliant?",
+    answer: "Yes, the Mirafi 135N meets Build America, Buy America Act (BABA) requirements. It is manufactured by TenCate Geosynthetics Americas (a Solmax company) and is inert to biological degradation, resisting naturally encountered chemicals, alkalis, and acids."
+  }
+];
+
+// JSON-LD Schema for Product and FAQ
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Mirafi 135N Nonwoven Geotextile",
+  "description": "Lightweight needlepunched nonwoven geotextile for drainage and filtration applications. Highest flow rate in the Mirafi nonwoven series at 155 gal/min/ft².",
+  "brand": {
+    "@type": "Brand",
+    "name": "Solmax"
+  },
+  "category": "Nonwoven Geotextiles",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "areaServed": {
+      "@type": "State",
+      "name": "Ohio"
+    },
+    "seller": {
+      "@type": "Organization",
+      "name": "BuyGeogrid.com",
+      "telephone": "+1-440-368-1420"
+    }
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
 };
 
 export default function Mirafi135N() {
@@ -37,6 +100,15 @@ export default function Mirafi135N() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      {/* JSON-LD Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
       <main className="flex-grow">
         <PageHero
@@ -116,6 +188,21 @@ export default function Mirafi135N() {
             <p className="text-lg text-gray-700 leading-relaxed">
               Choose based on your application: French drains and residential drainage often work well with 135N. Commercial drainage and retaining wall applications may require 140N or 180N. Contact us to discuss your project requirements.
             </p>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mirafi 135N FAQ</h2>
+            <div className="space-y-6">
+              {faqData.map((faq, index) => (
+                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

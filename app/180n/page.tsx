@@ -7,17 +7,80 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mirafi 180N Nonwoven Geotextile Ohio',
-  description: 'Mirafi 180N heavy-duty nonwoven geotextile for drainage and filtration. Maximum flow capacity, puncture resistance. Cleveland, Akron, Toledo.',
+  title: 'Buy Mirafi 180N Heavy-Duty Nonwoven Geotextile | Ohio | BuyGeogrid',
+  description: 'Buy Solmax Mirafi 180N heavy-duty nonwoven geotextile. 205 lbs grab tensile, 500 lbs CBR puncture strength, #80 sieve filtration. Ideal for highway and commercial drainage. Ohio distributor.',
   keywords: ['Mirafi 180N', 'nonwoven geotextile', 'drainage fabric', 'heavy-duty fabric', 'Cleveland', 'Akron'],
   alternates: {
     canonical: 'https://www.buygeogrid.com/180n',
   },
   openGraph: {
-    title: 'Mirafi 180N Nonwoven Geotextile Ohio | Heavy-Duty',
-    description: 'Heavy-duty drainage and filtration fabric. Ohio distributor.',
+    title: 'Buy Mirafi 180N Heavy-Duty Nonwoven Geotextile | Ohio | BuyGeogrid',
+    description: 'Heavy-duty drainage and filtration fabric. Maximum strength in the Mirafi nonwoven line. Ohio distributor.',
     images: ['/images/products/mirafi-180n.jpeg'],
   },
+};
+
+// FAQ data for schema markup
+const faqData = [
+  {
+    question: "What is the Mirafi 180N nonwoven geotextile?",
+    answer: "The Mirafi 180N is a needlepunched nonwoven geotextile composed of polypropylene fibers formed into a stable network. It is the heavy-duty option in the Mirafi nonwoven line, providing maximum strength and the tightest filtration. It is manufactured by TenCate Geosynthetics Americas (a Solmax company) and tested in a GAI-LAP accredited laboratory."
+  },
+  {
+    question: "Why is the 180N considered heavy-duty?",
+    answer: "The 180N is the strongest in the Mirafi nonwoven line with 205 lbs grab tensile strength, 80 lbs trapezoid tear strength, and 500 lbs CBR puncture strength. Its AOS of #80 U.S. sieve (0.18mm) provides the finest filtration of the three nonwoven products, making it suitable for demanding applications with heavy equipment and fine-grained soils."
+  },
+  {
+    question: "What applications is the Mirafi 180N used for?",
+    answer: "The 180N is used for highway drainage, sports field drainage, commercial site drainage, and heavy-duty filtration applications. It is ideal for demanding applications where maximum strength and fine filtration are required, especially when working with fine-grained soils where preventing migration is critical."
+  },
+  {
+    question: "Does the Mirafi 180N meet DOT specifications?",
+    answer: "The 180N is manufactured by TenCate Geosynthetics Americas (a Solmax company) and tested in a GAI-LAP accredited laboratory. It is inert to biological degradation and resists naturally encountered chemicals, alkalis, and acids. Contact us to verify compliance with your specific state or project DOT requirements."
+  },
+  {
+    question: "How do I order the Mirafi 180N in Ohio?",
+    answer: "BuyGeogrid.com is an Ohio distributor for the Mirafi 180N. The 180N comes in rolls measuring 12.5 feet wide by 360 feet long, covering approximately 500 square yards per roll at approximately 265 lbs per roll. Call (440) 368-1420 or visit our contact page for pricing and delivery throughout Northern Ohio."
+  }
+];
+
+// JSON-LD Schema for Product and FAQ
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Mirafi 180N Nonwoven Geotextile",
+  "description": "Heavy-duty needlepunched nonwoven geotextile for demanding drainage and filtration applications. Maximum strength with 205 lbs grab tensile and 500 lbs CBR puncture resistance.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Solmax"
+  },
+  "category": "Nonwoven Geotextiles",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "areaServed": {
+      "@type": "State",
+      "name": "Ohio"
+    },
+    "seller": {
+      "@type": "Organization",
+      "name": "BuyGeogrid.com",
+      "telephone": "+1-440-368-1420"
+    }
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
 };
 
 export default function Mirafi180N() {
@@ -37,6 +100,15 @@ export default function Mirafi180N() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      {/* JSON-LD Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
       <main className="flex-grow">
         <PageHero
@@ -116,6 +188,21 @@ export default function Mirafi180N() {
             <p className="text-lg text-gray-700 leading-relaxed">
               For lighter-duty applications or when maximum flow rate is the priority, the 135N or 140N may be more cost-effective. Contact us to discuss your project requirements and we can recommend the most appropriate product.
             </p>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mirafi 180N FAQ</h2>
+            <div className="space-y-6">
+              {faqData.map((faq, index) => (
+                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
