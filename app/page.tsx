@@ -148,7 +148,7 @@ export default function Home() {
               Anyone can sell you a roll of geogrid. We help you figure out which one you actually need.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              We test your subgrade with a DCP, run the results through Tensar Plus design software, and give you an engineered recommendation — the right product and the right aggregate thickness for your actual site conditions. When you fail a proof roll, we show up with a solution. When your engineers need PDH credits, we bring lunch and training. That&apos;s the difference between a distributor and a supply house.
+              We test your subgrade with a DCP — at no cost to you — run the results through Tensar Plus design software, and give you an engineered recommendation — the right product and the right aggregate thickness for your actual site conditions. When you fail a proof roll, we show up with a solution. When your engineers need PDH credits, we bring lunch and training. That&apos;s the difference between a distributor and a supply house.
             </p>
             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
               Schedule a Free Site Assessment
