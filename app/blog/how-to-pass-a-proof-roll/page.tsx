@@ -94,14 +94,23 @@ export default function ProofRollPage() {
             <div className="bg-white rounded border border-gray-200 p-8">
               <div className="prose prose-lg max-w-none">
 
-                <div className="bg-gray-50 border border-gray-200 rounded p-6 mb-8 flex flex-col sm:flex-row items-center gap-4">
-                  <div className="flex-grow">
-                    <h3 className="text-lg font-bold text-gray-900 mb-1">Tensar 2025 Subgrade Pocket Card</h3>
-                    <p className="text-gray-600 text-sm">Download the full reference card with aggregate thickness charts and cost conversion tables.</p>
+                <div className="bg-gray-50 border border-gray-200 rounded mb-8 overflow-hidden">
+                  <div className="w-full" style={{ height: '500px' }}>
+                    <iframe
+                      src="/docs/tensar-2025-subgrade-pocket-card.pdf"
+                      className="w-full h-full border-0"
+                      title="Tensar 2025 Subgrade Pocket Card"
+                    />
                   </div>
-                  <a href="/docs/tensar-2025-subgrade-pocket-card.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors whitespace-nowrap">
-                    Download PDF
-                  </a>
+                  <div className="p-4 flex items-center justify-between bg-white border-t border-gray-200">
+                    <div>
+                      <h3 className="text-base font-bold text-gray-900">Tensar 2025 Subgrade Pocket Card</h3>
+                      <p className="text-gray-500 text-sm">Aggregate thickness charts and cost conversion tables</p>
+                    </div>
+                    <a href="/docs/tensar-2025-subgrade-pocket-card.pdf" download className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors whitespace-nowrap">
+                      Download PDF
+                    </a>
+                  </div>
                 </div>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is a Proof Roll?</h2>
