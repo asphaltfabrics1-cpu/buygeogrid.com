@@ -97,8 +97,13 @@ export default function ProofRollPage() {
                 <div className="rounded border border-gray-200 mb-8 overflow-hidden">
                   <img
                     src="/images/tensar-2025-subgrade-pocket-card.png"
-                    alt="Tensar 2025 Subgrade Pocket Card — aggregate thickness charts and cost conversion tables"
+                    alt="Tensar 2025 Subgrade Pocket Card front — aggregate thickness charts"
                     className="w-full m-0"
+                  />
+                  <img
+                    src="/images/tensar-2025-subgrade-pocket-card-back.png"
+                    alt="Tensar 2025 Subgrade Pocket Card back — cost conversion tables"
+                    className="w-full m-0 border-t border-gray-200"
                   />
                   <div className="p-4 flex items-center justify-between bg-gray-50 border-t border-gray-200">
                     <div>
