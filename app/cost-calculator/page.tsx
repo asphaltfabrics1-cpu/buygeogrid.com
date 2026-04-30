@@ -281,7 +281,7 @@ export default function CostCalculatorPage() {
               <p className="text-gray-300 text-sm leading-relaxed">
                 This calculator uses the pocket card for quick estimates. For engineered designs with exact thickness requirements,
                 Tensar+ software uses your actual DCP test data to model site-specific solutions.
-                We run Tensar+ for our customers at no charge — or you can <a href="https://www.tensarcorp.com/support" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] underline">download it from Tensar</a> and run it yourself.
+                We run Tensar+ for our customers at no charge — or you can <a href="https://www.tensarplus.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] underline">download it from Tensar</a> and run it yourself.
               </p>
             </div>
             <Link href="/contact" className="inline-block bg-[#00c97e] hover:bg-[#00b36f] text-white font-bold py-3 px-6 rounded transition-colors whitespace-nowrap text-center">

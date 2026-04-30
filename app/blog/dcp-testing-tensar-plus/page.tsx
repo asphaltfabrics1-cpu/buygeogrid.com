@@ -132,7 +132,7 @@ export default function DCPTestingTensarPlus() {
                   Tensar Plus incorporates data from Tensar&apos;s geogrid product line, including the InterAx series with its multi-directional triangular aperture geometry. The software accounts for the confinement effect that geogrids provide to aggregate, which creates a composite mechanically stabilized layer with greater bearing capacity than aggregate alone.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  You can <a href="https://www.tensarcorp.com/support" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] underline hover:text-[#00b36f] font-semibold">download Tensar+ from Tensar&apos;s website</a>, or contact us — we run Tensar+ designs for our customers at no charge as part of our free DCP testing service.
+                  You can <a href="https://www.tensarplus.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] underline hover:text-[#00b36f] font-semibold">download Tensar+ from Tensar&apos;s website</a>, or contact us — we run Tensar+ designs for our customers at no charge as part of our free DCP testing service.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">How They Work Together</h2>
