@@ -7,7 +7,7 @@ import { useState, useMemo } from 'react';
 
 // Tensar 2025 Subgrade Pocket Card data
 // Aggregate thickness (inches) to pass a proof roll with 1" deformation
-const THICKNESS_DATA: Record<string, { label: string; description: string; cbr: number; overExcavation: number; bx: number; hx145: number; hx165: number; nx850: number; nx850dual?: number }> = {
+const THICKNESS_DATA: Record<string, { label: string; description: string; cbr: number; overExcavation: number; bx: number; hx145: number; hx165: number; nx850: number; nx850dual?: number; nx850display?: string }> = {
   severe: {
     label: '3" Deep Footprint (Severe)',
     description: 'Boots sink 3 inches into subgrade — very soft, wet soil',
@@ -37,7 +37,8 @@ const THICKNESS_DATA: Record<string, { label: string; description: string; cbr: 
     bx: 16,
     hx145: 14,
     hx165: 10,
-    nx850: 5, // midpoint of 4-6"
+    nx850: 6, // conservative end of 4-6" range per pocket card
+    nx850display: '4–6',
   },
 };
 
@@ -83,9 +84,13 @@ export default function CostCalculatorPage() {
     const savings = unstabilizedCost - stabilizedTotalCost;
     const savingsPercent = unstabilizedCost > 0 ? (savings / unstabilizedCost) * 100 : 0;
 
+    // Show the published range label if available (e.g. "4–6" for NX850 mild)
+    const displayThickness = (geogridType === 'nx850' && soil.nx850display) ? soil.nx850display : String(stabilizedThickness);
+
     return {
       unstabilizedThickness,
       stabilizedThickness,
+      stabilizedThicknessDisplay: displayThickness,
       thicknessSaved,
       unstabilizedCost,
       stabilizedAggregateCost,
@@ -94,6 +99,7 @@ export default function CostCalculatorPage() {
       savings,
       savingsPercent,
       cbr: soil.cbr,
+      isRange: displayThickness !== String(stabilizedThickness),
     };
   }, [soilCondition, geogridType, projectArea, aggregateCost, geogridCostPerSY]);
 
@@ -237,7 +243,10 @@ export default function CostCalculatorPage() {
                 <div className="border-2 border-green-200 bg-green-50 rounded-lg p-6">
                   <h3 className="text-lg font-bold text-green-800 mb-4">With {GEOGRID_OPTIONS[geogridType].label}</h3>
                   <p className="text-sm text-green-700 mb-1">Stabilized section</p>
-                  <p className="text-3xl font-bold text-green-900 mb-4">{results.stabilizedThickness}&quot; of aggregate</p>
+                  <p className="text-3xl font-bold text-green-900 mb-4">{results.stabilizedThicknessDisplay}&quot; of aggregate</p>
+                  {results.isRange && (
+                    <p className="text-xs text-green-700 -mt-3 mb-4">Cost estimate uses conservative end ({results.stabilizedThickness}&quot;)</p>
+                  )}
                   <div className="border-t border-green-200 pt-4 space-y-1">
                     <div className="flex justify-between text-sm text-green-700">
                       <span>Aggregate:</span>
