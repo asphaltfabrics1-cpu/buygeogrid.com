@@ -197,6 +197,9 @@ export default function Header() {
                   <Link href="/lunch-and-learn" className="block px-4 py-2 hover:bg-white/10 transition-colors">
                     Lunch & Learn
                   </Link>
+                  <Link href="/cost-calculator" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Cost Calculator
+                  </Link>
                 </div>
               )}
             </li>
@@ -282,6 +285,11 @@ export default function Header() {
             <li>
               <Link href="/lunch-and-learn" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Lunch & Learn
+              </Link>
+            </li>
+            <li>
+              <Link href="/cost-calculator" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
+                Cost Calculator
               </Link>
             </li>
           </ul>

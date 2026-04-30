@@ -244,6 +244,9 @@ export default function ProofRollPage() {
                   <p className="text-gray-600 text-sm mt-3">
                     <strong>Savings: $90,000</strong> less the cost of geogrid. Assumed aggregate unit weight: 133 pcf.
                   </p>
+                  <Link href="/cost-calculator" className="inline-flex items-center gap-2 mt-3 text-[#00c97e] hover:text-[#00b36f] font-semibold text-sm">
+                    Try our Cost Savings Calculator with your own numbers →
+                  </Link>
                 </div>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">When to Consider Geogrid</h2>
@@ -300,7 +303,11 @@ export default function ProofRollPage() {
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link href="/cost-calculator" className="block p-6 bg-white rounded border border-gray-200 hover:border-[#00c97e] transition-colors text-left">
+                <h3 className="font-bold text-gray-900 mb-2">Cost Savings Calculator</h3>
+                <p className="text-gray-600 text-sm">Calculate your aggregate savings with geogrid.</p>
+              </Link>
               <Link href="/blog/dcp-testing-tensar-plus" className="block p-6 bg-white rounded border border-gray-200 hover:border-[#00c97e] transition-colors text-left">
                 <h3 className="font-bold text-gray-900 mb-2">DCP Testing & Tensar Plus</h3>
                 <p className="text-gray-600 text-sm">How field soil testing feeds into geogrid design.</p>
