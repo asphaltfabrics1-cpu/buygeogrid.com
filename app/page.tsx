@@ -27,10 +27,10 @@ export default function Home() {
   ];
 
   const features = [
-    { title: 'Free DCP Testing', desc: 'We come to your site and test your subgrade. Real CBR data, not guesswork.' },
-    { title: 'Tensar+ Design Support', desc: 'We run your soil data through Tensar Plus and give you an engineered recommendation.' },
-    { title: 'On-Site When You Need Us', desc: 'Failing a proof roll? We show up with a solution, not just a product.' },
-    { title: 'Lunch & Learn Training', desc: 'Free training for your team with PDH credits for engineers. We bring lunch.' },
+    { title: 'Free DCP Testing', desc: 'We come to your site and test your subgrade. Real CBR data, not guesswork.', href: '/contact' },
+    { title: 'Tensar+ Design Support', desc: 'We run your soil data through Tensar Plus and give you an engineered recommendation.', href: '/blog/dcp-testing-tensar-plus' },
+    { title: 'Cost Savings Calculator', desc: 'See how much geogrid can save on aggregate costs for your next project.', href: '/cost-calculator' },
+    { title: 'Lunch & Learn Training', desc: 'Free training for your team with PDH credits for engineers. We bring lunch.', href: '/lunch-and-learn' },
   ];
 
   const videoSchema = {
@@ -161,15 +161,16 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
-                <div
+                <Link
                   key={index}
-                  className="bg-white rounded p-6 border border-gray-200 hover:border-[#00c97e] transition-colors duration-200"
+                  href={feature.href}
+                  className="bg-white rounded p-6 border border-gray-200 hover:border-[#00c97e] transition-colors duration-200 block"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600">{feature.desc}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
