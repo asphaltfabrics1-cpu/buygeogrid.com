@@ -171,6 +171,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog/freeze-thaw-frost-heave-ohio`,
+      lastModified: new Date('2026-05-11'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
     // Other Pages
     {
       url: `${baseUrl}/contact`,

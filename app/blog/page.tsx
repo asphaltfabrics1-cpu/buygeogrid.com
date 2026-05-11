@@ -21,6 +21,12 @@ export const metadata: Metadata = {
 export default function Blog() {
   const posts = [
     {
+      title: 'Freeze-Thaw & Frost Heave in Ohio: Geogrid, Patch Packs & Interlayer Playbook',
+      date: 'May 11, 2026',
+      excerpt: 'Why Northern Ohio pavements crack every spring, and the three-layer fix: Patch Packs for open potholes now, Petrotac interlayer before fall overlay, and geogrid when the section is rebuilt.',
+      url: '/blog/freeze-thaw-frost-heave-ohio',
+    },
+    {
       title: 'How to Pass a Proof Roll: Geogrid & Aggregate Thickness Guide',
       date: 'April 29, 2026',
       excerpt: 'Failing a proof roll? Use this chart to determine the right geogrid and aggregate thickness based on your subgrade CBR. Includes cost savings examples.',

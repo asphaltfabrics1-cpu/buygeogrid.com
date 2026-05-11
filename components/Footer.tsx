@@ -77,7 +77,7 @@ export default function Footer() {
             </Link>
             <div className="mt-6 flex gap-4">
               <Link
-                href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61577581101649"
+                href="https://www.facebook.com/profile.php?id=61577581101649"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-white/20 rounded-full p-2 hover:scale-110 transition-all"

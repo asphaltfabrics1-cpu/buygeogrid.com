@@ -102,6 +102,28 @@ export default function LunchAndLearn() {
           </div>
         </section>
 
+        {/* Testimonial Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <figure className="bg-gray-50 border border-gray-200 rounded p-8 md:p-10">
+              <div className="flex items-center mb-4" aria-label="5 out of 5 stars">
+                {[0,1,2,3,4].map((i) => (
+                  <svg key={i} className="w-6 h-6 text-[#f5a623]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.364 1.118l1.286 3.957c.3.922-.755 1.688-1.54 1.118l-3.367-2.446a1 1 0 00-1.176 0l-3.367 2.446c-.784.57-1.838-.196-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.098 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote className="text-lg text-gray-800 leading-relaxed mb-6">
+                &ldquo;We also appreciate their lunch-and-learn sessions. They are always well-organized, informative, and a great opportunity to earn CE credits.&rdquo;
+              </blockquote>
+              <figcaption className="text-gray-700 font-semibold">
+                — <a href="https://engineeredtechnicalsolutions.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#00c97e] underline decoration-gray-300 hover:decoration-[#00c97e] underline-offset-4">Engineered Technical Solutions</a>
+                <span className="block text-sm text-gray-500 font-normal mt-1">Google Review</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         {/* How It Works Section */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-4xl mx-auto">

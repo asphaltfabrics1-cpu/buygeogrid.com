@@ -45,6 +45,35 @@ export default function Home() {
     "duration": "PT6S"
   };
 
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "name": "BuyGeogrid.com - AF Supply",
+      "image": "https://buygeogrid.com/images/logos/afsupplylogo_transparent.png",
+      "telephone": "+14403681420",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cleveland",
+        "addressRegion": "OH",
+        "postalCode": "44139",
+        "addressCountry": "US"
+      }
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Engineered Technical Solutions",
+      "url": "https://engineeredtechnicalsolutions.com/"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "reviewBody": "Asphalt Fabrics & Supply is a great resource for anyone looking to gain a better understanding of the cost saving options available when it comes to pavement and concrete. The technical information they provide is very thorough, and extremely useful when determining the best solution for a project. Their DCP testing and follow-up evaluations help to clarify subsurface conditions. In addition to this, they have a great lineup of software available to help tailor a solution specifically for each site. Their team is always willing to walk through options to ensure the best outcome as well. We also appreciate their lunch-and-learn sessions. They are always well-organized, informative, and a great opportunity to earn CE credits."
+  };
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -284,6 +313,36 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Testimonial Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
+              What Our Customers Say
+            </h2>
+            <figure className="bg-gray-50 border border-gray-200 rounded p-8 md:p-10">
+              <div className="flex items-center mb-4" aria-label="5 out of 5 stars">
+                {[0,1,2,3,4].map((i) => (
+                  <svg key={i} className="w-6 h-6 text-[#f5a623]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.446a1 1 0 00-.364 1.118l1.286 3.957c.3.922-.755 1.688-1.54 1.118l-3.367-2.446a1 1 0 00-1.176 0l-3.367 2.446c-.784.57-1.838-.196-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.098 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote className="text-lg text-gray-800 leading-relaxed mb-6">
+                <p className="mb-4">
+                  &ldquo;Asphalt Fabrics &amp; Supply is a great resource for anyone looking to gain a better understanding of the cost saving options available when it comes to pavement and concrete. The technical information they provide is very thorough, and extremely useful when determining the best solution for a project. Their DCP testing and follow-up evaluations help to clarify subsurface conditions. In addition to this, they have a great lineup of software available to help tailor a solution specifically for each site. Their team is always willing to walk through options to ensure the best outcome as well.&rdquo;
+                </p>
+                <p>
+                  &ldquo;We also appreciate their lunch-and-learn sessions. They are always well-organized, informative, and a great opportunity to earn CE credits.&rdquo;
+                </p>
+              </blockquote>
+              <figcaption className="text-gray-700 font-semibold">
+                — <a href="https://engineeredtechnicalsolutions.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#00c97e] underline decoration-gray-300 hover:decoration-[#00c97e] underline-offset-4">Engineered Technical Solutions</a>
+                <span className="block text-sm text-gray-500 font-normal mt-1">Google Review</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         {/* Lunch & Learn Section */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -382,6 +441,13 @@ export default function Home() {
         id="organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+
+      {/* Structured Data - Review Schema */}
+      <Script
+        id="review-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
     </div>
   );
