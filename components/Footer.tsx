@@ -59,7 +59,20 @@ export default function Footer() {
                   FAQ
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="https://asphaltfabrics.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-500 font-bold text-lg hover:text-accent-400 hover:scale-110 inline-block transition-all"
+                >
+                  Installation Services ↗
+                </Link>
+              </li>
             </ul>
+            <p className="text-white/70 text-sm mt-3 leading-relaxed">
+              Need a crew, not just materials? Our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-accent-500 hover:text-accent-400 font-semibold">Asphalt Fabrics &amp; Specialties</a> installs paving fabric, crack seal, and chip seal across Northern Ohio.
+            </p>
           </div>
 
           {/* Call to Action & Social */}

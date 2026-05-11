@@ -117,7 +117,7 @@ export default function Resources() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">Technical Information</h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Capabilities Flyer</h3>
                 <p className="text-gray-700 mb-4">
@@ -149,6 +149,16 @@ export default function Resources() {
                 <Link href="/contact" className="text-[#00c97e] font-semibold hover:underline">
                   Request Testing →
                 </Link>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6 border-2 border-[#00c97e]">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Installation Services</h3>
+                <p className="text-gray-700 mb-4">
+                  Need a crew? Our sister company Asphalt Fabrics &amp; Specialties installs paving fabric, geogrid, crack seal, and chip seal throughout Northern Ohio.
+                </p>
+                <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] font-semibold hover:underline">
+                  asphaltfabrics.com ↗
+                </a>
               </div>
             </div>
 
