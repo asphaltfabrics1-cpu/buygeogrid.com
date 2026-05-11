@@ -52,7 +52,7 @@ const faqData = [
   },
   {
     question: "Someone is asking me about crack sealing — what should I quote?",
-    answer: "It depends on what comes next. If the cracks will be overlaid in the same season, Propex Petrotac 1-foot interlayer rolls are usually a stronger answer than a conventional hot-pour crack seal — the self-adhesive membrane provides stress relief so cracks don't reflect through the new overlay and acts as a moisture barrier into the base. We stock Petrotac at the supply house for contractors to install. If the customer actually wants a hot-pour crack seal as standalone maintenance done for them, that's a separate install service: our sister company Asphalt Fabrics & Specialties is a Northern Ohio pavement contractor that handles crack sealing as part of their own services line. Reach them directly at (440) 249-6717."
+    answer: "It depends on what comes next. If the cracks will be overlaid in the same season, Propex Petrotac 1-foot interlayer rolls are usually a stronger answer than a conventional hot-pour crack seal — the self-adhesive membrane provides stress relief so cracks don't reflect through the new overlay and acts as a moisture barrier into the base. We stock Petrotac at the supply house for contractors to install. If the customer actually wants the crack sealing done for them as a service, our sister company Asphalt Fabrics & Specialties performs crack sealing in Northern Ohio. Reach them directly at (440) 249-6717."
   },
   {
     question: "How does an interlayer fit into a freeze-thaw repair strategy?",
@@ -226,7 +226,7 @@ export default function FreezeThawOhioPage() {
 
                 <div className="bg-gray-50 border-l-4 border-[#00c97e] rounded p-5 mb-6">
                   <p className="text-gray-800 text-sm leading-relaxed m-0">
-                    <strong>Looking for an install crew, not materials?</strong> Our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Asphalt Fabrics &amp; Specialties</a> is a separate Northern Ohio pavement install contractor. They run paving fabric installation, crack sealing, chip seal, and other pavement-protection services using their own product line — different scope from what we stock here at the supply house, same family, same region. If your project calls for a crew on the ground rather than rolls off the shelf, reach them at <a href="tel:4402496717" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">(440) 249-6717</a>.
+                    <strong>Looking for the work done for you, not materials?</strong> Our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Asphalt Fabrics &amp; Specialties</a> performs paving fabric installation, crack sealing, and chip sealing in Northern Ohio. Same family, same region — different work. If you need someone to actually do the install rather than buy the rolls, reach them at <a href="tel:4402496717" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">(440) 249-6717</a>.
                   </p>
                 </div>
 
