@@ -117,7 +117,20 @@ export default function Resources() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">Technical Information</h2>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Capabilities Flyer</h3>
+                <p className="text-gray-700 mb-4">
+                  One-page overview: what we stock, why local beats national for geosynthetics, and the proof-roll chart for sizing aggregate over weak subgrades.
+                </p>
+                <a href="/docs/asphalt-fabrics-supply-flyer.pdf" download className="inline-flex items-center gap-2 text-[#00c97e] font-semibold hover:underline">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                  Download PDF
+                </a>
+              </div>
+
               <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Product Spec Sheets</h3>
                 <p className="text-gray-700 mb-4">
