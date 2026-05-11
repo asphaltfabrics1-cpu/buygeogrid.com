@@ -226,7 +226,7 @@ export default function FreezeThawOhioPage() {
 
                 <div className="bg-gray-50 border-l-4 border-[#00c97e] rounded p-5 mb-6">
                   <p className="text-gray-800 text-sm leading-relaxed m-0">
-                    <strong>Looking for the work done for you, not materials?</strong> Our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Asphalt Fabrics &amp; Specialties</a> performs paving fabric installation, crack sealing, and chip sealing in Northern Ohio. Same family, same region — different work. If you need someone to actually do the install rather than buy the rolls, reach them at <a href="tel:4402496717" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">(440) 249-6717</a>.
+                    <strong>Different product, different scope — need it installed?</strong> Petrotac is peel-and-stick and meant for contractors to apply themselves. The other type of paving fabric interlayer — <strong>non-peel-and-stick paving fabric</strong> laid with a hot asphalt tack coat over large areas like parking lots and roads before overlay — is what our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Asphalt Fabrics &amp; Specialties</a> installs in Northern Ohio. They also handle crack sealing and chip sealing. Different product than what we stock, same family, same region. Reach them at <a href="tel:4402496717" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">(440) 249-6717</a>.
                   </p>
                 </div>
 

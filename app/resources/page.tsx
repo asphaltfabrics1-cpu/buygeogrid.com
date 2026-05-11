@@ -154,7 +154,7 @@ export default function Resources() {
               <div className="bg-gray-50 rounded-lg p-6 border-2 border-[#00c97e]">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Installation Services</h3>
                 <p className="text-gray-700 mb-4">
-                  Need the work done? Our sister company Asphalt Fabrics &amp; Specialties performs paving fabric installation, crack sealing, and chip sealing in Northern Ohio.
+                  Need it installed? Our sister company Asphalt Fabrics &amp; Specialties installs non-peel-and-stick paving fabric on parking lots and roads in Northern Ohio, plus crack sealing and chip sealing.
                 </p>
                 <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] font-semibold hover:underline">
                   asphaltfabrics.com ↗

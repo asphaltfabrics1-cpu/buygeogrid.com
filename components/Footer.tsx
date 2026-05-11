@@ -88,7 +88,7 @@ export default function Footer() {
               </li>
             </ul>
             <p className="text-white/70 text-sm mt-3 leading-relaxed">
-              Need a crew, not just materials? Our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-accent-500 hover:text-accent-400 font-semibold">Asphalt Fabrics &amp; Specialties</a> installs paving fabric, crack seal, and chip seal across Northern Ohio.
+              Need it installed? Our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-accent-500 hover:text-accent-400 font-semibold">Asphalt Fabrics &amp; Specialties</a> installs non-peel-and-stick paving fabric on parking lots and roads in Northern Ohio, plus crack sealing and chip sealing.
             </p>
           </div>
 
