@@ -167,6 +167,26 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Capabilities Flyer Download Band */}
+        <section className="py-8 px-6 bg-[#00c97e] text-white">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="text-center md:text-left">
+              <h2 className="text-xl md:text-2xl font-bold mb-1">Want the quick overview?</h2>
+              <p className="text-white/90 leading-snug">Download our one-page capabilities flyer — what we stock, why local beats national, and the proof-roll chart.</p>
+            </div>
+            <a
+              href="/docs/asphalt-fabrics-supply-flyer.pdf"
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-[#00c97e] bg-white hover:bg-gray-100 rounded transition-colors whitespace-nowrap flex-shrink-0"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+              Download Flyer (PDF)
+            </a>
+          </div>
+        </section>
+
         {/* What We Do Differently */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">

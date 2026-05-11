@@ -81,13 +81,30 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="bg-green-50 border-2 border-[#00c97e] rounded p-6">
+                <div className="bg-green-50 border-2 border-[#00c97e] rounded p-6 mb-6">
                   <h3 className="font-bold text-gray-900 mb-3 text-xl">Free DCP Testing</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Request your free Dynamic Cone Penetrometer (DCP) test today!
                     We provide expert soil analysis to help you select the right
                     Geogrid solution for your project.
                   </p>
+                </div>
+
+                <div className="bg-white border border-gray-200 rounded p-6">
+                  <h3 className="font-bold text-gray-900 mb-3 text-xl">Not Ready to Talk Yet?</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Grab our one-page capabilities flyer — what we stock, why local beats national, and the proof-roll chart for sizing aggregate over weak subgrades.
+                  </p>
+                  <a
+                    href="/docs/asphalt-fabrics-supply-flyer.pdf"
+                    download
+                    className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                    Download Flyer (PDF)
+                  </a>
                 </div>
               </div>
             </div>
