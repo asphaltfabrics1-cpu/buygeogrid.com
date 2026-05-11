@@ -31,6 +31,11 @@ export default function Interlayers() {
       image: '/images/products/petrotac.jpg',
       url: '/petrotac-15ft',
     },
+    {
+      name: 'Propex Petrotac® 4ft Roll',
+      image: '/images/products/petrotac.jpg',
+      url: '/petrotac-4ft',
+    },
   ];
 
   return (

@@ -52,7 +52,7 @@ const faqData = [
   },
   {
     question: "Someone is asking me about crack sealing — what should I quote?",
-    answer: "It depends on what comes next. If the cracks will be overlaid in the same season, Propex Petrotac 1-foot interlayer rolls are usually a stronger answer than a conventional hot-pour crack seal — the self-adhesive membrane provides stress relief so cracks don't reflect through the new overlay and acts as a moisture barrier into the base. If they actually need a hot-pour crack seal as standalone maintenance, that's an install service: our sister company Asphalt Fabrics & Specialties handles crack sealing throughout Northern Ohio at (440) 249-6717. We supply the materials side; they put crews on the ground."
+    answer: "It depends on what comes next. If the cracks will be overlaid in the same season, Propex Petrotac 1-foot interlayer rolls are usually a stronger answer than a conventional hot-pour crack seal — the self-adhesive membrane provides stress relief so cracks don't reflect through the new overlay and acts as a moisture barrier into the base. We stock Petrotac at the supply house for contractors to install. If the customer actually wants a hot-pour crack seal as standalone maintenance done for them, that's a separate install service: our sister company Asphalt Fabrics & Specialties is a Northern Ohio pavement contractor that handles crack sealing as part of their own services line. Reach them directly at (440) 249-6717."
   },
   {
     question: "How does an interlayer fit into a freeze-thaw repair strategy?",
@@ -213,12 +213,20 @@ export default function FreezeThawOhioPage() {
                   <li><strong>Moisture barrier</strong> — blocks water from infiltrating the base, which is what feeds the next round of freeze-thaw damage.</li>
                 </ul>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Two scopes match the work: <Link href="/petrotac-1ft" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Petrotac 1-foot rolls</Link> for treating individual cracks, joints, and localized distress, and <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">full-length contractor-installed rolls</a> for full-width coverage when an entire lot or section is being overlaid. The 1-foot product is the right answer when an owner calls about &quot;crack sealing&quot; on a lot that is going to be overlaid later — it does more than a hot-pour crack seal because it also blocks moisture into the base.
+                  We stock Petrotac in three widths so the roll matches the scope of the distress:
+                </p>
+                <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                  <li><Link href="/petrotac-1ft" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Petrotac 1ft (12 in)</Link> — individual transverse and longitudinal cracks, joints, and spot treatment. The most economical option for narrow distress.</li>
+                  <li><Link href="/petrotac-15ft" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Petrotac 1.5ft (18 in)</Link> — wider cracks, expansion joints, and areas with parallel cracking that need a bit more overlap.</li>
+                  <li><Link href="/petrotac-4ft" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Petrotac 4ft (48 in)</Link> — broad cracking patterns, lane-segment overlays, and large patch perimeters where a wider strip cuts roll count and seams. New width, in stock.</li>
+                </ul>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  The 1ft is usually the right answer when an owner calls about &quot;crack sealing&quot; on a lot that is going to be overlaid later — Petrotac does more than a hot-pour crack seal because it also blocks moisture into the base. All three are sold at the supply house for contractors to install themselves.
                 </p>
 
                 <div className="bg-gray-50 border-l-4 border-[#00c97e] rounded p-5 mb-6">
                   <p className="text-gray-800 text-sm leading-relaxed m-0">
-                    <strong>Need a crew, not just the rolls?</strong> Petrotac is peel-and-stick and DIY-friendly, but full-width contractor-grade paving fabric — the traditional non-self-adhesive type laid with hot asphalt tack coat across an entire pavement before overlay — is an install-with-equipment job. Our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Asphalt Fabrics &amp; Specialties</a> installs paving fabric, handles crack sealing and chip seal, and runs the pavement-protection work that pairs with the materials we supply. Same family, two lanes: we sell the materials, they put them in the ground. Reach them at <a href="tel:4402496717" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">(440) 249-6717</a>.
+                    <strong>Looking for an install crew, not materials?</strong> Our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Asphalt Fabrics &amp; Specialties</a> is a separate Northern Ohio pavement install contractor. They run paving fabric installation, crack sealing, chip seal, and other pavement-protection services using their own product line — different scope from what we stock here at the supply house, same family, same region. If your project calls for a crew on the ground rather than rolls off the shelf, reach them at <a href="tel:4402496717" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">(440) 249-6717</a>.
                   </p>
                 </div>
 
