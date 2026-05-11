@@ -61,6 +61,23 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/cost-calculator"
+                  className="text-accent-500 font-bold text-lg hover:text-accent-400 hover:scale-110 inline-block transition-all"
+                >
+                  Cost Calculator
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="/docs/asphalt-fabrics-supply-flyer.pdf"
+                  download
+                  className="text-accent-500 font-bold text-lg hover:text-accent-400 hover:scale-110 inline-block transition-all"
+                >
+                  ⬇ Download Flyer
+                </a>
+              </li>
+              <li>
+                <Link
                   href="https://asphaltfabrics.com"
                   target="_blank"
                   rel="noopener noreferrer"
