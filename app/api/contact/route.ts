@@ -3,7 +3,21 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, cityState, product, message } = body;
+    const { name, email, phone, cityState, product, message, website } = body;
+
+    // Honeypot: bots fill the hidden "website" field, humans don't see it.
+    // Return a fake-success response so bots don't learn they were blocked.
+    if (website && typeof website === 'string' && website.trim() !== '') {
+      console.log('Honeypot triggered — silently dropping spam submission', {
+        email,
+        ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip'),
+        honeypotValue: website.slice(0, 100),
+      });
+      return NextResponse.json({
+        success: true,
+        message: 'Quote request submitted successfully',
+      });
+    }
 
     // Validate required fields
     if (!name || !email || !message) {
