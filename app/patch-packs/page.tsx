@@ -119,6 +119,25 @@ const faqSchema = {
   }))
 };
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Patch Packs: Road Repairs without Tools",
+  "description": "Patch Packs cold asphalt pothole repair demo — fill a pothole with no specialized equipment, in any weather, with immediate traffic access.",
+  "thumbnailUrl": "https://i.ytimg.com/vi/k2-_wDHrnk8/maxresdefault.jpg",
+  "uploadDate": "2024-01-01",
+  "contentUrl": "https://www.youtube.com/watch?v=k2-_wDHrnk8",
+  "embedUrl": "https://www.youtube.com/embed/k2-_wDHrnk8",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BuyGeogrid.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.buygeogrid.com/images/logos/afsupplylogo_transparent.png"
+    }
+  }
+};
+
 export default function PatchPacks() {
   const features = [
     { text: 'No specialized equipment required' },
@@ -147,6 +166,10 @@ export default function PatchPacks() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
       />
       <Header />
       <main className="flex-grow">
@@ -178,6 +201,27 @@ export default function PatchPacks() {
             <p className="text-lg text-gray-700 leading-relaxed">
               Available in Standard and Flex variants, Patch Packs are designed for repairing asphalt and reactive concrete defects measuring 1 inch or deeper. The VOC-free formulation makes them safe to use in any environment—from municipal road crews to commercial property managers.
             </p>
+          </div>
+        </section>
+
+        {/* Video Demo Section */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Watch Patch Packs in Action</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+              See how a single person can repair a pothole with Patch Packs in under a minute — no torches, no hot box, no special tools required.
+            </p>
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-gray-100">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/k2-_wDHrnk8"
+                title="Patch Packs: Road Repairs without Tools"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </section>
 
