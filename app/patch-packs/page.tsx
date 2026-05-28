@@ -214,7 +214,7 @@ export default function PatchPacks() {
             <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-gray-100">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/k2-_wDHrnk8"
+                src="https://www.youtube-nocookie.com/embed/k2-_wDHrnk8"
                 title="Patch Packs: Road Repairs without Tools"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
