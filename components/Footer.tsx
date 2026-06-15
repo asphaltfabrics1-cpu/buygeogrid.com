@@ -137,10 +137,11 @@ export default function Footer() {
         {/* Copyright */}
         <div className="text-center mt-10 pt-8 text-base text-white/70 border-t border-white/10 font-medium flex items-center justify-center gap-3">
           <span>© {currentYear} BuyGeogrid.com. All rights reserved Asphalt Fabrics & Supply.</span>
-          <Link
+          <a
             href="/admin"
             aria-label="Admin login"
             title="Admin login"
+            rel="nofollow noopener"
             className="text-white/40 hover:text-accent-500 transition-colors"
           >
             <svg
@@ -158,7 +159,7 @@ export default function Footer() {
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
               <path d="M7 11V7a5 5 0 0 1 10 0v4" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </footer>
