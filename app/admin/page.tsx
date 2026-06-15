@@ -79,6 +79,50 @@ export default function AdminPage() {
       </header>
 
       <main className="max-w-7xl mx-auto px-6 py-8">
+        {/* Quick links — for iPad navigation without typing slugs */}
+        <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <a
+            href="/trade-show"
+            target="_blank"
+            rel="noopener"
+            className="block bg-[#00c97e] hover:bg-[#00b36f] text-white rounded-lg p-4 transition-colors"
+          >
+            <div className="text-xs uppercase opacity-80 tracking-wide">Trade Show</div>
+            <div className="text-lg font-bold mt-1">📱 Open iPad Kiosk</div>
+            <div className="text-xs opacity-90 mt-1 break-all">
+              buygeogrid.com/trade-show
+            </div>
+          </a>
+          <a
+            href="/admin/broadcast"
+            className="block bg-white border border-gray-200 hover:border-[#00c97e] rounded-lg p-4 transition-colors"
+          >
+            <div className="text-xs uppercase text-gray-500 tracking-wide">Email</div>
+            <div className="text-lg font-bold mt-1 text-gray-900">✉ Send Broadcast</div>
+            <div className="text-xs text-gray-500 mt-1">Compose &amp; send to the list</div>
+          </a>
+          <a
+            href="/"
+            target="_blank"
+            rel="noopener"
+            className="block bg-white border border-gray-200 hover:border-[#00c97e] rounded-lg p-4 transition-colors"
+          >
+            <div className="text-xs uppercase text-gray-500 tracking-wide">Public</div>
+            <div className="text-lg font-bold mt-1 text-gray-900">🌐 Open Site</div>
+            <div className="text-xs text-gray-500 mt-1">buygeogrid.com</div>
+          </a>
+          <a
+            href="/contact"
+            target="_blank"
+            rel="noopener"
+            className="block bg-white border border-gray-200 hover:border-[#00c97e] rounded-lg p-4 transition-colors"
+          >
+            <div className="text-xs uppercase text-gray-500 tracking-wide">Public</div>
+            <div className="text-lg font-bold mt-1 text-gray-900">💬 Quote Form</div>
+            <div className="text-xs text-gray-500 mt-1">/contact (Monday + Gideon)</div>
+          </a>
+        </div>
+
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div>
             <h2 className="text-2xl font-bold text-gray-900">Email Signups</h2>
