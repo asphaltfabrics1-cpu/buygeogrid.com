@@ -32,6 +32,10 @@ function CampaignsPanel({ signups }: { signups: Signup[] }) {
     const url = `/trade-show${eventSlug ? `?event=${encodeURIComponent(eventSlug)}` : ''}`;
     window.open(url, '_blank', 'noopener');
   }
+  function openOrder(eventSlug: string) {
+    const url = `/order${eventSlug ? `?event=${encodeURIComponent(eventSlug)}` : ''}`;
+    window.open(url, '_blank', 'noopener');
+  }
 
   async function copyToClipboard(text: string) {
     try {
@@ -68,7 +72,14 @@ function CampaignsPanel({ signups }: { signups: Signup[] }) {
             disabled={!slug}
             className="px-4 py-2 text-sm bg-[#00c97e] hover:bg-[#00b36f] disabled:bg-gray-300 text-white font-semibold rounded"
           >
-            📱 Open Kiosk
+            📱 Email Kiosk
+          </button>
+          <button
+            onClick={() => slug && openOrder(slug)}
+            disabled={!slug}
+            className="px-4 py-2 text-sm bg-[#1a1a1a] hover:bg-[#333] disabled:bg-gray-300 text-white font-semibold rounded"
+          >
+            🛒 Order Kiosk
           </button>
           <button
             onClick={() => previewUrl && copyToClipboard(previewUrl)}
@@ -108,12 +119,20 @@ function CampaignsPanel({ signups }: { signups: Signup[] }) {
                     {n} signup{n === 1 ? '' : 's'}
                   </div>
                 </div>
-                <button
-                  onClick={() => openKiosk(src)}
-                  className="flex-shrink-0 px-3 py-1.5 text-xs border border-gray-300 hover:border-[#00c97e] hover:text-[#00c97e] text-gray-700 font-semibold rounded"
-                >
-                  Reopen Kiosk
-                </button>
+                <div className="flex flex-col gap-1.5 flex-shrink-0">
+                  <button
+                    onClick={() => openKiosk(src)}
+                    className="px-3 py-1 text-xs border border-gray-300 hover:border-[#00c97e] hover:text-[#00c97e] text-gray-700 font-semibold rounded whitespace-nowrap"
+                  >
+                    📱 Email
+                  </button>
+                  <button
+                    onClick={() => openOrder(src)}
+                    className="px-3 py-1 text-xs border border-gray-300 hover:border-gray-700 hover:text-gray-900 text-gray-700 font-semibold rounded whitespace-nowrap"
+                  >
+                    🛒 Order
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -188,6 +207,9 @@ export default function AdminPage() {
           <nav className="flex gap-3 text-sm text-gray-300">
             <a href="/admin" className="text-white font-semibold">
               Signups
+            </a>
+            <a href="/admin/orders" className="hover:text-white">
+              Orders
             </a>
             <a href="/admin/broadcast" className="hover:text-white">
               Broadcast
