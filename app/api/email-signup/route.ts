@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sql } from '@vercel/postgres';
 
 interface SignupBody {
   name?: string;
@@ -32,38 +33,65 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Forward to the Gideon Dashboard public lead endpoint, tagged as a
-    // mailing-list signup so it can be filtered separately from quote leads.
-    const tag = source || 'mailing-list';
-    const jobDetails = [
-      company ? `Company: ${company}` : null,
-      interest ? `Interested in: ${interest}` : null,
-      `Source: ${tag}`,
-    ]
-      .filter(Boolean)
-      .join('\n');
+    const tag = source || 'unknown';
+    const cleanEmail = email.trim().toLowerCase();
+    const cleanName = name?.trim() || null;
+    const cleanCompany = company?.trim() || null;
+    const cleanInterest = interest?.trim() || null;
+    const ip =
+      request.headers.get('x-forwarded-for') ||
+      request.headers.get('x-real-ip') ||
+      null;
+    const userAgent = request.headers.get('user-agent') || null;
 
+    // Primary: write to Postgres. ON CONFLICT updates the existing row
+    // with any newly provided fields, so re-signups don't error out.
     try {
-      await fetch(
-        'https://dashboard.gideoncode.com/api/public/buygeogrid.com/leads',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            visitorId: `email-signup-${Date.now()}`,
-            visitorName: name || email,
-            visitorEmail: email,
-            visitorAddress: company || undefined,
-            jobType: `Mailing List (${tag})`,
-            jobDetails,
-          }),
-        }
+      await sql`
+        INSERT INTO email_signups (email, name, company, interest, source, ip, user_agent)
+        VALUES (${cleanEmail}, ${cleanName}, ${cleanCompany}, ${cleanInterest}, ${tag}, ${ip}, ${userAgent})
+        ON CONFLICT (email) DO UPDATE SET
+          name     = COALESCE(EXCLUDED.name,     email_signups.name),
+          company  = COALESCE(EXCLUDED.company,  email_signups.company),
+          interest = COALESCE(EXCLUDED.interest, email_signups.interest),
+          source   = EXCLUDED.source,
+          unsubscribed = false
+      `;
+    } catch (dbErr) {
+      console.error('email_signups insert failed:', dbErr);
+      return NextResponse.json(
+        { error: 'Failed to save signup' },
+        { status: 500 }
       );
-    } catch (err) {
-      console.error('Gideon Dashboard email-signup forward failed:', err);
-      // Don't fail the user-facing request if downstream is down — we still
-      // log to the server console so the signup isn't lost outright.
-      console.log('FALLBACK email signup:', { name, email, company, interest, source: tag });
+    }
+
+    // Belt-and-suspenders: also fire off to the Gideon Dashboard so the
+    // signup is visible in the existing lead inbox until the new /admin
+    // is fully trusted. Fire-and-forget; doesn't block the user response.
+    try {
+      const jobDetails = [
+        cleanCompany ? `Company: ${cleanCompany}` : null,
+        cleanInterest ? `Interested in: ${cleanInterest}` : null,
+        `Source: ${tag}`,
+      ]
+        .filter(Boolean)
+        .join('\n');
+      fetch('https://dashboard.gideoncode.com/api/public/buygeogrid.com/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          visitorId: `email-signup-${Date.now()}`,
+          visitorName: cleanName || cleanEmail,
+          visitorEmail: cleanEmail,
+          visitorAddress: cleanCompany || undefined,
+          jobType: `Mailing List (${tag})`,
+          jobDetails,
+        }),
+      }).catch(() => {
+        /* ignore — primary write already succeeded */
+      });
+    } catch {
+      /* swallow — fallback only */
     }
 
     return NextResponse.json({ success: true });
