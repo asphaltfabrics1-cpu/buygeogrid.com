@@ -135,8 +135,30 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="text-center mt-10 pt-8 text-base text-white/70 border-t border-white/10 font-medium">
-          © {currentYear} BuyGeogrid.com. All rights reserved Asphalt Fabrics & Supply.
+        <div className="text-center mt-10 pt-8 text-base text-white/70 border-t border-white/10 font-medium flex items-center justify-center gap-3">
+          <span>© {currentYear} BuyGeogrid.com. All rights reserved Asphalt Fabrics & Supply.</span>
+          <Link
+            href="/admin"
+            aria-label="Admin login"
+            title="Admin login"
+            className="text-white/40 hover:text-accent-500 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </Link>
         </div>
       </div>
     </footer>
