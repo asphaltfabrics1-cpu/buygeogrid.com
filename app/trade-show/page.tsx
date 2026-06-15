@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -14,6 +15,7 @@ const INTEREST_OPTIONS = [
 ] as const;
 
 export default function TradeShowPage() {
+  const searchParams = useSearchParams();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
@@ -24,9 +26,19 @@ export default function TradeShowPage() {
   const [error, setError] = useState('');
   const nameRef = useRef<HTMLInputElement>(null);
 
-  // Tag the signup with today's date so multiple shows are distinguishable
-  // in the dashboard later.
-  const sourceTag = `trade-show-${new Date().toISOString().slice(0, 10)}`;
+  // Source priority:
+  //   ?event=ConExpo-2026  →  source tag = "ConExpo-2026"   (named campaign)
+  //   no param             →  source tag = "trade-show-YYYY-MM-DD"  (date fallback)
+  // Slugify the event name so the tag is URL/filter-friendly.
+  const rawEvent = searchParams?.get('event')?.trim() || '';
+  const eventSlug = rawEvent
+    ? rawEvent
+        .replace(/[^a-zA-Z0-9-_]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+    : '';
+  const sourceTag = eventSlug
+    ? eventSlug
+    : `trade-show-${new Date().toISOString().slice(0, 10)}`;
 
   // After a successful submit, hold the success screen briefly then reset
   // the form so the next person can sign up.

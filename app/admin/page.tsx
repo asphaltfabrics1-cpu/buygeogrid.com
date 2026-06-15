@@ -2,6 +2,127 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
+function slugifyEvent(s: string): string {
+  return s
+    .trim()
+    .replace(/[^a-zA-Z0-9-_]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function CampaignsPanel({ signups }: { signups: Signup[] }) {
+  const [newName, setNewName] = useState('');
+
+  // Group existing signups by source so each campaign tag shows a live count
+  const counts = useMemo(() => {
+    const c: Record<string, number> = {};
+    for (const s of signups) c[s.source] = (c[s.source] ?? 0) + 1;
+    return c;
+  }, [signups]);
+
+  const campaigns = Object.entries(counts)
+    .filter(([src]) => src && src !== 'unknown' && src !== 'popup')
+    .sort((a, b) => b[1] - a[1]);
+
+  const slug = slugifyEvent(newName);
+  const previewUrl = slug
+    ? `${typeof window !== 'undefined' ? window.location.origin : 'https://buygeogrid.com'}/trade-show?event=${encodeURIComponent(slug)}`
+    : '';
+
+  function openKiosk(eventSlug: string) {
+    const url = `/trade-show${eventSlug ? `?event=${encodeURIComponent(eventSlug)}` : ''}`;
+    window.open(url, '_blank', 'noopener');
+  }
+
+  async function copyToClipboard(text: string) {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      /* ignore */
+    }
+  }
+
+  return (
+    <div className="mb-6 bg-white border border-gray-200 rounded-lg p-5">
+      <h3 className="text-lg font-bold text-gray-900 mb-1">
+        Trade-Show Campaigns
+      </h3>
+      <p className="text-sm text-gray-500 mb-4">
+        Name a campaign and get a custom kiosk URL. Every signup from that URL
+        is tagged with the campaign name so you can broadcast to them later.
+      </p>
+
+      <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-4">
+        <label className="block text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">
+          New campaign
+        </label>
+        <div className="flex flex-wrap gap-2">
+          <input
+            type="text"
+            value={newName}
+            onChange={(e) => setNewName(e.target.value)}
+            placeholder="e.g. ConExpo 2026"
+            className="flex-1 min-w-[200px] px-3 py-2 text-sm border border-gray-300 rounded focus:border-[#00c97e] focus:outline-none"
+          />
+          <button
+            onClick={() => slug && openKiosk(slug)}
+            disabled={!slug}
+            className="px-4 py-2 text-sm bg-[#00c97e] hover:bg-[#00b36f] disabled:bg-gray-300 text-white font-semibold rounded"
+          >
+            📱 Open Kiosk
+          </button>
+          <button
+            onClick={() => previewUrl && copyToClipboard(previewUrl)}
+            disabled={!slug}
+            className="px-4 py-2 text-sm border border-gray-300 hover:border-[#00c97e] hover:text-[#00c97e] text-gray-700 font-semibold rounded disabled:opacity-50"
+          >
+            📋 Copy URL
+          </button>
+        </div>
+        {slug && (
+          <div className="mt-2 text-xs text-gray-500 break-all">
+            URL: <code className="bg-white border border-gray-200 rounded px-1.5 py-0.5">{previewUrl}</code>
+            <br />
+            Tag: <code className="bg-white border border-gray-200 rounded px-1.5 py-0.5">{slug}</code>
+          </div>
+        )}
+      </div>
+
+      <div>
+        <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">
+          Past campaigns ({campaigns.length})
+        </div>
+        {campaigns.length === 0 ? (
+          <p className="text-sm text-gray-500 italic">
+            No campaigns yet. Name your first one above to get a kiosk URL.
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {campaigns.map(([src, n]) => (
+              <div
+                key={src}
+                className="flex items-center justify-between gap-2 border border-gray-200 rounded-lg p-3"
+              >
+                <div className="min-w-0">
+                  <div className="font-semibold text-gray-900 truncate">{src}</div>
+                  <div className="text-xs text-gray-500">
+                    {n} signup{n === 1 ? '' : 's'}
+                  </div>
+                </div>
+                <button
+                  onClick={() => openKiosk(src)}
+                  className="flex-shrink-0 px-3 py-1.5 text-xs border border-gray-300 hover:border-[#00c97e] hover:text-[#00c97e] text-gray-700 font-semibold rounded"
+                >
+                  Reopen Kiosk
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 interface Signup {
   id: number;
   email: string;
@@ -80,26 +201,14 @@ export default function AdminPage() {
 
       <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Quick links — for iPad navigation without typing slugs */}
-        <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          <a
-            href="/trade-show"
-            target="_blank"
-            rel="noopener"
-            className="block bg-[#00c97e] hover:bg-[#00b36f] text-white rounded-lg p-4 transition-colors"
-          >
-            <div className="text-xs uppercase opacity-80 tracking-wide">Trade Show</div>
-            <div className="text-lg font-bold mt-1">📱 Open iPad Kiosk</div>
-            <div className="text-xs opacity-90 mt-1 break-all">
-              buygeogrid.com/trade-show
-            </div>
-          </a>
+        <div className="mb-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
           <a
             href="/admin/broadcast"
-            className="block bg-white border border-gray-200 hover:border-[#00c97e] rounded-lg p-4 transition-colors"
+            className="block bg-[#00c97e] hover:bg-[#00b36f] text-white rounded-lg p-4 transition-colors"
           >
-            <div className="text-xs uppercase text-gray-500 tracking-wide">Email</div>
-            <div className="text-lg font-bold mt-1 text-gray-900">✉ Send Broadcast</div>
-            <div className="text-xs text-gray-500 mt-1">Compose &amp; send to the list</div>
+            <div className="text-xs uppercase opacity-80 tracking-wide">Email</div>
+            <div className="text-lg font-bold mt-1">✉ Send Broadcast</div>
+            <div className="text-xs opacity-90 mt-1">Compose &amp; send to the list</div>
           </a>
           <a
             href="/"
@@ -122,6 +231,9 @@ export default function AdminPage() {
             <div className="text-xs text-gray-500 mt-1">/contact (Monday + Gideon)</div>
           </a>
         </div>
+
+        {/* Trade-show campaigns: name an event, get a kiosk URL */}
+        <CampaignsPanel signups={signups} />
 
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div>
