@@ -62,7 +62,17 @@ export default function AdminPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-[#1a1a1a] text-white px-6 py-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold">BuyGeogrid Admin</h1>
+        <div className="flex items-center gap-4">
+          <h1 className="text-xl font-bold">BuyGeogrid Admin</h1>
+          <nav className="flex gap-3 text-sm text-gray-300">
+            <a href="/admin" className="text-white font-semibold">
+              Signups
+            </a>
+            <a href="/admin/broadcast" className="hover:text-white">
+              Broadcast
+            </a>
+          </nav>
+        </div>
         <a href="/" className="text-sm text-gray-300 hover:text-white">
           ← Back to site
         </a>
@@ -86,10 +96,16 @@ export default function AdminPage() {
             </button>
             <a
               href="/api/admin/signups/csv"
-              className="px-4 py-2 text-sm bg-[#00c97e] hover:bg-[#00b36f] text-white font-semibold rounded-lg inline-flex items-center gap-1"
+              className="px-4 py-2 text-sm bg-white border border-gray-300 hover:border-[#00c97e] hover:text-[#00c97e] text-gray-700 font-semibold rounded-lg inline-flex items-center gap-1"
               download
             >
               ⬇ Download CSV
+            </a>
+            <a
+              href="/admin/broadcast"
+              className="px-4 py-2 text-sm bg-[#00c97e] hover:bg-[#00b36f] text-white font-semibold rounded-lg inline-flex items-center gap-1"
+            >
+              ✉ Send Broadcast
             </a>
           </div>
         </div>
