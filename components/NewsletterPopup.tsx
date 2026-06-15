@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 const DISMISS_KEY = 'bg_newsletter_popup_dismissed_at';
+const PERMANENT_DISMISS_KEY = 'bg_newsletter_popup_never';
 const SUBMITTED_KEY = 'bg_newsletter_submitted_at';
 const DISMISS_TTL_DAYS = 30;
-const TIME_TRIGGER_MS = 30_000; // show after 30s
-const SCROLL_TRIGGER = 0.5; // or after scrolling past 50% of page
+const TIME_TRIGGER_MS = 400; // open quickly after page paint
 
 // Routes the popup should NEVER appear on
 const HIDDEN_PATHS = ['/admin', '/trade-show', '/unsubscribe'];
@@ -27,6 +27,13 @@ export default function NewsletterPopup() {
     if (!pathname) return;
     if (HIDDEN_PATHS.some((p) => pathname.startsWith(p))) return;
 
+    // "Don't show again" set previously? Honor permanently.
+    try {
+      if (localStorage.getItem(PERMANENT_DISMISS_KEY)) return;
+    } catch {
+      /* localStorage may be blocked — fall through */
+    }
+
     // Already submitted before? Don't show again.
     try {
       if (localStorage.getItem(SUBMITTED_KEY)) return;
@@ -34,7 +41,7 @@ export default function NewsletterPopup() {
       /* localStorage may be blocked — fall through */
     }
 
-    // Recently dismissed? Honor the cooldown.
+    // Recently dismissed (Maybe later)? Honor the cooldown.
     try {
       const dismissedAtRaw = localStorage.getItem(DISMISS_KEY);
       if (dismissedAtRaw) {
@@ -47,29 +54,25 @@ export default function NewsletterPopup() {
       /* ignore */
     }
 
+    // Pop right after first paint — short delay avoids competing with the
+    // initial layout but feels instant to the visitor.
     const timer = setTimeout(() => setOpen(true), TIME_TRIGGER_MS);
-
-    function onScroll() {
-      const scrollY = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (docHeight <= 0) return;
-      const ratio = scrollY / docHeight;
-      if (ratio >= SCROLL_TRIGGER) {
-        setOpen(true);
-      }
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('scroll', onScroll);
-    };
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   function handleDismiss() {
     setOpen(false);
     try {
       localStorage.setItem(DISMISS_KEY, String(Date.now()));
+    } catch {
+      /* ignore */
+    }
+  }
+
+  function handleNeverShow() {
+    setOpen(false);
+    try {
+      localStorage.setItem(PERMANENT_DISMISS_KEY, '1');
     } catch {
       /* ignore */
     }
@@ -232,6 +235,13 @@ export default function NewsletterPopup() {
                 {submitting ? 'Saving...' : 'Sign Me Up'}
               </button>
             </div>
+            <button
+              type="button"
+              onClick={handleNeverShow}
+              className="block w-full text-center text-xs text-gray-400 hover:text-gray-600 mt-3 underline"
+            >
+              Don&apos;t show this again
+            </button>
           </form>
         </div>
       )}
