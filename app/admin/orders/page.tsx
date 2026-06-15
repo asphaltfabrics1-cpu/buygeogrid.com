@@ -111,6 +111,7 @@ export default function OrdersAdmin() {
           <nav className="flex gap-3 text-sm text-gray-300">
             <a href="/admin" className="hover:text-white">Signups</a>
             <a href="/admin/orders" className="text-white font-semibold">Orders</a>
+            <a href="/admin/chats" className="hover:text-white">Chats</a>
             <a href="/admin/broadcast" className="hover:text-white">Broadcast</a>
           </nav>
         </div>

@@ -101,6 +101,9 @@ export default function BroadcastPage() {
             <a href="/admin/orders" className="hover:text-white">
               Orders
             </a>
+            <a href="/admin/chats" className="hover:text-white">
+              Chats
+            </a>
             <a href="/admin/broadcast" className="text-white font-semibold">
               Broadcast
             </a>

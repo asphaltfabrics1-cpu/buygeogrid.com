@@ -211,6 +211,9 @@ export default function AdminPage() {
             <a href="/admin/orders" className="hover:text-white">
               Orders
             </a>
+            <a href="/admin/chats" className="hover:text-white">
+              Chats
+            </a>
             <a href="/admin/broadcast" className="hover:text-white">
               Broadcast
             </a>
