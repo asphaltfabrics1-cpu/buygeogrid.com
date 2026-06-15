@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   },
 };
 
+// Reading ?event= via useSearchParams in the client component means we can't
+// statically prerender. Force dynamic since the page is noindex anyway —
+// nothing to gain from SSG and prerender was failing in production builds.
+export const dynamic = 'force-dynamic';
+
 export default function TradeShowLayout({
   children,
 }: {
