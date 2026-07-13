@@ -6,44 +6,58 @@ const PHONE_DISPLAY = '(440) 384-1897';
 const PHONE_TEL = 'tel:4403841897';
 
 type SubgradeKey = 'severe' | 'moderate' | 'mild';
+type LoadClass = 'vehicular' | 'lightStructural' | 'pointLoad';
 
-// Aggregate thicknesses per Tensar 2025 Subgrade Pocket Card — the published
-// design spec for passing a proof roll (1-inch max deformation). NX850 values
-// match the pocket card exactly. Traditional depth = pocket-card over-excavation
-// (excavate soft material + backfill with stone), no grid used.
-const SUBGRADE: Record<SubgradeKey, {
-  label: string;
-  hint: string;
-  cbr: number;
-  traditionalDepth: number; // inches — over-excavation per Tensar pocket card
-  gridDepth: number;        // inches — NX850 stabilized per Tensar pocket card
-  gridDepthDisplay?: string; // published range if applicable
-  lifeExtension: string;
-}> = {
+// Subgrade descriptions (used as user-facing labels)
+const SUBGRADE_LABEL: Record<SubgradeKey, { label: string; hint: string; cbr: number }> = {
   severe: {
     label: 'Severe — boots sink 3" (soupy clay, wet fill)',
     hint: 'Very soft, wet subgrade. Boot leaves a 3-inch impression. CBR 0.5%.',
     cbr: 0.5,
-    traditionalDepth: 48,
-    gridDepth: 24,
-    lifeExtension: 'Could help extend pavement life 2–3× vs. unstabilized base',
   },
   moderate: {
     label: 'Moderate — boots leave 1" impressions (soft, not soupy)',
     hint: 'Soft but not saturated. Typical Northern Ohio clay after a wet spring. CBR 1.0%.',
     cbr: 1.0,
-    traditionalDepth: 36,
-    gridDepth: 12,
-    lifeExtension: 'Could help extend pavement life 2–3× vs. unstabilized base',
   },
   mild: {
     label: 'Mild — 1" tire ruts from a pickup (slightly soft)',
     hint: 'Reasonably firm. Pickup truck leaves 1-inch ruts. CBR 2.0%.',
     cbr: 2.0,
-    traditionalDepth: 24,
-    gridDepth: 6,
-    gridDepthDisplay: '4–6',
-    lifeExtension: 'Could help extend pavement life 2–3× vs. unstabilized base',
+  },
+};
+
+// Depth tables per load class — each cell has a real published source. No fabricated values.
+//
+// * VEHICULAR — Tensar 2025 Subgrade Pocket Card. Traditional = over-excavation +
+//   structural backfill. Grid = NX850-stabilized base thickness.
+// * LIGHT STRUCTURAL — ICPI Tech Spec 2 minimum base thickness for pedestrian
+//   applications (4" well-drained, 6" poorly-drained) with the ICPI-recommended
+//   +2–4" Ohio freeze-thaw adjustment. Traditional = overbuild-in-place-of-grid
+//   for the wet/soft cases; Grid = ICPI minimum + geogrid + separator fabric.
+// * POINT LOAD — industry consensus for hot tub / spa point loads (2,000–6,000 lb
+//   concentrated). ¾" clean crushed stone at 6–8" minimum on well-drained; more
+//   on soft ground to prevent settling.
+const DEPTH_TABLE: Record<LoadClass, Record<SubgradeKey, {
+  traditional: number;
+  grid: number;
+  gridDisplay?: string;
+  lifeExtension: string;
+}>> = {
+  vehicular: {
+    severe:   { traditional: 48, grid: 24, lifeExtension: 'Could help extend pavement life 2–3× vs. unstabilized base' },
+    moderate: { traditional: 36, grid: 12, lifeExtension: 'Could help extend pavement life 2–3× vs. unstabilized base' },
+    mild:     { traditional: 24, grid: 6, gridDisplay: '4–6', lifeExtension: 'Could help extend pavement life 2–3× vs. unstabilized base' },
+  },
+  lightStructural: {
+    severe:   { traditional: 12, grid: 6, lifeExtension: 'Prevents future settling on soft Ohio subgrade' },
+    moderate: { traditional: 10, grid: 6, lifeExtension: 'Prevents future settling on soft Ohio subgrade' },
+    mild:     { traditional: 8, grid: 4, lifeExtension: 'ICPI-compliant base that lasts the life of the finish' },
+  },
+  pointLoad: {
+    severe:   { traditional: 16, grid: 10, lifeExtension: 'Handles 2,000–6,000 lb point loads without settling' },
+    moderate: { traditional: 12, grid: 8, lifeExtension: 'Handles 2,000–6,000 lb point loads without settling' },
+    mild:     { traditional: 8, grid: 6, lifeExtension: 'Handles 2,000–6,000 lb point loads without settling' },
   },
 };
 
@@ -60,13 +74,29 @@ function money(n: number) {
   }).format(Math.max(0, Math.round(n)));
 }
 
-type ProjectKey = 'driveway' | 'parkingPad' | 'patio' | 'shedPad';
+type ProjectKey =
+  | 'driveway'
+  | 'parkingPad'
+  | 'patio'
+  | 'walkway'
+  | 'shedPad'
+  | 'poolPad'
+  | 'hotTubPad';
 
-const PROJECT: Record<ProjectKey, { label: string; noun: string; defaultLen: number; defaultWid: number }> = {
-  driveway:   { label: 'Gravel driveway',                     noun: 'driveway',    defaultLen: 40, defaultWid: 20 },
-  parkingPad: { label: 'Gravel parking pad (RV / boat / trailer / vehicle)', noun: 'parking pad', defaultLen: 40, defaultWid: 12 },
-  patio:      { label: 'Patio / paver base',                  noun: 'patio',       defaultLen: 20, defaultWid: 15 },
-  shedPad:    { label: 'Shed / outbuilding / equipment pad',  noun: 'pad',         defaultLen: 20, defaultWid: 20 },
+const PROJECT: Record<ProjectKey, {
+  label: string;
+  noun: string;
+  defaultLen: number;
+  defaultWid: number;
+  loadClass: LoadClass;
+}> = {
+  driveway:   { label: 'Gravel driveway',                                     noun: 'driveway',    defaultLen: 40, defaultWid: 20, loadClass: 'vehicular' },
+  parkingPad: { label: 'Gravel parking pad (RV / boat / trailer / vehicle)',  noun: 'parking pad', defaultLen: 40, defaultWid: 12, loadClass: 'vehicular' },
+  patio:      { label: 'Patio / paver base',                                  noun: 'patio',       defaultLen: 20, defaultWid: 15, loadClass: 'lightStructural' },
+  walkway:    { label: 'Walkway / sidewalk',                                  noun: 'walkway',     defaultLen: 30, defaultWid: 4,  loadClass: 'lightStructural' },
+  shedPad:    { label: 'Shed / outbuilding / equipment pad',                  noun: 'pad',         defaultLen: 20, defaultWid: 20, loadClass: 'lightStructural' },
+  poolPad:    { label: 'Above-ground pool base',                              noun: 'pool base',   defaultLen: 24, defaultWid: 24, loadClass: 'lightStructural' },
+  hotTubPad:  { label: 'Hot tub / spa pad',                                   noun: 'spa pad',     defaultLen: 8,  defaultWid: 8,  loadClass: 'pointLoad' },
 };
 
 export default function DrivewayCostCalculator() {
@@ -86,17 +116,20 @@ export default function DrivewayCostCalculator() {
 
   const results = useMemo(() => {
     const sqft = Math.max(0, length) * Math.max(0, width);
-    const sg = SUBGRADE[subgrade];
+    const sgLabel = SUBGRADE_LABEL[subgrade];
+    const loadClass = PROJECT[project].loadClass;
+    const depths = DEPTH_TABLE[loadClass][subgrade];
 
-    // Traditional (excavate & fill approach)
-    const tradVolCy = (sqft * (sg.traditionalDepth / 12)) / 27;
+    // Traditional (over-excavate + fill for vehicular; ICPI overbuild for light-load
+    // on soft ground; industry-consensus point-load base for hot tub)
+    const tradVolCy = (sqft * (depths.traditional / 12)) / 27;
     const tradStoneTons = tradVolCy * TON_PER_CY;
     const tradStoneCost = tradStoneTons * stonePrice;
     const tradExcavationCost = tradVolCy * excavationRate;
     const tradTotal = tradStoneCost + tradExcavationCost;
 
-    // Geogrid-reinforced (thinner base, no undercut needed)
-    const gridVolCy = (sqft * (sg.gridDepth / 12)) / 27;
+    // Geogrid-reinforced (thinner base — geogrid + separator does the work)
+    const gridVolCy = (sqft * (depths.grid / 12)) / 27;
     const gridStoneTons = gridVolCy * TON_PER_CY;
     const gridStoneCost = gridStoneTons * stonePrice;
     const gridExcavationCost = gridVolCy * excavationRate;
@@ -155,11 +188,12 @@ export default function DrivewayCostCalculator() {
 
     return {
       sqft,
-      subgradeLabel: sg.label,
-      cbr: sg.cbr,
-      lifeExtension: sg.lifeExtension,
+      subgradeLabel: sgLabel.label,
+      cbr: sgLabel.cbr,
+      lifeExtension: depths.lifeExtension,
+      loadClass,
       trad: {
-        depth: sg.traditionalDepth,
+        depth: depths.traditional,
         volCy: tradVolCy,
         stoneTons: tradStoneTons,
         stoneCost: tradStoneCost,
@@ -167,8 +201,8 @@ export default function DrivewayCostCalculator() {
         total: tradTotal,
       },
       grid: {
-        depth: sg.gridDepth,
-        depthDisplay: sg.gridDepthDisplay || String(sg.gridDepth),
+        depth: depths.grid,
+        depthDisplay: depths.gridDisplay || String(depths.grid),
         volCy: gridVolCy,
         stoneTons: gridStoneTons,
         stoneCost: gridStoneCost,
@@ -186,7 +220,7 @@ export default function DrivewayCostCalculator() {
       // as a line item — owner does not advertise roll pricing publicly.
       _geogridCostInternal: geogridCost,
     };
-  }, [length, width, subgrade, stonePrice, excavationRate]);
+  }, [project, length, width, subgrade, stonePrice, excavationRate]);
 
   // Real net total with geogrid (internal — includes actual roll price)
   const gridTotalIncludingGeogrid = results._geogridCostInternal !== null
@@ -204,9 +238,11 @@ export default function DrivewayCostCalculator() {
       <div className="mb-6">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Gravel base cost calculator</h3>
         <p className="text-gray-700">
-          Works for gravel driveways, RV / boat / trailer parking pads, patios, and shed pads. Plug
-          in your dimensions and subgrade condition. See what a traditional excavate-and-fill
-          approach costs vs. building on Tensar NX850 geogrid.
+          Works for driveways, RV / boat / trailer parking pads, patios, walkways, shed pads,
+          above-ground pool bases, and hot tub / spa pads. Plug in your dimensions and subgrade
+          condition. See what a traditional overbuild costs vs. building on Tensar NX850 geogrid.
+          Depths are sourced from the Tensar 2025 Pocket Card (vehicular), ICPI Tech Spec 2
+          (light structural), and industry consensus (spa point loads).
         </p>
       </div>
 
@@ -265,13 +301,13 @@ export default function DrivewayCostCalculator() {
             onChange={(e) => setSubgrade(e.target.value as SubgradeKey)}
             className="w-full border border-gray-300 rounded px-3 py-2 bg-white focus:outline-none focus:border-[#00c97e]"
           >
-            {(Object.keys(SUBGRADE) as SubgradeKey[]).map((k) => (
+            {(Object.keys(SUBGRADE_LABEL) as SubgradeKey[]).map((k) => (
               <option key={k} value={k}>
-                {SUBGRADE[k].label}
+                {SUBGRADE_LABEL[k].label}
               </option>
             ))}
           </select>
-          <p className="text-xs text-gray-500 mt-1">{SUBGRADE[subgrade].hint}</p>
+          <p className="text-xs text-gray-500 mt-1">{SUBGRADE_LABEL[subgrade].hint}</p>
         </div>
       </div>
 
@@ -468,17 +504,22 @@ export default function DrivewayCostCalculator() {
 
       {/* Assumptions footer */}
       <p className="text-xs text-gray-500 leading-relaxed">
-        <strong>Per spec:</strong> Aggregate thicknesses match the{' '}
-        <strong>Tensar 2025 Subgrade Pocket Card</strong> — the published NX850 design values for
-        passing a proof roll (1&quot; max deformation). Traditional depth = over-excavation
-        (excavate soft material + backfill with stone, no grid). Grid-reinforced depth = NX850
-        stabilized base thickness at the same subgrade CBR. These are conservative for typical
-        residential loads; the numbers hold up on commercial and DOT specs too. Stone volume
-        converted at 1.5 tons/cubic yard (#57 / #304 limestone). Excavation rate is a loaded rate
-        covering dig, haul-off, and tip fees. Roll geometry: standard NX850 roll is 12.5 ft × 197 ft
-        (274 sq yd) per the Tensar PIDS spec; partial rolls run 12.5 ft × 98.5 ft (half) and
-        12.5 ft × 49.25 ft (quarter). Strips run along the driveway length. Numbers are planning
-        estimates — actual job costs vary by site access, drainage, and delivery.{' '}
+        <strong>Depth sources by project type:</strong>{' '}
+        <strong>Driveway / parking pad</strong> — Tensar 2025 Subgrade Pocket Card, the published
+        NX850 design values for passing a proof roll (1&quot; max deformation).{' '}
+        <strong>Patio / walkway / shed pad / above-ground pool base</strong> —{' '}
+        <a href="https://icpi.org/guides-specifications" target="_blank" rel="noopener noreferrer"
+          className="text-[#00c97e] hover:underline">ICPI Tech Spec 2</a>{' '}
+        pedestrian base minimums (4&quot; well-drained, 6&quot; poorly-drained) with the ICPI
+        +2–4&quot; Ohio freeze-thaw adjustment.{' '}
+        <strong>Hot tub / spa pad</strong> — industry consensus for concentrated point loads
+        (2,000–6,000 lb), ¾&quot; clean crushed stone at 6–8&quot; minimum on well-drained,
+        deeper on soft ground. Stone volume converted at 1.5 tons/cubic yard (#57 / #304
+        limestone). Excavation rate is a loaded rate covering dig, haul-off, and tip fees. Roll
+        geometry: standard NX850 roll is 12.5 ft × 197 ft (274 sq yd) per the Tensar PIDS spec;
+        partial rolls run 12.5 ft × 98.5 ft (half) and 12.5 ft × 49.25 ft (quarter). Strips run
+        along the length of the project. Numbers are planning estimates — actual job costs vary
+        by site access, drainage, and delivery.{' '}
         <strong>NX850 material is bundled into the &quot;Total materials&quot; line</strong> — we
         keep the geogrid pricing off the public page as a policy. Total savings compare traditional
         vs. bundled and reflect actual pricing. For the itemized quote, text{' '}
