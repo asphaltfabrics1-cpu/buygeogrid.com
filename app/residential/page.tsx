@@ -344,13 +344,31 @@ export default function ResidentialPage() {
         <section id="calculator" className="py-16 px-6 bg-white scroll-mt-20 border-t border-gray-100">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">
-              Driveway cost savings calculator
+              Gravel base cost savings calculator
             </h2>
-            <p className="text-lg text-gray-700 mb-8">
-              See what a soft-subgrade driveway costs the traditional way vs. building on Tensar
-              NX850. Numbers use Northern Ohio residential defaults for stone and excavation — edit
-              the assumptions to match your job.
+            <p className="text-lg text-gray-700 mb-6">
+              See what a soft-subgrade project costs the traditional way vs. building on Tensar
+              NX850. Covers driveways, RV / boat pads, patios, walkways, shed pads, above-ground
+              pool bases, and hot tub / spa pads. Numbers use Northern Ohio residential defaults —
+              edit the assumptions to match your job.
             </p>
+            <div className="mb-8 rounded border-l-4 border-[#00c97e] bg-[#f0fdf4] p-4">
+              <p className="text-sm text-gray-800 leading-relaxed">
+                <strong className="text-gray-900">Referenced by the national standard.</strong>{' '}
+                The Concrete Masonry &amp; Hardscapes Association — the national trade org civil
+                engineers, landscape architects, and code officials cite —{' '}
+                <a
+                  href="https://www.cmha.org/resource/pav-tec-022/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#00c97e] font-semibold hover:underline"
+                >
+                  directly endorses geogrid
+                </a>{' '}
+                for soft, wet, and slow-draining soils. That&apos;s the material we supply. See
+                CMHA PAV-TEC-022 — &quot;Geosynthetics for Segmental Concrete Pavements&quot;.
+              </p>
+            </div>
             <DrivewayCostCalculator />
           </div>
         </section>

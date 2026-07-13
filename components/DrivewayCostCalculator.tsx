@@ -513,7 +513,12 @@ export default function DrivewayCostCalculator() {
         <a href="https://www.cmha.org/resource/pav-tec-002/" target="_blank" rel="noopener noreferrer"
           className="text-[#00c97e] hover:underline">CMHA PAV-TEC-002</a>{' '}
         (formerly ICPI Tech Spec 2) pedestrian base minimums — 4&quot; well-drained, 6&quot;
-        poorly-drained — with the industry-standard +2–4&quot; Ohio freeze-thaw adjustment.{' '}
+        poorly-drained — with the industry-standard +2–4&quot; Ohio freeze-thaw adjustment. Geogrid
+        use in these light-load applications is directly endorsed by{' '}
+        <a href="https://www.cmha.org/resource/pav-tec-022/" target="_blank" rel="noopener noreferrer"
+          className="text-[#00c97e] hover:underline">CMHA PAV-TEC-022 (Geosynthetics for Segmental
+        Concrete Pavements)</a>, which cites geogrid for soft, wet, and slow-draining soils —
+        Northeast Ohio&apos;s default subgrade.{' '}
         <strong>Hot tub / spa pad</strong> — industry consensus for concentrated point loads
         (2,000–6,000 lb), ¾&quot; clean crushed stone at 6–8&quot; minimum on well-drained,
         deeper on soft ground. Stone volume converted at 1.5 tons/cubic yard (#57 / #304
