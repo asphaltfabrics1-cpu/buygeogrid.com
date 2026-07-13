@@ -158,12 +158,99 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    // Problem-first landing pages (SEO — broader intent than SKU pages)
+    {
+      url: `${baseUrl}/soft-ground-solutions`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/muddy-driveway-fix`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/weak-subgrade`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/potholes-keep-coming-back`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/gravel-driveway-stabilization`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    // Comparison pages
+    {
+      url: `${baseUrl}/geogrid-vs-geotextile`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/petrotac-vs-paving-fabric`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/nx850-vs-tx190`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    // Local + problem combos
+    {
+      url: `${baseUrl}/muddy-driveway-cleveland`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/soft-ground-akron`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/subgrade-stabilization-toledo`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
     // Blog
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/how-much-geogrid-for-a-driveway`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/why-does-my-driveway-keep-sinking`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/fix-soft-ground-without-excavating`,
+      lastModified: new Date('2026-07-13'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/what-is-geogrid`,

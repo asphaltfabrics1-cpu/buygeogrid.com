@@ -11,6 +11,7 @@ export default function Header() {
   const [interlayersOpen, setInterlayersOpen] = useState(false);
   const [patchPacksOpen, setPatchPacksOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
 
   return (
     <>
@@ -164,6 +165,41 @@ export default function Header() {
               </Link>
             </li>
 
+            {/* Solutions Dropdown — problem-first landing pages for broader search intent */}
+            <li
+              className="relative group"
+              onMouseEnter={() => setSolutionsOpen(true)}
+              onMouseLeave={() => setSolutionsOpen(false)}
+            >
+              <button className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
+                Solutions ▾
+              </button>
+              {solutionsOpen && (
+                <div
+                  className="md:absolute relative top-full left-0 bg-[#2a2a2a] border border-gray-700 shadow-lg py-2 min-w-[280px] z-50"
+                  onMouseEnter={() => setSolutionsOpen(true)}
+                  onMouseLeave={() => setSolutionsOpen(false)}
+                >
+                  <div className="px-4 py-2 text-xs uppercase tracking-wide text-gray-400 font-semibold">Fix a Problem</div>
+                  <Link href="/soft-ground-solutions" className="block px-4 py-2 hover:bg-white/10 transition-colors">Soft Ground Solutions</Link>
+                  <Link href="/muddy-driveway-fix" className="block px-4 py-2 hover:bg-white/10 transition-colors">Muddy Driveway Fix</Link>
+                  <Link href="/gravel-driveway-stabilization" className="block px-4 py-2 hover:bg-white/10 transition-colors">Gravel Driveway Stabilization</Link>
+                  <Link href="/weak-subgrade" className="block px-4 py-2 hover:bg-white/10 transition-colors">Weak Subgrade Under Pavement</Link>
+                  <Link href="/potholes-keep-coming-back" className="block px-4 py-2 hover:bg-white/10 transition-colors">Potholes Keep Coming Back</Link>
+
+                  <div className="px-4 py-2 mt-2 text-xs uppercase tracking-wide text-gray-400 font-semibold border-t border-gray-700 pt-3">Compare Products</div>
+                  <Link href="/geogrid-vs-geotextile" className="block px-4 py-2 hover:bg-white/10 transition-colors">Geogrid vs. Geotextile</Link>
+                  <Link href="/petrotac-vs-paving-fabric" className="block px-4 py-2 hover:bg-white/10 transition-colors">Petrotac vs. Paving Fabric</Link>
+                  <Link href="/nx850-vs-tx190" className="block px-4 py-2 hover:bg-white/10 transition-colors">NX850 vs. TX190L</Link>
+
+                  <div className="px-4 py-2 mt-2 text-xs uppercase tracking-wide text-gray-400 font-semibold border-t border-gray-700 pt-3">Northern Ohio</div>
+                  <Link href="/muddy-driveway-cleveland" className="block px-4 py-2 hover:bg-white/10 transition-colors">Cleveland — Muddy Driveways</Link>
+                  <Link href="/soft-ground-akron" className="block px-4 py-2 hover:bg-white/10 transition-colors">Akron — Soft Ground</Link>
+                  <Link href="/subgrade-stabilization-toledo" className="block px-4 py-2 hover:bg-white/10 transition-colors">Toledo — Subgrade Stabilization</Link>
+                </div>
+              )}
+            </li>
+
             {/* Residential — residential cost calculator + quote */}
             <li>
               <Link href="/residential" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
@@ -276,7 +312,24 @@ export default function Header() {
                 Patch Packs
               </Link>
             </li>
-            <li>
+
+            {/* Solutions section — problem-first landing pages */}
+            <li className="mt-2">
+              <div className="px-3 py-2 text-xs uppercase tracking-wide text-gray-400 font-semibold border-t border-gray-700 pt-3">Solutions</div>
+              <Link href="/soft-ground-solutions" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Soft Ground Solutions</Link>
+              <Link href="/muddy-driveway-fix" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Muddy Driveway Fix</Link>
+              <Link href="/gravel-driveway-stabilization" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Gravel Driveway Stabilization</Link>
+              <Link href="/weak-subgrade" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Weak Subgrade</Link>
+              <Link href="/potholes-keep-coming-back" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Potholes Keep Coming Back</Link>
+              <Link href="/geogrid-vs-geotextile" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Geogrid vs. Geotextile</Link>
+              <Link href="/petrotac-vs-paving-fabric" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Petrotac vs. Paving Fabric</Link>
+              <Link href="/nx850-vs-tx190" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">NX850 vs. TX190L</Link>
+              <Link href="/muddy-driveway-cleveland" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Cleveland Driveways</Link>
+              <Link href="/soft-ground-akron" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Akron Soft Ground</Link>
+              <Link href="/subgrade-stabilization-toledo" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-sm hover:bg-white/10">Toledo Subgrade</Link>
+            </li>
+
+            <li className="mt-2 border-t border-gray-700 pt-2">
               <Link href="/residential" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Residential
               </Link>
