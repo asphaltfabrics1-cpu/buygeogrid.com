@@ -54,22 +54,26 @@ export default function HowMuchGeogridForDriveway() {
 
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Typical Roll Sizes by SKU</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Tensar NX850 Roll Sizes We Stock</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              For residential driveways we stock <strong>Tensar InterAx NX850</strong> in partial rolls
+              sized for typical residential jobs. Full-roll dimensions come straight from the Tensar PIDS
+              spec — the partial widths are cut from the same 12.5 ft standard roll.
+            </p>
             <div className="bg-white rounded shadow-sm overflow-hidden">
               <table className="w-full">
                 <thead className="bg-gray-100">
                   <tr>
-                    <th className="text-left p-4 font-semibold">SKU</th>
-                    <th className="text-left p-4 font-semibold">Roll Dimensions</th>
+                    <th className="text-left p-4 font-semibold">Format</th>
+                    <th className="text-left p-4 font-semibold">Dimensions</th>
                     <th className="text-left p-4 font-semibold">Coverage</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { s: 'Tensar NX650', d: '13.1 ft × 246 ft', c: '~358 yd²' },
-                    { s: 'Tensar NX750', d: '13.1 ft × 246 ft', c: '~358 yd²' },
-                    { s: 'Tensar NX850', d: '13.1 ft × 246 ft', c: '~358 yd²' },
-                    { s: 'Tensar TX190L', d: '13.1 ft × 246 ft', c: '~358 yd²' },
+                    { s: 'Quarter roll', d: '12.5 ft × 49.25 ft', c: '68.5 yd²' },
+                    { s: 'Half roll', d: '12.5 ft × 98.5 ft', c: '137 yd²' },
+                    { s: 'Standard (full) roll', d: '12.5 ft × 197 ft', c: '274 yd²' },
                   ].map((r, i) => (
                     <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                       <td className="p-4 font-semibold">{r.s}</td>
@@ -81,7 +85,8 @@ export default function HowMuchGeogridForDriveway() {
               </table>
             </div>
             <p className="text-sm text-gray-600 mt-4">
-              Roll dimensions may vary by production run. Always confirm current stock with us before finalizing your order.
+              We keep half and quarter rolls in stock at our Solon warehouse for pickup. Full-roll orders are quoted
+              by phone. Text your driveway dimensions to (440) 384-1897 and we&apos;ll tell you which format fits.
             </p>
           </div>
         </section>
@@ -89,12 +94,17 @@ export default function HowMuchGeogridForDriveway() {
         <section className="py-16 px-6 bg-white">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-World Sizing Examples</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              NX850 rolls are 12.5 ft wide. Strips run along the driveway length. Figure out how many strips
+              you need (width ÷ 12.5, round up), multiply by driveway length, and match to the closest
+              partial-roll length.
+            </p>
             <div className="space-y-6">
               {[
-                { s: 'Short suburban driveway', d: '40 ft × 10 ft = 400 ft² = 44 yd² + 10% = ~49 yd²', r: 'Buy 1 partial roll or share a roll across two jobs.' },
-                { s: 'Standard residential driveway', d: '100 ft × 12 ft = 1,200 ft² = 133 yd² + 10% = ~147 yd²', r: 'Buy 1 roll (~358 yd²) — leftover is useful for a work pad or future job.' },
-                { s: 'Long rural driveway', d: '300 ft × 14 ft = 4,200 ft² = 467 yd² + 10% = ~514 yd²', r: 'Buy 2 rolls. Leftover ~200 yd² covers a turnaround or shed pad.' },
-                { s: 'Small commercial parking', d: '80 ft × 60 ft = 4,800 ft² = 533 yd² + 10% = ~587 yd²', r: 'Buy 2 rolls (~716 yd²) — leftover useful for future patches.' },
+                { s: 'Short suburban driveway', d: '40 ft × 10 ft — 1 strip × 40 linear ft', r: '1 quarter roll (49.25 ft available). Leftover ~9 ft.' },
+                { s: 'Standard residential driveway', d: '80 ft × 12 ft — 1 strip × 80 linear ft', r: '1 half roll (98.5 ft available). Leftover ~18 ft.' },
+                { s: 'RV / boat pad', d: '40 ft × 20 ft — 2 strips × 40 linear ft = 80 linear ft', r: '1 half roll covers both strips.' },
+                { s: 'Long rural driveway', d: '150 ft × 12 ft — 1 strip × 150 linear ft', r: '1 half + 1 quarter roll (147.75 ft available). Text us — larger jobs get a phone quote.' },
               ].map((e, i) => (
                 <div key={i} className="bg-gray-50 p-6 rounded border-l-4 border-[#00c97e]">
                   <h3 className="font-semibold text-gray-900 mb-2">{e.s}</h3>
@@ -103,31 +113,30 @@ export default function HowMuchGeogridForDriveway() {
                 </div>
               ))}
             </div>
+            <p className="text-sm text-gray-600 mt-6">
+              Or skip the math — use our <Link href="/residential" className="text-[#00c97e] font-semibold hover:underline">driveway calculator</Link>, enter your dimensions, and it recommends the exact partial-roll combination.
+            </p>
           </div>
         </section>
 
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Which Tensar SKU for a Driveway?</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              For most residential and light-commercial driveways, the choice comes down to:
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why NX850 for Residential Driveways?</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              For residential driveways and pads we stock <strong>Tensar InterAx NX850</strong> in partial-roll
+              formats — the current-generation top-of-the-line multi-axial geogrid. The design values for NX850
+              come straight from the Tensar 2025 Subgrade Pocket Card, so our driveway calculator matches
+              exactly what a Tensar engineer would spec.
             </p>
-            <div className="space-y-4">
-              <div className="bg-white p-6 rounded shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2">Tensar InterAx NX650</h3>
-                <p className="text-gray-700">Workhorse for typical residential driveways on decent subgrade. Cost-effective. Most common choice.</p>
-                <Link href="/geogrid/nx650" className="mt-2 inline-block text-[#00c97e] font-semibold hover:underline">NX650 details →</Link>
-              </div>
-              <div className="bg-white p-6 rounded shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2">Tensar InterAx NX750</h3>
-                <p className="text-gray-700">Step up when the subgrade is softer, the vehicles are heavier (RVs, dump trucks), or the driveway sees commercial traffic.</p>
-                <Link href="/geogrid/nx750" className="mt-2 inline-block text-[#00c97e] font-semibold hover:underline">NX750 details →</Link>
-              </div>
-              <div className="bg-white p-6 rounded shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-2">Tensar TriAx TX190L</h3>
-                <p className="text-gray-700">Previous-generation option — still widely spec&apos;d, well-documented, and often cheaper per roll than InterAx.</p>
-                <Link href="/geogrid/tx190" className="mt-2 inline-block text-[#00c97e] font-semibold hover:underline">TX190L details →</Link>
-              </div>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              For commercial, DOT, and heavy-duty applications we also carry the rest of the Tensar lineup —
+              NX650, NX750, TriAx TX190L, and the H-Series. Call us and we&apos;ll walk through the right SKU
+              for your job with a Tensar+ engineered design.
+            </p>
+            <div className="mt-6">
+              <Link href="/geogrid/nx850" className="inline-block text-[#00c97e] font-semibold hover:underline">
+                NX850 product details →
+              </Link>
             </div>
           </div>
         </section>

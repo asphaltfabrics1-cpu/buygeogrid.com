@@ -118,26 +118,38 @@ export default function DrivewayCostCalculator() {
     const linearFtNeeded = stripsNeeded * length;
     const gridSqFtNeeded = linearFtNeeded * ROLL_WIDTH;
 
+    // NX850 partial-roll pricing — verified from PIDS spec (12.5 ft × 197 ft = 274 sy full)
+    // and current listed prices. Quarter roll = 68.5 sy = $445. Half roll = 137 sy = $885.
+    // Larger jobs get routed to phone quote (we only stock partials).
+    const QUARTER_ROLL_PRICE = 445;
+    const HALF_ROLL_PRICE = 885;
+
     let rollRecommendation = '';
     let rollLengthAvailable = 0;
+    let geogridCost: number | null = null;
     if (linearFtNeeded === 0) {
       rollRecommendation = '';
     } else if (linearFtNeeded <= QUARTER_ROLL_LEN) {
       rollRecommendation = '1 quarter roll (12.5 ft × 49.25 ft)';
       rollLengthAvailable = QUARTER_ROLL_LEN;
+      geogridCost = QUARTER_ROLL_PRICE;
     } else if (linearFtNeeded <= HALF_ROLL_LEN) {
       rollRecommendation = '1 half roll (12.5 ft × 98.5 ft)';
       rollLengthAvailable = HALF_ROLL_LEN;
+      geogridCost = HALF_ROLL_PRICE;
     } else if (linearFtNeeded <= HALF_ROLL_LEN + QUARTER_ROLL_LEN) {
       rollRecommendation = '1 half roll + 1 quarter roll';
       rollLengthAvailable = HALF_ROLL_LEN + QUARTER_ROLL_LEN;
-    } else if (linearFtNeeded <= FULL_ROLL_LEN) {
-      rollRecommendation = '1 full roll (12.5 ft × 197 ft)';
-      rollLengthAvailable = FULL_ROLL_LEN;
+      geogridCost = HALF_ROLL_PRICE + QUARTER_ROLL_PRICE;
+    } else if (linearFtNeeded <= 2 * HALF_ROLL_LEN) {
+      rollRecommendation = '2 half rolls';
+      rollLengthAvailable = 2 * HALF_ROLL_LEN;
+      geogridCost = 2 * HALF_ROLL_PRICE;
     } else {
-      const fullRollsNeeded = Math.ceil(linearFtNeeded / FULL_ROLL_LEN);
-      rollRecommendation = `${fullRollsNeeded} full rolls (12.5 ft × 197 ft each)`;
-      rollLengthAvailable = fullRollsNeeded * FULL_ROLL_LEN;
+      // Job too big for partial-roll stock — fall back to phone quote
+      rollRecommendation = 'Larger than stocked partial rolls — text for a full-roll quote';
+      rollLengthAvailable = 0;
+      geogridCost = null;
     }
     const leftoverLinearFt = Math.max(0, rollLengthAvailable - linearFtNeeded);
 
@@ -170,8 +182,22 @@ export default function DrivewayCostCalculator() {
       stripsNeeded,
       linearFtNeeded,
       gridSqFtNeeded,
+      // geogridCost held internally for the savings math but NEVER surfaced
+      // as a line item — owner does not advertise roll pricing publicly.
+      _geogridCostInternal: geogridCost,
     };
   }, [length, width, subgrade, stonePrice, excavationRate]);
+
+  // Real net total with geogrid (internal — includes actual roll price)
+  const gridTotalIncludingGeogrid = results._geogridCostInternal !== null
+    ? results.grid.subtotal + results._geogridCostInternal
+    : null;
+  const netSavings = gridTotalIncludingGeogrid !== null
+    ? results.trad.total - gridTotalIncludingGeogrid
+    : null;
+  const netSavingsPct = gridTotalIncludingGeogrid !== null && results.trad.total > 0
+    ? (netSavings! / results.trad.total) * 100
+    : null;
 
   return (
     <div className="bg-white border border-gray-200 rounded p-6 md:p-8">
@@ -396,17 +422,17 @@ export default function DrivewayCostCalculator() {
         </div>
       </div>
 
-      {/* Savings callout */}
+      {/* Savings callout — uses real net-of-geogrid math when available */}
       <div className="bg-[#00c97e] text-white rounded p-5 mb-4">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div>
             <div className="text-sm uppercase tracking-wide opacity-90">
-              Stone + excavation savings
+              {netSavings !== null ? 'Net savings after geogrid' : 'Stone + excavation savings'}
             </div>
             <div className="text-3xl font-bold">
-              {money(results.materialSavings)}
+              {money(netSavings ?? results.materialSavings)}
               <span className="text-lg font-normal ml-2 opacity-90">
-                ({results.savingsPercent.toFixed(0)}%)
+                ({(netSavingsPct ?? results.savingsPercent).toFixed(0)}%)
               </span>
             </div>
           </div>
@@ -416,12 +442,20 @@ export default function DrivewayCostCalculator() {
           </div>
         </div>
         <p className="text-sm mt-3 opacity-95">
-          NX850 partial-roll cost for a job this size runs a fraction of these material savings.
-          Text{' '}
-          <a href={PHONE_TEL} className="underline font-semibold">
-            {PHONE_DISPLAY}
-          </a>{' '}
-          with your square footage for the exact number — same-day quote.
+          {netSavings !== null ? (
+            <>
+              Savings shown are <strong>net of the NX850 material</strong> — you save this much
+              even after including the geogrid. Text{' '}
+              <a href={PHONE_TEL} className="underline font-semibold">{PHONE_DISPLAY}</a>{' '}
+              for the exact quote — same-day.
+            </>
+          ) : (
+            <>
+              Your job needs full-roll coverage. Text{' '}
+              <a href={PHONE_TEL} className="underline font-semibold">{PHONE_DISPLAY}</a>{' '}
+              with your dimensions for a same-day quote.
+            </>
+          )}
         </p>
       </div>
 
@@ -434,9 +468,12 @@ export default function DrivewayCostCalculator() {
         stabilized base thickness at the same subgrade CBR. These are conservative for typical
         residential loads; the numbers hold up on commercial and DOT specs too. Stone volume
         converted at 1.5 tons/cubic yard (#57 / #304 limestone). Excavation rate is a loaded rate
-        covering dig, haul-off, and tip fees. Grid layout assumes 12.5-ft-wide roll strips run
-        along the driveway length. Numbers are planning estimates — actual job costs vary by
-        site access, drainage, and delivery. Geogrid material cost not shown; text{' '}
+        covering dig, haul-off, and tip fees. Roll geometry: standard NX850 roll is 12.5 ft × 197 ft
+        (274 sq yd) per the Tensar PIDS spec; partial rolls run 12.5 ft × 98.5 ft (half) and
+        12.5 ft × 49.25 ft (quarter). Strips run along the driveway length. Numbers are planning
+        estimates — actual job costs vary by site access, drainage, and delivery.{' '}
+        <strong>The savings figure above is net of the NX850 material</strong> — you save that much
+        even after paying for the geogrid. For an exact quoted price, text{' '}
         <a href={PHONE_TEL} className="text-[#00c97e] hover:underline font-semibold">
           {PHONE_DISPLAY}
         </a>{' '}
