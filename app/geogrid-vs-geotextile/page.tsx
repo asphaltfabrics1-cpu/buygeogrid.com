@@ -39,7 +39,7 @@ const faqData = [
   },
   {
     question: 'How do I know which product to buy?',
-    answer: 'Two data points: your subgrade CBR and your traffic load. We do free on-site DCP testing to measure the CBR. Then the design comes from Tensar\'s engineering software (also free with our material) that specs the exact geogrid, aggregate thickness, and separation-fabric requirement for your loads. No guessing, no over-buying.',
+    answer: 'Two data points: your subgrade condition and your traffic load. Tell us how soft the ground gets in wet weather and what will drive across it, and we\'ll spec the exact geogrid, aggregate thickness, and separation-fabric requirement. Tensar\'s engineering software (free with our material) handles the design.',
   },
 ];
 

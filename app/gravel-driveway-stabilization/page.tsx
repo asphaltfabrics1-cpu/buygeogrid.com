@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Gravel Driveway Stabilization | Stop Sinking Stone with Geogrid | Ohio',
-  description: 'Gravel driveway keeps sinking, rutting, or getting swallowed by mud? Geogrid stabilizes the stone into a stiff platform so it stays where you put it. Northern Ohio distributor. Free on-site DCP testing.',
+  description: 'Gravel driveway keeps sinking, rutting, or getting swallowed by mud? Geogrid stabilizes the stone into a stiff platform so it stays where you put it. Northern Ohio distributor. Same-day pickup from Solon.',
   keywords: ['gravel driveway stabilization', 'stop gravel from sinking', 'geogrid gravel driveway', 'driveway rutting fix', 'how to stabilize a gravel driveway', 'Cleveland gravel driveway', 'long driveway ruts'],
   alternates: { canonical: 'https://www.buygeogrid.com/gravel-driveway-stabilization' },
   openGraph: {
@@ -27,7 +27,7 @@ const faqData = [
   },
   {
     question: 'What size aggregate should I use with geogrid?',
-    answer: 'For most residential and small-commercial driveways, #57 (roughly 3/4 inch clean stone) or #304 (crusher-run with fines) placed 6–10 inches thick over the geogrid. #57 drains better; #304 compacts tighter. If the subgrade is soft (CBR under 3), go closer to 10 inches. If it\'s firm, 6 inches is enough. We can spec exact thickness after a DCP test.',
+    answer: 'For most residential and small-commercial driveways, #57 (roughly 3/4 inch clean stone) or #304 (crusher-run with fines) placed 6–10 inches thick over the geogrid. #57 drains better; #304 compacts tighter. If the subgrade is soft, go closer to 10 inches. If it\'s firm, 6 inches is enough. Text us your dimensions and we\'ll spec the exact thickness.',
   },
   {
     question: 'What if the soil under my current driveway is really soft?',
@@ -148,7 +148,7 @@ export default function GravelDrivewayStabilization() {
         <section className="py-16 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Build the Driveway You Meant to Build</h2>
-            <p className="text-lg text-gray-300 mb-6">Northern Ohio distributor. In-stock at our Solon warehouse. Free on-site DCP testing.</p>
+            <p className="text-lg text-gray-300 mb-6">Northern Ohio distributor. In-stock at our Solon warehouse.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/residential" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
                 Driveway Cost Calculator

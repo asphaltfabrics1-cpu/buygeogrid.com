@@ -128,7 +128,7 @@ export default function MuddyDrivewayFix() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Not Sure If Your Soil Is the Problem?</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              We do free on-site DCP testing anywhere in Northern Ohio. Twenty minutes with a Dynamic Cone Penetrometer tells us exactly how weak your subgrade is (measured as CBR), which tells us exactly what fabric and geogrid you need — no guessing, no over-buying.
+              Call us with a photo of the wet spots and a rough size. We&apos;ll tell you which Tensar geogrid and Mirafi fabric to use for your subgrade, how many rolls, and what you should expect to pay.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               After the test we&apos;ll walk you through the numbers, spec the material, and you can decide from there. No pressure, no sales pitch.
@@ -158,7 +158,7 @@ export default function MuddyDrivewayFix() {
         <section className="py-16 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Fix It Once?</h2>
-            <p className="text-lg text-gray-300 mb-6">Northern Ohio distributor. Free on-site DCP testing. Same-day pickup from our Solon warehouse.</p>
+            <p className="text-lg text-gray-300 mb-6">Northern Ohio distributor. Same-day pickup from our Solon warehouse.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
                 Get a Quote

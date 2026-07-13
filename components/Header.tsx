@@ -35,7 +35,7 @@ export default function Header() {
               onMouseLeave={() => setGeogridsOpen(false)}
             >
               <Link href="/geogrid" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Geogrids ▾
+                Geogrids
               </Link>
               {geogridsOpen && (
                 <div
@@ -87,7 +87,7 @@ export default function Header() {
               onMouseLeave={() => setWovenOpen(false)}
             >
               <Link href="/woven-fabrics" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Woven Fabrics ▾
+                Woven Fabrics
               </Link>
               {wovenOpen && (
                 <div
@@ -112,7 +112,7 @@ export default function Header() {
               onMouseLeave={() => setNonWovenOpen(false)}
             >
               <Link href="/nonwoven-fabrics" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Non-Woven Fabrics ▾
+                Non-Woven Fabrics
               </Link>
               {nonWovenOpen && (
                 <div
@@ -140,7 +140,7 @@ export default function Header() {
               onMouseLeave={() => setInterlayersOpen(false)}
             >
               <Link href="/interlayers" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Interlayers ▾
+                Interlayers
               </Link>
               {interlayersOpen && (
                 <div
@@ -172,7 +172,7 @@ export default function Header() {
               onMouseLeave={() => setSolutionsOpen(false)}
             >
               <button className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Solutions ▾
+                Solutions
               </button>
               {solutionsOpen && (
                 <div
@@ -220,7 +220,7 @@ export default function Header() {
               onMouseLeave={() => setResourcesOpen(false)}
             >
               <Link href="/resources" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Resources ▾
+                Resources
               </Link>
               {resourcesOpen && (
                 <div

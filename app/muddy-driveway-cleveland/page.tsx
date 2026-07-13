@@ -61,7 +61,7 @@ export default function MuddyDrivewayCleveland() {
       <main className="flex-grow">
         <PageHero
           title="Muddy Driveway Fix — Cleveland, Ohio"
-          description="Cleveland's heavy clay soil is why your gravel keeps disappearing. It's not your gravel — it's the ground beneath, pumping up through the stone every time you drive over it. Local warehouse in Solon. Free on-site DCP testing across Greater Cleveland."
+          description="Cleveland's heavy clay soil is why your gravel keeps disappearing. It's not your gravel — it's the ground beneath, pumping up through the stone every time you drive over it. Local warehouse in Solon."
           ctaText="Get a Free Quote"
           ctaLink="/contact"
           secondaryCtaText="Call (440) 368-1420"
@@ -142,7 +142,7 @@ export default function MuddyDrivewayCleveland() {
         <section className="py-16 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Fix It Once, Cleveland</h2>
-            <p className="text-lg text-gray-300 mb-6">Local warehouse. Local delivery. Free on-site DCP testing anywhere in Greater Cleveland.</p>
+            <p className="text-lg text-gray-300 mb-6">Local warehouse. Local delivery. Same-day pickup from our Solon warehouse.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/residential" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
                 Driveway Cost Calculator
