@@ -387,7 +387,9 @@ export default function DrivewayCostCalculator() {
           </table>
         </div>
 
-        {/* With Geogrid */}
+        {/* With Geogrid — deliberately does NOT itemize (excavation + stone + geogrid
+            all rolled into one bundled total so the roll price can't be back-solved
+            from the visible numbers. Owner does not advertise NX850 pricing.) */}
         <div className="border-2 border-[#00c97e] rounded p-5 bg-white">
           <div className="text-xs uppercase tracking-wide text-[#00c97e] font-semibold mb-1">
             With Tensar NX850 Geogrid
@@ -398,36 +400,41 @@ export default function DrivewayCostCalculator() {
           <table className="w-full text-sm">
             <tbody>
               <tr>
-                <td className="py-1 text-gray-700">Excavation + haul-off</td>
-                <td className="py-1 text-right text-gray-900">{money(results.grid.excavationCost)}</td>
-              </tr>
-              <tr>
                 <td className="py-1 text-gray-700">
-                  Stone ({results.grid.stoneTons.toFixed(1)} tons)
+                  {results.grid.stoneTons.toFixed(1)} tons stone + excavation + NX850
                 </td>
-                <td className="py-1 text-right text-gray-900">{money(results.grid.stoneCost)}</td>
-              </tr>
-              <tr>
-                <td className="py-1 text-gray-700">NX850 partial roll</td>
-                <td className="py-1 text-right text-gray-500 italic">get quote</td>
+                <td className="py-1 text-right text-gray-500 italic">bundled</td>
               </tr>
               <tr className="border-t border-gray-300">
-                <td className="pt-2 font-bold text-gray-900">Materials subtotal</td>
+                <td className="pt-2 font-bold text-gray-900">Total materials</td>
                 <td className="pt-2 text-right font-bold text-gray-900">
-                  {money(results.grid.subtotal)}
+                  {gridTotalIncludingGeogrid !== null
+                    ? money(gridTotalIncludingGeogrid)
+                    : (
+                      <a href={PHONE_TEL} className="text-[#00c97e] not-italic hover:underline">
+                        text for quote
+                      </a>
+                    )}
                 </td>
               </tr>
             </tbody>
           </table>
+          <p className="text-xs text-gray-500 mt-3 leading-relaxed">
+            Bundled to keep NX850 pricing confidential — text{' '}
+            <a href={PHONE_TEL} className="text-[#00c97e] font-semibold hover:underline">
+              {PHONE_DISPLAY}
+            </a>{' '}
+            for the exact quoted breakdown.
+          </p>
         </div>
       </div>
 
-      {/* Savings callout — uses real net-of-geogrid math when available */}
+      {/* Savings callout — comparison of the two bundled totals */}
       <div className="bg-[#00c97e] text-white rounded p-5 mb-4">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div>
             <div className="text-sm uppercase tracking-wide opacity-90">
-              {netSavings !== null ? 'Net savings after geogrid' : 'Stone + excavation savings'}
+              Total savings with NX850
             </div>
             <div className="text-3xl font-bold">
               {money(netSavings ?? results.materialSavings)}
@@ -444,8 +451,8 @@ export default function DrivewayCostCalculator() {
         <p className="text-sm mt-3 opacity-95">
           {netSavings !== null ? (
             <>
-              Savings shown are <strong>net of the NX850 material</strong> — you save this much
-              even after including the geogrid. Text{' '}
+              Total savings compare the traditional itemized cost against the bundled NX850 build
+              (excavation + stone + geogrid). Text{' '}
               <a href={PHONE_TEL} className="underline font-semibold">{PHONE_DISPLAY}</a>{' '}
               for the exact quote — same-day.
             </>
@@ -472,8 +479,9 @@ export default function DrivewayCostCalculator() {
         (274 sq yd) per the Tensar PIDS spec; partial rolls run 12.5 ft × 98.5 ft (half) and
         12.5 ft × 49.25 ft (quarter). Strips run along the driveway length. Numbers are planning
         estimates — actual job costs vary by site access, drainage, and delivery.{' '}
-        <strong>The savings figure above is net of the NX850 material</strong> — you save that much
-        even after paying for the geogrid. For an exact quoted price, text{' '}
+        <strong>NX850 material is bundled into the &quot;Total materials&quot; line</strong> — we
+        keep the geogrid pricing off the public page as a policy. Total savings compare traditional
+        vs. bundled and reflect actual pricing. For the itemized quote, text{' '}
         <a href={PHONE_TEL} className="text-[#00c97e] hover:underline font-semibold">
           {PHONE_DISPLAY}
         </a>{' '}
