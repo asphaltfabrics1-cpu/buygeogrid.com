@@ -31,10 +31,12 @@ const SUBGRADE_LABEL: Record<SubgradeKey, { label: string; hint: string; cbr: nu
 //
 // * VEHICULAR — Tensar 2025 Subgrade Pocket Card. Traditional = over-excavation +
 //   structural backfill. Grid = NX850-stabilized base thickness.
-// * LIGHT STRUCTURAL — ICPI Tech Spec 2 minimum base thickness for pedestrian
-//   applications (4" well-drained, 6" poorly-drained) with the ICPI-recommended
-//   +2–4" Ohio freeze-thaw adjustment. Traditional = overbuild-in-place-of-grid
-//   for the wet/soft cases; Grid = ICPI minimum + geogrid + separator fabric.
+// * LIGHT STRUCTURAL — CMHA PAV-TEC-002 (formerly ICPI Tech Spec 2, since ICPI
+//   merged into the Concrete Masonry & Hardscapes Association in early 2024)
+//   pedestrian base minimums (4" well-drained, 6" poorly-drained) with the
+//   industry-standard +2–4" Ohio freeze-thaw adjustment. Traditional =
+//   overbuild-in-place-of-grid for wet/soft cases; Grid = pedestrian minimum
+//   + geogrid + separator fabric. Direct URL: https://www.cmha.org/resource/pav-tec-002/
 // * POINT LOAD — industry consensus for hot tub / spa point loads (2,000–6,000 lb
 //   concentrated). ¾" clean crushed stone at 6–8" minimum on well-drained; more
 //   on soft ground to prevent settling.
@@ -508,10 +510,10 @@ export default function DrivewayCostCalculator() {
         <strong>Driveway / parking pad</strong> — Tensar 2025 Subgrade Pocket Card, the published
         NX850 design values for passing a proof roll (1&quot; max deformation).{' '}
         <strong>Patio / walkway / shed pad / above-ground pool base</strong> —{' '}
-        <a href="https://icpi.org/guides-specifications" target="_blank" rel="noopener noreferrer"
-          className="text-[#00c97e] hover:underline">ICPI Tech Spec 2</a>{' '}
-        pedestrian base minimums (4&quot; well-drained, 6&quot; poorly-drained) with the ICPI
-        +2–4&quot; Ohio freeze-thaw adjustment.{' '}
+        <a href="https://www.cmha.org/resource/pav-tec-002/" target="_blank" rel="noopener noreferrer"
+          className="text-[#00c97e] hover:underline">CMHA PAV-TEC-002</a>{' '}
+        (formerly ICPI Tech Spec 2) pedestrian base minimums — 4&quot; well-drained, 6&quot;
+        poorly-drained — with the industry-standard +2–4&quot; Ohio freeze-thaw adjustment.{' '}
         <strong>Hot tub / spa pad</strong> — industry consensus for concentrated point loads
         (2,000–6,000 lb), ¾&quot; clean crushed stone at 6–8&quot; minimum on well-drained,
         deeper on soft ground. Stone volume converted at 1.5 tons/cubic yard (#57 / #304
