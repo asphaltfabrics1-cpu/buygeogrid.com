@@ -164,6 +164,13 @@ export default function Header() {
               </Link>
             </li>
 
+            {/* Homeowners — residential cost calculator + quote */}
+            <li>
+              <Link href="/residential" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
+                Homeowners
+              </Link>
+            </li>
+
             <li>
               <Link href="/contact" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Contact Us
@@ -267,6 +274,11 @@ export default function Header() {
             <li>
               <Link href="/patch-packs" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Patch Packs
+              </Link>
+            </li>
+            <li>
+              <Link href="/residential" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
+                Homeowners
               </Link>
             </li>
             <li>
