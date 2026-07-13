@@ -164,10 +164,10 @@ export default function Header() {
               </Link>
             </li>
 
-            {/* Homeowners — residential cost calculator + quote */}
+            {/* Residential — residential cost calculator + quote */}
             <li>
               <Link href="/residential" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Homeowners
+                Residential
               </Link>
             </li>
 
@@ -278,7 +278,7 @@ export default function Header() {
             </li>
             <li>
               <Link href="/residential" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Homeowners
+                Residential
               </Link>
             </li>
             <li>
