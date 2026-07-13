@@ -344,13 +344,14 @@ export default function ResidentialPage() {
         <section id="calculator" className="py-16 px-6 bg-white scroll-mt-20 border-t border-gray-100">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">
-              Gravel base cost savings calculator
+              Base cost &amp; quote calculator
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              See what a soft-subgrade project costs the traditional way vs. building on Tensar
-              NX850. Covers driveways, RV / boat pads, patios, walkways, shed pads, above-ground
-              pool bases, and hot tub / spa pads. Numbers use Northern Ohio residential defaults —
-              edit the assumptions to match your job.
+              See what your project costs the traditional way vs. building on Tensar NX850. Covers
+              gravel / asphalt / stamped concrete driveways, RV / boat pads, patios, concrete slabs
+              (pool decks, stamped patios, walkways), shed pads, above-ground pool bases, and
+              hot tub / spa pads. Bigger jobs get a savings number; smaller jobs get a text-for-quote
+              button — either way you land on our phone.
             </p>
             <div className="mb-8 rounded border-l-4 border-[#00c97e] bg-[#f0fdf4] p-4">
               <p className="text-sm text-gray-800 leading-relaxed">

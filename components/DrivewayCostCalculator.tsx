@@ -68,6 +68,13 @@ const DEPTH_TABLE: Record<LoadClass, Record<SubgradeKey, {
 // #57 / #304 limestone runs ~1.4–1.5 ton/cy compacted → use 1.5
 const TON_PER_CY = 1.5;
 
+// Savings threshold — if net savings falls below this, we hide the green savings
+// callout and show a "text for a quote" CTA instead. Never a negative number on
+// screen. Small light-load projects (patio, walkway, shed pad, pool base, hot tub)
+// often land here because the quarter-roll cost swamps the modest excavation +
+// stone savings. Every hit is still a lead into (440) 384-1897.
+const SAVINGS_THRESHOLD = 100;
+
 function money(n: number) {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -78,8 +85,11 @@ function money(n: number) {
 
 type ProjectKey =
   | 'driveway'
+  | 'asphaltDriveway'
+  | 'stampedDriveway'
   | 'parkingPad'
   | 'patio'
+  | 'concreteSlab'
   | 'walkway'
   | 'shedPad'
   | 'poolPad'
@@ -92,13 +102,16 @@ const PROJECT: Record<ProjectKey, {
   defaultWid: number;
   loadClass: LoadClass;
 }> = {
-  driveway:   { label: 'Gravel driveway',                                     noun: 'driveway',    defaultLen: 40, defaultWid: 20, loadClass: 'vehicular' },
-  parkingPad: { label: 'Gravel parking pad (RV / boat / trailer / vehicle)',  noun: 'parking pad', defaultLen: 40, defaultWid: 12, loadClass: 'vehicular' },
-  patio:      { label: 'Patio / paver base',                                  noun: 'patio',       defaultLen: 20, defaultWid: 15, loadClass: 'lightStructural' },
-  walkway:    { label: 'Walkway / sidewalk',                                  noun: 'walkway',     defaultLen: 30, defaultWid: 4,  loadClass: 'lightStructural' },
-  shedPad:    { label: 'Shed / outbuilding / equipment pad',                  noun: 'pad',         defaultLen: 20, defaultWid: 20, loadClass: 'lightStructural' },
-  poolPad:    { label: 'Above-ground pool base',                              noun: 'pool base',   defaultLen: 24, defaultWid: 24, loadClass: 'lightStructural' },
-  hotTubPad:  { label: 'Hot tub / spa pad',                                   noun: 'spa pad',     defaultLen: 8,  defaultWid: 8,  loadClass: 'pointLoad' },
+  driveway:         { label: 'Gravel driveway',                                     noun: 'driveway',      defaultLen: 40, defaultWid: 20, loadClass: 'vehicular' },
+  asphaltDriveway:  { label: 'Asphalt driveway',                                    noun: 'driveway',      defaultLen: 40, defaultWid: 20, loadClass: 'vehicular' },
+  stampedDriveway:  { label: 'Stamped concrete driveway',                           noun: 'driveway',      defaultLen: 40, defaultWid: 20, loadClass: 'vehicular' },
+  parkingPad:       { label: 'RV / boat / trailer parking pad',                     noun: 'parking pad',   defaultLen: 40, defaultWid: 12, loadClass: 'vehicular' },
+  patio:            { label: 'Patio (paver, brick, stone)',                         noun: 'patio',         defaultLen: 20, defaultWid: 15, loadClass: 'lightStructural' },
+  concreteSlab:     { label: 'Concrete slab (pool deck, stamped patio, walkway)',   noun: 'slab',          defaultLen: 20, defaultWid: 10, loadClass: 'lightStructural' },
+  walkway:          { label: 'Walkway / sidewalk',                                  noun: 'walkway',       defaultLen: 30, defaultWid: 4,  loadClass: 'lightStructural' },
+  shedPad:          { label: 'Shed / outbuilding / equipment pad',                  noun: 'pad',           defaultLen: 20, defaultWid: 20, loadClass: 'lightStructural' },
+  poolPad:          { label: 'Above-ground pool base',                              noun: 'pool base',     defaultLen: 24, defaultWid: 24, loadClass: 'lightStructural' },
+  hotTubPad:        { label: 'Hot tub / spa pad',                                   noun: 'spa pad',       defaultLen: 8,  defaultWid: 8,  loadClass: 'pointLoad' },
 };
 
 export default function DrivewayCostCalculator() {
@@ -238,13 +251,12 @@ export default function DrivewayCostCalculator() {
   return (
     <div className="bg-white border border-gray-200 rounded p-6 md:p-8">
       <div className="mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Gravel base cost calculator</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Base cost &amp; quote calculator</h3>
         <p className="text-gray-700">
-          Works for driveways, RV / boat / trailer parking pads, patios, walkways, shed pads,
-          above-ground pool bases, and hot tub / spa pads. Plug in your dimensions and subgrade
-          condition. See what a traditional overbuild costs vs. building on Tensar NX850 geogrid.
-          Depths are sourced from the Tensar 2025 Pocket Card (vehicular), ICPI Tech Spec 2
-          (light structural), and industry consensus (spa point loads).
+          Plug in your project size and subgrade condition. See what a traditional overbuild costs
+          vs. building on Tensar NX850 geogrid. Depths from the Tensar 2025 Pocket Card (vehicular)
+          and CMHA PAV-TEC-002 (light structural). Smaller projects: skip the math and text your
+          dimensions to (440) 384-1897 for a same-day quote.
         </p>
       </div>
 
@@ -467,42 +479,64 @@ export default function DrivewayCostCalculator() {
         </div>
       </div>
 
-      {/* Savings callout — comparison of the two bundled totals */}
-      <div className="bg-[#00c97e] text-white rounded p-5 mb-4">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-          <div>
-            <div className="text-sm uppercase tracking-wide opacity-90">
-              Total savings with NX850
+      {/* Savings callout OR quote CTA — depends on whether savings clear the threshold.
+          Never a negative number on screen. Small light-load projects get routed to the
+          phone/text CTA because the geogrid material cost swamps the modest depth savings —
+          but the customer still lands on a lead-capture line, which is the point. */}
+      {netSavings !== null && netSavings >= SAVINGS_THRESHOLD ? (
+        <div className="bg-[#00c97e] text-white rounded p-5 mb-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+            <div>
+              <div className="text-sm uppercase tracking-wide opacity-90">
+                Total savings with NX850
+              </div>
+              <div className="text-3xl font-bold">
+                {money(netSavings)}
+                <span className="text-lg font-normal ml-2 opacity-90">
+                  ({netSavingsPct!.toFixed(0)}%)
+                </span>
+              </div>
             </div>
-            <div className="text-3xl font-bold">
-              {money(netSavings ?? results.materialSavings)}
-              <span className="text-lg font-normal ml-2 opacity-90">
-                ({(netSavingsPct ?? results.savingsPercent).toFixed(0)}%)
-              </span>
+            <div className="text-right md:text-right">
+              <div className="text-sm opacity-90">Expected life</div>
+              <div className="text-base font-semibold">{results.lifeExtension}</div>
             </div>
           </div>
-          <div className="text-right md:text-right">
-            <div className="text-sm opacity-90">Expected life</div>
-            <div className="text-base font-semibold">{results.lifeExtension}</div>
+          <p className="text-sm mt-3 opacity-95">
+            Total savings compare the traditional itemized cost against the bundled NX850 build
+            (excavation + stone + geogrid). Text{' '}
+            <a href={PHONE_TEL} className="underline font-semibold">{PHONE_DISPLAY}</a>{' '}
+            for the exact quote — same-day.
+          </p>
+        </div>
+      ) : (
+        <div className="bg-[#1a1a1a] text-white rounded p-5 mb-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <div className="text-sm uppercase tracking-wide text-[#00c97e] font-semibold">
+                Small job — call for a real quote
+              </div>
+              <div className="text-xl md:text-2xl font-bold mt-1">
+                Text your dimensions to <a href={PHONE_TEL} className="underline">{PHONE_DISPLAY}</a>
+              </div>
+              <p className="text-sm text-gray-300 mt-2 leading-relaxed">
+                {netSavings === null
+                  ? <>Larger jobs get a full-roll quote — text your exact dimensions and we&apos;ll price it same-day.</>
+                  : <>On projects this size, the geogrid material is close to the excavation savings — but the geogrid still prevents settling, extends life, and pays off in fewer rebuilds. We&apos;ll price the exact rolls you need — same-day.</>}
+              </p>
+              <p className="text-xs text-gray-400 mt-2">
+                Expected life with NX850: <strong className="text-gray-200">{results.lifeExtension}</strong>
+              </p>
+            </div>
+            <a
+              href={PHONE_TEL}
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#00c97e] hover:bg-[#00b36f] text-white rounded font-semibold text-sm whitespace-nowrap transition-colors"
+            >
+              Text {PHONE_DISPLAY}
+            </a>
           </div>
         </div>
-        <p className="text-sm mt-3 opacity-95">
-          {netSavings !== null ? (
-            <>
-              Total savings compare the traditional itemized cost against the bundled NX850 build
-              (excavation + stone + geogrid). Text{' '}
-              <a href={PHONE_TEL} className="underline font-semibold">{PHONE_DISPLAY}</a>{' '}
-              for the exact quote — same-day.
-            </>
-          ) : (
-            <>
-              Your job needs full-roll coverage. Text{' '}
-              <a href={PHONE_TEL} className="underline font-semibold">{PHONE_DISPLAY}</a>{' '}
-              with your dimensions for a same-day quote.
-            </>
-          )}
-        </p>
-      </div>
+      )}
 
       {/* Assumptions footer */}
       <p className="text-xs text-gray-500 leading-relaxed">
