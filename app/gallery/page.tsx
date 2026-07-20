@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import GalleryGrid from '@/components/GalleryGrid';
+import Reveal from '@/components/Reveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -58,42 +59,51 @@ export default function Gallery() {
         </section>
 
         {/* Gallery Grid */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-7xl mx-auto">
 
             {/* Real Projects Section */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Installation Projects</h2>
-            </div>
+            <Reveal className="mb-12">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Photos</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Installation Projects</h2>
+            </Reveal>
 
             {/* Projects Grid with Lightbox */}
-            <GalleryGrid projects={projects} />
+            <Reveal delay={120}>
+              <GalleryGrid projects={projects} />
+            </Reveal>
 
-            {/* CTA Box */}
-            <div className="mt-16 bg-[#1a1a1a] text-white rounded p-12 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">
                 Have a Project to Showcase?
               </h2>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
                 We love featuring completed Geogrid installations! Contact us to share your project photos
                 and help other contractors see what's possible with Tensar and Solmax products.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
                 >
                   Submit Your Project
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
                 </Link>
                 <Link
                   href="tel:4403681420"
-                  className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200"
+                  className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group"
                 >
-                  (440) 368-1420
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
                 </Link>
               </div>
-            </div>
-
+            </Reveal>
           </div>
         </section>
       </main>

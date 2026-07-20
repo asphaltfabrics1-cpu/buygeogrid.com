@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -45,11 +46,13 @@ export default function TensarGeogridGuide() {
         </section>
 
         {/* Article Content */}
-        <article className="py-16 px-6">
+        <article className="py-20 md:py-24 px-6">
           <div className="max-w-4xl mx-auto prose prose-lg">
+            <Reveal>
 
             {/* Introduction */}
             <section className="mb-12">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Introduction</div>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Tensar geogrid is one of the most trusted names in soil stabilization and pavement reinforcement. Whether you&apos;re building roads, parking lots, or working on subgrade improvement, understanding the different types of Tensar geogrids and their applications can help you choose the right product for your project and potentially reduce construction costs significantly.
               </p>
@@ -60,7 +63,8 @@ export default function TensarGeogridGuide() {
 
             {/* What is Tensar Geogrid */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">What is Tensar Geogrid?</h2>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Overview</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">What is Tensar Geogrid?</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Tensar geogrid is a polymer-based reinforcement material used in civil engineering and construction applications. The geogrid features a grid-like structure with apertures (openings) that interlock with aggregate materials, creating a mechanically stabilized layer that distributes loads more effectively than aggregate alone.
               </p>
@@ -71,7 +75,8 @@ export default function TensarGeogridGuide() {
 
             {/* Types of Tensar Geogrid */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Types of Tensar Geogrid</h2>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Types</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Types of Tensar Geogrid</h2>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">InterAx Geogrids (NX Series)</h3>
@@ -139,7 +144,8 @@ export default function TensarGeogridGuide() {
 
             {/* Applications */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Tensar Geogrid Applications</h2>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Applications</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Tensar Geogrid Applications</h2>
 
               <h3 className="text-xl font-bold text-gray-900 mb-3">Road Construction & Rehabilitation</h3>
               <p className="text-gray-700 mb-6">
@@ -164,7 +170,8 @@ export default function TensarGeogridGuide() {
 
             {/* Benefits */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Benefits of Tensar Geogrid</h2>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Benefits</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Benefits of Tensar Geogrid</h2>
               <ul className="space-y-4 text-lg text-gray-700">
                 <li><strong>Reduced Aggregate Requirements:</strong> Geogrid reinforcement can reduce aggregate base thickness by 30-50% while maintaining equivalent performance.</li>
                 <li><strong>Lower Construction Costs:</strong> Less material means less trucking, less excavation, and faster construction timelines.</li>
@@ -177,7 +184,8 @@ export default function TensarGeogridGuide() {
 
             {/* How to Choose */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Choose the Right Tensar Geogrid</h2>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Selection</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">How to Choose the Right Tensar Geogrid</h2>
               <p className="text-gray-700 mb-4">
                 Selecting the appropriate geogrid depends on several factors:
               </p>
@@ -194,7 +202,8 @@ export default function TensarGeogridGuide() {
 
             {/* Ohio Distributor */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Tensar Geogrid Distributor in Ohio</h2>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Ohio</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Tensar Geogrid Distributor in Ohio</h2>
               <p className="text-gray-700 mb-4">
                 As an authorized Tensar distributor, we stock a full range of Tensar geogrid products at our Solon, Ohio warehouse. We serve contractors, engineers, and municipalities throughout Northern Ohio including Cleveland, Akron, Canton, Youngstown, and Toledo.
               </p>
@@ -210,29 +219,36 @@ export default function TensarGeogridGuide() {
               </ul>
             </section>
 
+            </Reveal>
           </div>
         </article>
 
         {/* CTA Section */}
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Tensar Geogrid for Your Project?</h2>
-            <p className="text-lg text-gray-300 mb-6">Get competitive pricing and expert support from your authorized Ohio distributor</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Request a Quote
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Need Tensar Geogrid for Your Project?</h2>
+              <p className="text-lg text-gray-300 mb-8">Get competitive pricing and expert support from your authorized Ohio distributor</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Request a Quote
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Related Products */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Browse Tensar Geogrid Products</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Products</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center leading-tight tracking-tight">Browse Tensar Geogrid Products</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Link href="/geogrid" className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="font-bold text-gray-900 mb-2">All Geogrids</h3>
@@ -247,6 +263,7 @@ export default function TensarGeogridGuide() {
                 <p className="text-gray-600 text-sm">Heavy-duty industrial applications</p>
               </Link>
             </div>
+            </Reveal>
           </div>
         </section>
       </main>

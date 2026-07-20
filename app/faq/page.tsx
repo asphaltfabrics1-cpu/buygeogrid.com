@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -83,43 +84,52 @@ export default function FAQ() {
         />
 
         {/* FAQ Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-5xl mx-auto">
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Common Questions</h2>
+            </Reveal>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded p-6 border border-gray-200 hover:border-[#00c97e] transition-colors duration-200"
-                >
-                  <h2 className="text-xl font-bold mb-3 text-gray-900">
-                    {faq.question}
-                  </h2>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+                <Reveal key={index} delay={index * 60}>
+                  <div className="bg-white rounded p-6 border border-gray-200 hover:border-[#00c97e] transition-colors duration-200">
+                    <h3 className="text-xl font-bold mb-3 text-gray-900">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
+          </div>
+        </section>
 
-            {/* CTA Box */}
-            <div className="mt-12 bg-green-50 border-2 border-[#00c97e] rounded p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Still Have Questions?</h3>
-              <p className="text-lg text-gray-700 mb-6">
+        {/* CTA Section */}
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Still Have Questions?</h2>
+              <p className="text-lg text-gray-300 mb-8">
                 Our team is here to help! Contact us for personalized assistance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
                 >
                   Contact Us
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
                 </Link>
                 <Link
                   href="tel:4403681420"
-                  className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 bg-[#1a1a1a] rounded transition-colors duration-200"
+                  className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group"
                 >
-                  (440) 368-1420
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
                 </Link>
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>

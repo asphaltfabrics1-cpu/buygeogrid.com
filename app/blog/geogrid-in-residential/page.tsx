@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -35,8 +36,9 @@ export default function GeogridInResidential() {
           secondaryCtaLink="tel:4403681420"
         />
 
-        <article className="py-16 px-6 bg-gray-50">
+        <article className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
+            <Reveal>
             <div className="bg-white rounded border border-gray-200 p-8">
               <div className="prose prose-lg max-w-none">
                 <div className="mb-8">
@@ -47,7 +49,8 @@ export default function GeogridInResidential() {
                   />
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Driveway Reinforcement</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Driveways</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">1. Driveway Reinforcement</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Geogrid helps distribute vehicle loads evenly, minimize settlement, and reduce the need for
                   frequent maintenance. This produces driveways with reduced cracking and gravel migration,
@@ -58,7 +61,8 @@ export default function GeogridInResidential() {
                   creates a stable foundation that can handle daily vehicle traffic without deteriorating.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">2. Retaining Wall Support</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Walls</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">2. Retaining Wall Support</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Installing Geogrid increases wall stability and lifespan by improving drainage and movement
                   resistance. Whether you're building a new retaining wall or reinforcing an existing one,
@@ -70,7 +74,8 @@ export default function GeogridInResidential() {
                   Contact us to discuss retaining wall reinforcement options for your project.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">3. Patio and Outdoor Living Areas</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Patios</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">3. Patio and Outdoor Living Areas</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Placing Geogrid beneath pavers prevents settling and shifting caused by freeze-thaw cycles
                   or heavy foot traffic, maintaining a level surface over time. This is especially important
@@ -81,14 +86,16 @@ export default function GeogridInResidential() {
                   grills, or hot tubs are placed on the surface.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">4. Walkways and Garden Paths</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Walkways</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">4. Walkways and Garden Paths</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   The material stabilizes bases and reduces the need for thick subgrades, saving money and
                   installation time. Geogrid provides a stable foundation for walkways and garden paths,
                   preventing uneven settling and reducing maintenance requirements over the life of the project.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">5. Garage Slab or Shed Foundation Support</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Slabs</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">5. Garage Slab or Shed Foundation Support</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Geogrid improves subgrade strength beneath concrete slabs, reducing cracking and providing
                   cost-effective foundation support. This is particularly valuable for garage floors and shed
@@ -96,7 +103,8 @@ export default function GeogridInResidential() {
                   repairs down the road.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Choosing the Right Geogrid for Your Project</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Selection</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Choosing the Right Geogrid for Your Project</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Not all Geogrids are the same. For most residential applications, the InterAx NX series
                   offers excellent performance at a reasonable cost. The NX650 works well for light-duty
@@ -123,15 +131,17 @@ export default function GeogridInResidential() {
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
                     >
                       Request a Quote
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
                     </Link>
                     <Link
                       href="/geogrid"
-                      className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-gray-700 border-2 border-gray-300 hover:border-gray-400 rounded transition-colors duration-200"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-gray-700 border-2 border-gray-300 hover:border-gray-400 rounded transition-colors duration-200 group"
                     >
                       View Products
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
                     </Link>
                   </div>
                 </div>
@@ -146,6 +156,7 @@ export default function GeogridInResidential() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </article>
       </main>

@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -89,8 +90,9 @@ export default function ProofRollPage() {
           secondaryCtaLink="tel:4403681420"
         />
 
-        <article className="py-16 px-6 bg-gray-50">
+        <article className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
+            <Reveal>
             <div className="bg-white rounded border border-gray-200 p-8">
               <div className="prose prose-lg max-w-none">
 
@@ -119,7 +121,8 @@ export default function ProofRollPage() {
                   </div>
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is a Proof Roll?</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Overview</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">What Is a Proof Roll?</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   A proof roll test is a field method for evaluating subgrade stability. A fully loaded dump truck is driven across the prepared subgrade while an inspector observes the surface for signs of deformation — rutting, pumping, deflection, or rolling.
                 </p>
@@ -127,7 +130,8 @@ export default function ProofRollPage() {
                   The typical pass/fail threshold is <strong>1 inch of deformation or less</strong>. If the subgrade deflects more than that under the loaded truck, construction cannot proceed until the subgrade is stabilized. Failing a proof roll means delays, change orders, and cost overruns — which is why getting ahead of it with proper testing and design matters.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Visual Subgrade Assessment</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Assessment</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Visual Subgrade Assessment</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Before running a DCP test, you can estimate your subgrade CBR by looking at the ground. These visual indicators correlate to approximate CBR values:
                 </p>
@@ -160,7 +164,8 @@ export default function ProofRollPage() {
                   </table>
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Aggregate Thickness to Pass a Proof Roll</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Thickness chart</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Aggregate Thickness to Pass a Proof Roll</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   The chart below shows the estimated aggregate thickness needed to pass a proof roll with 1&quot; or less deformation, based on subgrade CBR and geogrid product. Well-graded, angular crushed stone with 5%-15% fines is recommended for best results.
                 </p>
@@ -212,7 +217,8 @@ export default function ProofRollPage() {
                   Source: Tensar 2025 Subgrade Pocket Card. These conditions are considered typical. Special considerations may be necessary for highly moisture-sensitive soils (silts, organics) or saturated subgrade conditions. Contact us for site-specific recommendations.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Cost Savings Example</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Cost</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Cost Savings Example</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   The aggregate is often the most expensive part of subgrade stabilization. Reducing the required thickness with geogrid directly reduces your project cost.
                 </p>
@@ -244,12 +250,13 @@ export default function ProofRollPage() {
                   <p className="text-gray-600 text-sm mt-3">
                     <strong>Savings: $90,000</strong> less the cost of geogrid. Assumed aggregate unit weight: 133 pcf.
                   </p>
-                  <Link href="/cost-calculator" className="inline-flex items-center gap-2 mt-3 text-[#00c97e] hover:text-[#00b36f] font-semibold text-sm">
-                    Try our Cost Savings Calculator with your own numbers →
+                  <Link href="/cost-calculator" className="inline-flex items-center gap-1 mt-3 text-[#00c97e] hover:gap-2 font-semibold text-sm transition-all">
+                    Try our Cost Savings Calculator with your own numbers <span>→</span>
                   </Link>
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">When to Consider Geogrid</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">When to use</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">When to Consider Geogrid</h2>
                 <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700">
                   <li>Challenging subgrade conditions — pumping, rutting, or rolling</li>
                   <li>Proposed aggregate thicker than 12&quot; or asphalt thicker than 3&quot;</li>
@@ -260,7 +267,8 @@ export default function ProofRollPage() {
                   <li>Failing a proof roll</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Aggregate Recommendations</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Aggregate</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Aggregate Recommendations</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   For best results with geogrid, use well-graded, angular crushed stone with 5%-15% fines. The angular particles interlock with the geogrid apertures more effectively than rounded aggregate, creating a stronger mechanically stabilized layer. Avoid using clean stone (no fines) or excessive fines (over 15%) as both reduce the confinement effect.
                 </p>
@@ -281,28 +289,34 @@ export default function ProofRollPage() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </article>
 
         {/* FAQ Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Proof Roll FAQ</h2>
-            <div className="space-y-6">
-              {faqData.map((faq, index) => (
-                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center leading-tight tracking-tight">Proof Roll FAQ</h2>
+              <div className="space-y-6">
+                {faqData.map((faq, index) => (
+                  <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Related */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Related</div>
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Related Resources</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link href="/cost-calculator" className="block p-6 bg-white rounded border border-gray-200 hover:border-[#00c97e] transition-colors text-left">
                 <h3 className="font-bold text-gray-900 mb-2">Cost Savings Calculator</h3>
@@ -321,6 +335,7 @@ export default function ProofRollPage() {
                 <p className="text-gray-600 text-sm">Compare stabilization methods for your project.</p>
               </Link>
             </div>
+            </Reveal>
           </div>
         </section>
       </main>

@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
+import Reveal from '@/components/Reveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -31,17 +32,23 @@ export default function Contact() {
           secondaryCtaLink="tel:4403681420"
         />
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-6xl mx-auto">
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Get in touch</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Contact Information</h2>
+            </Reveal>
 
             <div className="grid md:grid-cols-2 gap-12" id="form">
               {/* Contact Form */}
-              <ContactForm />
+              <Reveal delay={120}>
+                <ContactForm />
+              </Reveal>
 
               {/* Contact Information */}
-              <div>
+              <Reveal delay={240}>
                 <div className="bg-white rounded border border-gray-200 p-8 mb-6">
-                  <h2 className="text-2xl font-bold mb-6 text-gray-900">Contact Information</h2>
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900">Contact Information</h3>
                   <div className="space-y-4">
                     <div>
                       <h3 className="font-bold text-gray-900 mb-2">Address</h3>
@@ -106,7 +113,7 @@ export default function Contact() {
                     Download Flyer (PDF)
                   </a>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>

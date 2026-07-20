@@ -2,6 +2,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import { useState, useMemo } from 'react';
 
@@ -314,33 +315,41 @@ export default function CostCalculatorPage() {
           </div>
 
           {/* CTA */}
-          <div className="bg-[#1a1a1a] rounded-lg p-8 text-center text-white">
-            <h2 className="text-3xl font-bold mb-3" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-              Get Exact Numbers for Your Project
-            </h2>
-            <p className="text-gray-300 mb-6 max-w-xl mx-auto">
-              We offer free DCP testing throughout Ohio. We&apos;ll test your subgrade, run the data through Tensar+ design software,
-              and give you an engineered recommendation — no cost, no obligation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-block bg-[#00c97e] hover:bg-[#00b36f] text-white font-bold py-3 px-8 rounded transition-colors"
-              >
-                Request Free DCP Testing
-              </Link>
-              <Link
-                href="tel:4403681420"
-                className="inline-block border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded transition-colors"
-              >
-                Call (440) 368-1420
-              </Link>
+          <Reveal>
+            <div className="bg-[#1a1a1a] rounded-lg p-8 text-center text-white">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Get in touch</div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight tracking-tight" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
+                Get Exact Numbers for Your Project
+              </h2>
+              <p className="text-gray-300 mb-6 max-w-xl mx-auto">
+                We offer free DCP testing throughout Ohio. We&apos;ll test your subgrade, run the data through Tensar+ design software,
+                and give you an engineered recommendation — no cost, no obligation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
+                >
+                  Request Free DCP Testing
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link
+                  href="tel:4403681420"
+                  className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group"
+                >
+                  <span>Call (440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Reference Table */}
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Tensar 2025 Subgrade Pocket Card — Full Reference</h2>
+            <Reveal className="mb-4">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Reference</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Tensar 2025 Subgrade Pocket Card — Full Reference</h2>
+            </Reveal>
             <p className="text-gray-600 mb-6">
               Estimated aggregate thickness (inches) to pass a proof roll with 1&quot; deformation.
               Source: <em>Tensar, a Division of CMC. &copy; 2025.</em>

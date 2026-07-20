@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -100,12 +101,14 @@ export default function DCPTestingTensarPlus() {
           secondaryCtaLink="tel:4403681420"
         />
 
-        <article className="py-16 px-6 bg-gray-50">
+        <article className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
+            <Reveal>
             <div className="bg-white rounded border border-gray-200 p-8">
               <div className="prose prose-lg max-w-none">
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is DCP Testing?</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">DCP</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">What Is DCP Testing?</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   The Dynamic Cone Penetrometer (DCP) is a portable field instrument used to measure the in-situ strength of subgrade soils. It consists of a steel rod with a hardened conical tip, and a standard-weight hammer that is dropped from a fixed height against an anvil to drive the cone into the ground.
                 </p>
@@ -116,7 +119,8 @@ export default function DCPTestingTensarPlus() {
                   DCP testing follows <strong>ASTM D6951/D6951M</strong> — &ldquo;Standard Test Method for Use of the Dynamic Cone Penetrometer in Shallow Pavement Applications.&rdquo; This standard defines the equipment, procedure, and provides correlation equations to convert the penetration index to California Bearing Ratio (CBR) values, which are the standard measure of soil strength used in pavement and geogrid design.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">How DCP Results Relate to CBR</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">CBR</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">How DCP Results Relate to CBR</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   The California Bearing Ratio (CBR) is a widely used measure of subgrade strength. A CBR of 3 or below indicates very weak soil that will likely require stabilization. A CBR of 10 or above generally indicates adequate bearing capacity for most pavement applications.
                 </p>
@@ -124,7 +128,8 @@ export default function DCPTestingTensarPlus() {
                   ASTM D6951 provides correlation equations to convert DCP penetration index values directly to CBR. This allows engineers to assess subgrade strength on-site in minutes rather than collecting samples and waiting for laboratory CBR test results. The DCP also measures strength at multiple depths in a single test, showing how soil conditions vary through the subgrade profile — information that a single-depth lab test cannot provide.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is Tensar Plus?</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Software</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">What Is Tensar Plus?</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Tensar Plus (Tensar+) is Tensar&apos;s design software for engineering mechanically stabilized layers (MSLs) using geogrid. It takes project-specific inputs — including subgrade CBR values, traffic loads, and design life — and calculates the optimal geogrid product and aggregate thickness required to meet performance criteria.
                 </p>
@@ -135,7 +140,8 @@ export default function DCPTestingTensarPlus() {
                   You can <a href="https://www.tensarplus.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] underline hover:text-[#00b36f] font-semibold">download Tensar+ from Tensar&apos;s website</a>, or contact us — we run Tensar+ designs for our customers at no charge as part of our free DCP testing service.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">How They Work Together</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Workflow</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">How They Work Together</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   The workflow is straightforward:
                 </p>
@@ -147,7 +153,8 @@ export default function DCPTestingTensarPlus() {
                   <li><strong>Comparison:</strong> The software can compare the geogrid-stabilized section against an unstabilized section, showing the reduction in aggregate thickness and cost savings.</li>
                 </ol>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is a Mechanically Stabilized Layer?</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">MSL</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">What Is a Mechanically Stabilized Layer?</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   When geogrid is placed within an aggregate layer, the aggregate particles interlock with the geogrid&apos;s apertures. Provided the geogrid ribs are stiff enough and the junctions strong enough, this confines the aggregate and prevents lateral movement under load. The result is a geogrid-aggregate composite — called a mechanically stabilized layer (MSL) — that distributes loads more effectively than aggregate alone.
                 </p>
@@ -155,7 +162,8 @@ export default function DCPTestingTensarPlus() {
                   The MSL increases bearing capacity over weak subgrade soils, controls differential settlement, and can significantly reduce the amount of aggregate required for a given application. This is the engineering principle that Tensar Plus quantifies using the DCP-derived CBR data.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Why This Matters for Your Project</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Why it matters</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Why This Matters for Your Project</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Without field testing, geogrid design is based on assumptions about soil strength. Those assumptions can lead to over-engineering (wasting money on unnecessary aggregate) or under-engineering (premature failure). DCP testing removes the guesswork by providing actual subgrade data that feeds directly into the design software.
                 </p>
@@ -179,28 +187,34 @@ export default function DCPTestingTensarPlus() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </article>
 
         {/* FAQ Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">DCP Testing & Tensar Plus FAQ</h2>
-            <div className="space-y-6">
-              {faqData.map((faq, index) => (
-                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center leading-tight tracking-tight">DCP Testing & Tensar Plus FAQ</h2>
+              <div className="space-y-6">
+                {faqData.map((faq, index) => (
+                  <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Related Content */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Related</div>
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Related Resources</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Link href="/cost-calculator" className="block p-6 bg-white rounded border border-gray-200 hover:border-[#00c97e] transition-colors text-left">
                 <h3 className="font-bold text-gray-900 mb-2">Cost Savings Calculator</h3>
@@ -215,6 +229,7 @@ export default function DCPTestingTensarPlus() {
                 <p className="text-gray-600 text-sm">Compare two popular soil stabilization methods for your project.</p>
               </Link>
             </div>
+            </Reveal>
           </div>
         </section>
       </main>

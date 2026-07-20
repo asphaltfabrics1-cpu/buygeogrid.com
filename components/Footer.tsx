@@ -4,150 +4,126 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-black via-dark-950 to-black text-white py-12 px-6 border-t-4 border-primary-500 shadow-2xl">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-wrap justify-between items-start gap-12">
+    <footer className="bg-[#1a1a1a] text-white border-t-2 border-[#00c97e]">
+      <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12">
           {/* Company Info */}
-          <div className="flex-1 min-w-[250px]">
-            <h3 className="mb-4 text-white font-black text-2xl">BuyGeogrid.com</h3>
-            <p className="my-2 text-white/90 font-semibold text-lg">Asphalt Fabrics & Supply</p>
-            <p className="my-2 text-white/90 font-medium">7620 Bond Street, Glenwillow, OH 44139</p>
-            <p className="my-2 text-white/90 font-semibold">
-              Phone:{' '}
-              <Link href="tel:14403681420" className="text-accent-500 hover:text-accent-400 font-bold hover:underline transition-colors">
-                (440) 368-1420
-              </Link>
-            </p>
-            <p className="my-2 text-white/90 font-semibold">
-              Email:{' '}
-              <Link
-                href="mailto:jstone@asphaltfabrics.com"
-                className="text-accent-500 hover:text-accent-400 font-bold hover:underline transition-colors"
-              >
-                jstone@asphaltfabrics.com
-              </Link>
-            </p>
-          </div>
+          <div className="lg:col-span-2">
+            <div className="text-[#00c97e] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Northern Ohio</div>
+            <div className="text-2xl font-bold mb-1">BuyGeogrid.com</div>
+            <div className="text-gray-400 text-sm mb-6">Asphalt Fabrics &amp; Supply</div>
 
-          {/* Quick Links */}
-          <div className="flex-[2] min-w-[200px]">
-            <h4 className="mb-4 text-2xl font-black text-accent-500 border-b-3 border-accent-500 pb-2">
-              Quick Links
-            </h4>
-            <ul className="list-none p-0 m-0 space-y-3">
-              <li>
-                <Link
-                  href="/"
-                  className="text-accent-500 font-bold text-lg hover:text-accent-400 hover:scale-110 inline-block transition-all"
-                >
-                  Home
+            <div className="space-y-2 text-gray-300 text-sm leading-relaxed max-w-md">
+              <p>7620 Bond Street, Glenwillow, OH 44139</p>
+              <p>
+                <Link href="tel:14403681420" className="hover:text-[#00c97e] transition-colors">
+                  (440) 368-1420
                 </Link>
-              </li>
-              <li>
-                <Link
-                  href="/geogrid"
-                  className="text-accent-500 font-bold text-lg hover:text-accent-400 hover:scale-110 inline-block transition-all"
-                >
-                  Geogrids
+              </p>
+              <p>
+                <Link href="mailto:jstone@asphaltfabrics.com" className="hover:text-[#00c97e] transition-colors">
+                  jstone@asphaltfabrics.com
                 </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq"
-                  className="text-accent-500 font-bold text-lg hover:text-accent-400 hover:scale-110 inline-block transition-all"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cost-calculator"
-                  className="text-accent-500 font-bold text-lg hover:text-accent-400 hover:scale-110 inline-block transition-all"
-                >
-                  Cost Calculator
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="/docs/asphalt-fabrics-supply-flyer.pdf"
-                  download
-                  className="text-accent-500 font-bold text-lg hover:text-accent-400 hover:scale-110 inline-block transition-all"
-                >
-                  ⬇ Download Flyer
-                </a>
-              </li>
-              <li>
-                <Link
-                  href="https://asphaltfabrics.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent-500 font-bold text-lg hover:text-accent-400 hover:scale-110 inline-block transition-all"
-                >
-                  Installation Services ↗
-                </Link>
-              </li>
-            </ul>
-            <p className="text-white/70 text-sm mt-3 leading-relaxed">
-              Need it installed? Our sister company <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-accent-500 hover:text-accent-400 font-semibold">Asphalt Fabrics &amp; Specialties</a> installs non-peel-and-stick paving fabric on parking lots and roads in Northern Ohio, plus crack sealing and chip sealing.
-            </p>
-          </div>
+              </p>
+            </div>
 
-          {/* Call to Action & Social */}
-          <div className="flex-1 min-w-[250px]">
-            <h4 className="mb-3 text-white font-black text-xl">Need a Quote?</h4>
-            <p className="text-white/90 mb-6 font-semibold leading-relaxed">
-              Call now or fill out our quote request form. We match pricing and offer
-              bulk discounts.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-black rounded-xl shadow-xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105"
-            >
-              Request a Quote
-            </Link>
-            <div className="mt-6 flex gap-4">
+            <div className="mt-8 flex gap-3">
               <Link
                 href="https://www.facebook.com/profile.php?id=61577581101649"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 rounded-full p-2 hover:scale-110 transition-all"
+                aria-label="Facebook"
+                className="w-9 h-9 flex items-center justify-center border border-white/20 rounded hover:border-[#00c97e] hover:bg-[#00c97e]/10 transition-colors"
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/24/145/145802.png"
-                  alt="Facebook"
-                  className="h-6"
+                  alt=""
+                  className="h-4 opacity-80"
                 />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/asphalt-fabrics-supply"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 rounded-full p-2 hover:scale-110 transition-all"
+                aria-label="LinkedIn"
+                className="w-9 h-9 flex items-center justify-center border border-white/20 rounded hover:border-[#00c97e] hover:bg-[#00c97e]/10 transition-colors"
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/24/145/145807.png"
-                  alt="LinkedIn"
-                  className="h-6"
+                  alt=""
+                  className="h-4 opacity-80"
                 />
               </Link>
             </div>
           </div>
+
+          {/* Quick Links */}
+          <div>
+            <div className="text-[#00c97e] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Explore</div>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/" className="text-gray-300 hover:text-[#00c97e] transition-colors">Home</Link></li>
+              <li><Link href="/geogrid" className="text-gray-300 hover:text-[#00c97e] transition-colors">Geogrids</Link></li>
+              <li><Link href="/woven-fabrics" className="text-gray-300 hover:text-[#00c97e] transition-colors">Woven Fabrics</Link></li>
+              <li><Link href="/nonwoven-fabrics" className="text-gray-300 hover:text-[#00c97e] transition-colors">Non-Woven Fabrics</Link></li>
+              <li><Link href="/interlayers" className="text-gray-300 hover:text-[#00c97e] transition-colors">Interlayers</Link></li>
+              <li><Link href="/patch-packs" className="text-gray-300 hover:text-[#00c97e] transition-colors">Patch Packs</Link></li>
+              <li><Link href="/cost-calculator" className="text-gray-300 hover:text-[#00c97e] transition-colors">Cost Calculator</Link></li>
+              <li><Link href="/faq" className="text-gray-300 hover:text-[#00c97e] transition-colors">FAQ</Link></li>
+            </ul>
+          </div>
+
+          {/* CTA */}
+          <div>
+            <div className="text-[#00c97e] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Get in touch</div>
+            <p className="text-gray-300 text-sm leading-relaxed mb-5">
+              Call for a same-day quote or request a free on-site DCP test.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#00c97e] hover:bg-[#00b36f] text-white text-sm font-semibold rounded transition-colors group mb-4"
+            >
+              Request a Quote
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+
+            <a
+              href="/docs/asphalt-fabrics-supply-flyer.pdf"
+              download
+              className="flex items-center gap-2 text-gray-300 hover:text-[#00c97e] text-sm transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+              Download capabilities flyer
+            </a>
+          </div>
+        </div>
+
+        {/* Sister-company note */}
+        <div className="border-t border-white/10 pt-8 mb-8">
+          <p className="text-gray-400 text-sm leading-relaxed max-w-3xl">
+            Need it installed? Our sister company{' '}
+            <a href="https://asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] hover:underline">
+              Asphalt Fabrics &amp; Specialties
+            </a>{' '}
+            installs non-peel-and-stick paving fabric on parking lots and roads in Northern Ohio, plus crack sealing and chip sealing.
+          </p>
         </div>
 
         {/* Copyright */}
-        <div className="text-center mt-10 pt-8 text-base text-white/70 border-t border-white/10 font-medium flex items-center justify-center gap-3">
-          <span>© {currentYear} BuyGeogrid.com. All rights reserved Asphalt Fabrics & Supply.</span>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+          <span>© {currentYear} BuyGeogrid.com — Asphalt Fabrics &amp; Supply. All rights reserved.</span>
           <a
             href="/admin"
             aria-label="Admin login"
             title="Admin login"
             rel="nofollow noopener"
-            className="text-white/40 hover:text-accent-500 transition-colors"
+            className="text-gray-600 hover:text-[#00c97e] transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

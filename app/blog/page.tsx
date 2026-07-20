@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -84,29 +85,26 @@ export default function Blog() {
         />
 
         {/* Blog Posts */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <div className="space-y-6">
               {posts.map((post, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded border border-gray-200 p-8 hover:border-[#00c97e] transition-colors duration-200"
-                >
-                  <h2 className="text-2xl font-bold mb-2 text-gray-900">
-                    {post.title}
-                  </h2>
-                  <div className="text-sm text-gray-500 mb-4">{post.date}</div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">{post.excerpt}</p>
-                  <Link
-                    href={post.url}
-                    className="inline-flex items-center px-6 py-2 bg-[#00c97e] hover:bg-[#00b36f] text-white rounded font-semibold transition-colors duration-200"
-                  >
-                    Read More
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </Link>
-                </div>
+                <Reveal key={index} delay={index * 60}>
+                  <div className="bg-white rounded border border-gray-200 p-8 hover:border-[#00c97e] transition-colors duration-200">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900 leading-tight tracking-tight">
+                      {post.title}
+                    </h2>
+                    <div className="text-sm text-gray-500 mb-4">{post.date}</div>
+                    <p className="text-gray-700 mb-6 leading-relaxed">{post.excerpt}</p>
+                    <Link
+                      href={post.url}
+                      className="inline-flex items-center gap-2 px-6 py-2 bg-[#00c97e] hover:bg-[#00b36f] text-white rounded font-semibold transition-colors duration-200 group"
+                    >
+                      Read More
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </Link>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>

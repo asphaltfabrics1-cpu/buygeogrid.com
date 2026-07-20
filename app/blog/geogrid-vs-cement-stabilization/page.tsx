@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -35,8 +36,9 @@ export default function GeogridVsCement() {
           secondaryCtaLink="tel:4403681420"
         />
 
-        <article className="py-16 px-6 bg-gray-50">
+        <article className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
+            <Reveal>
             <div className="bg-white rounded border border-gray-200 p-8">
               <div className="prose prose-lg max-w-none">
                 <div className="mb-8">
@@ -51,7 +53,8 @@ export default function GeogridVsCement() {
                   </div>
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Cement Stabilization</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Cement</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Cement Stabilization</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Cement stabilization involves mixing Portland cement into soil. This approach requires mixing,
                   equipment, and curing time and carries a high carbon footprint due to cement production.
@@ -62,7 +65,8 @@ export default function GeogridVsCement() {
                   significant soil movement or freeze-thaw cycles.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Geogrid Reinforcement</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Geogrid</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Geogrid Reinforcement</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Geogrid reinforcement uses geosynthetic grids placed under aggregate materials. It's ideal
                   for gravel driveways, patios, roads, and parking areas with fast installation and minimal labor.
@@ -73,7 +77,8 @@ export default function GeogridVsCement() {
                   where freeze-thaw cycles are common.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Key Comparison Points</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Comparison</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Key Comparison Points</h2>
 
                 <div className="overflow-x-auto mb-6">
                   <table className="min-w-full border border-gray-300">
@@ -114,7 +119,8 @@ export default function GeogridVsCement() {
                   </table>
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">When to Choose Each Method</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">When to use</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">When to Choose Each Method</h2>
 
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Choose Geogrid For:</h3>
@@ -135,7 +141,8 @@ export default function GeogridVsCement() {
                   </ul>
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Cost Considerations</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Cost</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Cost Considerations</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   While cement stabilization may seem like a straightforward solution, the total cost often
                   exceeds Geogrid reinforcement when you factor in equipment rental, labor, curing time, and
@@ -145,7 +152,8 @@ export default function GeogridVsCement() {
                   provides better value and long-term performance.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">The Bottom Line</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Bottom line</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">The Bottom Line</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Both methods have their place in construction. Cement stabilization makes sense for permanent
                   infrastructure projects where rigidity is essential and budgets allow for the additional cost
@@ -162,15 +170,17 @@ export default function GeogridVsCement() {
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
                     >
                       Request a Quote
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
                     </Link>
                     <Link
                       href="/geogrid"
-                      className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-gray-700 border-2 border-gray-300 hover:border-gray-400 rounded transition-colors duration-200"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-gray-700 border-2 border-gray-300 hover:border-gray-400 rounded transition-colors duration-200 group"
                     >
                       View Products
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
                     </Link>
                   </div>
                 </div>
@@ -185,6 +195,7 @@ export default function GeogridVsCement() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </article>
       </main>

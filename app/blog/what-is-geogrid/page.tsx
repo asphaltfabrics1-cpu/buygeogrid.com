@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -35,8 +36,9 @@ export default function WhatIsGeogrid() {
           secondaryCtaLink="tel:4403681420"
         />
 
-        <article className="py-16 px-6 bg-gray-50">
+        <article className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
+            <Reveal>
             <div className="bg-white rounded border border-gray-200 p-8">
               <div className="prose prose-lg max-w-none">
                 <div className="mb-8">
@@ -51,7 +53,8 @@ export default function WhatIsGeogrid() {
                   </div>
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is Geogrid?</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Overview</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">What Is Geogrid?</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Geogrid consists of polymer materials manufactured in a grid pattern with open apertures.
                   These materials allow soil, aggregate, or base materials to interlock through the grid.
@@ -62,7 +65,8 @@ export default function WhatIsGeogrid() {
                   and soil conditions.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">How It Works</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">How it works</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">How It Works</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   The reinforcement mechanism relies on mechanical interlock—when materials are compacted into
                   the grid structure, they lock together to improve shear strength and prevent shifting.
@@ -73,14 +77,16 @@ export default function WhatIsGeogrid() {
                   rutting and surface deformation in unstabilized bases.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Types Available</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Types</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Types Available</h2>
                 <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700">
                   <li><strong>Biaxial:</strong> Two-directional strength for driveways</li>
                   <li><strong>Triaxial:</strong> Multi-directional with triangular apertures for advanced applications</li>
                   <li><strong>Uniaxial:</strong> Single-direction strength for walls and slopes</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Key Applications</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Applications</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Key Applications</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Geogrid is used in five primary applications:
                 </p>
@@ -95,7 +101,8 @@ export default function WhatIsGeogrid() {
                   Each application benefits from improved load capacity and reduced maintenance needs.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Benefits</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Benefits</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Benefits</h2>
                 <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700">
                   <li>Improved bearing capacity</li>
                   <li>Reduced material requirements</li>
@@ -104,7 +111,8 @@ export default function WhatIsGeogrid() {
                   <li>Extended pavement lifespan</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">When Do You Need Geogrid?</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">When to use</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">When Do You Need Geogrid?</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Geogrid is particularly valuable when dealing with weak or unstable subgrade soils. If your
                   site has clay, organic material, or high water tables, Geogrid can help create a stable base
@@ -115,7 +123,8 @@ export default function WhatIsGeogrid() {
                   protection against premature failure.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Free DCP Testing</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Testing</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Free DCP Testing</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Not sure if your site needs Geogrid? We offer free Dynamic Cone Penetrometer (DCP) testing
                   throughout Northern Ohio. This simple field test measures your soil's bearing capacity and
@@ -132,15 +141,17 @@ export default function WhatIsGeogrid() {
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
                     >
                       Request a Quote
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
                     </Link>
                     <Link
                       href="/geogrid"
-                      className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-gray-700 border-2 border-gray-300 hover:border-gray-400 rounded transition-colors duration-200"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-gray-700 border-2 border-gray-300 hover:border-gray-400 rounded transition-colors duration-200 group"
                     >
                       View Products
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
                     </Link>
                   </div>
                 </div>
@@ -155,6 +166,7 @@ export default function WhatIsGeogrid() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </article>
       </main>

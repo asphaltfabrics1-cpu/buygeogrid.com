@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -101,10 +102,13 @@ export default function FreezeThawOhioPage() {
           secondaryCtaLink="tel:4403681420"
         />
 
-        <article className="py-16 px-6 bg-gray-50">
+        <article className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
+            <Reveal>
             <div className="bg-white rounded border border-gray-200 p-8">
               <div className="prose prose-lg max-w-none">
+
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Overview</div>
 
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Every spring, the same calls come in from Cleveland, Akron, and Canton: a parking lot that looked fine in October is now alligator-cracked, a driveway has a hump down the middle, a service road is pumping water through every joint. The damage looks like it happened overnight. It did not. It was set up months earlier, when the ground froze.
@@ -114,7 +118,8 @@ export default function FreezeThawOhioPage() {
                   This post covers what is actually happening in Northern Ohio subgrades during freeze-thaw cycles, why the soils here are uniquely vulnerable, and where geogrid does — and does not — help.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">The Three Ingredients of Frost Heave</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Mechanics</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">The Three Ingredients of Frost Heave</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Frost heave is not just &quot;ground freezing.&quot; It requires three conditions to occur together. Remove any one and frost heave largely stops:
                 </p>
@@ -127,7 +132,8 @@ export default function FreezeThawOhioPage() {
                   When all three are present, water is pulled upward toward the freezing zone and freezes into discrete ice lenses that grow horizontally. Those lenses displace the soil above them — that is the &quot;heave&quot; you see on the surface. Heave of several inches over a single winter is well-documented in the engineering literature.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Northern Ohio Checks All Three Boxes</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Ohio soils</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Why Northern Ohio Checks All Three Boxes</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Cuyahoga, Summit, Stark, Lorain, and Mahoning counties sit on glacial till deposited by the Wisconsin and Illinoian glaciations. The result is a landscape dominated by silt loams, silty clay loams, and clay loams — exactly the soil textures that fall into the most frost-susceptible categories.
                 </p>
@@ -138,7 +144,8 @@ export default function FreezeThawOhioPage() {
                   Layer on a sustained winter with frost penetration that commonly reaches into the 20-to-30+ inch range in Northern Ohio, and a water table that is rarely deep enough to matter, and you have all three ingredients sitting under most of the region&apos;s parking lots, driveways, and low-volume roads.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">The Real Damage Happens in the Spring, Not the Winter</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Spring breakup</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">The Real Damage Happens in the Spring, Not the Winter</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Here is the part that surprises people: most of the pavement damage you see in April and May was not caused by the freezing — it was caused by the thawing.
                 </p>
@@ -155,7 +162,8 @@ export default function FreezeThawOhioPage() {
                   </p>
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Geogrid Actually Does — and Doesn&apos;t Do</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">What geogrid does</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">What Geogrid Actually Does — and Doesn&apos;t Do</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Be skeptical of anyone who tells you geogrid &quot;prevents&quot; frost heave. It does not. Geogrid is not a moisture barrier and does not change the capillary behavior of the soil below it. If the three ingredients are present, the soil will heave.
                 </p>
@@ -169,12 +177,14 @@ export default function FreezeThawOhioPage() {
                   <li><strong>Extends the section&apos;s life through multiple freeze-thaw cycles</strong> by limiting the cumulative damage each spring breakup adds.</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Pair It With a Separator</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Separator</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Pair It With a Separator</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   In silty Northern Ohio subgrades, the most effective freeze-thaw section combines a geogrid (for reinforcement and confinement) with a <Link href="/nonwoven-fabrics" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">nonwoven geotextile</Link> (for separation and filtration) at the subgrade interface. The geotextile keeps fines from pumping up into the aggregate during the saturated thaw period, while still allowing water to pass. This combination is widely used in cold-region pavement design for exactly this reason.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Where It Pays Off in Northern Ohio</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Applications</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Where It Pays Off in Northern Ohio</h2>
                 <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700">
                   <li><strong>Commercial parking lots</strong> on glacial till — the most common problem we get called about each spring.</li>
                   <li><strong>Residential driveways</strong> in Cuyahoga, Summit, and Stark counties, where silty clay loam subgrades are the default.</li>
@@ -183,7 +193,8 @@ export default function FreezeThawOhioPage() {
                   <li><strong>Repair sections</strong> where last spring&apos;s breakup damage is being rebuilt and you do not want to be back in the same spot next May.</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Right Now: Patch Packs for the Potholes Already Open</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Right now</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Right Now: Patch Packs for the Potholes Already Open</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Geogrid is the long-term answer when you are rebuilding a section. But if you are reading this in May and you have potholes already broken open from spring breakup, you need something you can throw down today. That is what <Link href="/patch-packs" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Patch Packs</Link> are for.
                 </p>
@@ -198,7 +209,8 @@ export default function FreezeThawOhioPage() {
                   Patch Packs do not fix the underlying subgrade problem that caused the pothole — only a proper base rebuild does that. But they buy you the rest of the season to plan and budget the real repair, and they hold up far better than throwing cold mix from a bag.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Before You Overlay This Fall: Treat the Cracks With an Interlayer</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Interlayer</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Before You Overlay This Fall: Treat the Cracks With an Interlayer</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Here is the trap a lot of property owners fall into: spring breakup damages the surface, summer brings an overlay, the new asphalt looks great for a winter or two, and then the same cracks come right back through. That is <strong>reflective cracking</strong> — the underlying cracks &quot;telegraphing&quot; up through the fresh overlay because nothing was done to stop them.
                 </p>
@@ -230,7 +242,8 @@ export default function FreezeThawOhioPage() {
                   </p>
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">The Three-Layer Strategy for Freeze-Thaw Climates</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Playbook</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">The Three-Layer Strategy for Freeze-Thaw Climates</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Put it all together and Northern Ohio property owners and contractors have a repeatable playbook:
                 </p>
@@ -243,7 +256,8 @@ export default function FreezeThawOhioPage() {
                   Each layer addresses a different piece of the freeze-thaw problem. Skipping one is usually what causes the same lot to keep failing.
                 </p>
 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">A Note on Verification</h2>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Sources</div>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">A Note on Verification</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   The frost-susceptibility classifications cited above come from the U.S. Army Corps of Engineers and are referenced in standard FHWA pavement design guidance. Site-specific soils information for any address in Northern Ohio is available through the USDA-NRCS <a href="https://websoilsurvey.nrcs.usda.gov/" target="_blank" rel="noopener noreferrer" className="text-[#00c97e] hover:text-[#00b36f] font-semibold">Web Soil Survey</a>. Geogrid product specifications follow ODOT Construction &amp; Material Specifications Item 712 and manufacturer datasheets — we can pull the relevant spec for any project on request.
                 </p>
@@ -264,28 +278,34 @@ export default function FreezeThawOhioPage() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </article>
 
         {/* FAQ Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Freeze-Thaw &amp; Geogrid FAQ</h2>
-            <div className="space-y-6">
-              {faqData.map((faq, index) => (
-                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center leading-tight tracking-tight">Freeze-Thaw &amp; Geogrid FAQ</h2>
+              <div className="space-y-6">
+                {faqData.map((faq, index) => (
+                  <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Related */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Related</div>
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Related Resources</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link href="/patch-packs" className="block p-6 bg-white rounded border border-gray-200 hover:border-[#00c97e] transition-colors text-left">
                 <h3 className="font-bold text-gray-900 mb-2">Patch Packs</h3>
@@ -304,6 +324,7 @@ export default function FreezeThawOhioPage() {
                 <p className="text-gray-600 text-sm">Separation and filtration for frost-prone subgrades.</p>
               </Link>
             </div>
+            </Reveal>
           </div>
         </section>
       </main>

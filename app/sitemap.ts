@@ -216,6 +216,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/soft-earth-solutions-cleveland`,
+      lastModified: new Date('2026-07-20'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/soft-ground-akron`,
       lastModified: new Date('2026-07-13'),
       changeFrequency: 'monthly',

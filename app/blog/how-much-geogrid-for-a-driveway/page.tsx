@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -33,9 +34,11 @@ export default function HowMuchGeogridForDriveway() {
           badge="Sizing Guide"
         />
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-3xl mx-auto prose prose-lg">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Math in One Step</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Formula</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">The Math in One Step</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               Multiply length by width to get the driveway square footage. Divide by 9 to convert to square yards. Add 10% for overlap at seams. That&apos;s your geogrid order.
             </p>
@@ -49,12 +52,15 @@ export default function HowMuchGeogridForDriveway() {
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
               Example: a 100 ft × 12 ft driveway = 1,200 ft² = 133.3 yd² = <strong>147 yd² of geogrid with overlap</strong>.
             </p>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Tensar NX850 Roll Sizes We Stock</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Roll sizes</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Tensar NX850 Roll Sizes We Stock</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               For residential driveways we stock <strong>Tensar InterAx NX850</strong> in partial rolls
               sized for typical residential jobs. Full-roll dimensions come straight from the Tensar PIDS
@@ -88,12 +94,15 @@ export default function HowMuchGeogridForDriveway() {
               We keep half and quarter rolls in stock at our Solon warehouse for pickup. Full-roll orders are quoted
               by phone. Text your driveway dimensions to (440) 384-1897 and we&apos;ll tell you which format fits.
             </p>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-World Sizing Examples</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Examples</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Real-World Sizing Examples</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               NX850 rolls are 12.5 ft wide. Strips run along the driveway length. Figure out how many strips
               you need (width ÷ 12.5, round up), multiply by driveway length, and match to the closest
@@ -116,12 +125,15 @@ export default function HowMuchGeogridForDriveway() {
             <p className="text-sm text-gray-600 mt-6">
               Or skip the math — use our <Link href="/residential" className="text-[#00c97e] font-semibold hover:underline">driveway calculator</Link>, enter your dimensions, and it recommends the exact partial-roll combination.
             </p>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why NX850 for Residential Driveways?</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Why NX850</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Why NX850 for Residential Driveways?</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               For residential driveways and pads we stock <strong>Tensar InterAx NX850</strong> in partial-roll
               formats — the current-generation top-of-the-line multi-axial geogrid. The design values for NX850
@@ -134,37 +146,45 @@ export default function HowMuchGeogridForDriveway() {
               for your job with a Tensar+ engineered design.
             </p>
             <div className="mt-6">
-              <Link href="/geogrid/nx850" className="inline-block text-[#00c97e] font-semibold hover:underline">
-                NX850 product details →
+              <Link href="/geogrid/nx850" className="inline-flex items-center gap-1 text-[#00c97e] font-semibold hover:gap-2 transition-all">
+                NX850 product details <span>→</span>
               </Link>
             </div>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Don&apos;t Forget the Fabric</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Fabric</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Don&apos;t Forget the Fabric</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               If your subgrade is soft, wet, or heavy clay (typical for most of Northeast Ohio), you also need a woven geotextile below the geogrid to stop the soil from pumping up into your aggregate. Size the fabric the same way — square yards + 10% overlap — and buy Mirafi 500X or 600X.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              <Link href="/geogrid-vs-geotextile" className="text-[#00c97e] font-semibold hover:underline">More on the geogrid vs. geotextile question here →</Link>
+              <Link href="/geogrid-vs-geotextile" className="inline-flex items-center gap-1 text-[#00c97e] font-semibold hover:gap-2 transition-all">More on the geogrid vs. geotextile question here <span>→</span></Link>
             </p>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Skip the Math — Use the Calculator</h2>
-            <p className="text-lg text-gray-300 mb-6">Enter your driveway dimensions and subgrade type, get an itemized material list and total cost.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/residential" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Driveway Cost Calculator
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Skip the Math — Use the Calculator</h2>
+              <p className="text-lg text-gray-300 mb-8">Enter your driveway dimensions and subgrade type, get an itemized material list and total cost.</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/residential" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Driveway Cost Calculator
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>
