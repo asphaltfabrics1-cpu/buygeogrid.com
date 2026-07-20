@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -69,9 +70,12 @@ export default function MuddyDrivewayFix() {
           badge="Ohio Homeowners & Contractors"
         />
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Cycle You&apos;re Stuck In</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The trap</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">The Cycle You&apos;re Stuck In</h2>
+            </Reveal>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {[
                 { n: '1', h: 'Spring', b: 'Driveway turns to mud. You add a few tons of gravel and re-grade.' },
@@ -91,9 +95,12 @@ export default function MuddyDrivewayFix() {
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Two-Layer Fix</h2>
+            <Reveal className="mb-6">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The fix</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">The Two-Layer Fix</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded shadow-sm">
                 <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Bottom Layer</div>
@@ -124,9 +131,11 @@ export default function MuddyDrivewayFix() {
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Not Sure If Your Soil Is the Problem?</h2>
+            <Reveal>
+            <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Not sure?</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Not Sure If Your Soil Is the Problem?</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               Call us with a photo of the wet spots and a rough size. We&apos;ll tell you which Tensar geogrid and Mirafi fabric to use for your subgrade, how many rolls, and what you should expect to pay.
             </p>
@@ -134,39 +143,50 @@ export default function MuddyDrivewayFix() {
               After the test we&apos;ll walk you through the numbers, spec the material, and you can decide from there. No pressure, no sales pitch.
             </p>
             <div className="mt-8">
-              <Link href="/residential" className="inline-flex items-center px-6 py-3 bg-[#00c97e] text-white rounded font-semibold hover:bg-[#00b36f] transition-colors">
-                Use the driveway cost calculator →
+              <Link href="/residential" className="inline-flex items-center gap-2 px-6 py-3 bg-[#00c97e] text-white rounded font-semibold hover:bg-[#00b36f] transition-colors group">
+                Use the driveway cost calculator
+                <span className="transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">FAQ</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Frequently Asked Questions</h2>
+            </Reveal>
             <div className="space-y-6">
               {faqData.map((faq, i) => (
-                <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+                <Reveal key={i} delay={i * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Fix It Once?</h2>
-            <p className="text-lg text-gray-300 mb-6">Northern Ohio distributor. Same-day pickup from our Solon warehouse.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Get a Quote
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Ready to Fix It Once?</h2>
+              <p className="text-lg text-gray-300 mb-8">Northern Ohio distributor. Same-day pickup from our Solon warehouse.</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Get a Quote
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

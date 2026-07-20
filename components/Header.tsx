@@ -17,11 +17,20 @@ export default function Header() {
     <>
       {/* Combined Header & Navigation */}
       <header className="bg-[#1a1a1a] text-white py-3 px-4 border-b-[3px] border-[#00c97e]">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto">
           <div className="flex items-center justify-between gap-4">
-            {/* Center Navigation - Desktop Only */}
+            {/* Logo - Left */}
+            <Link href="/" className="flex-shrink-0 flex items-center" aria-label="BuyGeogrid — Asphalt Fabrics Supply home">
+              <img
+                src="/images/logos/afsupplylogo_transparent.png"
+                alt="Asphalt Fabrics & Supply"
+                className="h-10 md:h-11 w-auto"
+              />
+            </Link>
+
+            {/* Desktop Navigation — arbitrary variants scope to this ul only so mobile menu is untouched */}
             <nav className="hidden md:block flex-1">
-              <ul className="flex justify-center items-center gap-0">
+              <ul className="flex justify-center items-center gap-0 [&_a]:!px-2 [&_a]:!text-sm [&_a]:whitespace-nowrap [&_button]:!px-2 [&_button]:!text-sm [&_button]:whitespace-nowrap lg:[&_a]:!px-3 lg:[&_a]:!text-base lg:[&_button]:!px-3 lg:[&_button]:!text-base">
             <li>
               <Link href="/" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Home

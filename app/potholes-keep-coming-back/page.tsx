@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -69,49 +70,62 @@ export default function PotholesKeepComingBack() {
           badge="Municipal-Grade Materials for Anyone"
         />
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Freeze-Thaw Cycle That Eats Your Pavement</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              A pothole doesn&apos;t start as a hole. It starts as a crack. Water gets in the crack. In an Ohio winter that water freezes and expands ~9%. It pushes the pavement apart from below. The next thaw, more water gets in. Traffic loads pound the weakened area. A chunk breaks free. Now there&apos;s a hole.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Filling the hole doesn&apos;t address the crack that fed it. That&apos;s why the same pothole reappears every March.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The problem</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">The Freeze-Thaw Cycle That Eats Your Pavement</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                A pothole doesn&apos;t start as a hole. It starts as a crack. Water gets in the crack. In an Ohio winter that water freezes and expands ~9%. It pushes the pavement apart from below. The next thaw, more water gets in. Traffic loads pound the weakened area. A chunk breaks free. Now there&apos;s a hole.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Filling the hole doesn&apos;t address the crack that fed it. That&apos;s why the same pothole reappears every March.
+              </p>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Two-Step Permanent Fix</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The fix</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">The Two-Step Permanent Fix</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded shadow-sm">
-                <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Step 1 — Seal the Cracks</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Petrotac Peel-and-Stick Interlayer</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Petrotac bridges cracks so they don&apos;t reflect back through your next overlay or seal coat. Peel the release liner, position it over the crack, warm with a torch or heat gun, roll it down. Three widths — 1ft, 1.5ft, and 4ft — stocked at our Solon warehouse.
-                </p>
-                <Link href="/interlayers" className="text-[#00c97e] font-semibold hover:underline">
-                  See Petrotac options →
-                </Link>
-              </div>
-              <div className="bg-white p-6 rounded shadow-sm">
-                <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Step 2 — Patch That Stays</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Patch Packs Cold Asphalt</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Sealed pouches of engineered cold asphalt that compact under traffic and stay locked in. This is what municipal crews use. Not the generic cold patch from the hardware store that ends up on the shoulder after the first snowplow pass.
-                </p>
-                <Link href="/patch-packs" className="text-[#00c97e] font-semibold hover:underline">
-                  See Patch Packs →
-                </Link>
-              </div>
+              <Reveal delay={120}>
+                <div className="bg-white p-6 rounded shadow-sm h-full">
+                  <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Step 1 — Seal the Cracks</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Petrotac Peel-and-Stick Interlayer</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Petrotac bridges cracks so they don&apos;t reflect back through your next overlay or seal coat. Peel the release liner, position it over the crack, warm with a torch or heat gun, roll it down. Three widths — 1ft, 1.5ft, and 4ft — stocked at our Solon warehouse.
+                  </p>
+                  <Link href="/interlayers" className="inline-flex items-center gap-1 text-[#00c97e] font-semibold hover:gap-2 transition-all">
+                    See Petrotac options <span>→</span>
+                  </Link>
+                </div>
+              </Reveal>
+              <Reveal delay={240}>
+                <div className="bg-white p-6 rounded shadow-sm h-full">
+                  <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Step 2 — Patch That Stays</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Patch Packs Cold Asphalt</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Sealed pouches of engineered cold asphalt that compact under traffic and stay locked in. This is what municipal crews use. Not the generic cold patch from the hardware store that ends up on the shoulder after the first snowplow pass.
+                  </p>
+                  <Link href="/patch-packs" className="inline-flex items-center gap-1 text-[#00c97e] font-semibold hover:gap-2 transition-all">
+                    See Patch Packs <span>→</span>
+                  </Link>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">What Cold Patch You&apos;ve Already Tried Won&apos;t Do</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Why it fails</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">What Cold Patch You&apos;ve Already Tried Won&apos;t Do</h2>
+            </Reveal>
             <div className="space-y-4">
               {[
                 { p: 'Doesn\'t compact', b: 'Generic cold patch stays soft. Traffic and snowplows kick it out of the hole within weeks.' },
@@ -119,41 +133,52 @@ export default function PotholesKeepComingBack() {
                 { p: 'Doesn\'t seal the crack', b: 'Even a perfect pothole fill does nothing if the surrounding crack is still open and letting water in.' },
                 { p: 'Wrong material for the temperature', b: 'Winter-grade cold patch is different from warm-weather formulations. Big-box product is one-size-fits-all.' },
               ].map((item, i) => (
-                <div key={i} className="border-l-4 border-red-500 bg-red-50 p-4 rounded">
-                  <p className="font-semibold text-gray-900 mb-1">{item.p}</p>
-                  <p className="text-gray-700">{item.b}</p>
-                </div>
+                <Reveal key={i} delay={120 + i * 120}>
+                  <div className="border-l-4 border-red-500 bg-red-50 p-4 rounded">
+                    <p className="font-semibold text-gray-900 mb-1">{item.p}</p>
+                    <p className="text-gray-700">{item.b}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">FAQ</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">FAQ</h2>
+            </Reveal>
             <div className="space-y-6">
               {faqData.map((faq, i) => (
-                <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+                <Reveal key={i} delay={i * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Stop Patching. Start Fixing.</h2>
-            <p className="text-lg text-gray-300 mb-6">Municipal-grade repair materials for property managers, contractors, and homeowners in Northern Ohio.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/patch-packs" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Order Patch Packs
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Stop Patching. Start Fixing.</h2>
+              <p className="text-lg text-gray-300 mb-8">Municipal-grade repair materials for property managers, contractors, and homeowners in Northern Ohio.</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/patch-packs" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Order Patch Packs
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -69,65 +70,80 @@ export default function SubgradeStabilizationToledo() {
           badge="DOT & Commercial-Approved"
         />
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Lake Maumee Legacy</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Toledo and the surrounding Maumee River basin sit on lacustrine clay left behind by proglacial Lake Maumee — a shallow inland lake that covered much of northwestern Ohio at the end of the last ice age. The result is a subgrade that\ is dense, saturated most of the year, and has some of the lowest CBR values in the state.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              For contractors and engineers, this means proof-roll failures are the norm — and the fastest, cheapest way past them is a geogrid-stabilized aggregate layer, not dig-and-replace.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The problem</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">The Lake Maumee Legacy</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Toledo and the surrounding Maumee River basin sit on lacustrine clay left behind by proglacial Lake Maumee — a shallow inland lake that covered much of northwestern Ohio at the end of the last ice age. The result is a subgrade that is dense, saturated most of the year, and has some of the lowest CBR values in the state.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                For contractors and engineers, this means proof-roll failures are the norm — and the fastest, cheapest way past them is a geogrid-stabilized aggregate layer, not dig-and-replace.
+              </p>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Cost Comparison: The Two Fixes</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The comparison</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Cost Comparison: The Two Fixes</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-red-50 p-6 rounded border-l-4 border-red-500">
-                <div className="text-sm font-semibold text-red-700 uppercase tracking-wide mb-2">Traditional</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Dig-and-Replace</h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Excavate 24–36 inches of soft clay</li>
-                  <li>• Haul spoil off-site</li>
-                  <li>• Import structural fill</li>
-                  <li>• Compact in lifts</li>
-                  <li>• Days of extra work per acre</li>
-                  <li>• Spoil disposal fees</li>
-                  <li>• Weather delays extend everything</li>
-                </ul>
-              </div>
-              <div className="bg-green-50 p-6 rounded border-l-4 border-[#00c97e]">
-                <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Modern</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Geogrid Stabilization</h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Roll out geogrid on prepared subgrade</li>
-                  <li>• (Optional) Mirafi 500X/600X below on very soft ground</li>
-                  <li>• Place aggregate, compact</li>
-                  <li>• No excavation, no import</li>
-                  <li>• Same-day install per section</li>
-                  <li>• DOT- and engineer-approved solution</li>
-                  <li>• Tensar Plus stamped design included</li>
-                </ul>
-              </div>
+              <Reveal delay={120}>
+                <div className="bg-red-50 p-6 rounded border-l-4 border-red-500 h-full">
+                  <div className="text-sm font-semibold text-red-700 uppercase tracking-wide mb-2">Traditional</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Dig-and-Replace</h3>
+                  <ul className="space-y-2 text-gray-700 text-sm">
+                    <li>• Excavate 24–36 inches of soft clay</li>
+                    <li>• Haul spoil off-site</li>
+                    <li>• Import structural fill</li>
+                    <li>• Compact in lifts</li>
+                    <li>• Days of extra work per acre</li>
+                    <li>• Spoil disposal fees</li>
+                    <li>• Weather delays extend everything</li>
+                  </ul>
+                </div>
+              </Reveal>
+              <Reveal delay={240}>
+                <div className="bg-green-50 p-6 rounded border-l-4 border-[#00c97e] h-full">
+                  <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Modern</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Geogrid Stabilization</h3>
+                  <ul className="space-y-2 text-gray-700 text-sm">
+                    <li>• Roll out geogrid on prepared subgrade</li>
+                    <li>• (Optional) Mirafi 500X/600X below on very soft ground</li>
+                    <li>• Place aggregate, compact</li>
+                    <li>• No excavation, no import</li>
+                    <li>• Same-day install per section</li>
+                    <li>• DOT- and engineer-approved solution</li>
+                    <li>• Tensar Plus stamped design included</li>
+                  </ul>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Toledo Delivery Radius</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Coverage</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Toledo Delivery Radius</h2>
+            </Reveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
                 { area: 'Toledo Metro', places: 'Downtown, West Toledo, South Toledo, Point Place, East Toledo' },
                 { area: 'Suburbs', places: 'Sylvania, Perrysburg, Maumee, Oregon, Rossford, Northwood' },
                 { area: 'Outer Ring', places: 'Waterville, Bowling Green, Findlay, Napoleon, Bryan' },
-              ].map((area) => (
-                <div key={area.area} className="bg-gray-50 p-4 rounded">
-                  <div className="font-semibold text-[#00c97e] mb-2">{area.area}</div>
-                  <p className="text-sm text-gray-700">{area.places}</p>
-                </div>
+              ].map((area, i) => (
+                <Reveal key={area.area} delay={120 + i * 120}>
+                  <div className="bg-gray-50 p-4 rounded h-full">
+                    <div className="font-semibold text-[#00c97e] mb-2">{area.area}</div>
+                    <p className="text-sm text-gray-700">{area.places}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
             <p className="text-center mt-6 text-gray-600 text-sm">
@@ -136,32 +152,41 @@ export default function SubgradeStabilizationToledo() {
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Toledo FAQ</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Toledo FAQ</h2>
+            </Reveal>
             <div className="space-y-6">
               {faqData.map((faq, i) => (
-                <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+                <Reveal key={i} delay={i * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Failed Proof Roll?</h2>
-            <p className="text-lg text-gray-300 mb-6">We&apos;ll get a DCP on your Toledo site this week and have your engineer a stamped Tensar Plus design shortly after.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Request a Site Visit
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Failed Proof Roll?</h2>
+              <p className="text-lg text-gray-300 mb-8">We&apos;ll get a DCP on your Toledo site this week and have your engineer a stamped Tensar Plus design shortly after.</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Request a Site Visit
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

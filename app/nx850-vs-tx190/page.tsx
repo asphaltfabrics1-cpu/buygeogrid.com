@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -69,9 +70,13 @@ export default function Nx850VsTx190() {
           badge="Free Tensar Plus Design Support"
         />
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">The Comparison</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Compare</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight text-center">The Comparison</h2>
+            </Reveal>
+            <Reveal delay={120}>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
@@ -101,90 +106,116 @@ export default function Nx850VsTx190() {
                 </tbody>
               </table>
             </div>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Where Each Fits Best</h2>
+            <Reveal className="mb-6">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">How to pick</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Where Each Fits Best</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded shadow-sm border-l-4 border-[#00c97e]">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Pick NX850 when...</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Heavy commercial or industrial pavement</li>
-                  <li>• DOT project with newer InterAx-compatible spec</li>
-                  <li>• You want to minimize aggregate thickness</li>
-                  <li>• Distribution centers, ports, intermodal</li>
-                  <li>• You&apos;re specifying fresh, not matching a legacy design</li>
-                </ul>
-                <Link href="/geogrid/nx850" className="mt-4 inline-block text-[#00c97e] font-semibold hover:underline">
-                  NX850 details →
-                </Link>
-              </div>
-              <div className="bg-white p-6 rounded shadow-sm border-l-4 border-blue-500">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Pick TX190L when...</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Engineer of record has an existing TX spec</li>
-                  <li>• DOT or agency manual references TriAx by name</li>
-                  <li>• Consistency with prior TX-installed sections</li>
-                  <li>• Residential, small commercial, established use cases</li>
-                  <li>• Warranty or maintenance requires product match</li>
-                </ul>
-                <Link href="/geogrid/tx190" className="mt-4 inline-block text-blue-700 font-semibold hover:underline">
-                  TX190L details →
-                </Link>
-              </div>
+              <Reveal delay={120}>
+                <div className="bg-white p-6 rounded shadow-sm border-l-4 border-[#00c97e] h-full">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Pick NX850 when...</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Heavy commercial or industrial pavement</li>
+                    <li>• DOT project with newer InterAx-compatible spec</li>
+                    <li>• You want to minimize aggregate thickness</li>
+                    <li>• Distribution centers, ports, intermodal</li>
+                    <li>• You&apos;re specifying fresh, not matching a legacy design</li>
+                  </ul>
+                  <Link href="/geogrid/nx850" className="mt-4 inline-flex items-center gap-1 text-[#00c97e] font-semibold hover:gap-2 transition-all">
+                    NX850 details <span>→</span>
+                  </Link>
+                </div>
+              </Reveal>
+              <Reveal delay={240}>
+                <div className="bg-white p-6 rounded shadow-sm border-l-4 border-blue-500 h-full">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Pick TX190L when...</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Engineer of record has an existing TX spec</li>
+                    <li>• DOT or agency manual references TriAx by name</li>
+                    <li>• Consistency with prior TX-installed sections</li>
+                    <li>• Residential, small commercial, established use cases</li>
+                    <li>• Warranty or maintenance requires product match</li>
+                  </ul>
+                  <Link href="/geogrid/tx190" className="mt-4 inline-flex items-center gap-1 text-blue-700 font-semibold hover:gap-2 transition-all">
+                    TX190L details <span>→</span>
+                  </Link>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Middle-Ground InterAx Options</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Between NX850 and dropping back to TX190L, there are two InterAx options that cover most real-world applications:
-            </p>
+            <Reveal className="mb-6">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Options</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">The Middle-Ground InterAx Options</h2>
+            </Reveal>
+            <Reveal delay={120}>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Between NX850 and dropping back to TX190L, there are two InterAx options that cover most real-world applications:
+              </p>
+            </Reveal>
             <div className="space-y-4">
-              <div className="bg-green-50 p-6 rounded border-l-4 border-[#00c97e]">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">InterAx NX750</h3>
-                <p className="text-gray-700">Between NX650 and NX850. Commercial pavement, moderate-to-heavy loads, weaker subgrades. Often the right pick when NX850 is over-spec and NX650 is under-spec.</p>
-                <Link href="/geogrid/nx750" className="mt-3 inline-block text-[#00c97e] font-semibold hover:underline">NX750 →</Link>
-              </div>
-              <div className="bg-green-50 p-6 rounded border-l-4 border-[#00c97e]">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">InterAx NX650</h3>
-                <p className="text-gray-700">Workhorse for residential driveways, small commercial parking, private access roads. Adequate subgrade support, most cost-effective InterAx SKU for typical jobs.</p>
-                <Link href="/geogrid/nx650" className="mt-3 inline-block text-[#00c97e] font-semibold hover:underline">NX650 →</Link>
-              </div>
+              <Reveal delay={240}>
+                <div className="bg-green-50 p-6 rounded border-l-4 border-[#00c97e]">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">InterAx NX750</h3>
+                  <p className="text-gray-700">Between NX650 and NX850. Commercial pavement, moderate-to-heavy loads, weaker subgrades. Often the right pick when NX850 is over-spec and NX650 is under-spec.</p>
+                  <Link href="/geogrid/nx750" className="mt-3 inline-flex items-center gap-1 text-[#00c97e] font-semibold hover:gap-2 transition-all">NX750 <span>→</span></Link>
+                </div>
+              </Reveal>
+              <Reveal delay={360}>
+                <div className="bg-green-50 p-6 rounded border-l-4 border-[#00c97e]">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">InterAx NX650</h3>
+                  <p className="text-gray-700">Workhorse for residential driveways, small commercial parking, private access roads. Adequate subgrade support, most cost-effective InterAx SKU for typical jobs.</p>
+                  <Link href="/geogrid/nx650" className="mt-3 inline-flex items-center gap-1 text-[#00c97e] font-semibold hover:gap-2 transition-all">NX650 <span>→</span></Link>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">FAQ</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">FAQ</h2>
+            </Reveal>
             <div className="space-y-6">
               {faqData.map((faq, i) => (
-                <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+                <Reveal key={i} delay={i * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Let&apos;s Run the Design</h2>
-            <p className="text-lg text-gray-300 mb-6">Free Tensar Plus design support with every material order. Send us your CBR and loads, we&apos;ll spec the exact geogrid.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Request a Design Review
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Let&apos;s Run the Design</h2>
+              <p className="text-lg text-gray-300 mb-8">Free Tensar Plus design support with every material order. Send us your CBR and loads, we&apos;ll spec the exact geogrid.</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Request a Design Review
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

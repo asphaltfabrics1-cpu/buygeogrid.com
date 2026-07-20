@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
 import ProductCard from '@/components/ProductCard';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -95,9 +96,12 @@ export default function Geogrid() {
         />
 
         {/* Products Grid */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Browse Tensar Geogrid Products</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Products</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight text-center">Browse Tensar Geogrid Products</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {products.map((product, index) => (
                 <ProductCard
@@ -112,82 +116,101 @@ export default function Geogrid() {
         </section>
 
         {/* What Is Geogrid Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What Is Geogrid?</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Geogrid is a polymer mesh designed to mechanically stabilize aggregate bases. When placed between the subgrade and base course, it interlocks with stone to distribute loads across a wider area and limit lateral movement. This can reduce rutting, prevent base contamination from soft soils, and help extend pavement life.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Tensar manufactures several Geogrid product lines, each engineered for different applications:
-            </p>
-            <ul className="space-y-3 text-lg text-gray-700">
-              <li><strong>InterAx® (NX Series):</strong> Multi-axial Geogrids with hexagonal apertures that provide 360-degree stability. Ideal for unpaved roads, parking lots, and sites with variable traffic patterns.</li>
-              <li><strong>TriAx® (TX Series):</strong> Triangular aperture Geogrids offering multi-directional strength. Well-suited for paved roads, highways, and heavy-duty applications.</li>
-              <li><strong>Biaxial (BX Series):</strong> Rectangular aperture Geogrids designed for bi-directional loading. Commonly used in retaining walls, slopes, and foundation reinforcement.</li>
-            </ul>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Overview</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">What Is Geogrid?</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Geogrid is a polymer mesh designed to mechanically stabilize aggregate bases. When placed between the subgrade and base course, it interlocks with stone to distribute loads across a wider area and limit lateral movement. This can reduce rutting, prevent base contamination from soft soils, and help extend pavement life.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Tensar manufactures several Geogrid product lines, each engineered for different applications:
+              </p>
+              <ul className="space-y-3 text-lg text-gray-700">
+                <li><strong>InterAx® (NX Series):</strong> Multi-axial Geogrids with hexagonal apertures that provide 360-degree stability. Ideal for unpaved roads, parking lots, and sites with variable traffic patterns.</li>
+                <li><strong>TriAx® (TX Series):</strong> Triangular aperture Geogrids offering multi-directional strength. Well-suited for paved roads, highways, and heavy-duty applications.</li>
+                <li><strong>Biaxial (BX Series):</strong> Rectangular aperture Geogrids designed for bi-directional loading. Commonly used in retaining walls, slopes, and foundation reinforcement.</li>
+              </ul>
+            </Reveal>
           </div>
         </section>
 
         {/* How Geogrid Works Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">How Geogrid Works</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              When aggregate is compacted over Geogrid, the stone particles partially penetrate the apertures and lock into place. This creates a mechanically stabilized layer that resists movement under load. As traffic passes over the surface, forces are distributed laterally through the Geogrid rather than concentrating on weak spots in the subgrade.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              The result is a stiffer base that can support heavier loads with less material. In many cases, Geogrid allows engineers to reduce aggregate thickness while achieving equivalent or better performance—saving on excavation, hauling, and material costs.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">How it works</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">How Geogrid Works</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                When aggregate is compacted over Geogrid, the stone particles partially penetrate the apertures and lock into place. This creates a mechanically stabilized layer that resists movement under load. As traffic passes over the surface, forces are distributed laterally through the Geogrid rather than concentrating on weak spots in the subgrade.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The result is a stiffer base that can support heavier loads with less material. In many cases, Geogrid allows engineers to reduce aggregate thickness while achieving equivalent or better performance—saving on excavation, hauling, and material costs.
+              </p>
+            </Reveal>
           </div>
         </section>
 
         {/* Evolution of Geogrid Technology Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">The Evolution of Geogrid Technology</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Tensar invented the Geogrid in 1978 and has continued advancing the technology ever since. Their <strong>Biaxial (BX) series</strong>, introduced in the 1980s, featured rectangular apertures for bi-directional reinforcement—ideal for retaining walls and foundation support. In 2007, Tensar launched the <strong>TriAx® series</strong> with triangular apertures that provide radial stiffness in all directions, improving performance under multi-directional traffic loads. The latest innovation is the <strong>InterAx® series</strong> (2021), which uses hexagonal geometry with multiple aperture sizes and coextruded outer layers that conform to aggregate particles for enhanced interlock. Each generation builds on decades of research and field-proven performance.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">History</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">The Evolution of Geogrid Technology</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Tensar invented the Geogrid in 1978 and has continued advancing the technology ever since. Their <strong>Biaxial (BX) series</strong>, introduced in the 1980s, featured rectangular apertures for bi-directional reinforcement—ideal for retaining walls and foundation support. In 2007, Tensar launched the <strong>TriAx® series</strong> with triangular apertures that provide radial stiffness in all directions, improving performance under multi-directional traffic loads. The latest innovation is the <strong>InterAx® series</strong> (2021), which uses hexagonal geometry with multiple aperture sizes and coextruded outer layers that conform to aggregate particles for enhanced interlock. Each generation builds on decades of research and field-proven performance.
+              </p>
+            </Reveal>
           </div>
         </section>
 
         {/* Choosing the Right Geogrid Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Choosing the Right Geogrid</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The best Geogrid for your project depends on your soil conditions, expected traffic, and structural requirements. Soft or saturated subgrades often benefit from higher-grade products like NX850 or TX190, while stable soils may only need lighter reinforcement. Pavement type also matters—unpaved surfaces see different stress patterns than asphalt roads.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Not sure which product fits your site? We offer free DCP soil testing throughout Northern Ohio to measure your subgrade strength. Based on the results, we can recommend a Geogrid solution tailored to your project&apos;s needs.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">How to pick</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">Choosing the Right Geogrid</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                The best Geogrid for your project depends on your soil conditions, expected traffic, and structural requirements. Soft or saturated subgrades often benefit from higher-grade products like NX850 or TX190, while stable soils may only need lighter reinforcement. Pavement type also matters—unpaved surfaces see different stress patterns than asphalt roads.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Not sure which product fits your site? We offer free DCP soil testing throughout Northern Ohio to measure your subgrade strength. Based on the results, we can recommend a Geogrid solution tailored to your project&apos;s needs.
+              </p>
+            </Reveal>
           </div>
         </section>
 
         {/* Serving Northern Ohio Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Serving Northern Ohio</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We stock Tensar Geogrids at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Coverage</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Serving Northern Ohio</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We stock Tensar Geogrids at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours.
+              </p>
+            </Reveal>
           </div>
         </section>
 
         {/* Lunch & Learn CTA Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Want to Learn More?</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Schedule a free Lunch & Learn for your team. We provide expert training on Tensar Geogrids—plus free lunch and PDH credits for engineers.
-            </p>
-            <Link
-              href="/lunch-and-learn"
-              className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
-            >
-              Schedule a Lunch & Learn
-            </Link>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Learn</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Want to Learn More?</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Schedule a free Lunch & Learn for your team. We provide expert training on Tensar Geogrids—plus free lunch and PDH credits for engineers.
+              </p>
+              <Link
+                href="/lunch-and-learn"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
+              >
+                Schedule a Lunch & Learn
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </Reveal>
           </div>
         </section>
       </main>

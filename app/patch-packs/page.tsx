@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
 import Section from '@/components/Section';
 import ProductDetail from '@/components/ProductDetail';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -192,171 +193,214 @@ export default function PatchPacks() {
         </Section>
 
         {/* What Are Patch Packs Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What Are Patch Packs?</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Patch Packs are a fast and easy cold asphalt patch solution for all-weather emergency pavement repair. Whether you need to fix potholes, spalls, or other pavement defects, this cold patch asphalt product delivers durable results without specialized equipment. The VOC-free pothole material combines 100% recycled aggregate with a non-volatile binder, making it an environmentally conscious choice for pavement maintenance.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Available in Standard and Flex variants, Patch Packs are designed for repairing asphalt and reactive concrete defects measuring 1 inch or deeper. The VOC-free formulation makes them safe to use in any environment—from municipal road crews to commercial property managers.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Overview</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">What Are Patch Packs?</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Patch Packs are a fast and easy cold asphalt patch solution for all-weather emergency pavement repair. Whether you need to fix potholes, spalls, or other pavement defects, this cold patch asphalt product delivers durable results without specialized equipment. The VOC-free pothole material combines 100% recycled aggregate with a non-volatile binder, making it an environmentally conscious choice for pavement maintenance.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Available in Standard and Flex variants, Patch Packs are designed for repairing asphalt and reactive concrete defects measuring 1 inch or deeper. The VOC-free formulation makes them safe to use in any environment—from municipal road crews to commercial property managers.
+              </p>
+            </Reveal>
           </div>
         </section>
 
         {/* Video Demo Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Watch Patch Packs in Action</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
-              See how a single person can repair a pothole with Patch Packs in under a minute — no torches, no hot box, no special tools required.
-            </p>
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-gray-100">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube-nocookie.com/embed/k2-_wDHrnk8"
-                title="Patch Packs: Road Repairs without Tools"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Video</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">Watch Patch Packs in Action</h2>
+              <p className="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
+                See how a single person can repair a pothole with Patch Packs in under a minute — no torches, no hot box, no special tools required.
+              </p>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-gray-100">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/k2-_wDHrnk8"
+                  title="Patch Packs: Road Repairs without Tools"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </Reveal>
           </div>
         </section>
 
         {/* How It Works Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">How Cold Patch Asphalt Works</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The asphalt binder in this cold asphalt patch enables Patch Packs to expand and compress under vehicle load, establishing adhesion to existing surfaces while simultaneously sealing the top and side edges of the repair area. Unlike hot mix asphalt, this all-weather pothole repair solution works in any temperature.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Simply clean the pothole of loose debris, place the recycled aggregate patch material into the hole, and compact it. No heating, mixing, or specialized equipment is required. The repair can be opened to traffic immediately after compaction—perfect for emergency pavement repair situations.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">How it works</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">How Cold Patch Asphalt Works</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                The asphalt binder in this cold asphalt patch enables Patch Packs to expand and compress under vehicle load, establishing adhesion to existing surfaces while simultaneously sealing the top and side edges of the repair area. Unlike hot mix asphalt, this all-weather pothole repair solution works in any temperature.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Simply clean the pothole of loose debris, place the recycled aggregate patch material into the hole, and compact it. No heating, mixing, or specialized equipment is required. The repair can be opened to traffic immediately after compaction—perfect for emergency pavement repair situations.
+              </p>
+            </Reveal>
           </div>
         </section>
 
         {/* Applications Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Pothole Repair Applications</h2>
-            <ul className="space-y-3 text-lg text-gray-700">
-              <li><strong>Bridge deck repair material</strong> – Trusted solution for bridge approach and deck repairs</li>
-              <li><strong>Highway and road pavements</strong> – Works on both asphalt and concrete surfaces</li>
-              <li><strong>Utility cut restoration</strong> – Pavement leveling around drains, manholes, and access points</li>
-              <li><strong>Multi-use vehicular pathways</strong> – Bike paths, trails, and shared roadways</li>
-              <li><strong>Commercial surfaces</strong> – Parking facilities, driveways, and high-traffic areas</li>
-              <li><strong>Emergency cold weather repairs</strong> – All-weather pothole repair when hot mix isn&apos;t available</li>
-            </ul>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Applications</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">Pothole Repair Applications</h2>
+              <ul className="space-y-3 text-lg text-gray-700">
+                <li><strong>Bridge deck repair material</strong> – Trusted solution for bridge approach and deck repairs</li>
+                <li><strong>Highway and road pavements</strong> – Works on both asphalt and concrete surfaces</li>
+                <li><strong>Utility cut restoration</strong> – Pavement leveling around drains, manholes, and access points</li>
+                <li><strong>Multi-use vehicular pathways</strong> – Bike paths, trails, and shared roadways</li>
+                <li><strong>Commercial surfaces</strong> – Parking facilities, driveways, and high-traffic areas</li>
+                <li><strong>Emergency cold weather repairs</strong> – All-weather pothole repair when hot mix isn&apos;t available</li>
+              </ul>
+            </Reveal>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Benefits of Cold Asphalt Patch</h2>
-            <ul className="space-y-3 text-lg text-gray-700">
-              <li><strong>No specialized equipment required</strong> – Simple application process for any crew</li>
-              <li><strong>Single-person application</strong> – Reduces labor costs significantly</li>
-              <li><strong>Reduces safety hazards</strong> – For workers and drivers alike</li>
-              <li><strong>VOC-free pothole material</strong> – Environmentally conscious formulation</li>
-              <li><strong>Immediate traffic access</strong> – No curing time needed for emergency pavement repair</li>
-              <li><strong>All-weather pothole repair</strong> – Works in any season or condition, including freezing temperatures</li>
-              <li><strong>100% recycled aggregate</strong> – Sustainable choice for municipalities and contractors</li>
-            </ul>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Benefits</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">Benefits of Cold Asphalt Patch</h2>
+              <ul className="space-y-3 text-lg text-gray-700">
+                <li><strong>No specialized equipment required</strong> – Simple application process for any crew</li>
+                <li><strong>Single-person application</strong> – Reduces labor costs significantly</li>
+                <li><strong>Reduces safety hazards</strong> – For workers and drivers alike</li>
+                <li><strong>VOC-free pothole material</strong> – Environmentally conscious formulation</li>
+                <li><strong>Immediate traffic access</strong> – No curing time needed for emergency pavement repair</li>
+                <li><strong>All-weather pothole repair</strong> – Works in any season or condition, including freezing temperatures</li>
+                <li><strong>100% recycled aggregate</strong> – Sustainable choice for municipalities and contractors</li>
+              </ul>
+            </Reveal>
           </div>
         </section>
 
         {/* Product Variants Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Product Variants</h2>
+            <Reveal className="mb-6">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Options</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight text-center">Product Variants</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Standard Patch Packs</h3>
-                <p className="text-gray-700">
-                  Designed for standard cold asphalt patch repairs on asphalt and concrete pavement. Ideal for most pothole and spall repairs on roads, parking lots, and driveways throughout Northern Ohio.
-                </p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Flex Patch Packs</h3>
-                <p className="text-gray-700">
-                  Enhanced flexibility for areas with greater movement or thermal expansion. The preferred bridge deck repair material for surfaces subject to heavy loads and temperature fluctuations.
-                </p>
-              </div>
+              <Reveal delay={120}>
+                <div className="bg-gray-50 p-6 rounded-lg h-full">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Standard Patch Packs</h3>
+                  <p className="text-gray-700">
+                    Designed for standard cold asphalt patch repairs on asphalt and concrete pavement. Ideal for most pothole and spall repairs on roads, parking lots, and driveways throughout Northern Ohio.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal delay={240}>
+                <div className="bg-gray-50 p-6 rounded-lg h-full">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Flex Patch Packs</h3>
+                  <p className="text-gray-700">
+                    Enhanced flexibility for areas with greater movement or thermal expansion. The preferred bridge deck repair material for surfaces subject to heavy loads and temperature fluctuations.
+                  </p>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
         {/* Why Repair Potholes Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Repair Potholes Quickly?</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Potholes cause vehicle damage, create safety hazards, and accelerate pavement deterioration. Water entering through potholes undermines the base layers, leading to larger failures and more expensive repairs. In freeze-thaw climates like Northern Ohio, this cycle can cause rapid pavement breakdown—making emergency pavement repair essential.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Addressing potholes promptly with an effective cold patch asphalt solution like Patch Packs protects your pavement investment and reduces liability exposure. Quick all-weather pothole repair also improves the driving experience and public perception of road conditions.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Why it matters</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">Why Repair Potholes Quickly?</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Potholes cause vehicle damage, create safety hazards, and accelerate pavement deterioration. Water entering through potholes undermines the base layers, leading to larger failures and more expensive repairs. In freeze-thaw climates like Northern Ohio, this cycle can cause rapid pavement breakdown—making emergency pavement repair essential.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Addressing potholes promptly with an effective cold patch asphalt solution like Patch Packs protects your pavement investment and reduces liability exposure. Quick all-weather pothole repair also improves the driving experience and public perception of road conditions.
+              </p>
+            </Reveal>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pothole Repair FAQ</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight text-center">Pothole Repair FAQ</h2>
+            </Reveal>
             <div className="space-y-6">
               {faqData.map((faq, index) => (
-                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+                <Reveal key={index} delay={index * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
         {/* Serving Northern Ohio Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Pothole Repair Supplier Serving Northern Ohio</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We stock Patch Packs cold asphalt patch at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours. Contact us for current availability and to discuss your pothole repair needs.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Coverage</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Pothole Repair Supplier Serving Northern Ohio</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We stock Patch Packs cold asphalt patch at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours. Contact us for current availability and to discuss your pothole repair needs.
+              </p>
+            </Reveal>
           </div>
         </section>
 
         {/* Lunch & Learn CTA Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Want to Learn More?</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Schedule a free Lunch & Learn for your team. We provide expert training on cold asphalt patch products, pavement repair solutions, and geosynthetics—plus free lunch and PDH credits for engineers.
-            </p>
-            <Link
-              href="/lunch-and-learn"
-              className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
-            >
-              Schedule a Lunch & Learn
-            </Link>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Learn</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Want to Learn More?</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Schedule a free Lunch & Learn for your team. We provide expert training on cold asphalt patch products, pavement repair solutions, and geosynthetics—plus free lunch and PDH credits for engineers.
+              </p>
+              <Link
+                href="/lunch-and-learn"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
+              >
+                Schedule a Lunch & Learn
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </Reveal>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Order Patch Packs?</h2>
-            <p className="text-lg text-gray-300 mb-6">Get competitive pricing on cold asphalt patch and expert support from your Northern Ohio asphalt repair supply distributor</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Request a Quote
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Ready to Order Patch Packs?</h2>
+              <p className="text-lg text-gray-300 mb-8">Get competitive pricing on cold asphalt patch and expert support from your Northern Ohio asphalt repair supply distributor</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Request a Quote
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

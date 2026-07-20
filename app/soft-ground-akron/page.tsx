@@ -1,13 +1,14 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Soft Ground Solutions Akron Ohio | Geogrid + Fabric | BuyGeogrid',
-  description: 'Working over soft ground in Akron, Summit County, or the Portage Lakes area? Geogrid stabilizes weak subgrade for driveways, farm lanes, and construction access. Northern Ohio distributor. Free on-site DCP testing.',
-  keywords: ['soft ground Akron', 'soil stabilization Akron Ohio', 'Summit County geogrid', 'Portage Lakes driveway', 'weak subgrade Akron', 'Akron gravel driveway', 'Cuyahoga Falls', 'Stow soil'],
+  description: 'Working over soft ground (or soft earth) in Akron, Summit County, or the Portage Lakes area? Geogrid stabilizes weak subgrade for driveways, farm lanes, and construction access. Northern Ohio distributor. Free on-site DCP testing.',
+  keywords: ['soft ground Akron', 'soil stabilization Akron Ohio', 'Summit County geogrid', 'Portage Lakes driveway', 'weak subgrade Akron', 'Akron gravel driveway', 'Cuyahoga Falls', 'Stow soil', 'soft earth', 'soft earth solutions'],
   alternates: { canonical: 'https://www.buygeogrid.com/soft-ground-akron' },
   openGraph: {
     title: 'Soft Ground Solutions — Akron, Ohio',
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 const faqData = [
   {
     question: 'Why is soft ground so common in the Akron area?',
-    answer: 'Summit County and the surrounding Portage Lakes region sit on a landscape shaped by post-glacial lake beds, wetlands, and reworked till. Many parts of Akron proper — especially neighborhoods built over former marsh or old strip-mine reclaim — have subgrade CBR values in the low single digits year-round. Soft ground here isn\'t rare; it\'s the default.',
+    answer: 'Summit County and the surrounding Portage Lakes region sit on a landscape shaped by post-glacial lake beds, wetlands, and reworked till. Many parts of Akron proper — especially neighborhoods built over former marsh or old strip-mine reclaim — have subgrade CBR values in the low single digits year-round. Soft ground (also called soft earth) here isn\'t rare; it\'s the default.',
   },
   {
     question: 'What kinds of jobs do you typically supply in Akron?',
@@ -69,21 +70,27 @@ export default function SoftGroundAkron() {
           badge="Summit, Portage, Medina Counties"
         />
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Akron-Area Ground</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Summit County and its neighbors sit on a landscape reshaped repeatedly by glacial advance and retreat. The Portage Lakes, the Cuyahoga River valley, and pockets across Akron proper are underlain by lake-bed clays and reworked glacial till that drain slowly and stay soft.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              For contractors and property owners, this means: don&apos;t assume the subgrade will support what you&apos;re building. Test it. Then build a mechanically stabilized aggregate layer that spreads the load — instead of hoping the soil holds up.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The problem</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">The Akron-Area Ground</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Summit County and its neighbors sit on a landscape reshaped repeatedly by glacial advance and retreat. The Portage Lakes, the Cuyahoga River valley, and pockets across Akron proper are underlain by lake-bed clays and reworked glacial till that drain slowly and stay soft.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                For contractors and property owners, this means: don&apos;t assume the subgrade will support what you&apos;re building. Test it. Then build a mechanically stabilized aggregate layer that spreads the load — instead of hoping the soil holds up.
+              </p>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Where We Serve</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Coverage</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Where We Serve</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { area: 'Akron Proper', places: 'Downtown, Highland Square, West Hill, Kenmore, Ellet' },
@@ -92,19 +99,24 @@ export default function SoftGroundAkron() {
                 { area: 'South Akron', places: 'New Franklin, Coventry, Green' },
                 { area: 'Portage County', places: 'Kent, Ravenna, Aurora, Streetsboro, Hudson' },
                 { area: 'Medina County', places: 'Medina, Brunswick, Wadsworth, Hinckley' },
-              ].map((area) => (
-                <div key={area.area} className="bg-white p-4 rounded shadow-sm">
-                  <div className="font-semibold text-[#00c97e] mb-2">{area.area}</div>
-                  <p className="text-sm text-gray-700">{area.places}</p>
-                </div>
+              ].map((area, i) => (
+                <Reveal key={area.area} delay={120 + i * 120}>
+                  <div className="bg-white p-4 rounded shadow-sm h-full">
+                    <div className="font-semibold text-[#00c97e] mb-2">{area.area}</div>
+                    <p className="text-sm text-gray-700">{area.places}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Common Akron Applications</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Applications</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Common Akron Applications</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 { h: 'Long Residential Driveways', b: 'Rural and semi-rural properties in Bath, Copley, and Portage County typically have 200+ ft driveways where soft-spot rutting is inevitable without stabilization.' },
@@ -112,41 +124,52 @@ export default function SoftGroundAkron() {
                 { h: 'Construction Site Access', b: 'Temporary and permanent site access roads on Summit County commercial builds — proof-roll failures are common and geogrid is the fastest fix.' },
                 { h: 'Small Commercial Parking', b: 'Storefronts along Market Street, Arlington, and Wooster Ave. Existing subgrade often needs stabilization before new pavement.' },
               ].map((app, i) => (
-                <div key={i} className="bg-gray-50 p-6 rounded border-l-4 border-[#00c97e]">
-                  <h3 className="font-semibold text-gray-900 mb-2">{app.h}</h3>
-                  <p className="text-gray-700 text-sm">{app.b}</p>
-                </div>
+                <Reveal key={i} delay={120 + i * 120}>
+                  <div className="bg-gray-50 p-6 rounded border-l-4 border-[#00c97e] h-full">
+                    <h3 className="font-semibold text-gray-900 mb-2">{app.h}</h3>
+                    <p className="text-gray-700 text-sm">{app.b}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Akron FAQ</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Akron FAQ</h2>
+            </Reveal>
             <div className="space-y-6">
               {faqData.map((faq, i) => (
-                <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+                <Reveal key={i} delay={i * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Stabilize It Before You Build</h2>
-            <p className="text-lg text-gray-300 mb-6">Free on-site DCP testing across Summit, Portage, and Medina counties. Same-day pickup from Solon warehouse.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Request a Site Visit
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Stabilize It Before You Build</h2>
+              <p className="text-lg text-gray-300 mb-8">Free on-site DCP testing across Summit, Portage, and Medina counties. Same-day pickup from Solon warehouse.</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Request a Site Visit
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

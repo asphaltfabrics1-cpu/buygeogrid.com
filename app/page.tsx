@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import Script from 'next/script';
 import type { Metadata } from 'next';
@@ -20,15 +21,24 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const benefits = [
-    { number: '40%', label: 'Cost Reduction', desc: 'Lower aggregate costs' },
-    { number: 'Up to 3x', label: 'Longer Life', desc: 'Could extend pavement lifespan' },
-    { number: '24/7', label: 'Support', desc: 'Expert consultation' },
+  const signatureServices = [
+    {
+      eyebrow: 'On-site testing',
+      title: 'Free DCP Testing',
+      desc: 'We come to your site and test your subgrade. Real CBR data, not guesswork.',
+      href: '/contact',
+      cta: 'Request a DCP test',
+    },
+    {
+      eyebrow: 'Engineered design',
+      title: 'Tensar+ Design Support',
+      desc: 'We run your soil data through Tensar Plus and give you an engineered recommendation.',
+      href: '/blog/dcp-testing-tensar-plus',
+      cta: 'How the design works',
+    },
   ];
 
-  const features = [
-    { title: 'Free DCP Testing', desc: 'We come to your site and test your subgrade. Real CBR data, not guesswork.', href: '/contact' },
-    { title: 'Tensar+ Design Support', desc: 'We run your soil data through Tensar Plus and give you an engineered recommendation.', href: '/blog/dcp-testing-tensar-plus' },
+  const secondaryServices = [
     { title: 'Cost Savings Calculator', desc: 'See how much geogrid can save on aggregate costs for your next project.', href: '/cost-calculator' },
     { title: 'Lunch & Learn Training', desc: 'Free training for your team with PDH credits for engineers. We bring lunch.', href: '/lunch-and-learn' },
   ];
@@ -130,42 +140,52 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-[#1a1a1a] text-white">
-          <div className="max-w-7xl mx-auto px-6 py-16">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                  Professional Geosynthetic Solutions for Civil Infrastructure
-                </h1>
-                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Authorized distributor of Tensar Geogrids and Solmax Mirafi geotextiles.
-                  Expert consultation and competitive pricing for projects across Northern Ohio.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
-                  >
-                    Get Free DCP Test
-                  </Link>
-                  <Link
-                    href="tel:4403681420"
-                    className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200"
-                  >
-                    Call (440) 368-1420
-                  </Link>
-                </div>
+        <section className="relative bg-[#1a1a1a] text-white overflow-hidden">
+          {/* Background image */}
+          <div className="absolute inset-0">
+            <img
+              src="/images/tensar-geogrid-blog-northern-ohio.jpg"
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover opacity-45"
+            />
+            {/* Gradient overlay — dark on left for text legibility, fades right */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a] via-[#1a1a1a]/85 to-[#1a1a1a]/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/70 via-transparent to-transparent" />
+          </div>
+
+          {/* Content */}
+          <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-32 lg:py-40">
+            <div className="max-w-3xl">
+              <div className="inline-block text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-6">
+                Northern Ohio · Solon Warehouse
               </div>
-              <div className="hidden md:flex justify-center items-center">
-                <img
-                  src="/images/logos/afsupplylogo_transparent.png"
-                  alt="AF Supply Logo"
-                  className="w-full max-w-xl h-auto"
-                />
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
+                Geogrids, geotextiles, and interlayers — stocked in Solon.
+              </h1>
+              <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
+                Authorized Tensar and Solmax distributor serving contractors across Northern Ohio. Free on-site DCP testing. Pickup at our Solon warehouse.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
+                >
+                  Get Free DCP Test
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link
+                  href="tel:4403681420"
+                  className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors duration-200 group"
+                >
+                  <span>Call (440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* Capabilities Flyer Download Band */}
         <section className="py-8 px-6 bg-[#00c97e] text-white">
@@ -188,157 +208,231 @@ export default function Home() {
         </section>
 
         {/* What We Do Differently */}
-        <section className="py-16 px-6 bg-gray-50">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              More Than a Supplier
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Anyone can sell you a roll of geogrid. We help you figure out which one you actually need.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              We test your subgrade with a DCP — at no cost to you — run the results through Tensar Plus design software, and give you an engineered recommendation — the right product and the right aggregate thickness for your actual site conditions. When you fail a proof roll, we show up with a solution. When your engineers need PDH credits, we bring lunch and training. That&apos;s the difference between a local Ohio distributor and a supply house.
-            </p>
-            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-              Schedule a Free Site Assessment
-            </Link>
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-[1fr_1.3fr] gap-12 md:gap-16 items-start">
+              <Reveal>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The difference</div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-6">
+                  More Than a Supplier
+                </h2>
+                <p className="text-xl text-gray-800 leading-snug font-medium">
+                  Anyone can sell you a roll of geogrid. We help you figure out which one you actually need.
+                </p>
+              </Reveal>
+              <Reveal delay={120}>
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  We test your subgrade with a DCP — at no cost to you — run the results through Tensar Plus design software, and give you an engineered recommendation — the right product and the right aggregate thickness for your actual site conditions. When you fail a proof roll, we show up with a solution. When your engineers need PDH credits, we bring lunch and training. That&apos;s the difference between a local Ohio distributor and a supply house.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
+                >
+                  Schedule a Free Site Assessment
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+              </Reveal>
+            </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-16 px-6 bg-white">
+        {/* Signature Services */}
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
-                <Link
-                  key={index}
-                  href={feature.href}
-                  className="bg-white rounded p-6 border border-gray-200 hover:border-[#00c97e] transition-colors duration-200 block"
-                >
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">{feature.desc}</p>
-                </Link>
+            <Reveal className="max-w-2xl mb-14">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Services</div>
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
+                How we help before you buy.
+              </h2>
+            </Reveal>
+
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              {signatureServices.map((s, i) => (
+                <Reveal key={i} delay={i * 120}>
+                  <Link
+                    href={s.href}
+                    className="group relative bg-[#1a1a1a] text-white p-8 md:p-10 rounded overflow-hidden hover:bg-[#111111] transition-colors duration-200 flex flex-col h-full"
+                  >
+                    <div className="absolute top-0 left-0 h-1 w-24 bg-[#00c97e]" />
+                    <div className="text-[#00c97e] text-xs font-semibold uppercase tracking-[0.2em] mb-4 mt-2">{s.eyebrow}</div>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">{s.title}</h3>
+                    <p className="text-gray-300 leading-relaxed mb-8 flex-grow">{s.desc}</p>
+                    <div className="inline-flex items-center gap-2 text-[#00c97e] font-semibold group-hover:translate-x-1 transition-transform duration-200">
+                      {s.cta}
+                      <span>→</span>
+                    </div>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4 mt-6">
+              {secondaryServices.map((s, i) => (
+                <Reveal key={i} delay={240 + i * 120}>
+                  <Link
+                    href={s.href}
+                    className="group flex items-start gap-4 py-5 px-6 border border-gray-200 rounded hover:border-[#00c97e] hover:bg-gray-50 transition-colors duration-200"
+                  >
+                    <div className="flex-grow">
+                      <div className="font-semibold text-gray-900 mb-1 group-hover:text-[#00c97e] transition-colors">{s.title}</div>
+                      <div className="text-sm text-gray-600">{s.desc}</div>
+                    </div>
+                    <div className="text-gray-400 group-hover:text-[#00c97e] group-hover:translate-x-1 transition-all duration-200 self-center">→</div>
+                  </Link>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Why Geogrid Section */}
-        <section className="py-16 px-6 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-              Why Use Geogrid?
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Geogrid is one of the most practical ways to improve base performance without overbuilding. By mechanically stabilizing aggregate, it can allow for reduced stone thickness while maintaining or improving structural capacity. This often translates to less excavation, fewer material deliveries, and shorter project timelines. Geogrid also helps prevent subgrade intrusion—when soft soils migrate into the base layer and weaken it over time. From residential driveways to commercial parking lots and municipal roadways, Geogrid offers a reliable way to build longer-lasting surfaces with fewer callbacks.
-            </p>
-          </div>
-        </section>
+        {/* Deep-content trio: Why Geogrid / DCP Testing / Serving Northern Ohio */}
+        <section className="py-20 md:py-24 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-y-0 md:gap-x-12 lg:gap-x-16">
+              <Reveal as="article" className="bg-gray-50 md:bg-transparent border border-gray-200 md:border-0 md:border-t-2 md:border-[#00c97e] p-6 md:p-0 md:pt-8 rounded md:rounded-none">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#00c97e] md:text-gray-500 mb-4">01 — Product</div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5 leading-tight">
+                  Why Use Geogrid?
+                </h2>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Geogrid is one of the most practical ways to improve base performance without overbuilding. By mechanically stabilizing aggregate, it can allow for reduced stone thickness while maintaining or improving structural capacity. This often translates to less excavation, fewer material deliveries, and shorter project timelines. Geogrid also helps prevent subgrade intrusion—when soft soils migrate into the base layer and weaken it over time. From residential driveways to commercial parking lots and municipal roadways, Geogrid offers a reliable way to build longer-lasting surfaces with fewer callbacks.
+                </p>
+              </Reveal>
 
-        {/* DCP Testing Section */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-              What Is DCP Testing?
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              A Dynamic Cone Penetrometer (DCP) is a portable tool used to measure soil strength on-site. It works by dropping a weighted hammer onto a steel rod with a cone tip, recording how far the cone penetrates with each blow. The results correlate to California Bearing Ratio (CBR) values, which help determine how much structural support your subgrade can provide. DCP testing gives you real data about your soil conditions—so you can make informed decisions about whether Geogrid is needed and which product is right for your project. We offer free DCP testing throughout Northern Ohio.
-            </p>
-          </div>
-        </section>
+              <Reveal as="article" delay={120} className="bg-gray-50 md:bg-transparent border border-gray-200 md:border-0 md:border-t-2 md:border-[#00c97e] p-6 md:p-0 md:pt-8 rounded md:rounded-none">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#00c97e] md:text-gray-500 mb-4">02 — Testing</div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5 leading-tight">
+                  What Is DCP Testing?
+                </h2>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  A Dynamic Cone Penetrometer (DCP) is a portable tool used to measure soil strength on-site. It works by dropping a weighted hammer onto a steel rod with a cone tip, recording how far the cone penetrates with each blow. The results correlate to California Bearing Ratio (CBR) values, which help determine how much structural support your subgrade can provide. DCP testing gives you real data about your soil conditions—so you can make informed decisions about whether Geogrid is needed and which product is right for your project. We offer free DCP testing throughout Northern Ohio.
+                </p>
+              </Reveal>
 
-        {/* Service Area Section */}
-        <section className="py-16 px-6 bg-gray-50">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Serving Northern Ohio
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We stock Tensar Geogrids and Solmax Mirafi Geotextiles at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours. For time-sensitive projects, call us directly and we&apos;ll work to meet your schedule. We also provide on-site DCP soil testing and technical consultations at no charge throughout Northern Ohio.
-            </p>
+              <Reveal as="article" delay={240} className="bg-gray-50 md:bg-transparent border border-gray-200 md:border-0 md:border-t-2 md:border-[#00c97e] p-6 md:p-0 md:pt-8 rounded md:rounded-none">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#00c97e] md:text-gray-500 mb-4">03 — Coverage</div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5 leading-tight">
+                  Serving Northern Ohio
+                </h2>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  We stock Tensar Geogrids and Solmax Mirafi Geotextiles at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours. For time-sensitive projects, call us directly and we&apos;ll work to meet your schedule. We also provide on-site DCP soil testing and technical consultations at no charge throughout Northern Ohio.
+                </p>
+              </Reveal>
+            </div>
           </div>
         </section>
 
         {/* Authorized Distributor Section */}
-        <section className="py-16 px-6 bg-gray-50">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Authorized Distributor
-            </h2>
-            <p className="text-lg text-gray-700 mb-12">
-              Proud distributor of Tensar Geogrids, Solmax Mirafi Geotextiles, and Patch Packs
-            </p>
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="max-w-2xl mb-14">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Authorized Distributor</div>
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
+                Proud distributor of Tensar Geogrids, Solmax Mirafi Geotextiles, and Patch Packs.
+              </h2>
+            </Reveal>
 
-            <div className="flex justify-center items-center gap-8 mb-12 flex-wrap">
+            {/* Product showcase — actual products we stock */}
+            <Reveal delay={120} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              {[
+                { img: '/images/products/solution-interax.png', brand: 'Tensar', product: 'InterAx® Geogrid', href: '/geogrid' },
+                { img: '/images/products/mirafi-500x.jpeg', brand: 'Solmax', product: 'Mirafi® Geotextile', href: '/woven-fabrics' },
+                { img: '/images/products/petrotac.jpg', brand: 'Propex', product: 'Petrotac® Interlayer', href: '/interlayers' },
+                { img: '/images/products/patch-packs.png', brand: 'FPT', product: 'Patch Packs™', href: '/patch-packs' },
+              ].map((p, i) => (
+                <Link
+                  key={i}
+                  href={p.href}
+                  className="group bg-[#252525] hover:bg-[#2f2f2f] transition-colors duration-200 rounded overflow-hidden flex flex-col"
+                >
+                  <div className="aspect-square bg-white/5 flex items-center justify-center p-6 overflow-hidden">
+                    <img
+                      src={p.img}
+                      alt={`${p.brand} ${p.product}`}
+                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-4 border-t border-white/10">
+                    <div className="text-[#00c97e] text-xs uppercase tracking-wider font-semibold mb-1">{p.brand}</div>
+                    <div className="font-semibold text-sm md:text-base">{p.product}</div>
+                  </div>
+                </Link>
+              ))}
+            </Reveal>
+
+            <Reveal delay={200} className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 border border-white/10 mb-12">
               <Link
                 href="https://asphaltfabrics.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity duration-200 hover:opacity-75 p-6 bg-white rounded border border-gray-200"
+                className="bg-[#1a1a1a] hover:bg-[#252525] transition-colors duration-200 flex items-center justify-center p-8 min-h-[140px]"
+                aria-label="Asphalt Fabrics Supply"
               >
                 <img
                   src="/images/logos/logo-8.22.18.jpg"
-                  alt="Asphalt Fabrics Supply Logo"
-                  className="h-20"
+                  alt="Asphalt Fabrics Supply"
+                  className="max-h-16 w-auto"
                 />
               </Link>
               <Link
                 href="https://www.tensarcorp.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity duration-200 hover:opacity-75 p-6 bg-white rounded border border-gray-200"
+                className="bg-[#1a1a1a] hover:bg-[#252525] transition-colors duration-200 flex items-center justify-center p-8 min-h-[140px]"
+                aria-label="Tensar"
               >
                 <img
                   src="/images/logos/tensar.png"
-                  alt="Tensar Logo"
-                  className="h-20"
+                  alt="Tensar"
+                  className="max-h-16 w-auto brightness-0 invert opacity-90"
                 />
               </Link>
               <Link
                 href="https://www.solmax.com/us/en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity duration-200 hover:opacity-75 p-6 bg-white rounded border border-gray-200"
+                className="bg-[#1a1a1a] hover:bg-[#252525] transition-colors duration-200 flex items-center justify-center p-8 min-h-[140px]"
+                aria-label="Solmax"
               >
                 <img
                   src="/images/logos/solmax.png"
-                  alt="Solmax Logo"
-                  className="h-20"
+                  alt="Solmax"
+                  className="max-h-16 w-auto brightness-0 invert opacity-90"
                 />
               </Link>
               <Link
                 href="https://fptinfrastructure.com/products/pavement-repair-materials/patch-packs/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity duration-200 hover:opacity-75 p-6 bg-white rounded border border-gray-200"
+                className="bg-[#1a1a1a] hover:bg-[#252525] transition-colors duration-200 flex items-center justify-center p-8 min-h-[140px]"
+                aria-label="Patch Packs"
               >
                 <img
                   src="/images/logos/PatchPacksTM Logo 2in.png"
-                  alt="Patch Packs Logo"
-                  className="h-20"
+                  alt="Patch Packs"
+                  className="max-h-16 w-auto brightness-0 invert opacity-90"
                 />
               </Link>
-            </div>
+            </Reveal>
 
-            <div className="bg-white border-2 border-[#00c97e] rounded p-6 text-left max-w-3xl mx-auto">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Can&apos;t Find What You Need?</h3>
-              <p className="text-gray-700 leading-relaxed">
-                We can source it directly from the manufacturer. Click the logos above to explore
-                their full catalogs, then contact us about any product they offer. We&apos;re here
-                to get you exactly what your project needs.
+            <Reveal delay={240} className="border-l-2 border-[#00c97e] pl-6 max-w-3xl">
+              <h3 className="text-xl md:text-2xl font-bold mb-3">Can&apos;t find what you need?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                We can source it directly from the manufacturer. Click any logo above to explore their full catalogs, then contact us about any product they offer. We&apos;re here to get you exactly what your project needs.
               </p>
-            </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Testimonial Section */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
-              What Our Customers Say
-            </h2>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
+                What Our Customers Say
+              </h2>
+            </Reveal>
+            <Reveal delay={120} as="div">
             <figure className="bg-gray-50 border border-gray-200 rounded p-8 md:p-10">
               <div className="flex items-center mb-4" aria-label="5 out of 5 stars">
                 {[0,1,2,3,4].map((i) => (
@@ -360,6 +454,7 @@ export default function Home() {
                 <span className="block text-sm text-gray-500 font-normal mt-1">Google Review</span>
               </figcaption>
             </figure>
+            </Reveal>
           </div>
         </section>
 
@@ -367,7 +462,7 @@ export default function Home() {
         <section className="py-16 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+              <Reveal>
                 <div className="inline-block bg-[#00c97e] text-white px-4 py-2 rounded text-sm font-semibold mb-4">
                   100% FREE
                 </div>
@@ -403,8 +498,8 @@ export default function Home() {
                 >
                   Learn More & Schedule
                 </Link>
-              </div>
-              <div className="rounded-lg overflow-hidden h-96 bg-gray-900">
+              </Reveal>
+              <Reveal delay={120} className="rounded-lg overflow-hidden h-96 bg-gray-900">
                 <video
                   autoPlay
                   loop
@@ -416,7 +511,7 @@ export default function Home() {
                   <source src="/videos/lunch-and-learn.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -424,26 +519,28 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-20 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get expert consultation, free DCP testing, and competitive pricing on all products
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
-              >
-                Request a Quote
-              </Link>
-              <Link
-                href="tel:4403681420"
-                className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200"
-              >
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                Get expert consultation, free DCP testing, and competitive pricing on all products
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
+                >
+                  Request a Quote
+                </Link>
+                <Link
+                  href="tel:4403681420"
+                  className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200"
+                >
+                  (440) 368-1420
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

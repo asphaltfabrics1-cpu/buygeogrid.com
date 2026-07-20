@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -69,9 +70,13 @@ export default function GeogridVsGeotextile() {
           badge="Ohio Distributor"
         />
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Side-By-Side</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Compare</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight text-center">Side-By-Side</h2>
+            </Reveal>
+            <Reveal delay={120}>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
@@ -101,83 +106,99 @@ export default function GeogridVsGeotextile() {
                 </tbody>
               </table>
             </div>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">The Decision Tree</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">How to pick</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight text-center">The Decision Tree</h2>
+            </Reveal>
             <div className="space-y-4">
-              <div className="bg-white p-6 rounded shadow-sm">
-                <p className="text-lg font-semibold text-gray-900 mb-2">Building a driveway, road, or work pad?</p>
-                <p className="text-gray-700">→ You need geogrid for mechanical stabilization.</p>
-              </div>
-              <div className="bg-white p-6 rounded shadow-sm">
-                <p className="text-lg font-semibold text-gray-900 mb-2">Is the subgrade soft, wet, or clay-heavy (CBR under 3)?</p>
-                <p className="text-gray-700">→ Add woven geotextile below the geogrid as a separator.</p>
-              </div>
-              <div className="bg-white p-6 rounded shadow-sm">
-                <p className="text-lg font-semibold text-gray-900 mb-2">Building a French drain or drainage system?</p>
-                <p className="text-gray-700">→ Nonwoven geotextile (135N/140N/180N) — no geogrid needed.</p>
-              </div>
-              <div className="bg-white p-6 rounded shadow-sm">
-                <p className="text-lg font-semibold text-gray-900 mb-2">Retaining wall backfill or planter drainage?</p>
-                <p className="text-gray-700">→ Nonwoven geotextile as a filter layer.</p>
-              </div>
-              <div className="bg-white p-6 rounded shadow-sm">
-                <p className="text-lg font-semibold text-gray-900 mb-2">Under a stone-mulch decorative bed?</p>
-                <p className="text-gray-700">→ Woven geotextile as a weed barrier that still lets water through.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Products</h2>
-            <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/geogrid" className="bg-green-50 hover:bg-green-100 p-6 rounded border-l-4 border-[#00c97e] transition-colors">
-                <h3 className="font-semibold text-gray-900 mb-2">Geogrids</h3>
-                <p className="text-sm text-gray-700">Tensar InterAx, TriAx, H-Series — full lineup</p>
-              </Link>
-              <Link href="/woven-fabrics" className="bg-blue-50 hover:bg-blue-100 p-6 rounded border-l-4 border-blue-500 transition-colors">
-                <h3 className="font-semibold text-gray-900 mb-2">Woven Geotextiles</h3>
-                <p className="text-sm text-gray-700">Mirafi 500X, 600X — separation under load</p>
-              </Link>
-              <Link href="/nonwoven-fabrics" className="bg-gray-100 hover:bg-gray-200 p-6 rounded border-l-4 border-gray-500 transition-colors">
-                <h3 className="font-semibold text-gray-900 mb-2">Nonwoven Geotextiles</h3>
-                <p className="text-sm text-gray-700">Mirafi 135N, 140N, 180N — drainage & filtration</p>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 px-6 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">FAQ</h2>
-            <div className="space-y-6">
-              {faqData.map((faq, i) => (
-                <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+              {[
+                { q: 'Building a driveway, road, or work pad?', a: '→ You need geogrid for mechanical stabilization.' },
+                { q: 'Is the subgrade soft, wet, or clay-heavy (CBR under 3)?', a: '→ Add woven geotextile below the geogrid as a separator.' },
+                { q: 'Building a French drain or drainage system?', a: '→ Nonwoven geotextile (135N/140N/180N) — no geogrid needed.' },
+                { q: 'Retaining wall backfill or planter drainage?', a: '→ Nonwoven geotextile as a filter layer.' },
+                { q: 'Under a stone-mulch decorative bed?', a: '→ Woven geotextile as a weed barrier that still lets water through.' },
+              ].map((row, i) => (
+                <Reveal key={i} delay={120 + i * 120}>
+                  <div className="bg-white p-6 rounded shadow-sm">
+                    <p className="text-lg font-semibold text-gray-900 mb-2">{row.q}</p>
+                    <p className="text-gray-700">{row.a}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Still Not Sure?</h2>
-            <p className="text-lg text-gray-300 mb-6">Call us. Free design help from Tensar&apos;s engineering team included with every material order.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Get Design Help
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
+        <section className="py-20 md:py-24 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Related</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Related Products</h2>
+            </Reveal>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Reveal delay={120}>
+                <Link href="/geogrid" className="block bg-green-50 hover:bg-green-100 p-6 rounded border-l-4 border-[#00c97e] transition-colors h-full">
+                  <h3 className="font-semibold text-gray-900 mb-2">Geogrids</h3>
+                  <p className="text-sm text-gray-700">Tensar InterAx, TriAx, H-Series — full lineup</p>
+                </Link>
+              </Reveal>
+              <Reveal delay={240}>
+                <Link href="/woven-fabrics" className="block bg-blue-50 hover:bg-blue-100 p-6 rounded border-l-4 border-blue-500 transition-colors h-full">
+                  <h3 className="font-semibold text-gray-900 mb-2">Woven Geotextiles</h3>
+                  <p className="text-sm text-gray-700">Mirafi 500X, 600X — separation under load</p>
+                </Link>
+              </Reveal>
+              <Reveal delay={360}>
+                <Link href="/nonwoven-fabrics" className="block bg-gray-100 hover:bg-gray-200 p-6 rounded border-l-4 border-gray-500 transition-colors h-full">
+                  <h3 className="font-semibold text-gray-900 mb-2">Nonwoven Geotextiles</h3>
+                  <p className="text-sm text-gray-700">Mirafi 135N, 140N, 180N — drainage & filtration</p>
+                </Link>
+              </Reveal>
             </div>
+          </div>
+        </section>
+
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">FAQ</h2>
+            </Reveal>
+            <div className="space-y-6">
+              {faqData.map((faq, i) => (
+                <Reveal key={i} delay={i * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Still Not Sure?</h2>
+              <p className="text-lg text-gray-300 mb-8">Call us. Free design help from Tensar&apos;s engineering team included with every material order.</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Get Design Help
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

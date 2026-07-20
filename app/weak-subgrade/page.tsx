@@ -1,13 +1,14 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Weak Subgrade Under Asphalt or Concrete? | Fix It Before You Pave | Ohio',
-  description: 'A pavement is only as good as the subgrade under it. If yours is soft, clay-heavy, or scoring low on the DCP, geogrid + separation fabric fixes it before you spend the money on asphalt or concrete. Northern Ohio distributor.',
-  keywords: ['weak subgrade fix', 'soft subbase', 'subgrade stabilization', 'CBR subgrade', 'geogrid subgrade', 'DCP test Ohio', 'proof roll fail', 'Tensar subgrade', 'Cleveland Akron subgrade'],
+  description: 'A pavement is only as good as the subgrade under it. If yours is soft, clay-heavy, or scoring low on the DCP, geogrid + separation fabric fixes the soft ground (or soft earth) before you spend the money on asphalt or concrete. Northern Ohio distributor.',
+  keywords: ['weak subgrade fix', 'soft subbase', 'subgrade stabilization', 'CBR subgrade', 'geogrid subgrade', 'DCP test Ohio', 'proof roll fail', 'Tensar subgrade', 'Cleveland Akron subgrade', 'soft earth', 'soft earth solutions'],
   alternates: { canonical: 'https://www.buygeogrid.com/weak-subgrade' },
   openGraph: {
     title: 'Weak Subgrade? Fix It Before You Pave',
@@ -23,7 +24,7 @@ const faqData = [
   },
   {
     question: 'What does geogrid actually do for a weak subgrade?',
-    answer: 'Geogrid doesn\'t make the soil stronger. It changes how load transfers through the base above the soil. Aggregate placed on top of a Tensar InterAx or TriAx geogrid interlocks through the apertures and forms a stiff, mechanically stabilized layer that spreads wheel loads over a much wider area of subgrade. Same wheel load, much lower stress on the soft soil, no more rutting or pumping.',
+    answer: 'Geogrid doesn\'t make the soil stronger. It changes how load transfers through the base above the soil. Aggregate placed on top of a Tensar InterAx or TriAx geogrid interlocks through the apertures and forms a stiff, mechanically stabilized layer that spreads wheel loads over a much wider area of subgrade. Same wheel load, much lower stress on the soft ground (also called soft earth), no more rutting or pumping.',
   },
   {
     question: 'Do I need one layer or two?',
@@ -69,21 +70,27 @@ export default function WeakSubgrade() {
           badge="Contractor & DOT-Approved Solutions"
         />
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why the Subgrade Matters More Than the Pavement</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Every pavement section — 4 inches of asphalt, 6 inches of concrete, whatever the spec is — sits on top of an aggregate base, which sits on top of the subgrade. If the subgrade moves, the base moves, and the pavement above cracks, rolls, or fails outright.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              The subgrade is the invisible thing that determines whether your project lasts 20 years or 5. Getting it right — before the paver shows up — is the cheapest engineering decision on the job.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Why it matters</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Why the Subgrade Matters More Than the Pavement</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Every pavement section — 4 inches of asphalt, 6 inches of concrete, whatever the spec is — sits on top of an aggregate base, which sits on top of the subgrade. If the subgrade moves, the base moves, and the pavement above cracks, rolls, or fails outright.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The subgrade is the invisible thing that determines whether your project lasts 20 years or 5. Getting it right — before the paver shows up — is the cheapest engineering decision on the job.
+              </p>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Weak Subgrade Symptoms</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Symptoms</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Weak Subgrade Symptoms</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 'Proof roll failed inspection',
@@ -93,71 +100,91 @@ export default function WeakSubgrade() {
                 'Water pools instead of drains',
                 'Existing pavement cracks in a wavy pattern (subgrade movement)',
               ].map((sym, i) => (
-                <div key={i} className="bg-white p-4 rounded border-l-4 border-[#00c97e]">
-                  <p className="text-gray-800">{sym}</p>
-                </div>
+                <Reveal key={i} delay={120 + i * 120}>
+                  <div className="bg-white p-4 rounded border-l-4 border-[#00c97e] h-full">
+                    <p className="text-gray-800">{sym}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Stabilization Options — Ranked by Cost</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The options</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">The Stabilization Options — Ranked by Cost</h2>
+            </Reveal>
             <div className="space-y-6">
-              <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded">
-                <div className="flex items-baseline justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-gray-900">Dig Out and Replace</h3>
-                  <span className="text-sm font-semibold text-red-700">Most Expensive</span>
+              <Reveal delay={120}>
+                <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded">
+                  <div className="flex items-baseline justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900">Dig Out and Replace</h3>
+                    <span className="text-sm font-semibold text-red-700">Most Expensive</span>
+                  </div>
+                  <p className="text-gray-700">Excavate the soft material 24–36 inches down. Haul it off. Import structural fill. Compact in lifts. Days of work per acre, thousands per truckload for hauling, spoil disposal fees. Standard on big jobs before geogrid was widely available.</p>
                 </div>
-                <p className="text-gray-700">Excavate the soft material 24–36 inches down. Haul it off. Import structural fill. Compact in lifts. Days of work per acre, thousands per truckload for hauling, spoil disposal fees. Standard on big jobs before geogrid was widely available.</p>
-              </div>
+              </Reveal>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded">
-                <div className="flex items-baseline justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-gray-900">Cement or Lime Stabilization</h3>
-                  <span className="text-sm font-semibold text-yellow-700">Middle</span>
+              <Reveal delay={240}>
+                <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded">
+                  <div className="flex items-baseline justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900">Cement or Lime Stabilization</h3>
+                    <span className="text-sm font-semibold text-yellow-700">Middle</span>
+                  </div>
+                  <p className="text-gray-700">Mix cement or lime into the top 8–12 inches of soft soil to increase its strength. Works well on the right soil types but requires specialized equipment and creates a rigid layer that can crack. Not always practical on smaller sites.</p>
                 </div>
-                <p className="text-gray-700">Mix cement or lime into the top 8–12 inches of soft soil to increase its strength. Works well on the right soil types but requires specialized equipment and creates a rigid layer that can crack. Not always practical on smaller sites.</p>
-              </div>
+              </Reveal>
 
-              <div className="bg-green-50 border-l-4 border-[#00c97e] p-6 rounded">
-                <div className="flex items-baseline justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-gray-900">Geogrid Mechanical Stabilization</h3>
-                  <span className="text-sm font-semibold text-[#00c97e]">Least Expensive</span>
+              <Reveal delay={360}>
+                <div className="bg-green-50 border-l-4 border-[#00c97e] p-6 rounded">
+                  <div className="flex items-baseline justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900">Geogrid Mechanical Stabilization</h3>
+                    <span className="text-sm font-semibold text-[#00c97e]">Least Expensive</span>
+                  </div>
+                  <p className="text-gray-700">One or two rolls of geogrid at the subgrade interface, aggregate placed and compacted on top. No excavation, no cement, no wait time. Standard Tensar Plus design produces a fully engineered spec for the loads you&apos;re building for.</p>
                 </div>
-                <p className="text-gray-700">One or two rolls of geogrid at the subgrade interface, aggregate placed and compacted on top. No excavation, no cement, no wait time. Standard Tensar Plus design produces a fully engineered spec for the loads you&apos;re building for.</p>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">FAQ</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">FAQ</h2>
+            </Reveal>
             <div className="space-y-6">
               {faqData.map((faq, i) => (
-                <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+                <Reveal key={i} delay={i * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Got a Weak Subgrade Situation?</h2>
-            <p className="text-lg text-gray-300 mb-6">Free on-site DCP testing across Northern Ohio. We come out, take the readings, and spec the fix in writing.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                Request a Site Visit
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Got a Weak Subgrade Situation?</h2>
+              <p className="text-lg text-gray-300 mb-8">Free on-site DCP testing across Northern Ohio. We come out, take the readings, and spec the fix in writing.</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  Request a Site Visit
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

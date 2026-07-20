@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -69,9 +70,13 @@ export default function PetrotacVsPavingFabric() {
           badge="Ohio Distributor"
         />
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Side-By-Side</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Compare</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight text-center">Side-By-Side</h2>
+            </Reveal>
+            <Reveal delay={120}>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
@@ -100,75 +105,95 @@ export default function PetrotacVsPavingFabric() {
                 </tbody>
               </table>
             </div>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Simple Rule</h2>
+            <Reveal className="mb-6">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">How to pick</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">The Simple Rule</h2>
+            </Reveal>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded shadow-sm border-l-4 border-[#00c97e]">
-                <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Buy It Yourself</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Petrotac</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  You have specific cracks or joints you want to bridge. You can install it yourself with a torch. You&apos;re working around driveways, sidewalks, small commercial pavement.
-                </p>
-                <Link href="/interlayers" className="text-[#00c97e] font-semibold hover:underline">
-                  Petrotac widths & pricing →
-                </Link>
-              </div>
-              <div className="bg-white p-6 rounded shadow-sm border-l-4 border-blue-500">
-                <div className="text-sm font-semibold text-blue-700 uppercase tracking-wide mb-2">Have It Installed</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Paving Fabric</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  You&apos;re overlaying a full lot or road segment. You want reflective crack protection across the entire pavement, not just at cracks. Our sister company AF&amp;S installs this.
-                </p>
-                <a href="https://www.asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 font-semibold hover:underline">
-                  Asphalt Fabrics & Specialties →
-                </a>
-              </div>
+              <Reveal delay={120}>
+                <div className="bg-white p-6 rounded shadow-sm border-l-4 border-[#00c97e] h-full">
+                  <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Buy It Yourself</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Petrotac</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    You have specific cracks or joints you want to bridge. You can install it yourself with a torch. You&apos;re working around driveways, sidewalks, small commercial pavement.
+                  </p>
+                  <Link href="/interlayers" className="inline-flex items-center gap-1 text-[#00c97e] font-semibold hover:gap-2 transition-all">
+                    Petrotac widths & pricing <span>→</span>
+                  </Link>
+                </div>
+              </Reveal>
+              <Reveal delay={240}>
+                <div className="bg-white p-6 rounded shadow-sm border-l-4 border-blue-500 h-full">
+                  <div className="text-sm font-semibold text-blue-700 uppercase tracking-wide mb-2">Have It Installed</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Paving Fabric</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    You&apos;re overlaying a full lot or road segment. You want reflective crack protection across the entire pavement, not just at cracks. Our sister company AF&amp;S installs this.
+                  </p>
+                  <a href="https://www.asphaltfabrics.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-blue-700 font-semibold hover:gap-2 transition-all">
+                    Asphalt Fabrics & Specialties <span>→</span>
+                  </a>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 md:py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Both Products Solve the Same Problem</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Reflective cracking — cracks in an existing pavement that show back up in a new overlay within a season or two. Both Petrotac and contractor-grade paving fabric put an asphalt-saturated membrane between the old and new pavement, forcing any movement in the old crack to dissipate laterally instead of propagating up into the new layer.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              The choice is about install scale, not effectiveness. Both work when installed properly.
-            </p>
+            <Reveal>
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Why it matters</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Both Products Solve the Same Problem</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Reflective cracking — cracks in an existing pavement that show back up in a new overlay within a season or two. Both Petrotac and contractor-grade paving fabric put an asphalt-saturated membrane between the old and new pavement, forcing any movement in the old crack to dissipate laterally instead of propagating up into the new layer.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The choice is about install scale, not effectiveness. Both work when installed properly.
+              </p>
+            </Reveal>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">FAQ</h2>
+            <Reveal className="mb-8">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">FAQ</h2>
+            </Reveal>
             <div className="space-y-6">
               {faqData.map((faq, i) => (
-                <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
+                <Reveal key={i} delay={i * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Stop the Cracks?</h2>
-            <p className="text-lg text-gray-300 mb-6">Petrotac in stock. Call for pricing on rolls or to talk through your job.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/interlayers" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200">
-                See Petrotac Options
-              </Link>
-              <Link href="tel:4403681420" className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white border-2 border-white/30 hover:border-white/50 rounded transition-colors duration-200">
-                (440) 368-1420
-              </Link>
-            </div>
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Ready to Stop the Cracks?</h2>
+              <p className="text-lg text-gray-300 mb-8">Petrotac in stock. Call for pricing on rolls or to talk through your job.</p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link href="/interlayers" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
+                  See Petrotac Options
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
+                  <span>(440) 368-1420</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>
