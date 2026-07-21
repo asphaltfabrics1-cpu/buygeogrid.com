@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
         destination: 'https://www.buygeogrid.com/:path*',
         permanent: true,
       },
+      // AFS concrete landing page — legacy slug redirected to the specific-services slug
+      {
+        source: '/concrete-repair',
+        destination: '/concrete-crack-sealing',
+        permanent: true,
+      },
     ];
   },
   async headers() {

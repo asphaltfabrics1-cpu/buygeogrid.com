@@ -1,0 +1,612 @@
+import AFSFooter from '@/components/AFSFooter';
+import Reveal from '@/components/Reveal';
+import ConcreteRepairForm from '@/components/ConcreteRepairForm';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Concrete Repair Ohio | Crack Seal, Joint Repair, Parking Lots & Roads | AFS',
+  description: 'Specialty commercial & industrial concrete repair by Asphalt Fabrics & Specialties. Gray crack seal + FibreCrete polymer joint repair for parking lots, roads, loading docks, warehouses, and municipal concrete. Northeast Ohio, since 2003. Free 24-hr estimates.',
+  keywords: [
+    'concrete repair Cleveland',
+    'concrete repair Ohio',
+    'concrete crack sealing Ohio',
+    'gray crack seal concrete',
+    'commercial parking lot concrete repair',
+    'road concrete repair Ohio',
+    'loading dock concrete repair',
+    'dock apron repair Ohio',
+    'warehouse floor joint repair',
+    'FibreCrete installer Ohio',
+    'polymer concrete joint repair',
+    'industrial concrete repair Ohio',
+    'commercial concrete crack sealing',
+    'municipal concrete repair Ohio',
+    'Asphalt Fabrics Specialties concrete',
+    'Cuyahoga concrete repair',
+    'Northeast Ohio concrete joint sealing',
+  ],
+  alternates: { canonical: 'https://www.buygeogrid.com/concrete-crack-sealing' },
+  openGraph: {
+    title: 'Concrete Repair — Roads, Parking Lots, Loading Docks | AFS',
+    description: 'Gray crack seal + FibreCrete polymer joint repair for parking lots, roads, loading docks, warehouses, and municipal concrete. Northeast Ohio since 2003.',
+    type: 'article',
+  },
+};
+
+// AFS palette: black chassis (#1a1a1a) + construction yellow (#F5C518).
+// Page-scoped only — Header + Footer keep BuyGeogrid green.
+const AFS_YELLOW = '#F5C518';
+
+const applications = [
+  'Commercial parking lots',
+  'Roads & roadways',
+  'Loading docks & aprons',
+  'Warehouse floors',
+  'Manufacturing plants',
+  'Distribution centers',
+  'Municipal concrete',
+  'High-traffic joints & transitions',
+];
+
+const counties = [
+  { name: 'Cuyahoga', places: 'Cleveland, Lakewood, Parma, Solon, Westlake' },
+  { name: 'Summit', places: 'Akron, Cuyahoga Falls, Stow, Hudson' },
+  { name: 'Lake', places: 'Mentor, Painesville, Willoughby' },
+  { name: 'Geauga', places: 'Chardon, Chesterland, Bainbridge' },
+  { name: 'Portage', places: 'Kent, Ravenna, Aurora, Streetsboro' },
+  { name: 'Medina', places: 'Medina, Brunswick, Wadsworth' },
+];
+
+const credentials = [
+  { title: '20+ Years', body: 'Serving Northeast Ohio since 2003.' },
+  { title: 'ODOT Certified', body: 'Ohio DOT certified products and installation.' },
+  { title: 'Bonded & Insured', body: 'Fully bonded and insured. Free estimates within 24 hours.' },
+  { title: 'Direct Estimator', body: 'Talk to your estimator directly — no phone-tree runaround.' },
+];
+
+const scopeWeFix = [
+  'Cracked concrete joints and control cuts',
+  'Failed or deteriorated joint sealant',
+  'Spalled and eroded joint edges',
+  'Loading-dock joint & apron repair',
+  'Parking-lot and road crack sealing',
+  'Warehouse floor joint repair for high-traffic areas',
+];
+
+const scopeWeDont = [
+  'Full concrete slab replacement or removal',
+  'Concrete leveling / mudjacking / polyurethane lifting',
+  'Concrete resurfacing or new pours',
+  'Structural repair of collapsed slabs',
+  'Decorative concrete or stamped finishes',
+];
+
+const faqData = [
+  {
+    question: 'Do you replace concrete or just repair cracks and joints?',
+    answer: 'We specialize in crack sealing and polymer joint repair — we do not replace concrete slabs. If your concrete is structurally sound but the joints and cracks are shot, we save you the cost of tear-out and replacement. If a slab actually needs to be replaced or leveled, we\'ll tell you honestly during the free assessment.',
+  },
+  {
+    question: 'What\'s the difference between Gray Crack Seal and FibreCrete?',
+    answer: 'Gray Crack Seal is a specialty sealant that visually matches concrete — used to close cracks and joints and stop water intrusion without leaving black asphalt-colored lines. FibreCrete is a polymer-modified repair mortar built for high-traffic areas like loading docks, drive lanes, and warehouse floors — it rebuilds damaged joints and spalled concrete for rapid return to service. Our estimator picks the right material for each defect at the free on-site assessment.',
+  },
+  {
+    question: 'How fast can we reopen the area after a FibreCrete repair?',
+    answer: 'FibreCrete is designed for rapid return to service — minimal downtime is the whole point of the product. Actual reopen time depends on temperature, humidity, and traffic loads. We\'ll confirm the exact cure window for your specific job during the assessment.',
+  },
+  {
+    question: 'Do you match the color of our existing concrete?',
+    answer: 'Yes. Both Gray Crack Seal and FibreCrete are gray-toned to blend with concrete surfaces — no harsh black asphalt lines across your flatwork. Exact match depends on your concrete\'s age, aggregate color, and finish, but the result is dramatically better than ordinary black sealants.',
+  },
+  {
+    question: 'What areas do you serve?',
+    answer: 'Standard service area is six-county Northeast Ohio: Cuyahoga, Summit, Lake, Geauga, Portage, and Medina. That covers Cleveland, Akron, and everywhere between. For larger commercial and municipal projects, we\'ll travel south to Columbus.',
+  },
+  {
+    question: 'Can you work off-hours to minimize business disruption?',
+    answer: 'Yes — for commercial and industrial clients whose operations can\'t stop, we schedule off-hours, overnight, and weekend work when needed. Ask during the assessment and we\'ll build the schedule around your operating window.',
+  },
+  {
+    question: 'How much does concrete crack sealing or FibreCrete repair cost?',
+    answer: 'Pricing depends on linear footage, joint condition, site access, and how much prep the concrete needs. That\'s why we do free on-site assessments — you get a firm written estimate within 24 hours, no obligation, no pressure.',
+  },
+  {
+    question: 'Do you offer any warranty on the repair?',
+    answer: 'Product-level warranties from the material manufacturers apply and vary by product. We\'ll walk you through what covers your specific job when we give you the written estimate.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.buygeogrid.com/concrete-crack-sealing#business',
+  name: 'Asphalt Fabrics & Specialties',
+  description: 'Specialty commercial and industrial concrete crack sealing and polymer joint repair. Gray Crack Seal + FibreCrete for parking lots, roads, loading docks, warehouses, and municipal concrete. Northeast Ohio since 2003.',
+  url: 'https://www.buygeogrid.com/concrete-crack-sealing',
+  telephone: '+1-440-786-1077',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '7710 Bond Street',
+    addressLocality: 'Glenwillow',
+    addressRegion: 'OH',
+    postalCode: '44139',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Cuyahoga County, Ohio' },
+    { '@type': 'AdministrativeArea', name: 'Summit County, Ohio' },
+    { '@type': 'AdministrativeArea', name: 'Lake County, Ohio' },
+    { '@type': 'AdministrativeArea', name: 'Geauga County, Ohio' },
+    { '@type': 'AdministrativeArea', name: 'Portage County, Ohio' },
+    { '@type': 'AdministrativeArea', name: 'Medina County, Ohio' },
+    { '@type': 'City', name: 'Cleveland' },
+    { '@type': 'City', name: 'Akron' },
+    { '@type': 'City', name: 'Columbus' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Concrete Repair Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Concrete Crack Sealing (Gray Crack Seal)',
+          serviceType: 'Concrete crack sealing',
+          description: 'Specialty gray sealant for concrete cracks and joints. Visually matches concrete, stops water intrusion, no black asphalt lines. For structurally sound concrete on parking lots, roads, loading docks, warehouse floors, and municipal work.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'FibreCrete Polymer Joint Repair',
+          serviceType: 'Concrete joint repair',
+          description: 'Gray polymer-modified concrete repair for damaged joints, spalls, and cracks in high-traffic areas. Rapid return to service. For loading docks, dock aprons, drive lanes, warehouse floors, and industrial pavement.',
+        },
+      },
+    ],
+  },
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'ODOT Certified' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Fully Bonded and Insured' },
+  ],
+  foundingDate: '2003',
+};
+
+export default function ConcreteRepair() {
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <main className="flex-grow">
+        {/* Custom AFS-branded hero — replaces PageHero on this page for palette match */}
+        <section className="relative bg-[#1a1a1a] text-white overflow-hidden">
+          {/* Construction-stripe accent bar (top) */}
+          <div
+            className="h-3 w-full"
+            style={{
+              background: `repeating-linear-gradient(-45deg, ${AFS_YELLOW} 0 20px, #1a1a1a 20px 40px)`,
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative max-w-7xl mx-auto px-6 py-14 md:py-20 lg:py-24">
+            <div className="grid md:grid-cols-[1.3fr_1fr] gap-8 md:gap-12 items-center">
+              <div>
+                <div
+                  className="inline-block text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-5 px-3 py-1"
+                  style={{ backgroundColor: AFS_YELLOW, color: '#1a1a1a' }}
+                >
+                  Commercial Crack Sealing &amp; Joint Repair
+                </div>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight mb-4">
+                  Dock down?<br />Cracked concrete?
+                </h1>
+                <p
+                  className="inline-block text-xl md:text-2xl font-bold mb-8 px-2 py-1"
+                  style={{ backgroundColor: AFS_YELLOW, color: '#1a1a1a' }}
+                >
+                  Repaired today. Rolling tomorrow.
+                </p>
+                <p className="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
+                  Streets · roads · parking lots · loading docks · warehouse floors · joints &amp; cracks — fixed fast, matched gray, built for traffic.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
+                  <Link
+                    href="#assessment"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded transition-colors duration-200 group"
+                    style={{ backgroundColor: AFS_YELLOW, color: '#1a1a1a' }}
+                  >
+                    Request an Assessment
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </Link>
+                  <Link
+                    href="tel:4403841897"
+                    className="inline-flex items-center gap-2 text-base font-semibold text-white transition-colors group"
+                    style={{ '--hover-color': AFS_YELLOW } as React.CSSProperties}
+                  >
+                    <span>Call (440) 384-1897</span>
+                    <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* AFS logo + 24-HR badge stack */}
+              <div className="hidden lg:flex flex-col items-center justify-center gap-8">
+                <div className="bg-white rounded-lg p-6 shadow-2xl">
+                  <img
+                    src="/images/logos/logo-8.22.18.jpg"
+                    alt="Asphalt Fabrics & Specialties"
+                    className="w-full max-w-sm h-auto"
+                  />
+                </div>
+                <div
+                  className="relative w-40 h-40 flex items-center justify-center rounded-full border-8 shadow-xl"
+                  style={{ borderColor: AFS_YELLOW, backgroundColor: '#1a1a1a' }}
+                >
+                  <div className="text-center">
+                    <div className="text-4xl font-black leading-none" style={{ color: AFS_YELLOW }}>24-HR</div>
+                    <div className="text-sm font-bold uppercase tracking-widest text-white mt-2">Estimates</div>
+                    <div className="text-[10px] uppercase tracking-widest text-gray-400 mt-1">Fast &amp; free</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Construction-stripe accent bar (bottom) */}
+          <div
+            className="h-3 w-full"
+            style={{
+              background: `repeating-linear-gradient(-45deg, ${AFS_YELLOW} 0 20px, #1a1a1a 20px 40px)`,
+            }}
+            aria-hidden="true"
+          />
+        </section>
+
+        {/* Scope disclosure — helps SEO/AEO signal what we actually do */}
+        <section className="py-16 md:py-20 px-6 bg-gray-50 border-b border-gray-200">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="max-w-2xl mb-10">
+              <div className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3" style={{ color: '#B08A00' }}>What we do</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
+                Concrete Crack Sealing &amp; Polymer Joint Repair.
+              </h2>
+              <p className="text-lg text-gray-700 mt-4 leading-relaxed">
+                We fix what&apos;s cracked, not what&apos;s collapsed. Specialty sealing and joint repair for structurally sound concrete — when replacement would be overkill.
+              </p>
+            </Reveal>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Reveal>
+                <div className="bg-white rounded p-6 md:p-7 h-full border-l-4" style={{ borderColor: AFS_YELLOW }}>
+                  <div className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#B08A00' }}>What we fix</div>
+                  <ul className="space-y-2.5 text-gray-800">
+                    {scopeWeFix.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <span className="text-lg leading-none mt-0.5" style={{ color: '#B08A00' }}>✓</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+              <Reveal delay={120}>
+                <div className="bg-white rounded p-6 md:p-7 h-full border-l-4 border-gray-400">
+                  <div className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">What we don&apos;t do</div>
+                  <ul className="space-y-2.5 text-gray-600">
+                    {scopeWeDont.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <span className="text-lg leading-none mt-0.5 text-gray-400">×</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-5 pt-4 border-t border-gray-100 text-sm text-gray-600 italic">
+                    Need slab replacement or leveling? We&apos;ll tell you honestly and point you toward a contractor who does that work.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Two service cards */}
+        <section className="py-20 md:py-24 px-6 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <Reveal className="max-w-2xl mb-14">
+              <div className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3" style={{ color: '#B08A00' }}>Products</div>
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
+                Two specialty products, one purpose.
+              </h2>
+              <p className="text-lg text-gray-700 mt-4 leading-relaxed">
+                Both are gray — designed to visually match existing concrete rather than leaving the harsh black lines of ordinary asphalt sealants.
+              </p>
+            </Reveal>
+
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              {/* FibreCrete card */}
+              <Reveal>
+                <div className="relative bg-[#1a1a1a] text-white rounded overflow-hidden flex flex-col h-full">
+                  <div
+                    className="px-6 py-4 font-bold uppercase tracking-widest text-sm"
+                    style={{ backgroundColor: AFS_YELLOW, color: '#1a1a1a' }}
+                  >
+                    FibreCrete <span className="opacity-70 font-semibold">— Rapid Joint Repair</span>
+                  </div>
+                  <div className="p-8 md:p-10 flex flex-col flex-grow">
+                    <p className="text-gray-300 leading-relaxed mb-5 text-lg">
+                      Gray polymer-modified repair for joints, spalls and cracks in high-traffic concrete.
+                    </p>
+                    <ul className="text-gray-300 leading-relaxed space-y-3 mb-8">
+                      <li className="flex items-start gap-3">
+                        <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
+                        <span>Built for forklifts &amp; truck traffic</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
+                        <span>Rapid return to service — minimal downtime</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
+                        <span>Ideal for loading docks, aprons, drive lanes</span>
+                      </li>
+                    </ul>
+                    <Link href="#assessment" className="mt-auto inline-flex items-center gap-2 font-semibold group" style={{ color: AFS_YELLOW }}>
+                      Get an assessment
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </Link>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Gray Crack Seal card */}
+              <Reveal delay={120}>
+                <div className="relative bg-[#1a1a1a] text-white rounded overflow-hidden flex flex-col h-full">
+                  <div
+                    className="px-6 py-4 font-bold uppercase tracking-widest text-sm"
+                    style={{ backgroundColor: AFS_YELLOW, color: '#1a1a1a' }}
+                  >
+                    Gray Crack Seal <span className="opacity-70 font-semibold">— Color-Matched for Concrete</span>
+                  </div>
+                  <div className="p-8 md:p-10 flex flex-col flex-grow">
+                    <p className="text-gray-300 leading-relaxed mb-5 text-lg">
+                      Specialty gray sealant made for concrete — no black asphalt lines across your flatwork.
+                    </p>
+                    <ul className="text-gray-300 leading-relaxed space-y-3 mb-8">
+                      <li className="flex items-start gap-3">
+                        <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
+                        <span>Blends with concrete surfaces</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
+                        <span>Stops water &amp; keeps cracks from spreading</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
+                        <span>Clean look for docks, walks &amp; aprons</span>
+                      </li>
+                    </ul>
+                    <Link href="#assessment" className="mt-auto inline-flex items-center gap-2 font-semibold group" style={{ color: AFS_YELLOW }}>
+                      Get an assessment
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </Link>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+
+            <Reveal delay={240}>
+              <div className="mt-8 bg-gray-50 border-l-4 p-6 rounded" style={{ borderColor: AFS_YELLOW }}>
+                <p className="text-gray-700 leading-relaxed">
+                  <strong className="text-gray-900">Two products for two different problems.</strong> We&apos;ll come out, assess your site, and recommend the right material for each defect — free of charge.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Credibility strip — matches flyer's inline horizontal treatment */}
+        <section className="bg-[#1a1a1a] text-white py-8 px-6 border-y-2" style={{ borderColor: AFS_YELLOW }}>
+          <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-center text-sm md:text-base font-semibold uppercase tracking-wider">
+            <span>ODOT-Certified</span>
+            <span style={{ color: AFS_YELLOW }}>·</span>
+            <span>Fully Bonded &amp; Insured</span>
+            <span style={{ color: AFS_YELLOW }}>·</span>
+            <span>Preferred Installer for Material Manufacturers</span>
+            <span style={{ color: AFS_YELLOW }}>·</span>
+            <span>Talk Directly to Your Estimator</span>
+          </div>
+        </section>
+
+        {/* Applications */}
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="mb-10">
+              <div className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3" style={{ color: '#B08A00' }}>Where we work</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Ideal Applications</h2>
+            </Reveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {applications.map((app, i) => (
+                <Reveal key={app} delay={i * 60}>
+                  <div className="bg-white p-5 rounded border-l-4 h-full flex items-center" style={{ borderColor: AFS_YELLOW }}>
+                    <span className="font-semibold text-gray-900">{app}</span>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why AFS */}
+        <section className="py-20 md:py-24 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="mb-10">
+              <div className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3" style={{ color: '#B08A00' }}>Why AFS</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
+                Specialty materials, local install, direct communication.
+              </h2>
+            </Reveal>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {credentials.map((c, i) => (
+                <Reveal key={c.title} delay={i * 100}>
+                  <div className="border-t-2 pt-6 h-full" style={{ borderColor: AFS_YELLOW }}>
+                    <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-tight">{c.title}</div>
+                    <p className="text-gray-700 leading-relaxed text-sm">{c.body}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service area */}
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="mb-10">
+              <div className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3" style={{ color: '#B08A00' }}>Coverage</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Northeast Ohio — Large Projects Statewide to Columbus</h2>
+              <p className="text-lg text-gray-700 mt-4 leading-relaxed max-w-3xl">
+                Standard service area covers the six Northeast Ohio counties around our home base. Larger jobs south to Columbus considered on request.
+              </p>
+            </Reveal>
+            <div className="grid md:grid-cols-3 gap-4">
+              {counties.map((c, i) => (
+                <Reveal key={c.name} delay={120 + i * 60}>
+                  <div className="bg-white p-5 rounded border-l-4 h-full" style={{ borderColor: AFS_YELLOW }}>
+                    <div className="font-semibold text-gray-900 mb-1">{c.name} County</div>
+                    <p className="text-sm text-gray-600">{c.places}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ — big AEO signal, FAQPage schema below */}
+        <section className="py-20 md:py-24 px-6 bg-white border-t border-gray-100">
+          <div className="max-w-4xl mx-auto">
+            <Reveal className="mb-10">
+              <div className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3" style={{ color: '#B08A00' }}>FAQ</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
+                Straight answers.
+              </h2>
+            </Reveal>
+            <div className="space-y-6">
+              {faqData.map((faq, i) => (
+                <Reveal key={i} delay={i * 60}>
+                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 leading-snug">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Assessment form */}
+        <section id="assessment" className="py-20 md:py-24 px-6 bg-white scroll-mt-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-[1fr_1.3fr] gap-12 items-start">
+              <Reveal>
+                <div className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3" style={{ color: '#B08A00' }}>Free assessment</div>
+                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-[1.05] tracking-tight">
+                  We&apos;ll come look. No cost.
+                </h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Send the details and we&apos;ll be back within 24 hours with a recommendation, the right material, and a firm quote. Or call{' '}
+                  <a href="tel:4403841897" className="font-semibold hover:underline" style={{ color: '#B08A00' }}>
+                    (440) 384-1897
+                  </a>{' '}
+                  directly.
+                </p>
+                <ul className="text-gray-700 leading-relaxed space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="font-bold" style={{ color: '#B08A00' }}>✓</span>
+                    <span>Free on-site assessment across Northeast Ohio</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="font-bold" style={{ color: '#B08A00' }}>✓</span>
+                    <span>Written estimate within 24 hours</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="font-bold" style={{ color: '#B08A00' }}>✓</span>
+                    <span>Text photos to (440) 384-1897 for a faster preliminary read</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="font-bold" style={{ color: '#B08A00' }}>✓</span>
+                    <span>Direct communication with your estimator</span>
+                  </li>
+                </ul>
+              </Reveal>
+              <Reveal delay={120}>
+                <ConcreteRepairForm />
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Bottom CTA */}
+        <section className="relative py-20 md:py-24 px-6 bg-[#1a1a1a] text-white overflow-hidden">
+          <div
+            className="absolute top-0 left-0 right-0 h-3"
+            style={{ background: `repeating-linear-gradient(-45deg, ${AFS_YELLOW} 0 20px, #1a1a1a 20px 40px)` }}
+            aria-hidden="true"
+          />
+          <div className="relative max-w-4xl mx-auto text-center">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">
+                Keep your operation running.
+              </h2>
+              <p className="text-lg text-gray-300 mb-8">
+                Every day of downtime for concrete failure is money on the table. Free assessment. 24-hour turnaround.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link
+                  href="#assessment"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded transition-colors duration-200 group"
+                  style={{ backgroundColor: AFS_YELLOW, color: '#1a1a1a' }}
+                >
+                  Request Assessment
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link href="tel:4403841897" className="inline-flex items-center gap-2 text-base font-semibold text-white transition-colors group">
+                  <span>Call (440) 384-1897</span>
+                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+          <div
+            className="absolute bottom-0 left-0 right-0 h-3"
+            style={{ background: `repeating-linear-gradient(-45deg, ${AFS_YELLOW} 0 20px, #1a1a1a 20px 40px)` }}
+            aria-hidden="true"
+          />
+        </section>
+      </main>
+      <AFSFooter />
+
+      {/* Schema.org markup — AEO/SEO signal for FAQ + Service */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+    </div>
+  );
+}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
-import NewsletterPopup from "@/components/NewsletterPopup";
+import ConditionalWidgets from "@/components/ConditionalWidgets";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -220,17 +220,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
 
-        {/* Gideon AI Chat Widget */}
-        <Script
-          src="https://dashboard.gideoncode.com/chat-widget.js"
-          strategy="lazyOnload"
-        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <NewsletterPopup />
+        {/* Chatbot + newsletter popup render everywhere EXCEPT PPC landing pages (see ConditionalWidgets) */}
+        <ConditionalWidgets />
       </body>
     </html>
   );

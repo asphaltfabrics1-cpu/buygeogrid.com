@@ -222,6 +222,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/concrete-crack-sealing`,
+      lastModified: new Date('2026-07-21'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: new Date('2026-07-21'),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
       url: `${baseUrl}/soft-ground-akron`,
       lastModified: new Date('2026-07-13'),
       changeFrequency: 'monthly',
