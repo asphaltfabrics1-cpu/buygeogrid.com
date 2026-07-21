@@ -53,7 +53,7 @@ export default function ConcreteRepairForm() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Failed to submit form');
 
-      router.push('/contact/success');
+      router.push('/concrete-crack-sealing/thank-you');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong');
       setIsSubmitting(false);

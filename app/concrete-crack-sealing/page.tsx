@@ -89,7 +89,7 @@ const faqData = [
   },
   {
     question: 'What\'s the difference between Gray Crack Seal and FibreCrete?',
-    answer: 'Gray Crack Seal is a specialty sealant that visually matches concrete — used to close cracks and joints and stop water intrusion without leaving black asphalt-colored lines. FibreCrete is a polymer-modified repair mortar built for high-traffic areas like loading docks, drive lanes, and warehouse floors — it rebuilds damaged joints and spalled concrete for rapid return to service. Our estimator picks the right material for each defect at the free on-site assessment.',
+    answer: 'Simple rule based on crack width. Gray Crack Seal is a rubberized Type 2 sealant color-matched to concrete — used for cracks 1 inch or less. FibreCrete is a polymer mix with a small aggregate that rebuilds joints and cracks wider than 1 inch. Cracks under 1" → Gray Crack Seal. Cracks and joints over 1" → FibreCrete. We size it right at the free on-site assessment.',
   },
   {
     question: 'How fast can we reopen the area after a FibreCrete repair?',
@@ -163,18 +163,20 @@ const serviceSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Concrete Crack Sealing (Gray Crack Seal)',
+          name: 'Gray Crack Seal — Concrete Crack Sealing',
           serviceType: 'Concrete crack sealing',
-          description: 'Specialty gray sealant for concrete cracks and joints. Visually matches concrete, stops water intrusion, no black asphalt lines. For structurally sound concrete on parking lots, roads, loading docks, warehouse floors, and municipal work.',
+          description: 'Rubberized Type 2 sealant color-matched to concrete. Used for cracks 1 inch or less. Stops water intrusion, blends with concrete surfaces, no black asphalt lines. Applied on parking lots, roads, loading docks, warehouse floors, walkways, dock aprons, and municipal concrete.',
+          image: 'https://www.buygeogrid.com/images/afs/gray-crack-seal-1.jpg',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'FibreCrete Polymer Joint Repair',
+          name: 'FibreCrete — Polymer Concrete Joint Repair',
           serviceType: 'Concrete joint repair',
-          description: 'Gray polymer-modified concrete repair for damaged joints, spalls, and cracks in high-traffic areas. Rapid return to service. For loading docks, dock aprons, drive lanes, warehouse floors, and industrial pavement.',
+          description: 'Polymer-modified concrete mix with small aggregate. Used for cracks and joints wider than 1 inch. Rebuilds damaged joints, spalled edges, and wide cracks in high-traffic concrete. Rapid return to service. Built for forklift and truck traffic on loading docks, dock aprons, drive lanes, warehouse floors, and industrial pavement.',
+          image: 'https://www.buygeogrid.com/images/afs/fibrecrete-2.jpg',
         },
       },
     ],
@@ -339,6 +341,13 @@ export default function ConcreteRepair() {
               {/* FibreCrete card */}
               <Reveal>
                 <div className="relative bg-[#1a1a1a] text-white rounded overflow-hidden flex flex-col h-full">
+                  <div className="relative aspect-[16/10] bg-gray-900 overflow-hidden">
+                    <img
+                      src="/images/afs/fibrecrete-2.jpg"
+                      alt="FibreCrete polymer joint repair on concrete — gray polymer mix with small aggregate visibly patched across concrete panel joint by Asphalt Fabrics & Specialties"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
                   <div
                     className="px-6 py-4 font-bold uppercase tracking-widest text-sm"
                     style={{ backgroundColor: AFS_YELLOW, color: '#1a1a1a' }}
@@ -347,9 +356,13 @@ export default function ConcreteRepair() {
                   </div>
                   <div className="p-8 md:p-10 flex flex-col flex-grow">
                     <p className="text-gray-300 leading-relaxed mb-5 text-lg">
-                      Gray polymer-modified repair for joints, spalls and cracks in high-traffic concrete.
+                      Polymer mix with small aggregate. Rebuilds joints, spalls, and wider cracks in high-traffic concrete.
                     </p>
                     <ul className="text-gray-300 leading-relaxed space-y-3 mb-8">
+                      <li className="flex items-start gap-3">
+                        <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
+                        <span><strong className="text-white">For cracks &amp; joints wider than 1 inch</strong></span>
+                      </li>
                       <li className="flex items-start gap-3">
                         <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
                         <span>Built for forklifts &amp; truck traffic</span>
@@ -374,6 +387,13 @@ export default function ConcreteRepair() {
               {/* Gray Crack Seal card */}
               <Reveal delay={120}>
                 <div className="relative bg-[#1a1a1a] text-white rounded overflow-hidden flex flex-col h-full">
+                  <div className="relative aspect-[16/10] bg-gray-900 overflow-hidden">
+                    <img
+                      src="/images/afs/gray-crack-seal-1.jpg"
+                      alt="Gray Crack Seal on concrete surface — rubberized Type 2 sealant applied by Asphalt Fabrics & Specialties, color-matched to concrete, no black asphalt lines"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
                   <div
                     className="px-6 py-4 font-bold uppercase tracking-widest text-sm"
                     style={{ backgroundColor: AFS_YELLOW, color: '#1a1a1a' }}
@@ -382,9 +402,13 @@ export default function ConcreteRepair() {
                   </div>
                   <div className="p-8 md:p-10 flex flex-col flex-grow">
                     <p className="text-gray-300 leading-relaxed mb-5 text-lg">
-                      Specialty gray sealant made for concrete — no black asphalt lines across your flatwork.
+                      Rubberized Type 2 sealant, color-matched to concrete — no black asphalt lines across your flatwork.
                     </p>
                     <ul className="text-gray-300 leading-relaxed space-y-3 mb-8">
+                      <li className="flex items-start gap-3">
+                        <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
+                        <span><strong className="text-white">For cracks 1 inch or less</strong></span>
+                      </li>
                       <li className="flex items-start gap-3">
                         <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
                         <span>Blends with concrete surfaces</span>
@@ -410,23 +434,161 @@ export default function ConcreteRepair() {
             <Reveal delay={240}>
               <div className="mt-8 bg-gray-50 border-l-4 p-6 rounded" style={{ borderColor: AFS_YELLOW }}>
                 <p className="text-gray-700 leading-relaxed">
-                  <strong className="text-gray-900">Two products for two different problems.</strong> We&apos;ll come out, assess your site, and recommend the right material for each defect — free of charge.
+                  <strong className="text-gray-900">Simple rule:</strong> Cracks <strong>1 inch or less</strong> → Gray Crack Seal. Cracks and joints <strong>wider than 1 inch</strong> → FibreCrete. We&apos;ll size it right during the free on-site assessment.
                 </p>
               </div>
             </Reveal>
           </div>
         </section>
 
-        {/* Credibility strip — matches flyer's inline horizontal treatment */}
-        <section className="bg-[#1a1a1a] text-white py-8 px-6 border-y-2" style={{ borderColor: AFS_YELLOW }}>
-          <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-center text-sm md:text-base font-semibold uppercase tracking-wider">
-            <span>ODOT-Certified</span>
-            <span style={{ color: AFS_YELLOW }}>·</span>
-            <span>Fully Bonded &amp; Insured</span>
-            <span style={{ color: AFS_YELLOW }}>·</span>
-            <span>Preferred Installer for Material Manufacturers</span>
-            <span style={{ color: AFS_YELLOW }}>·</span>
-            <span>Talk Directly to Your Estimator</span>
+        {/* Trust badge strip — visual credentials with icons */}
+        <section className="bg-[#1a1a1a] text-white py-12 md:py-14 px-6 border-y-2" style={{ borderColor: AFS_YELLOW }}>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+              {/* ODOT Certified */}
+              <div className="flex items-center gap-3 p-3 md:p-4 border border-white/10 rounded hover:border-white/20 transition-colors">
+                <div
+                  className="flex-shrink-0 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded"
+                  style={{ backgroundColor: AFS_YELLOW }}
+                >
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#1a1a1a" strokeWidth={2.5} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                  </svg>
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-semibold">Certified</div>
+                  <div className="font-bold text-sm md:text-base leading-tight">ODOT Approved</div>
+                </div>
+              </div>
+
+              {/* Bonded & Insured */}
+              <div className="flex items-center gap-3 p-3 md:p-4 border border-white/10 rounded hover:border-white/20 transition-colors">
+                <div
+                  className="flex-shrink-0 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded"
+                  style={{ backgroundColor: AFS_YELLOW }}
+                >
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#1a1a1a" strokeWidth={2.5} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 4.556-4.03 8.25-9 8.25S3 16.556 3 12s4.03-8.25 9-8.25 9 3.694 9 8.25z" />
+                  </svg>
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-semibold">Fully</div>
+                  <div className="font-bold text-sm md:text-base leading-tight">Bonded &amp; Insured</div>
+                </div>
+              </div>
+
+              {/* Preferred Installer */}
+              <div className="flex items-center gap-3 p-3 md:p-4 border border-white/10 rounded hover:border-white/20 transition-colors">
+                <div
+                  className="flex-shrink-0 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded"
+                  style={{ backgroundColor: AFS_YELLOW }}
+                >
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#1a1a1a" strokeWidth={2.5} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.32.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg>
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-semibold">Preferred</div>
+                  <div className="font-bold text-sm md:text-base leading-tight">Manufacturer Installer</div>
+                </div>
+              </div>
+
+              {/* Since 2003 */}
+              <div className="flex items-center gap-3 p-3 md:p-4 border border-white/10 rounded hover:border-white/20 transition-colors">
+                <div
+                  className="flex-shrink-0 w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded"
+                  style={{ backgroundColor: AFS_YELLOW }}
+                >
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#1a1a1a" strokeWidth={2.5} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-semibold">Est.</div>
+                  <div className="font-bold text-sm md:text-base leading-tight">20+ Years · Since 2003</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Real work gallery */}
+        <section className="py-16 md:py-20 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="mb-8">
+              <div className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3" style={{ color: '#B08A00' }}>Real work</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">Actual jobs. Actual concrete.</h2>
+              <p className="text-lg text-gray-700 mt-3 leading-relaxed">
+                Every photo below is real AFS work — gray-on-gray, no black asphalt lines.
+              </p>
+            </Reveal>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+              <Reveal>
+                <div className="relative aspect-[4/3] rounded overflow-hidden bg-gray-900 group">
+                  <img
+                    src="/images/afs/fibrecrete-2.jpg"
+                    alt="Close-up of FibreCrete polymer joint repair by Asphalt Fabrics & Specialties — gray polymer mix with visible aggregate patched across concrete panel joint"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+                    <div className="text-xs uppercase tracking-widest font-semibold" style={{ color: AFS_YELLOW }}>FibreCrete</div>
+                    <div className="text-white text-sm font-semibold">Polymer joint repair</div>
+                  </div>
+                </div>
+              </Reveal>
+              <Reveal delay={100}>
+                <div className="relative aspect-[4/3] rounded overflow-hidden bg-gray-900 group">
+                  <img
+                    src="/images/afs/gray-crack-seal-1.jpg"
+                    alt="Gray Crack Seal on concrete — rubberized Type 2 sealant applied around storm drain by Asphalt Fabrics & Specialties, color-matched to concrete"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+                    <div className="text-xs uppercase tracking-widest font-semibold" style={{ color: AFS_YELLOW }}>Gray Crack Seal</div>
+                    <div className="text-white text-sm font-semibold">Storm-drain area repair</div>
+                  </div>
+                </div>
+              </Reveal>
+              <Reveal delay={200}>
+                <div className="relative aspect-[4/3] rounded overflow-hidden bg-gray-900 group">
+                  <img
+                    src="/images/afs/gray-crack-seal-2.jpg"
+                    alt="Gray Crack Seal V-shaped joint repair on concrete driveway by Asphalt Fabrics & Specialties — no black asphalt lines"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+                    <div className="text-xs uppercase tracking-widest font-semibold" style={{ color: AFS_YELLOW }}>Gray Crack Seal</div>
+                    <div className="text-white text-sm font-semibold">Driveway joint sealing</div>
+                  </div>
+                </div>
+              </Reveal>
+              <Reveal delay={300}>
+                <div className="relative aspect-[4/3] rounded overflow-hidden bg-gray-900 group">
+                  <img
+                    src="/images/afs/fibrecrete-1.jpg"
+                    alt="FibreCrete polymer joint repair on residential street by Asphalt Fabrics & Specialties"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+                    <div className="text-xs uppercase tracking-widest font-semibold" style={{ color: AFS_YELLOW }}>FibreCrete</div>
+                    <div className="text-white text-sm font-semibold">Street joint repair</div>
+                  </div>
+                </div>
+              </Reveal>
+              <Reveal delay={400}>
+                <div className="relative aspect-[4/3] rounded overflow-hidden bg-gray-900 group">
+                  <img
+                    src="/images/afs/fibrecrete-3.jpg"
+                    alt="FibreCrete polymer joint repair on residential cul-de-sac by Asphalt Fabrics & Specialties"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+                    <div className="text-xs uppercase tracking-widest font-semibold" style={{ color: AFS_YELLOW }}>FibreCrete</div>
+                    <div className="text-white text-sm font-semibold">Cul-de-sac repair</div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </section>
 
