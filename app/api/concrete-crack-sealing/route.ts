@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const FROM = 'BuyGeogrid <info@buygeogrid.com>';
-const NOTIFY_TO = 'jstone@asphaltfabrics.com';
+// Notify both Josh AND Mike (estimator) — whoever is faster picks up the lead
+const NOTIFY_TO = ['jstone@asphaltfabrics.com', 'mkirk@asphaltfabrics.com'];
 const REPLY_TO = 'jstone@asphaltfabrics.com';
 const AFS_PHONE = '(440) 384-1897';
 
