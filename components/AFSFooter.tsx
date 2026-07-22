@@ -32,8 +32,15 @@ export default function AFSFooter() {
               <div className="text-white font-semibold text-sm">
                 Asphalt Fabrics &amp; Specialties
               </div>
-              <div className="text-xs text-gray-500">
-                7710 Bond Street, Glenwillow, OH 44139 ·{' '}
+              <div className="text-xs text-gray-500 leading-relaxed">
+                7710 Bond Street, Glenwillow, OH 44139
+                <br />
+                Estimates &amp; project photos:{' '}
+                <a href="tel:4403841897" className="hover:text-white transition-colors font-semibold">
+                  (440) 384-1897
+                </a>
+                <br />
+                Main office:{' '}
                 <a href="tel:4407861077" className="hover:text-white transition-colors">
                   (440) 786-1077
                 </a>

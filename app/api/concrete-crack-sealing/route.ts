@@ -15,6 +15,7 @@ interface ConcreteRepairBody {
   facilityType?: string;
   damagedArea?: string;
   timeline?: string;
+  contactMethod?: string;
   details?: string;
   website?: string; // honeypot
 }
@@ -38,7 +39,7 @@ function fieldRow(label: string, value: string | undefined | null): string {
 export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as ConcreteRepairBody;
-    const { name, company, email, phone, city, facilityType, damagedArea, timeline, details, website } = body;
+    const { name, company, email, phone, city, facilityType, damagedArea, timeline, contactMethod, details, website } = body;
 
     // Honeypot — silent drop
     if (website && typeof website === 'string' && website.trim() !== '') {
@@ -71,6 +72,7 @@ export async function POST(request: NextRequest) {
     const cleanFacility = facilityType?.trim() || null;
     const cleanArea = damagedArea?.trim() || null;
     const cleanTimeline = timeline?.trim() || null;
+    const cleanContactMethod = contactMethod?.trim() || null;
     const cleanDetails = details?.trim() || null;
 
     // --- Send emails via Resend ---
@@ -91,6 +93,7 @@ export async function POST(request: NextRequest) {
             ${fieldRow('Facility type', cleanFacility)}
             ${fieldRow('Damaged area', cleanArea)}
             ${fieldRow('Timeline', cleanTimeline)}
+            ${fieldRow('Best way to reach', cleanContactMethod)}
             ${fieldRow('Details', cleanDetails)}
           </table>
           <p style="margin:16px 0 4px;color:#555;font-size:13px">Reply to this email to respond directly to ${escape(cleanName)}.</p>
@@ -108,6 +111,7 @@ export async function POST(request: NextRequest) {
         cleanFacility ? `Facility: ${cleanFacility}` : null,
         cleanArea ? `Damaged area: ${cleanArea}` : null,
         cleanTimeline ? `Timeline: ${cleanTimeline}` : null,
+        cleanContactMethod ? `Best way to reach: ${cleanContactMethod}` : null,
         cleanDetails ? `\nDetails:\n${cleanDetails}` : null,
         ``,
         `Reply to this email to respond directly.`,
@@ -185,6 +189,7 @@ export async function POST(request: NextRequest) {
         cleanFacility ? `Facility: ${cleanFacility}` : null,
         cleanArea ? `Damaged area: ${cleanArea}` : null,
         cleanTimeline ? `Timeline: ${cleanTimeline}` : null,
+        cleanContactMethod ? `Best way to reach: ${cleanContactMethod}` : null,
         cleanDetails ? `\nDetails:\n${cleanDetails}` : null,
       ]
         .filter(Boolean)

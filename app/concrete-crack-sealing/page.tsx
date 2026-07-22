@@ -1,4 +1,5 @@
 import AFSFooter from '@/components/AFSFooter';
+import AFSStickyMobileBar from '@/components/AFSStickyMobileBar';
 import Reveal from '@/components/Reveal';
 import ConcreteRepairForm from '@/components/ConcreteRepairForm';
 import Link from 'next/link';
@@ -165,7 +166,7 @@ const serviceSchema = {
           '@type': 'Service',
           name: 'Gray Crack Seal — Concrete Crack Sealing',
           serviceType: 'Concrete crack sealing',
-          description: 'Rubberized Type 2 sealant color-matched to concrete. Used for cracks 1 inch or less. Stops water intrusion, blends with concrete surfaces, no black asphalt lines. Applied on parking lots, roads, loading docks, warehouse floors, walkways, dock aprons, and municipal concrete.',
+          description: 'Rubberized Type 2 sealant color-matched to concrete. Used for cracks 1 inch or less. Helps block water intrusion, blends with concrete surfaces, no black asphalt lines. Applied on parking lots, roads, loading docks, warehouse floors, walkways, dock aprons, and municipal concrete.',
           image: 'https://www.buygeogrid.com/images/afs/gray-crack-seal-1.jpg',
         },
       },
@@ -191,7 +192,7 @@ const serviceSchema = {
 export default function ConcreteRepair() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <main className="flex-grow">
+      <main className="flex-grow pb-16 md:pb-0">
         {/* Custom AFS-branded hero — replaces PageHero on this page for palette match */}
         <section className="relative bg-[#1a1a1a] text-white overflow-hidden">
           {/* Construction-stripe accent bar (top) */}
@@ -241,6 +242,10 @@ export default function ConcreteRepair() {
                     <span>Call (440) 384-1897</span>
                     <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
                   </Link>
+                </div>
+                <div className="mt-5 text-xs md:text-sm text-gray-400 leading-relaxed">
+                  <span className="font-semibold text-gray-300">Commercial · Industrial · Municipal only.</span>{' '}
+                  Northeast Ohio service · larger projects considered statewide to Columbus.
                 </div>
               </div>
 
@@ -415,7 +420,7 @@ export default function ConcreteRepair() {
                       </li>
                       <li className="flex items-start gap-3">
                         <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
-                        <span>Stops water &amp; keeps cracks from spreading</span>
+                        <span>Helps block water intrusion &amp; slow further deterioration</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span style={{ color: AFS_YELLOW }} className="font-bold flex-shrink-0">•</span>
@@ -457,7 +462,7 @@ export default function ConcreteRepair() {
                 </div>
                 <div className="min-w-0">
                   <div className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-semibold">Certified</div>
-                  <div className="font-bold text-sm md:text-base leading-tight">ODOT Approved</div>
+                  <div className="font-bold text-sm md:text-base leading-tight">ODOT Certified</div>
                 </div>
               </div>
 
@@ -759,6 +764,28 @@ export default function ConcreteRepair() {
         </section>
       </main>
       <AFSFooter />
+      <AFSStickyMobileBar />
+
+      {/* Google Ads / GA conversion tracking — click-to-call + click-to-text on all page tel/sms links */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(){
+              function fire(cat, label){
+                if (typeof window.gtag === 'function') {
+                  window.gtag('event', cat, { event_category: 'engagement', event_label: label });
+                }
+              }
+              document.addEventListener('click', function(e){
+                var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"], a[href^="sms:"]') : null;
+                if (!a) return;
+                var isText = a.getAttribute('href').indexOf('sms:') === 0;
+                fire(isText ? 'click_to_text' : 'click_to_call', 'concrete_crack_sealing');
+              }, { passive: true });
+            })();
+          `,
+        }}
+      />
 
       {/* Schema.org markup — AEO/SEO signal for FAQ + Service */}
       <script

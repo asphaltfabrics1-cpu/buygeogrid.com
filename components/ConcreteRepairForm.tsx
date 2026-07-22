@@ -21,6 +21,14 @@ const TIMELINE_OPTIONS = [
   'Just gathering info',
 ];
 
+const CONTACT_METHODS = ['Call', 'Text', 'Email', 'No preference'];
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export default function ConcreteRepairForm() {
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -32,6 +40,7 @@ export default function ConcreteRepairForm() {
     facilityType: '',
     damagedArea: '',
     timeline: '',
+    contactMethod: '',
     details: '',
     website: '', // honeypot
   });
@@ -52,6 +61,15 @@ export default function ConcreteRepairForm() {
 
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Failed to submit form');
+
+      // Fire Google Ads / GA conversion event before redirect
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          event_category: 'form',
+          event_label: 'concrete_crack_sealing',
+          value: 1,
+        });
+      }
 
       router.push('/concrete-crack-sealing/thank-you');
     } catch (err) {
@@ -221,6 +239,34 @@ export default function ConcreteRepairForm() {
                 <option key={t} value={t}>{t}</option>
               ))}
             </select>
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="contactMethod" className="block text-sm font-semibold text-gray-700 mb-1">
+            Best way to reach you
+          </label>
+          <div className="flex flex-wrap gap-2">
+            {CONTACT_METHODS.map((m) => (
+              <label
+                key={m}
+                className={`inline-flex items-center gap-2 px-3 py-2 rounded border cursor-pointer text-sm transition-colors ${
+                  formData.contactMethod === m
+                    ? 'border-[#F5C518] bg-[#F5C518]/10 text-gray-900 font-semibold'
+                    : 'border-gray-300 text-gray-700 hover:border-gray-400'
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="contactMethod"
+                  value={m}
+                  checked={formData.contactMethod === m}
+                  onChange={handleChange}
+                  className="sr-only"
+                />
+                {m}
+              </label>
+            ))}
           </div>
         </div>
 
