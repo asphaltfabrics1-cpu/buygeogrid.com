@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
       // Customer autoresponder
       const customerHtml = `
         <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:640px">
-          <h2 style="margin:0 0 12px">Thanks — we&apos;ve got your request.</h2>
+          <h2 style="margin:0 0 12px">Thanks — we&apos;ve got your Crack Seal / FibreCrete quote request.</h2>
           <p style="line-height:1.6">Someone from Asphalt Fabrics &amp; Specialties will follow up within 24 hours to schedule a free assessment and quote your project.</p>
           <p style="line-height:1.6">In the meantime, feel free to text project photos to <strong>${AFS_PHONE}</strong> — the more we can see up front, the faster we can spec the fix.</p>
           <div style="padding:12px 16px;background:#f6f8f7;border-left:3px solid #00c97e;margin:18px 0;font-size:14px;line-height:1.6">
@@ -153,7 +153,7 @@ export async function POST(request: NextRequest) {
       `;
 
       const customerText = [
-        `Thanks — we've got your request.`,
+        `Thanks — we've got your Crack Seal / FibreCrete quote request.`,
         ``,
         `Someone from Asphalt Fabrics & Specialties will follow up within 24 hours to schedule a free assessment and quote your project.`,
         ``,
@@ -177,7 +177,7 @@ export async function POST(request: NextRequest) {
           from: FROM,
           replyTo: REPLY_TO,
           to: cleanEmail,
-          subject: `We got your request — Asphalt Fabrics & Specialties`,
+          subject: `Crack Seal / FibreCrete quote request received — Asphalt Fabrics & Specialties`,
           html: customerHtml,
           text: customerText,
         })
