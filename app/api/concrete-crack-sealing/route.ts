@@ -192,7 +192,7 @@ export async function POST(request: NextRequest) {
           <p style="margin:0 0 12px">Hey Kevin — heads up, a new Crack Seal / FibreCrete quote request just came in.</p>
           <p style="margin:0 0 12px"><strong>${escape(leadLabel)}</strong></p>
           <p style="margin:0 0 12px">Josh (jstone@) and Mike (mkirk@) received the full details and are on it.</p>
-          <p style="margin:0;color:#888;font-size:12px">— Automated notification from the AFS website (buygeogrid.com/concrete-crack-sealing) · Josh runs the site &amp; marketing pipeline.</p>
+          <p style="margin:0;color:#888;font-size:12px">— Automated notification from the AFS website (buygeogrid.com/concrete-crack-sealing).</p>
         </div>
       `;
       const ownerText = [
@@ -203,7 +203,6 @@ export async function POST(request: NextRequest) {
         `Josh (jstone@) and Mike (mkirk@) received the full details and are on it.`,
         ``,
         `— Automated notification from the AFS website (buygeogrid.com/concrete-crack-sealing).`,
-        `Josh runs the site & marketing pipeline.`,
       ].join('\n');
 
       resend.emails
