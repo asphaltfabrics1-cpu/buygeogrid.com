@@ -187,14 +187,14 @@ export async function POST(request: NextRequest) {
       const leadLabel = `${cleanName}${cleanCompany ? ` · ${cleanCompany}` : ''} · ${cleanCity}`;
       const ownerHtml = `
         <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;padding:16px;font-size:14px;line-height:1.6;color:#111">
-          <p style="margin:0 0 12px">Hey Kevin — heads up, a new AFS lead just came in.</p>
+          <p style="margin:0 0 12px">Hey Kevin — heads up, a new Crack Seal / FibreCrete quote request just came in.</p>
           <p style="margin:0 0 12px"><strong>${escape(leadLabel)}</strong></p>
           <p style="margin:0 0 12px">Josh (jstone@) and Mike (mkirk@) received the full details and are on it.</p>
           <p style="margin:0;color:#888;font-size:12px">— Submitted via buygeogrid.com/concrete-crack-sealing</p>
         </div>
       `;
       const ownerText = [
-        `Hey Kevin — heads up, a new AFS lead just came in.`,
+        `Hey Kevin — heads up, a new Crack Seal / FibreCrete quote request just came in.`,
         ``,
         leadLabel,
         ``,
@@ -207,7 +207,7 @@ export async function POST(request: NextRequest) {
         .send({
           from: FROM,
           to: OWNER_NOTIFY_TO,
-          subject: `AFS lead: ${leadLabel}`,
+          subject: `Crack Seal / FibreCrete quote — ${leadLabel}`,
           html: ownerHtml,
           text: ownerText,
         })
