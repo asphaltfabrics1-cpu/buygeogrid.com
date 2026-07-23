@@ -2,9 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const FROM = 'BuyGeogrid <info@buygeogrid.com>';
-// Notify both Josh AND Mike (estimator) — whoever is faster picks up the lead
+// Operational leads — full details to Josh (marketing) and Mike (estimator)
 const NOTIFY_TO = ['jstone@asphaltfabrics.com', 'mkirk@asphaltfabrics.com'];
 const REPLY_TO = 'jstone@asphaltfabrics.com';
+// Owner heads-up — Kevin gets a lightweight FYI so he knows leads are flowing without operational noise
+const OWNER_NOTIFY_TO = 'kslivka@asphaltfabrics.com';
 const AFS_PHONE = '(440) 384-1897';
 
 interface ConcreteRepairBody {
@@ -180,6 +182,36 @@ export async function POST(request: NextRequest) {
           text: customerText,
         })
         .catch((err) => console.error('concrete-crack-sealing customer notify failed:', err));
+
+      // Owner FYI — lightweight heads-up to Kevin (owner) so he knows leads are flowing
+      const leadLabel = `${cleanName}${cleanCompany ? ` · ${cleanCompany}` : ''} · ${cleanCity}`;
+      const ownerHtml = `
+        <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;padding:16px;font-size:14px;line-height:1.6;color:#111">
+          <p style="margin:0 0 12px">Hey Kevin — heads up, a new concrete-repair lead just came in.</p>
+          <p style="margin:0 0 12px"><strong>${escape(leadLabel)}</strong></p>
+          <p style="margin:0 0 12px">Josh (jstone@) and Mike (mkirk@) received the full details and are on it.</p>
+          <p style="margin:0;color:#888;font-size:12px">— Submitted via buygeogrid.com/concrete-crack-sealing</p>
+        </div>
+      `;
+      const ownerText = [
+        `Hey Kevin — heads up, a new concrete-repair lead just came in.`,
+        ``,
+        leadLabel,
+        ``,
+        `Josh (jstone@) and Mike (mkirk@) received the full details and are on it.`,
+        ``,
+        `— Submitted via buygeogrid.com/concrete-crack-sealing`,
+      ].join('\n');
+
+      resend.emails
+        .send({
+          from: FROM,
+          to: OWNER_NOTIFY_TO,
+          subject: `AFS lead: ${leadLabel}`,
+          html: ownerHtml,
+          text: ownerText,
+        })
+        .catch((err) => console.error('concrete-crack-sealing owner notify failed:', err));
     } else {
       console.error('RESEND_API_KEY not configured — concrete-crack-sealing lead not emailed');
     }
