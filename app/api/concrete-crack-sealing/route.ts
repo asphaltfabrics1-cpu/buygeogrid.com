@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const FROM = 'BuyGeogrid <info@buygeogrid.com>';
+// Display name = "Asphalt Fabrics Website" so recipients recognize the sender at a glance.
+// Actual send domain has to be info@buygeogrid.com (verified in Resend).
+const FROM = 'Asphalt Fabrics Website <info@buygeogrid.com>';
 // Operational leads — full details to Josh (marketing) and Mike (estimator)
 const NOTIFY_TO = ['jstone@asphaltfabrics.com', 'mkirk@asphaltfabrics.com'];
 const REPLY_TO = 'jstone@asphaltfabrics.com';
@@ -190,7 +192,7 @@ export async function POST(request: NextRequest) {
           <p style="margin:0 0 12px">Hey Kevin — heads up, a new Crack Seal / FibreCrete quote request just came in.</p>
           <p style="margin:0 0 12px"><strong>${escape(leadLabel)}</strong></p>
           <p style="margin:0 0 12px">Josh (jstone@) and Mike (mkirk@) received the full details and are on it.</p>
-          <p style="margin:0;color:#888;font-size:12px">— Submitted via buygeogrid.com/concrete-crack-sealing</p>
+          <p style="margin:0;color:#888;font-size:12px">— Automated notification from the AFS website (buygeogrid.com/concrete-crack-sealing) · Josh runs the site &amp; marketing pipeline.</p>
         </div>
       `;
       const ownerText = [
@@ -200,7 +202,8 @@ export async function POST(request: NextRequest) {
         ``,
         `Josh (jstone@) and Mike (mkirk@) received the full details and are on it.`,
         ``,
-        `— Submitted via buygeogrid.com/concrete-crack-sealing`,
+        `— Automated notification from the AFS website (buygeogrid.com/concrete-crack-sealing).`,
+        `Josh runs the site & marketing pipeline.`,
       ].join('\n');
 
       resend.emails
