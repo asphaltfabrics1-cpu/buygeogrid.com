@@ -15,7 +15,7 @@ export default function AFSHeader() {
           <Link
             href="/concrete-crack-sealing"
             className="flex-shrink-0 flex items-center"
-            aria-label="Asphalt Fabrics & Specialties — Concrete Repair"
+            aria-label="Asphalt Fabrics & Specialties — Concrete Crack Sealing & Joint Repair"
           >
             <img
               src="/images/logos/logo-8.22.18.jpg"

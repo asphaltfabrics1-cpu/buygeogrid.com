@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Thanks — Your Concrete Repair Request Is In | Asphalt Fabrics & Specialties',
+  title: 'Thanks — Your Request Is In | Asphalt Fabrics & Specialties',
   description: 'We\'ve received your concrete crack sealing / FibreCrete joint repair request. Someone from Asphalt Fabrics & Specialties will reach out within 24 hours.',
   robots: { index: false, follow: true }, // Thank-you pages shouldn't be indexed
   alternates: { canonical: 'https://www.buygeogrid.com/concrete-crack-sealing/thank-you' },

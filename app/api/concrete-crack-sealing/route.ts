@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
 
     // Honeypot — silent drop
     if (website && typeof website === 'string' && website.trim() !== '') {
-      console.log('Concrete-repair honeypot triggered', {
+      console.log('Crack-sealing form honeypot triggered', {
         email,
         ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip'),
       });
@@ -128,7 +128,7 @@ export async function POST(request: NextRequest) {
           from: FROM,
           replyTo: cleanEmail,
           to: NOTIFY_TO,
-          subject: `Concrete-repair lead — ${cleanName}${cleanCompany ? ` (${cleanCompany})` : ''} — ${cleanCity}`,
+          subject: `Crack sealing / joint repair lead — ${cleanName}${cleanCompany ? ` (${cleanCompany})` : ''} — ${cleanCity}`,
           html: adminHtml,
           text: adminText,
         })
@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
       // Customer autoresponder
       const customerHtml = `
         <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:640px">
-          <h2 style="margin:0 0 12px">Thanks — we&apos;ve got your concrete repair request.</h2>
+          <h2 style="margin:0 0 12px">Thanks — we&apos;ve got your request.</h2>
           <p style="line-height:1.6">Someone from Asphalt Fabrics &amp; Specialties will follow up within 24 hours to schedule a free assessment and quote your project.</p>
           <p style="line-height:1.6">In the meantime, feel free to text project photos to <strong>${AFS_PHONE}</strong> — the more we can see up front, the faster we can spec the fix.</p>
           <div style="padding:12px 16px;background:#f6f8f7;border-left:3px solid #00c97e;margin:18px 0;font-size:14px;line-height:1.6">
@@ -153,7 +153,7 @@ export async function POST(request: NextRequest) {
       `;
 
       const customerText = [
-        `Thanks — we've got your concrete repair request.`,
+        `Thanks — we've got your request.`,
         ``,
         `Someone from Asphalt Fabrics & Specialties will follow up within 24 hours to schedule a free assessment and quote your project.`,
         ``,
@@ -177,7 +177,7 @@ export async function POST(request: NextRequest) {
           from: FROM,
           replyTo: REPLY_TO,
           to: cleanEmail,
-          subject: `We got your concrete repair request — AFS`,
+          subject: `We got your request — Asphalt Fabrics & Specialties`,
           html: customerHtml,
           text: customerText,
         })
@@ -187,14 +187,14 @@ export async function POST(request: NextRequest) {
       const leadLabel = `${cleanName}${cleanCompany ? ` · ${cleanCompany}` : ''} · ${cleanCity}`;
       const ownerHtml = `
         <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;padding:16px;font-size:14px;line-height:1.6;color:#111">
-          <p style="margin:0 0 12px">Hey Kevin — heads up, a new concrete-repair lead just came in.</p>
+          <p style="margin:0 0 12px">Hey Kevin — heads up, a new AFS lead just came in.</p>
           <p style="margin:0 0 12px"><strong>${escape(leadLabel)}</strong></p>
           <p style="margin:0 0 12px">Josh (jstone@) and Mike (mkirk@) received the full details and are on it.</p>
           <p style="margin:0;color:#888;font-size:12px">— Submitted via buygeogrid.com/concrete-crack-sealing</p>
         </div>
       `;
       const ownerText = [
-        `Hey Kevin — heads up, a new concrete-repair lead just came in.`,
+        `Hey Kevin — heads up, a new AFS lead just came in.`,
         ``,
         leadLabel,
         ``,
@@ -237,7 +237,7 @@ export async function POST(request: NextRequest) {
           visitorEmail: cleanEmail,
           visitorPhone: cleanPhone,
           visitorAddress: cleanCity,
-          jobType: 'Concrete Repair — AFS',
+          jobType: 'AFS Crack Sealing / Joint Repair',
           jobDetails: jobDetailsParts,
         }),
       }).catch((err) => console.error('gideon dashboard notify failed:', err));

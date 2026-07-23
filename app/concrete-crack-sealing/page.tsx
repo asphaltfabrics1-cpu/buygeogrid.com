@@ -6,31 +6,31 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Concrete Repair Ohio | Crack Seal, Joint Repair, Parking Lots & Roads | AFS',
-  description: 'Specialty commercial & industrial concrete repair by Asphalt Fabrics & Specialties. Gray crack seal + FibreCrete polymer joint repair for parking lots, roads, loading docks, warehouses, and municipal concrete. Northeast Ohio, since 2003. Free 24-hr estimates.',
+  title: 'Concrete Crack Sealing & Joint Repair Ohio | Gray Crack Seal + FibreCrete | AFS',
+  description: 'Specialty commercial & industrial concrete crack sealing and polymer joint repair by Asphalt Fabrics & Specialties. Gray Crack Seal for cracks under 1 inch + FibreCrete polymer joint repair for wider joints — parking lots, roads, loading docks, warehouses, and municipal concrete. Northeast Ohio, since 2003. Free 24-hr estimates.',
   keywords: [
-    'concrete repair Cleveland',
-    'concrete repair Ohio',
+    'concrete crack sealing Cleveland',
     'concrete crack sealing Ohio',
+    'concrete joint repair Ohio',
     'gray crack seal concrete',
-    'commercial parking lot concrete repair',
-    'road concrete repair Ohio',
-    'loading dock concrete repair',
-    'dock apron repair Ohio',
+    'commercial parking lot crack sealing',
+    'road crack sealing Ohio',
+    'loading dock concrete joint repair',
+    'dock apron sealing Ohio',
     'warehouse floor joint repair',
     'FibreCrete installer Ohio',
     'polymer concrete joint repair',
-    'industrial concrete repair Ohio',
+    'industrial concrete joint sealing',
     'commercial concrete crack sealing',
-    'municipal concrete repair Ohio',
-    'Asphalt Fabrics Specialties concrete',
-    'Cuyahoga concrete repair',
+    'municipal concrete crack sealing Ohio',
+    'Asphalt Fabrics Specialties crack sealing',
+    'Cuyahoga concrete crack sealing',
     'Northeast Ohio concrete joint sealing',
   ],
   alternates: { canonical: 'https://www.buygeogrid.com/concrete-crack-sealing' },
   openGraph: {
-    title: 'Concrete Repair — Roads, Parking Lots, Loading Docks | AFS',
-    description: 'Gray crack seal + FibreCrete polymer joint repair for parking lots, roads, loading docks, warehouses, and municipal concrete. Northeast Ohio since 2003.',
+    title: 'Concrete Crack Sealing & Joint Repair — Roads, Parking Lots, Loading Docks | AFS',
+    description: 'Gray Crack Seal + FibreCrete polymer joint repair for parking lots, roads, loading docks, warehouses, and municipal concrete. Northeast Ohio since 2003.',
     type: 'article',
   },
 };
@@ -158,7 +158,7 @@ const serviceSchema = {
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Concrete Repair Services',
+    name: 'Concrete Crack Sealing & Joint Repair Services',
     itemListElement: [
       {
         '@type': 'Offer',
