@@ -1,5 +1,6 @@
 import AFSFooter from '@/components/AFSFooter';
 import AFSStickyMobileBar from '@/components/AFSStickyMobileBar';
+import AFSMetaPixel from '@/components/AFSMetaPixel';
 import Reveal from '@/components/Reveal';
 import ConcreteRepairForm from '@/components/ConcreteRepairForm';
 import Link from 'next/link';
@@ -192,6 +193,8 @@ const serviceSchema = {
 export default function ConcreteRepair() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      {/* Meta Pixel — AFS FB campaign, fires PageView on landing */}
+      <AFSMetaPixel />
       <main className="flex-grow pb-16 md:pb-0">
         {/* Custom AFS-branded hero — replaces PageHero on this page for palette match */}
         <section className="relative bg-[#1a1a1a] text-white overflow-hidden">

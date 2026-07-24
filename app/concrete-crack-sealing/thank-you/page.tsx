@@ -1,4 +1,5 @@
 import AFSFooter from '@/components/AFSFooter';
+import AFSMetaPixel from '@/components/AFSMetaPixel';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -14,6 +15,8 @@ const AFS_YELLOW = '#F5C518';
 export default function ThankYou() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      {/* Meta Pixel — fires PageView + Lead conversion event for FB Ads Manager */}
+      <AFSMetaPixel event="Lead" />
       <main className="flex-grow flex items-center justify-center bg-[#1a1a1a] text-white relative overflow-hidden">
         {/* Construction-stripe accent bar (top) */}
         <div
