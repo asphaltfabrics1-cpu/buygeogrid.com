@@ -1,15 +1,20 @@
-import Script from 'next/script';
-
 // Meta (Facebook) Pixel for the AFS Concrete Crack Sealing FB ad campaign.
 // Scoped to the AFS landing page + thank-you page only (NOT site-wide).
 // This is a SECOND pixel — the BuyGeogrid site-wide pixel (314192535267336)
 // is already loaded via app/layout.tsx.
 //
-// IMPORTANT: because fbq is already initialized site-wide, we DO NOT re-run
-// the FB base code IIFE (it short-circuits with `if(f.fbq)return`). Instead,
-// we just add this pixel via fbq('init', ...) and fire events specifically
-// to this pixel via fbq('trackSingle', ...) so the site-wide pixel isn't
-// polluted with duplicate events.
+// IMPORTANT (bug discovered live):
+// - We CANNOT re-run the FB base code IIFE because it short-circuits with
+//   `if(f.fbq)return` when fbq is already loaded site-wide.
+// - We CANNOT use next/script with inline children for this — headless-browser
+//   testing revealed the inline content wasn't executing reliably in the app
+//   router even though the tag was present with data-nscript="afterInteractive".
+// - We use a raw <script dangerouslySetInnerHTML> tag which the browser runs
+//   as a normal synchronous inline script — bulletproof.
+//
+// The pixel adds itself to the already-loaded fbq via fbq('init', ...) and
+// fires events specifically to this pixel via fbq('trackSingle', ...) so the
+// BuyGeogrid pixel isn't polluted with duplicate PageView/Lead events.
 const AFS_META_PIXEL_ID = '2475116883007778';
 
 type Props = {
@@ -26,27 +31,25 @@ export default function AFSMetaPixel({ event }: Props) {
     ? `window.fbq('trackSingle', '${AFS_META_PIXEL_ID}', '${event}');`
     : '';
 
+  const code = `
+(function () {
+  var tries = 0;
+  function init() {
+    if (typeof window.fbq === 'function') {
+      window.fbq('init', '${AFS_META_PIXEL_ID}');
+      window.fbq('trackSingle', '${AFS_META_PIXEL_ID}', 'PageView');
+      ${eventLine}
+    } else if (++tries < 40) {
+      setTimeout(init, 100);
+    }
+  }
+  init();
+})();
+  `.trim();
+
   return (
     <>
-      <Script id="afs-meta-pixel" strategy="afterInteractive">
-        {`
-          (function () {
-            var tries = 0;
-            function init() {
-              if (typeof window.fbq === 'function') {
-                window.fbq('init', '${AFS_META_PIXEL_ID}');
-                window.fbq('trackSingle', '${AFS_META_PIXEL_ID}', 'PageView');
-                ${eventLine}
-              } else if (++tries < 40) {
-                setTimeout(init, 100);
-              } else if (typeof console !== 'undefined') {
-                console.warn('[AFS Pixel] fbq not loaded — pixel ${AFS_META_PIXEL_ID} not initialized');
-              }
-            }
-            init();
-          })();
-        `}
-      </Script>
+      <script dangerouslySetInnerHTML={{ __html: code }} />
       <noscript>
         <img
           height="1"
