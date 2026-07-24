@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import ConditionalWidgets from "@/components/ConditionalWidgets";
+import SiteMetaPixel from "@/components/SiteMetaPixel";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -191,27 +192,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Facebook Pixel */}
-        <Script id="facebook-pixel" strategy="afterInteractive">
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '314192535267336');
-            fbq('track', 'PageView');
-          `}
-        </Script>
-        <noscript>
-          <img height="1" width="1" style={{display: 'none'}}
-            src="https://www.facebook.com/tr?id=314192535267336&ev=PageView&noscript=1"
-            alt="Facebook Pixel"
-          />
-        </noscript>
+        {/* Facebook Pixel moved to SiteMetaPixel component below — client-scoped so it doesn't fire on the AFS landing page (which has its own dedicated pixel) */}
 
         <Script
           id="structured-data"
@@ -227,6 +208,8 @@ export default function RootLayout({
         {children}
         {/* Chatbot + newsletter popup render everywhere EXCEPT PPC landing pages (see ConditionalWidgets) */}
         <ConditionalWidgets />
+        {/* Site-wide FB Pixel — skips the /concrete-crack-sealing route which has its own pixel */}
+        <SiteMetaPixel />
       </body>
     </html>
   );
