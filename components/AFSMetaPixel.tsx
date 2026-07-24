@@ -33,14 +33,19 @@ export default function AFSMetaPixel({ event }: Props) {
 
   const code = `
 (function () {
+  console.log('[AFSPixel] script tag executing');
   var tries = 0;
   function init() {
     if (typeof window.fbq === 'function') {
+      console.log('[AFSPixel] fbq detected, calling init + PageView for ${AFS_META_PIXEL_ID}');
       window.fbq('init', '${AFS_META_PIXEL_ID}');
       window.fbq('trackSingle', '${AFS_META_PIXEL_ID}', 'PageView');
-      ${eventLine}
+      ${eventLine ? `console.log('[AFSPixel] firing extra event: ${event}'); ${eventLine}` : ''}
+      console.log('[AFSPixel] after calls, fbq.instance.pixelsByID:', Object.keys((window.fbq.instance || {}).pixelsByID || {}));
     } else if (++tries < 40) {
       setTimeout(init, 100);
+    } else {
+      console.warn('[AFSPixel] fbq never appeared, giving up');
     }
   }
   init();
