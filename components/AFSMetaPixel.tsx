@@ -2,7 +2,14 @@ import Script from 'next/script';
 
 // Meta (Facebook) Pixel for the AFS Concrete Crack Sealing FB ad campaign.
 // Scoped to the AFS landing page + thank-you page only (NOT site-wide).
-// This is a separate pixel from BuyGeogrid's site-wide pixel.
+// This is a SECOND pixel — the BuyGeogrid site-wide pixel (314192535267336)
+// is already loaded via app/layout.tsx.
+//
+// IMPORTANT: because fbq is already initialized site-wide, we DO NOT re-run
+// the FB base code IIFE (it short-circuits with `if(f.fbq)return`). Instead,
+// we just add this pixel via fbq('init', ...) and fire events specifically
+// to this pixel via fbq('trackSingle', ...) so the site-wide pixel isn't
+// polluted with duplicate events.
 const AFS_META_PIXEL_ID = '2475116883007778';
 
 type Props = {
@@ -15,21 +22,29 @@ type Props = {
 };
 
 export default function AFSMetaPixel({ event }: Props) {
+  const eventLine = event
+    ? `window.fbq('trackSingle', '${AFS_META_PIXEL_ID}', '${event}');`
+    : '';
+
   return (
     <>
       <Script id="afs-meta-pixel" strategy="afterInteractive">
         {`
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '${AFS_META_PIXEL_ID}');
-          fbq('track', 'PageView');
-          ${event ? `fbq('track', '${event}');` : ''}
+          (function () {
+            var tries = 0;
+            function init() {
+              if (typeof window.fbq === 'function') {
+                window.fbq('init', '${AFS_META_PIXEL_ID}');
+                window.fbq('trackSingle', '${AFS_META_PIXEL_ID}', 'PageView');
+                ${eventLine}
+              } else if (++tries < 40) {
+                setTimeout(init, 100);
+              } else if (typeof console !== 'undefined') {
+                console.warn('[AFS Pixel] fbq not loaded — pixel ${AFS_META_PIXEL_ID} not initialized');
+              }
+            }
+            init();
+          })();
         `}
       </Script>
       <noscript>
