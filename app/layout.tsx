@@ -55,6 +55,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  other: {
+    // Meta Business Manager domain verification for buygeogrid.com
+    // (required for AFS pixel 2475116883007778 attribution + iOS 14.5+ tracking)
+    'facebook-domain-verification': 'et35hks06prlyhw1329wbklswc1qxa',
+  },
 };
 
 const structuredData = {
