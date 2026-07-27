@@ -9,6 +9,11 @@ const NOTIFY_TO = ['jstone@asphaltfabrics.com', 'mkirk@asphaltfabrics.com'];
 const REPLY_TO = 'jstone@asphaltfabrics.com';
 // Owner heads-up — Kevin gets a lightweight FYI so he knows leads are flowing without operational noise
 const OWNER_NOTIFY_TO = 'kslivka@asphaltfabrics.com';
+// Test allowlist — submissions from these email addresses are treated as tests.
+// Skip Mike + Kevin notifications so we don't spam them during pipeline testing.
+// Josh still gets the admin email (as reply-to + as customer autoresponder),
+// so the full flow is exercised end-to-end.
+const TEST_SUBMITTER_EMAILS = new Set(['jstone@asphaltfabrics.com', 'josh.stone63@gmail.com']);
 const AFS_PHONE = '(440) 384-1897';
 
 interface ConcreteRepairBody {
@@ -71,6 +76,10 @@ export async function POST(request: NextRequest) {
 
     const cleanName = name.trim();
     const cleanEmail = email.trim().toLowerCase();
+    const isTestSubmission = TEST_SUBMITTER_EMAILS.has(cleanEmail);
+    if (isTestSubmission) {
+      console.log(`[concrete-crack-sealing] TEST submission from ${cleanEmail} — skipping Mike + Kevin`);
+    }
     const cleanCompany = company?.trim() || null;
     const cleanPhone = phone.trim();
     const cleanCity = city.trim();
@@ -129,7 +138,7 @@ export async function POST(request: NextRequest) {
         .send({
           from: FROM,
           replyTo: cleanEmail,
-          to: NOTIFY_TO,
+          to: isTestSubmission ? ['jstone@asphaltfabrics.com'] : NOTIFY_TO,
           subject: `Crack sealing / joint repair lead — ${cleanName}${cleanCompany ? ` (${cleanCompany})` : ''} — ${cleanCity}`,
           html: adminHtml,
           text: adminText,
@@ -185,8 +194,10 @@ export async function POST(request: NextRequest) {
         })
         .catch((err) => console.error('concrete-crack-sealing customer notify failed:', err));
 
-      // Owner FYI — lightweight heads-up to Kevin (owner) so he knows leads are flowing
+      // Owner FYI — lightweight heads-up to Kevin (owner) so he knows leads are flowing.
+      // Skipped entirely on test submissions to avoid spamming him during pipeline testing.
       const leadLabel = `${cleanName}${cleanCompany ? ` · ${cleanCompany}` : ''} · ${cleanCity}`;
+      if (!isTestSubmission) {
       const ownerHtml = `
         <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;padding:16px;font-size:14px;line-height:1.6;color:#111">
           <p style="margin:0 0 12px">Hey Kevin — heads up, a new Crack Seal / FibreCrete quote request just came in.</p>
@@ -214,6 +225,7 @@ export async function POST(request: NextRequest) {
           text: ownerText,
         })
         .catch((err) => console.error('concrete-crack-sealing owner notify failed:', err));
+      } // end !isTestSubmission
     } else {
       console.error('RESEND_API_KEY not configured — concrete-crack-sealing lead not emailed');
     }
