@@ -1,5 +1,6 @@
 import AFSFooter from '@/components/AFSFooter';
 import AFSMetaPixel from '@/components/AFSMetaPixel';
+import ThankYouConversion from '@/components/ThankYouConversion';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -17,6 +18,8 @@ export default function ThankYou() {
     <div className="min-h-screen flex flex-col bg-white">
       {/* Meta Pixel — fires PageView + Lead conversion event for FB Ads Manager */}
       <AFSMetaPixel event="Lead" />
+      {/* GA4 conversion — fires crack_sealing_lead event for Google Ads import */}
+      <ThankYouConversion />
       <main className="flex-grow flex items-center justify-center bg-[#1a1a1a] text-white relative overflow-hidden">
         {/* Construction-stripe accent bar (top) */}
         <div
