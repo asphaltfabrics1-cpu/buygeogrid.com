@@ -37,6 +37,12 @@ export default function ThankYouConversion() {
         event_label: 'concrete_crack_sealing',
         value: 1,
       });
+
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-18356011253/dKBECI6x190cEPWB6rBE',
+        value: 500,
+        currency: 'USD',
+      });
     }
   }, []);
 
