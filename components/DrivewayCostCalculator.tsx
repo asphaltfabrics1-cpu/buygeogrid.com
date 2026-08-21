@@ -47,19 +47,19 @@ const DEPTH_TABLE: Record<LoadClass, Record<SubgradeKey, {
   lifeExtension: string;
 }>> = {
   vehicular: {
-    severe:   { traditional: 48, grid: 24, lifeExtension: 'Could help extend pavement life 2–3× vs. unstabilized base' },
-    moderate: { traditional: 36, grid: 12, lifeExtension: 'Could help extend pavement life 2–3× vs. unstabilized base' },
-    mild:     { traditional: 24, grid: 6, gridDisplay: '4–6', lifeExtension: 'Could help extend pavement life 2–3× vs. unstabilized base' },
+    severe:   { traditional: 48, grid: 24, lifeExtension: 'Can extend base life and reduce long-term maintenance costs (per Tensar full-scale trafficking testing)' },
+    moderate: { traditional: 36, grid: 12, lifeExtension: 'Can extend base life and reduce long-term maintenance costs (per Tensar full-scale trafficking testing)' },
+    mild:     { traditional: 24, grid: 6, gridDisplay: '4–6', lifeExtension: 'Can extend base life and reduce long-term maintenance costs (per Tensar full-scale trafficking testing)' },
   },
   lightStructural: {
-    severe:   { traditional: 12, grid: 6, lifeExtension: 'Prevents future settling on soft Ohio subgrade' },
-    moderate: { traditional: 10, grid: 6, lifeExtension: 'Prevents future settling on soft Ohio subgrade' },
+    severe:   { traditional: 12, grid: 6, lifeExtension: 'Can help resist settling on soft Ohio subgrade' },
+    moderate: { traditional: 10, grid: 6, lifeExtension: 'Can help resist settling on soft Ohio subgrade' },
     mild:     { traditional: 8, grid: 4, lifeExtension: 'ICPI-compliant base that lasts the life of the finish' },
   },
   pointLoad: {
-    severe:   { traditional: 16, grid: 10, lifeExtension: 'Handles 2,000–6,000 lb point loads without settling' },
-    moderate: { traditional: 12, grid: 8, lifeExtension: 'Handles 2,000–6,000 lb point loads without settling' },
-    mild:     { traditional: 8, grid: 6, lifeExtension: 'Handles 2,000–6,000 lb point loads without settling' },
+    severe:   { traditional: 16, grid: 10, lifeExtension: 'Designed for 2,000–6,000 lb point loads on stabilized base' },
+    moderate: { traditional: 12, grid: 8, lifeExtension: 'Designed for 2,000–6,000 lb point loads on stabilized base' },
+    mild:     { traditional: 8, grid: 6, lifeExtension: 'Designed for 2,000–6,000 lb point loads on stabilized base' },
   },
 };
 
@@ -498,7 +498,7 @@ export default function DrivewayCostCalculator() {
               </div>
             </div>
             <div className="text-right md:text-right">
-              <div className="text-sm opacity-90">Expected life</div>
+              <div className="text-sm opacity-90">What NX850 adds</div>
               <div className="text-base font-semibold">{results.lifeExtension}</div>
             </div>
           </div>
@@ -522,10 +522,10 @@ export default function DrivewayCostCalculator() {
               <p className="text-sm text-gray-300 mt-2 leading-relaxed">
                 {netSavings === null
                   ? <>Larger jobs get a full-roll quote — text your exact dimensions and we&apos;ll price it same-day.</>
-                  : <>On projects this size, the geogrid material is close to the excavation savings — but the geogrid still prevents settling, extends life, and pays off in fewer rebuilds. We&apos;ll price the exact rolls you need — same-day.</>}
+                  : <>On projects this size, the geogrid material is close to the excavation savings — but grid can help resist settling and reduce long-term maintenance costs. We&apos;ll price the exact rolls you need — same-day.</>}
               </p>
               <p className="text-xs text-gray-400 mt-2">
-                Expected life with NX850: <strong className="text-gray-200">{results.lifeExtension}</strong>
+                What NX850 adds: <strong className="text-gray-200">{results.lifeExtension}</strong>
               </p>
             </div>
             <a

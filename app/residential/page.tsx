@@ -370,11 +370,22 @@ export default function ResidentialPage() {
                 Base cost &amp; quote calculator
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                See what your project costs the traditional way vs. building on Tensar NX850. Covers
-                gravel / asphalt / stamped concrete driveways, RV / boat pads, patios, concrete slabs
-                (pool decks, stamped patios, walkways), shed pads, above-ground pool bases, and
-                hot tub / spa pads. Bigger jobs get a savings number; smaller jobs get a text-for-quote
-                button — either way you land on our phone.
+                Estimate what a job costs the traditional over-excavate-and-fill way vs. building on
+                Tensar NX850. Covers gravel / asphalt / stamped concrete driveways, RV / boat pads,
+                patios, concrete slabs (pool decks, stamped patios, walkways), shed pads, above-ground
+                pool bases, and hot tub / spa pads. Every project ends in a text-for-quote — we price
+                the exact roll size same-day.
+              </p>
+              <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                <strong className="text-gray-800">A note for residential jobs:</strong> your local
+                city or township building spec sets the required base depth — always build to permit
+                requirements. Where a stabilized-base alternative is allowed, NX850 can reduce
+                excavation and stone volumes. Where the depth is fixed, adding NX850 at the bottom
+                can extend base life and reduce long-term maintenance costs (per Tensar full-scale
+                trafficking testing). Numbers below reflect the Tensar-recommended stabilized base
+                thickness for a proof-roll-passing job on soft Northern Ohio clay — commercial jobs
+                see the biggest depth savings; residential jobs benefit more from added durability at
+                the same depth.
               </p>
               <div className="mb-8 rounded border-l-4 border-[#00c97e] bg-[#f0fdf4] p-4">
                 <p className="text-sm text-gray-800 leading-relaxed">
