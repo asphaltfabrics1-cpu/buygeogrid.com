@@ -406,6 +406,32 @@ export default function ResidentialPage() {
               </div>
             </Reveal>
             <DrivewayCostCalculator />
+
+            {/* Pocket card citation — proves the numbers in the calculator match Tensar's own source */}
+            <Reveal>
+              <div className="mt-12 rounded border border-gray-200 bg-gray-50 p-6">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <div className="text-[#00c97e] text-xs font-semibold uppercase tracking-[0.2em] mb-2">Source data</div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">Tensar 2025 Subgrade Pocket Card</h3>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      Every depth number above comes straight from Tensar&apos;s own 2025 Subgrade Pocket Card —
+                      the same reference their engineers hand out. Download it and check the math yourself.
+                    </p>
+                  </div>
+                  <a
+                    href="/docs/tensar-2025-subgrade-pocket-card.pdf"
+                    download
+                    className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors whitespace-nowrap no-underline shrink-0"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                    Download PDF
+                  </a>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </section>
 
