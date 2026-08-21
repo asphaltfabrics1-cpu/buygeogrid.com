@@ -22,6 +22,12 @@ export const metadata: Metadata = {
 export default function Blog() {
   const posts = [
     {
+      title: 'Do You Have to Buy a Full Roll of Geogrid?',
+      date: 'August 21, 2026',
+      excerpt: 'A full roll of NX850 is overkill for a driveway or patio. We cut quarter and half rolls of Tensar geogrid for residential jobs across Northern Ohio — stocked in Glenwillow, OH.',
+      url: '/blog/partial-rolls-of-geogrid',
+    },
+    {
       title: 'Freeze-Thaw & Frost Heave in Ohio: Geogrid, Patch Packs & Interlayer Playbook',
       date: 'May 11, 2026',
       excerpt: 'Why Northern Ohio pavements crack every spring, and the three-layer fix: Patch Packs for open potholes now, Petrotac interlayer before fall overlay, and geogrid when the section is rebuilt.',
