@@ -90,6 +90,29 @@ export default function NX850() {
             <p className="text-lg text-gray-700 leading-relaxed">
               Contact us for current availability and delivery throughout Northern Ohio.
             </p>
+
+            {/* Partial roll callout — routes residential / small-job traffic to /residential */}
+            <div className="mt-8 rounded border-l-4 border-[#00c97e] bg-[#f0fdf4] p-6">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <div className="text-[#00c97e] text-xs font-semibold uppercase tracking-[0.2em] mb-2">
+                    Small job? We cut partial rolls.
+                  </div>
+                  <p className="text-gray-800 leading-relaxed mb-0">
+                    A full roll is overkill for most driveways, patios, RV pads, or shed pads. We stock{' '}
+                    <strong>quarter rolls (12.5 × 49.25 ft, ~615 sq ft)</strong> and{' '}
+                    <strong>half rolls (12.5 × 98.5 ft, ~1,230 sq ft)</strong> out of our Glenwillow, OH warehouse
+                    for residential contractors and homeowners across Northern Ohio.
+                  </p>
+                </div>
+                <Link
+                  href="/residential"
+                  className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors whitespace-nowrap no-underline shrink-0"
+                >
+                  See residential options →
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
