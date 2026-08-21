@@ -68,21 +68,6 @@ const DEPTH_TABLE: Record<LoadClass, Record<SubgradeKey, {
 // #57 / #304 limestone runs ~1.4–1.5 ton/cy compacted → use 1.5
 const TON_PER_CY = 1.5;
 
-// Savings threshold — if net savings falls below this, we hide the green savings
-// callout and show a "text for a quote" CTA instead. Never a negative number on
-// screen. Small light-load projects (patio, walkway, shed pad, pool base, hot tub)
-// often land here because the quarter-roll cost swamps the modest excavation +
-// stone savings. Every hit is still a lead into (440) 384-1897.
-const SAVINGS_THRESHOLD = 100;
-
-function money(n: number) {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  }).format(Math.max(0, Math.round(n)));
-}
-
 type ProjectKey =
   | 'driveway'
   | 'asphaltDriveway'
@@ -119,9 +104,6 @@ export default function DrivewayCostCalculator() {
   const [length, setLength] = useState(40);
   const [width, setWidth] = useState(20);
   const [subgrade, setSubgrade] = useState<SubgradeKey>('moderate');
-  const [stonePrice, setStonePrice] = useState(35);      // $/ton delivered
-  const [excavationRate, setExcavationRate] = useState(15); // $/cy dig + haul off + tip
-  const [showAssumptions, setShowAssumptions] = useState(false);
 
   function handleProjectChange(next: ProjectKey) {
     setProject(next);
@@ -139,19 +121,10 @@ export default function DrivewayCostCalculator() {
     // on soft ground; industry-consensus point-load base for hot tub)
     const tradVolCy = (sqft * (depths.traditional / 12)) / 27;
     const tradStoneTons = tradVolCy * TON_PER_CY;
-    const tradStoneCost = tradStoneTons * stonePrice;
-    const tradExcavationCost = tradVolCy * excavationRate;
-    const tradTotal = tradStoneCost + tradExcavationCost;
 
     // Geogrid-reinforced (thinner base — geogrid + separator does the work)
     const gridVolCy = (sqft * (depths.grid / 12)) / 27;
     const gridStoneTons = gridVolCy * TON_PER_CY;
-    const gridStoneCost = gridStoneTons * stonePrice;
-    const gridExcavationCost = gridVolCy * excavationRate;
-    const gridSubtotal = gridStoneCost + gridExcavationCost; // pre-grid material
-
-    const materialSavings = tradTotal - gridSubtotal;
-    const savingsPercent = tradTotal > 0 ? (materialSavings / tradTotal) * 100 : 0;
 
     // Roll geometry: NX850 rolls are 12.5 ft wide. Strips run along the length
     // of the driveway (parallel to traffic — standard install). Total unrolled
@@ -160,44 +133,30 @@ export default function DrivewayCostCalculator() {
     const ROLL_WIDTH = 12.5;
     const QUARTER_ROLL_LEN = 49.25;
     const HALF_ROLL_LEN = 98.5;
-    const FULL_ROLL_LEN = 197;
 
     const stripsNeeded = width > 0 ? Math.ceil(width / ROLL_WIDTH) : 0;
     const linearFtNeeded = stripsNeeded * length;
-    const gridSqFtNeeded = linearFtNeeded * ROLL_WIDTH;
-
-    // NX850 partial-roll pricing — verified from PIDS spec (12.5 ft × 197 ft = 274 sy full)
-    // and current listed prices. Quarter roll = 68.5 sy = $445. Half roll = 137 sy = $885.
-    // Larger jobs get routed to phone quote (we only stock partials).
-    const QUARTER_ROLL_PRICE = 445;
-    const HALF_ROLL_PRICE = 885;
 
     let rollRecommendation = '';
     let rollLengthAvailable = 0;
-    let geogridCost: number | null = null;
     if (linearFtNeeded === 0) {
       rollRecommendation = '';
     } else if (linearFtNeeded <= QUARTER_ROLL_LEN) {
       rollRecommendation = '1 quarter roll (12.5 ft × 49.25 ft)';
       rollLengthAvailable = QUARTER_ROLL_LEN;
-      geogridCost = QUARTER_ROLL_PRICE;
     } else if (linearFtNeeded <= HALF_ROLL_LEN) {
       rollRecommendation = '1 half roll (12.5 ft × 98.5 ft)';
       rollLengthAvailable = HALF_ROLL_LEN;
-      geogridCost = HALF_ROLL_PRICE;
     } else if (linearFtNeeded <= HALF_ROLL_LEN + QUARTER_ROLL_LEN) {
       rollRecommendation = '1 half roll + 1 quarter roll';
       rollLengthAvailable = HALF_ROLL_LEN + QUARTER_ROLL_LEN;
-      geogridCost = HALF_ROLL_PRICE + QUARTER_ROLL_PRICE;
     } else if (linearFtNeeded <= 2 * HALF_ROLL_LEN) {
       rollRecommendation = '2 half rolls';
       rollLengthAvailable = 2 * HALF_ROLL_LEN;
-      geogridCost = 2 * HALF_ROLL_PRICE;
     } else {
       // Job too big for partial-roll stock — fall back to phone quote
       rollRecommendation = 'Larger than stocked partial rolls — text for a full-roll quote';
       rollLengthAvailable = 0;
-      geogridCost = null;
     }
     const leftoverLinearFt = Math.max(0, rollLengthAvailable - linearFtNeeded);
 
@@ -209,54 +168,29 @@ export default function DrivewayCostCalculator() {
       loadClass,
       trad: {
         depth: depths.traditional,
-        volCy: tradVolCy,
         stoneTons: tradStoneTons,
-        stoneCost: tradStoneCost,
-        excavationCost: tradExcavationCost,
-        total: tradTotal,
       },
       grid: {
         depth: depths.grid,
         depthDisplay: depths.gridDisplay || String(depths.grid),
-        volCy: gridVolCy,
         stoneTons: gridStoneTons,
-        stoneCost: gridStoneCost,
-        excavationCost: gridExcavationCost,
-        subtotal: gridSubtotal,
       },
-      materialSavings,
-      savingsPercent,
       rollRecommendation,
       leftoverLinearFt,
       stripsNeeded,
       linearFtNeeded,
-      gridSqFtNeeded,
-      // geogridCost held internally for the savings math but NEVER surfaced
-      // as a line item — owner does not advertise roll pricing publicly.
-      _geogridCostInternal: geogridCost,
     };
-  }, [project, length, width, subgrade, stonePrice, excavationRate]);
-
-  // Real net total with geogrid (internal — includes actual roll price)
-  const gridTotalIncludingGeogrid = results._geogridCostInternal !== null
-    ? results.grid.subtotal + results._geogridCostInternal
-    : null;
-  const netSavings = gridTotalIncludingGeogrid !== null
-    ? results.trad.total - gridTotalIncludingGeogrid
-    : null;
-  const netSavingsPct = gridTotalIncludingGeogrid !== null && results.trad.total > 0
-    ? (netSavings! / results.trad.total) * 100
-    : null;
+  }, [project, length, width, subgrade]);
 
   return (
     <div className="bg-white border border-gray-200 rounded p-6 md:p-8">
       <div className="mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Base cost &amp; quote calculator</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Base &amp; roll size calculator</h3>
         <p className="text-gray-700">
-          Plug in your project size and subgrade condition. See what a traditional overbuild costs
-          vs. building on Tensar NX850 geogrid. Depths from the Tensar 2025 Pocket Card (vehicular)
-          and CMHA PAV-TEC-002 (light structural). Smaller projects: skip the math and text your
-          dimensions to (440) 384-1897 for a same-day quote.
+          Plug in your project size and subgrade condition — we&apos;ll show you the base depth
+          options (unreinforced vs NX850-stabilized), the roll size you need, and what NX850 adds.
+          Depths from the Tensar 2025 Pocket Card (vehicular) and CMHA PAV-TEC-002 (light structural).
+          Text your dimensions to (440) 384-1897 for a same-day quote.
         </p>
       </div>
 
@@ -325,51 +259,6 @@ export default function DrivewayCostCalculator() {
         </div>
       </div>
 
-      <button
-        type="button"
-        onClick={() => setShowAssumptions((v) => !v)}
-        className="text-sm text-[#00c97e] font-semibold hover:underline mb-4"
-      >
-        {showAssumptions ? 'Hide' : 'Edit'} cost assumptions
-      </button>
-
-      {showAssumptions && (
-        <div className="grid md:grid-cols-2 gap-4 mb-6 p-4 bg-gray-50 rounded border border-gray-200">
-          <div>
-            <label htmlFor="calc-stone" className="block text-sm font-semibold text-gray-800 mb-1">
-              Stone ($/ton delivered)
-            </label>
-            <input
-              id="calc-stone"
-              type="number"
-              min={0}
-              value={stonePrice}
-              onChange={(e) => setStonePrice(Math.max(0, Number(e.target.value)))}
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-[#00c97e]"
-            />
-            <p className="text-xs text-gray-500 mt-1">
-              Northern Ohio #57 / #304 typically $30–$50/ton delivered.
-            </p>
-          </div>
-          <div>
-            <label htmlFor="calc-excavation" className="block text-sm font-semibold text-gray-800 mb-1">
-              Excavation + haul-off ($/cubic yard)
-            </label>
-            <input
-              id="calc-excavation"
-              type="number"
-              min={0}
-              value={excavationRate}
-              onChange={(e) => setExcavationRate(Math.max(0, Number(e.target.value)))}
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-[#00c97e]"
-            />
-            <p className="text-xs text-gray-500 mt-1">
-              Dig + spoil haul + tip fee. $10–$25/cy is common on residential.
-            </p>
-          </div>
-        </div>
-      )}
-
       {/* Results */}
       <div className="mb-4">
         <p className="text-sm text-gray-700">
@@ -406,137 +295,71 @@ export default function DrivewayCostCalculator() {
         </div>
       )}
 
+      {/* Depth comparison — labels + inches only, no dollar amounts. Residential
+          buyers can't act on the depth reduction (city spec locks depth) so the
+          dollar savings framing doesn't apply. Numbers here are Tensar's published
+          reference for a proof-roll-passing base — commercial jobs cash in on the
+          depth reduction; residential jobs use grid at their city-spec depth for
+          durability. */}
       <div className="grid md:grid-cols-2 gap-4 mb-6">
-        {/* Traditional */}
         <div className="border border-gray-300 rounded p-5 bg-gray-50">
           <div className="text-xs uppercase tracking-wide text-gray-500 mb-1">
             Traditional (excavate &amp; fill)
           </div>
-          <div className="text-lg font-bold text-gray-900 mb-3">
-            {results.trad.depth}&quot; depth · no geogrid
+          <div className="text-2xl font-bold text-gray-900 mb-2">
+            {results.trad.depth}&quot; base
           </div>
-          <table className="w-full text-sm">
-            <tbody>
-              <tr>
-                <td className="py-1 text-gray-700">Excavation + haul-off</td>
-                <td className="py-1 text-right text-gray-900">{money(results.trad.excavationCost)}</td>
-              </tr>
-              <tr>
-                <td className="py-1 text-gray-700">
-                  Stone ({results.trad.stoneTons.toFixed(1)} tons)
-                </td>
-                <td className="py-1 text-right text-gray-900">{money(results.trad.stoneCost)}</td>
-              </tr>
-              <tr className="border-t border-gray-300">
-                <td className="pt-2 font-bold text-gray-900">Total</td>
-                <td className="pt-2 text-right font-bold text-gray-900">
-                  {money(results.trad.total)}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            The unreinforced depth Tensar publishes for a proof-roll-passing base on this
+            subgrade — about {results.trad.stoneTons.toFixed(0)} tons of stone for your
+            project size.
+          </p>
         </div>
 
-        {/* With Geogrid — deliberately does NOT itemize (excavation + stone + geogrid
-            all rolled into one bundled total so the roll price can't be back-solved
-            from the visible numbers. Owner does not advertise NX850 pricing.) */}
         <div className="border-2 border-[#00c97e] rounded p-5 bg-white">
           <div className="text-xs uppercase tracking-wide text-[#00c97e] font-semibold mb-1">
             With Tensar NX850 Geogrid
           </div>
-          <div className="text-lg font-bold text-gray-900 mb-3">
-            {results.grid.depthDisplay}&quot; depth · grid-reinforced
+          <div className="text-2xl font-bold text-gray-900 mb-2">
+            {results.grid.depthDisplay}&quot; base
           </div>
-          <table className="w-full text-sm">
-            <tbody>
-              <tr>
-                <td className="py-1 text-gray-700">
-                  {results.grid.stoneTons.toFixed(1)} tons stone + excavation + NX850
-                </td>
-                <td className="py-1 text-right text-gray-500 italic">bundled</td>
-              </tr>
-              <tr className="border-t border-gray-300">
-                <td className="pt-2 font-bold text-gray-900">Total materials</td>
-                <td className="pt-2 text-right font-bold text-gray-900">
-                  {gridTotalIncludingGeogrid !== null
-                    ? money(gridTotalIncludingGeogrid)
-                    : (
-                      <a href={PHONE_TEL} className="text-[#00c97e] not-italic hover:underline">
-                        text for quote
-                      </a>
-                    )}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p className="text-xs text-gray-500 mt-3 leading-relaxed">
-            Bundled to keep NX850 pricing confidential — text{' '}
-            <a href={PHONE_TEL} className="text-[#00c97e] font-semibold hover:underline">
-              {PHONE_DISPLAY}
-            </a>{' '}
-            for the exact quoted breakdown.
+          <p className="text-sm text-gray-700 leading-relaxed">
+            Grid-stabilized depth Tensar publishes for the same subgrade — about{' '}
+            {results.grid.stoneTons.toFixed(0)} tons of stone. On residential jobs where the
+            depth is locked to city spec, the grid layer adds durability at the same depth.
           </p>
         </div>
       </div>
 
-      {/* Savings callout OR quote CTA — depends on whether savings clear the threshold.
-          Never a negative number on screen. Small light-load projects get routed to the
-          phone/text CTA because the geogrid material cost swamps the modest depth savings —
-          but the customer still lands on a lead-capture line, which is the point. */}
-      {netSavings !== null && netSavings >= SAVINGS_THRESHOLD ? (
-        <div className="bg-[#00c97e] text-white rounded p-5 mb-4">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div>
-              <div className="text-sm uppercase tracking-wide opacity-90">
-                Total savings with NX850
-              </div>
-              <div className="text-3xl font-bold">
-                {money(netSavings)}
-                <span className="text-lg font-normal ml-2 opacity-90">
-                  ({netSavingsPct!.toFixed(0)}%)
-                </span>
-              </div>
+      {/* What NX850 adds — qualitative benefit + text-for-quote CTA. No dollar
+          amounts anywhere — Owner does not advertise NX850 pricing publicly, and
+          the depth-savings dollar math is misleading for a residential audience. */}
+      <div className="bg-[#1a1a1a] text-white rounded p-5 mb-4">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <div className="text-sm uppercase tracking-wide text-[#00c97e] font-semibold">
+              What NX850 adds
             </div>
-            <div className="text-right md:text-right">
-              <div className="text-sm opacity-90">What NX850 adds</div>
-              <div className="text-base font-semibold">{results.lifeExtension}</div>
-            </div>
+            <p className="text-base text-gray-200 mt-2 leading-relaxed">
+              {results.lifeExtension}. Prevents subgrade pumping and helps keep the base
+              locked in place on soft Northern Ohio clay.
+            </p>
+            <p className="text-sm text-gray-400 mt-3 leading-relaxed">
+              Text your project dimensions to{' '}
+              <a href={PHONE_TEL} className="text-[#00c97e] font-semibold hover:underline">
+                {PHONE_DISPLAY}
+              </a>{' '}
+              — we&apos;ll price the exact roll size same-day.
+            </p>
           </div>
-          <p className="text-sm mt-3 opacity-95">
-            Total savings compare the traditional itemized cost against the bundled NX850 build
-            (excavation + stone + geogrid). Text{' '}
-            <a href={PHONE_TEL} className="underline font-semibold">{PHONE_DISPLAY}</a>{' '}
-            for the exact quote — same-day.
-          </p>
+          <a
+            href={PHONE_TEL}
+            className="inline-flex items-center justify-center px-6 py-3 bg-[#00c97e] hover:bg-[#00b36f] text-white rounded font-semibold text-sm whitespace-nowrap transition-colors shrink-0"
+          >
+            Text {PHONE_DISPLAY}
+          </a>
         </div>
-      ) : (
-        <div className="bg-[#1a1a1a] text-white rounded p-5 mb-4">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <div className="text-sm uppercase tracking-wide text-[#00c97e] font-semibold">
-                Small job — call for a real quote
-              </div>
-              <div className="text-xl md:text-2xl font-bold mt-1">
-                Text your dimensions to <a href={PHONE_TEL} className="underline">{PHONE_DISPLAY}</a>
-              </div>
-              <p className="text-sm text-gray-300 mt-2 leading-relaxed">
-                {netSavings === null
-                  ? <>Larger jobs get a full-roll quote — text your exact dimensions and we&apos;ll price it same-day.</>
-                  : <>On projects this size, the geogrid material is close to the excavation savings — but grid can help resist settling and reduce long-term maintenance costs. We&apos;ll price the exact rolls you need — same-day.</>}
-              </p>
-              <p className="text-xs text-gray-400 mt-2">
-                What NX850 adds: <strong className="text-gray-200">{results.lifeExtension}</strong>
-              </p>
-            </div>
-            <a
-              href={PHONE_TEL}
-              className="inline-flex items-center justify-center px-6 py-3 bg-[#00c97e] hover:bg-[#00b36f] text-white rounded font-semibold text-sm whitespace-nowrap transition-colors"
-            >
-              Text {PHONE_DISPLAY}
-            </a>
-          </div>
-        </div>
-      )}
+      </div>
 
       {/* Assumptions footer */}
       <p className="text-xs text-gray-500 leading-relaxed">
