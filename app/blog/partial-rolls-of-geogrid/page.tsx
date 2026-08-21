@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-08-21',
     authors: ['Asphalt Fabrics & Supply'],
-    images: ['/images/tensar-geogrid-residential-uses-ohio.png'],
+    images: ['/images/tensar-geogrid-blog-northern-ohio.jpg'],
   },
 };
 
@@ -54,8 +54,8 @@ export default function PartialRollsOfGeogrid() {
               <div className="prose prose-lg max-w-none">
                 <div className="mb-8">
                   <img
-                    src="/images/tensar-geogrid-residential-uses-ohio.png"
-                    alt="Partial rolls of Tensar NX850 geogrid stocked in Glenwillow, Ohio for residential driveways, patios, and pads"
+                    src="/images/tensar-geogrid-blog-northern-ohio.jpg"
+                    alt="Close-up of Tensar NX850 InterAx multi-axial geogrid — hexagon, trapezoid, and triangle apertures — cut into partial rolls in Glenwillow, Ohio"
                     className="w-full rounded border border-gray-200"
                   />
                 </div>
