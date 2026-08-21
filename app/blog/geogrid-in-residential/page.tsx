@@ -64,14 +64,14 @@ export default function GeogridInResidential() {
                 <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Walls</div>
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">2. Retaining Wall Support</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Installing Geogrid increases wall stability and lifespan by improving drainage and movement
-                  resistance. Whether you're building a new retaining wall or reinforcing an existing one,
-                  Geogrid provides the structural support needed to prevent failure and extend the wall's life.
-                  For walls over three feet tall, Geogrid reinforcement is often essential to meet building
-                  codes and ensure long-term stability. Uniaxial geogrids are specifically designed for
-                  retaining wall applications, providing high tensile strength in a single direction to
-                  resist the lateral earth pressures that cause walls to lean or collapse over time.
-                  Contact us to discuss retaining wall reinforcement options for your project.
+                  Geogrid reinforcement extends the life and stability of a retaining wall by tying the wall
+                  facing into the backfill mass, resisting the lateral earth pressures that cause walls to
+                  lean or fail over time. For most shorter residential retaining walls (typically under 3 ft),
+                  a biaxial (BX) geogrid is the common spec — it&apos;s what contractors around Northern Ohio
+                  use every day and it&apos;s what we stock (BX1200, BX1300). For taller walls, engineered MSE
+                  structures, or walls where long-term creep performance matters, a uniaxial (UX) geogrid is
+                  the right product because it&apos;s purpose-built for sustained one-direction tensile load.
+                  Contact us to spec the right product for your wall height, backfill, and site conditions.
                 </p>
 
                 <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Patios</div>
@@ -106,12 +106,17 @@ export default function GeogridInResidential() {
                 <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 mt-8">Selection</div>
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">Choosing the Right Geogrid for Your Project</h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Not all Geogrids are the same. For most residential applications, the InterAx NX series
-                  offers excellent performance at a reasonable cost. The NX650 works well for light-duty
-                  applications like walkways and patios, while the NX750 handles driveways and parking areas.
-                  The H-Series (HX145, HX165) provides a cost-effective option for base reinforcement and
-                  subgrade stabilization. We can help you select the right product based on your specific
-                  soil conditions and project requirements.
+                  Not all Geogrids are the same — the product depends on the application.
+                  For <strong>base stabilization</strong> under driveways, patios, walkways, and slabs, the
+                  InterAx NX series is the standard: NX650 for light-duty (walkways, patios), NX750 for
+                  driveways and parking areas, NX850 for heavier residential and commercial base work.
+                  The H-Series (HX145, HX165) is a cost-effective alternative for base reinforcement and
+                  subgrade stabilization. For <strong>shorter residential retaining walls (under ~3 ft)</strong>,
+                  a biaxial (BX) geogrid is what most contractors use — we stock BX1200 and BX1300 for exactly
+                  this. For <strong>taller walls, engineered MSE structures, and steep slopes</strong>, a
+                  uniaxial (UX) geogrid is the right product for its long-term creep performance. Multi-axial
+                  products like the NX series are for base work, not wall reinforcement. Contact us and we&apos;ll
+                  spec the right product for your wall height, soil, and load conditions.
                 </p>
 
                 <div className="mt-12 bg-blue-50 border-2 border-blue-300 rounded p-6">

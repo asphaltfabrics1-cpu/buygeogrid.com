@@ -128,9 +128,10 @@ export default function Geogrid() {
                 Tensar manufactures several Geogrid product lines, each engineered for different applications:
               </p>
               <ul className="space-y-3 text-lg text-gray-700">
-                <li><strong>InterAx® (NX Series):</strong> Multi-axial Geogrids with hexagonal apertures that provide 360-degree stability. Ideal for unpaved roads, parking lots, and sites with variable traffic patterns.</li>
-                <li><strong>TriAx® (TX Series):</strong> Triangular aperture Geogrids offering multi-directional strength. Well-suited for paved roads, highways, and heavy-duty applications.</li>
-                <li><strong>Biaxial (BX Series):</strong> Rectangular aperture Geogrids designed for bi-directional loading. Commonly used in retaining walls, slopes, and foundation reinforcement.</li>
+                <li><strong>InterAx® (NX Series):</strong> Multi-axial Geogrids with hexagonal apertures that provide 360-degree stability. Ideal for unpaved roads, driveways, parking lots, and sites with variable traffic patterns.</li>
+                <li><strong>TriAx® (TX Series):</strong> Triangular aperture Geogrids offering multi-directional strength. Well-suited for paved roads, highways, and heavy-duty base stabilization.</li>
+                <li><strong>Biaxial (BX Series):</strong> Rectangular aperture Geogrids designed for bi-directional loading. Used for base reinforcement under paved roads, parking lots, and permanent pavements. BX is also commonly specified for shorter residential retaining walls (typically under 3 ft) where design loads are low.</li>
+                <li><strong>Uniaxial (UX Series):</strong> High tensile strength in a single direction. Purpose-built for taller retaining walls, engineered MSE structures, steep slopes, and embankments — applications where long-term creep performance matters.</li>
               </ul>
             </Reveal>
           </div>
@@ -159,7 +160,7 @@ export default function Geogrid() {
               <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">History</div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">The Evolution of Geogrid Technology</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Tensar invented the Geogrid in 1978 and has continued advancing the technology ever since. Their <strong>Biaxial (BX) series</strong>, introduced in the 1980s, featured rectangular apertures for bi-directional reinforcement—ideal for retaining walls and foundation support. In 2007, Tensar launched the <strong>TriAx® series</strong> with triangular apertures that provide radial stiffness in all directions, improving performance under multi-directional traffic loads. The latest innovation is the <strong>InterAx® series</strong> (2021), which uses hexagonal geometry with multiple aperture sizes and coextruded outer layers that conform to aggregate particles for enhanced interlock. Each generation builds on decades of research and field-proven performance.
+                Tensar invented the Geogrid in 1978 and has continued advancing the technology ever since. Their original <strong>Uniaxial (UX) series</strong> was engineered for taller retaining walls, MSE structures, and steep-slope reinforcement — high tensile strength in one direction to resist earth pressures over long service lives. Their <strong>Biaxial (BX) series</strong>, introduced in the 1980s, featured rectangular apertures for bi-directional reinforcement — the workhorse for base stabilization under paved roads and parking lots, and a common spec for shorter residential retaining walls. In 2007, Tensar launched the <strong>TriAx® series</strong> with triangular apertures that provide radial stiffness in all directions, improving performance under multi-directional traffic loads. The latest innovation is the <strong>InterAx® series</strong> (2021), which uses hexagonal geometry with multiple aperture sizes and coextruded outer layers that conform to aggregate particles for enhanced interlock. Each generation builds on decades of research and field-proven performance.
               </p>
             </Reveal>
           </div>
