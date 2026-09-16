@@ -106,7 +106,7 @@ export default function PatchPackQuoteForm({ mode = 'quote', id }: PatchPackQuot
   }
 
   const inputClass =
-    'w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-[#00c97e] focus:border-[#00c97e] transition-all disabled:bg-gray-100 text-base';
+    'w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-[#00c97e] focus:border-[#00c97e] transition-all disabled:bg-gray-100 text-base text-gray-900 placeholder:text-gray-400';
 
   const title = isDemo ? 'Schedule a Free On-Site Demonstration' : 'Request Patch Pack Pricing';
   const subtitle = isDemo
