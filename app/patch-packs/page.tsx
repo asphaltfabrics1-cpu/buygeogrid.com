@@ -1,349 +1,288 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import PageHero from '@/components/PageHero';
-import Section from '@/components/Section';
-import ProductDetail from '@/components/ProductDetail';
 import Reveal from '@/components/Reveal';
 import Link from 'next/link';
+import PatchPackQuoteForm from '@/components/PatchPackQuoteForm';
+import PatchPackStickyMobileBar from '@/components/PatchPackStickyMobileBar';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pothole Repair Ohio | Patch Packs Cold Asphalt Patch | Cleveland, Akron, Toledo',
-  description: 'Professional pothole repair solution for Ohio. Patch Packs cold asphalt patch delivers permanent pothole fixes in any weather. VOC-free, instant traffic-ready. Serving Cleveland, Akron, Canton, Toledo. Call (440) 368-1420.',
-  keywords: [
-    'pothole repair Ohio',
-    'pothole repair Cleveland',
-    'pothole repair Akron',
-    'pothole repair Toledo',
-    'pothole repair Canton',
-    'pothole repair Youngstown',
-    'cold patch pothole repair',
-    'cold asphalt patch Ohio',
-    'permanent pothole fix',
-    'pothole filler Ohio',
-    'winter pothole repair',
-    'all-weather pothole repair',
-    'emergency pothole repair Ohio',
-    'commercial pothole repair',
-    'parking lot pothole repair',
-    'driveway pothole repair',
-    'asphalt pothole repair',
-    'cold patch asphalt',
-    'Patch Packs Ohio',
-    'VOC-free pothole material',
-    'bridge deck repair material',
-    'pothole repair material',
-    'buy pothole patch Ohio',
-    'pothole repair supplies Cleveland',
-    'municipal pothole repair'
-  ],
+  title: 'Patch Packs Pothole Repair | Commercial Cold Asphalt Patch Ohio',
+  description:
+    'Patch Packs provide all-weather pothole repair without heating or specialized equipment. Local pickup and Northern Ohio delivery for contractors, facilities, and municipalities.',
   alternates: {
     canonical: 'https://www.buygeogrid.com/patch-packs',
   },
   openGraph: {
-    title: 'Pothole Repair Ohio | Patch Packs Cold Asphalt Patch Solution',
-    description: 'Professional pothole repair solution for Ohio. Cold asphalt patch that works in any weather. Instant traffic-ready. Serving Cleveland, Akron, Canton, Toledo.',
+    title: 'Patch Packs Pothole Repair | Commercial Cold Asphalt Patch Ohio',
+    description:
+      'All-weather pothole repair for contractors, facilities, and municipalities. Stocked in Glenwillow, Ohio. Local pickup and Northern Ohio delivery.',
     images: ['/images/products/patch-packs.png'],
   },
 };
 
-// FAQ data for schema markup
 const faqData = [
   {
-    question: "What is the best way to repair a pothole?",
-    answer: "The best way to repair a pothole is to clean out loose debris, fill with cold patch asphalt material like Patch Packs, and compact firmly. Cold patch asphalt works in any weather and allows immediate traffic access. For deeper potholes over 4 inches, fill in 2-inch layers, compacting each layer."
+    question: 'Can Patch Packs be installed in freezing weather?',
+    answer:
+      'Yes. Patch Packs are a cold-applied pavement repair material formulated for use across a wide range of temperatures, including cold and wet conditions where hot mix asphalt is not practical.',
   },
   {
-    question: "Can you repair potholes in winter?",
-    answer: "Yes, cold asphalt patch products like Patch Packs are specifically designed for winter pothole repair. Unlike hot mix asphalt, cold patch works in freezing temperatures and wet conditions, making it ideal for emergency pothole repairs in Ohio's harsh winters."
+    question: 'Can they be used on asphalt and concrete?',
+    answer:
+      'Yes. Patch Packs are designed for repairs to both asphalt and concrete pavement surfaces.',
   },
   {
-    question: "How long does a pothole repair last?",
-    answer: "A properly applied cold asphalt patch repair can last several years. Patch Packs use 100% recycled aggregate with a special binder that expands and contracts with temperature changes, creating a durable bond. The key to longevity is proper compaction and ensuring the pothole is clean before application."
+    question: 'Do we need a hot box or specialized equipment?',
+    answer:
+      'No. Patch Packs do not require heating, mixing, or specialized application equipment. Basic hand tools and a means of compaction — a hand tamper, plate compactor, or vehicle tire where suitable — are all that is needed.',
   },
   {
-    question: "What size pothole can cold patch repair?",
-    answer: "Cold patch asphalt is effective for potholes 1 inch deep or deeper. For shallow surface defects, other repair methods may be more appropriate. For very deep potholes (over 4 inches), apply cold patch in multiple 2-inch layers, compacting each layer before adding the next."
+    question: 'How soon can traffic use the repaired area?',
+    answer:
+      'The repaired area can return to traffic immediately after the Patch Pack material is placed and properly compacted.',
   },
   {
-    question: "Do I need special equipment for pothole repair?",
-    answer: "No, Patch Packs cold asphalt patch requires no specialized equipment. A single person can complete repairs using basic hand tools. Simply place, spread, and compact with a hand tamper or vehicle tire. No heating, mixing, or special training required."
+    question: 'What is the difference between Standard and Flex?',
+    answer:
+      'Standard Patch Packs are intended for common pothole and pavement repairs on parking lots, driveways, roads, and general commercial pavement. Flex Patch Packs are intended for repair areas exposed to greater movement, thermal expansion, heavy loading, or bridge-deck conditions. If you’re not sure which is right for your project, send photos of the damaged area and we’ll help you select.',
   },
   {
-    question: "Where can I buy pothole repair material in Ohio?",
-    answer: "BuyGeogrid.com stocks Patch Packs cold asphalt patch at our Solon, Ohio warehouse. We deliver throughout Cleveland, Akron, Canton, Toledo, Youngstown, and all of Northern Ohio. Most orders ship within 24-48 hours. Call (440) 368-1420 for pricing and availability."
-  }
+    question: 'Can Asphalt Fabrics & Supply deliver?',
+    answer:
+      'Yes. Patch Packs are stocked at our Glenwillow, Ohio warehouse and available for local pickup or delivery throughout Northern Ohio, including Cleveland, Akron, Canton, Youngstown, and Toledo.',
+  },
+  {
+    question: 'Do you offer contractor or municipal volume pricing?',
+    answer:
+      'Yes. We provide volume pricing for contractors, facilities, and municipalities. Contact us with your approximate quantity and location for a quote.',
+  },
+  {
+    question: 'Can you demonstrate the product at our property?',
+    answer:
+      'Yes. We offer on-site demonstrations by request for qualifying commercial, contractor, facility, and municipal locations in Northern Ohio. Josh will follow up to confirm the location and schedule a time.',
+  },
 ];
 
-// JSON-LD Schema for Product and FAQ
+// Product schema — no price, no invented ratings/reviews/SKUs/availability.
+// Seller address matches the Glenwillow warehouse.
 const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Patch Packs Cold Asphalt Pothole Repair",
-  "description": "Professional cold asphalt patch for pothole repair. VOC-free, 100% recycled aggregate. Works in all weather conditions. Immediate traffic access after application.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Patch Packs"
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Patch Packs Cold-Applied Pavement Repair',
+  description:
+    'Cold-applied pothole and pavement repair material for asphalt and concrete. Installed with basic hand tools; no heating, mixing, or specialized equipment required. Available in Standard and Flex.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Patch Packs',
   },
-  "category": "Pothole Repair Materials",
-  "offers": {
-    "@type": "Offer",
-    "availability": "https://schema.org/InStock",
-    "areaServed": {
-      "@type": "State",
-      "name": "Ohio"
+  category: 'Pavement Repair Materials',
+  offers: {
+    '@type': 'Offer',
+    areaServed: {
+      '@type': 'State',
+      name: 'Ohio',
     },
-    "seller": {
-      "@type": "Organization",
-      "name": "BuyGeogrid.com",
-      "telephone": "+1-440-368-1420",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Solon",
-        "addressRegion": "OH",
-        "addressCountry": "US"
-      }
-    }
-  }
+    seller: {
+      '@type': 'Organization',
+      name: 'Asphalt Fabrics & Supply',
+      telephone: '+1-440-368-1420',
+      email: 'jstone@asphaltfabrics.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '7620 Bond Street',
+        addressLocality: 'Glenwillow',
+        addressRegion: 'OH',
+        postalCode: '44139',
+        addressCountry: 'US',
+      },
+    },
+  },
 };
 
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqData.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
 };
 
 const videoSchema = {
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Patch Packs: Road Repairs without Tools",
-  "description": "Patch Packs cold asphalt pothole repair demo — fill a pothole with no specialized equipment, in any weather, with immediate traffic access.",
-  "thumbnailUrl": "https://i.ytimg.com/vi/k2-_wDHrnk8/maxresdefault.jpg",
-  "uploadDate": "2024-01-01",
-  "contentUrl": "https://www.youtube.com/watch?v=k2-_wDHrnk8",
-  "embedUrl": "https://www.youtube.com/embed/k2-_wDHrnk8",
-  "publisher": {
-    "@type": "Organization",
-    "name": "BuyGeogrid.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.buygeogrid.com/images/logos/afsupplylogo_transparent.png"
-    }
-  }
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'Patch Packs: Road Repairs without Tools',
+  description:
+    'Patch Packs cold-applied pothole repair demonstration — filling a pothole without heating, mixing, or specialized equipment.',
+  thumbnailUrl: 'https://i.ytimg.com/vi/k2-_wDHrnk8/maxresdefault.jpg',
+  uploadDate: '2024-01-01',
+  contentUrl: 'https://www.youtube.com/watch?v=k2-_wDHrnk8',
+  embedUrl: 'https://www.youtube.com/embed/k2-_wDHrnk8',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Asphalt Fabrics & Supply',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.buygeogrid.com/images/logos/afsupplylogo_transparent.png',
+    },
+  },
 };
 
+const audienceCards = [
+  {
+    title: 'Property and facility managers',
+    body: 'Keep parking lots, drives, and loading areas safe without waiting on outside crews.',
+  },
+  {
+    title: 'Municipal and township road crews',
+    body: 'Respond to potholes and pavement failures across your service area year-round.',
+  },
+  {
+    title: 'Warehouses and distribution centers',
+    body: 'Repair fork-truck impact damage, dock approaches, and yard drive lanes without shutting them down.',
+  },
+  {
+    title: 'Paving and sealcoating contractors',
+    body: 'Handle in-between repairs and callbacks without mobilizing a hot-mix crew.',
+  },
+  {
+    title: 'Schools, churches, and healthcare facilities',
+    body: 'Address trip hazards and pavement defects around entrances, drop-offs, and lots quickly.',
+  },
+  {
+    title: 'Commercial and industrial properties',
+    body: 'Maintain access drives, staff lots, and service areas with a low-friction repair option.',
+  },
+];
+
+const traditionalProblems = [
+  'Waiting for a contractor to mobilize',
+  'Hot mix availability and temperature limitations',
+  'Multiple workers and specialized equipment',
+  'Closing the area while material cures',
+  'Loose, messy material stored in the maintenance shop',
+];
+
+const patchPackAdvantages = [
+  'All-weather, all-season application',
+  'One-person installation',
+  'No heating or mixing',
+  'No specialized application equipment',
+  'Immediate traffic access after compaction',
+  'Individually packaged for convenient storage and transport',
+];
+
+const localBullets = [
+  'Local warehouse pickup',
+  'Delivery available throughout Northern Ohio',
+  'Contractor, facility, and municipal volume pricing',
+  'Product selection and application assistance',
+  'On-site demonstrations available by request',
+];
+
+const demoBenefits = [
+  'Demonstration performed on an actual pavement defect',
+  'See the complete installation process',
+  'Ask application and product-selection questions',
+  'No obligation to purchase',
+];
+
 export default function PatchPacks() {
-  const features = [
-    { text: 'No specialized equipment required' },
-    { text: 'Single-person application' },
-    { text: 'VOC-free, environmentally conscious' },
-    { text: 'Immediate traffic access after application' },
-    { text: 'Works in all weather conditions and seasons' },
-    { text: '100% recycled aggregate' },
-  ];
-
-  const applications = [
-    { text: 'Bridge deck repair material' },
-    { text: 'Highway and road pavements (asphalt and concrete)' },
-    { text: 'Pavement leveling around drains and manholes' },
-    { text: 'Parking facilities and driveways' },
-    { text: 'High-traffic commercial surfaces' },
-  ];
-
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      {/* JSON-LD Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <Header />
-      <main className="flex-grow">
-        <PageHero
-          title="Pothole Repair That Works in Any Weather"
-          description="Patch Packs cold asphalt patch delivers permanent pothole repairs year-round—even in freezing temperatures. No special equipment needed. Instant traffic access after compaction. VOC-free formula with 100% recycled aggregate. Your trusted pothole repair supplier serving Cleveland, Akron, Canton, Toledo, and all of Northern Ohio."
-          ctaText="Request a Quote"
-          ctaLink="/contact"
-          secondaryCtaText="Call (440) 368-1420"
-          secondaryCtaLink="tel:4403681420"
-          image="/images/products/patch-packs.png"
-          imageAlt="Patch Packs Cold Asphalt Pothole Repair Solution"
-          logo="/images/logos/PatchPacksTM Logo 2in.png"
-          logoLink="https://fptinfrastructure.com/products/pavement-repair-materials/patch-packs/"
-          logoAlt="Patch Packs"
-        />
-
-        <Section background="gray">
-          <ProductDetail features={features} applications={applications} />
-        </Section>
-
-        {/* What Are Patch Packs Section */}
-        <section className="py-20 md:py-24 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <Reveal>
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Overview</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">What Are Patch Packs?</h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Patch Packs are a fast and easy cold asphalt patch solution for all-weather emergency pavement repair. Whether you need to fix potholes, spalls, or other pavement defects, this cold patch asphalt product delivers durable results without specialized equipment. The VOC-free pothole material combines 100% recycled aggregate with a non-volatile binder, making it an environmentally conscious choice for pavement maintenance.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Available in Standard and Flex variants, Patch Packs are designed for repairing asphalt and reactive concrete defects measuring 1 inch or deeper. The VOC-free formulation makes them safe to use in any environment—from municipal road crews to commercial property managers.
-              </p>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* Video Demo Section */}
-        <section className="py-20 md:py-24 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <Reveal className="mb-8">
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Video</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">Watch Patch Packs in Action</h2>
-              <p className="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
-                See how a single person can repair a pothole with Patch Packs in under a minute — no torches, no hot box, no special tools required.
-              </p>
-            </Reveal>
-            <Reveal delay={120}>
-              <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-gray-100">
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube-nocookie.com/embed/k2-_wDHrnk8"
-                  title="Patch Packs: Road Repairs without Tools"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
+      <main className="flex-grow pb-16 md:pb-0">
+        {/* Hero */}
+        <section className="relative bg-[#1a1a1a] text-white overflow-hidden">
+          <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-28 lg:py-32">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-5">
+                  Stocked in Glenwillow · Serving Northern Ohio
+                </div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
+                  Repair Potholes in Any Weather&mdash;Without a Hot Box
+                </h1>
+                <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
+                  Patch Packs give maintenance crews and contractors a fast, professional way to repair potholes
+                  and pavement failures year-round. One person can install the material without heating, mixing,
+                  or specialized equipment, and the repaired area can reopen to traffic immediately after
+                  compaction.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-center">
+                  <Link
+                    href="#quote"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
+                  >
+                    Get Patch Pack Pricing
+                    <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                  </Link>
+                  <Link
+                    href="#schedule-demo"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white border border-white/40 hover:border-[#00c97e] hover:text-[#00c97e] rounded transition-colors duration-200"
+                  >
+                    Schedule a Free Demo
+                  </Link>
+                  <a
+                    href="tel:4403681420"
+                    className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors sm:pl-2"
+                  >
+                    <span>Call 440-368-1420</span>
+                    <span className="opacity-60">&rarr;</span>
+                  </a>
+                </div>
+                <p className="text-sm text-gray-400 mt-5">
+                  Contractor, facility, and municipal volume pricing available.
+                </p>
               </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* How It Works Section */}
-        <section className="py-20 md:py-24 px-6 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <Reveal>
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">How it works</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">How Cold Patch Asphalt Works</h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                The asphalt binder in this cold asphalt patch enables Patch Packs to expand and compress under vehicle load, establishing adhesion to existing surfaces while simultaneously sealing the top and side edges of the repair area. Unlike hot mix asphalt, this all-weather pothole repair solution works in any temperature.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Simply clean the pothole of loose debris, place the recycled aggregate patch material into the hole, and compact it. No heating, mixing, or specialized equipment is required. The repair can be opened to traffic immediately after compaction—perfect for emergency pavement repair situations.
-              </p>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* Applications Section */}
-        <section className="py-20 md:py-24 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <Reveal>
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Applications</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">Pothole Repair Applications</h2>
-              <ul className="space-y-3 text-lg text-gray-700">
-                <li><strong>Bridge deck repair material</strong> – Trusted solution for bridge approach and deck repairs</li>
-                <li><strong>Highway and road pavements</strong> – Works on both asphalt and concrete surfaces</li>
-                <li><strong>Utility cut restoration</strong> – Pavement leveling around drains, manholes, and access points</li>
-                <li><strong>Multi-use vehicular pathways</strong> – Bike paths, trails, and shared roadways</li>
-                <li><strong>Commercial surfaces</strong> – Parking facilities, driveways, and high-traffic areas</li>
-                <li><strong>Emergency cold weather repairs</strong> – All-weather pothole repair when hot mix isn&apos;t available</li>
-              </ul>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 md:py-24 px-6 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <Reveal>
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Benefits</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">Benefits of Cold Asphalt Patch</h2>
-              <ul className="space-y-3 text-lg text-gray-700">
-                <li><strong>No specialized equipment required</strong> – Simple application process for any crew</li>
-                <li><strong>Single-person application</strong> – Reduces labor costs significantly</li>
-                <li><strong>Reduces safety hazards</strong> – For workers and drivers alike</li>
-                <li><strong>VOC-free pothole material</strong> – Environmentally conscious formulation</li>
-                <li><strong>Immediate traffic access</strong> – No curing time needed for emergency pavement repair</li>
-                <li><strong>All-weather pothole repair</strong> – Works in any season or condition, including freezing temperatures</li>
-                <li><strong>100% recycled aggregate</strong> – Sustainable choice for municipalities and contractors</li>
-              </ul>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* Product Variants Section */}
-        <section className="py-20 md:py-24 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <Reveal className="mb-6">
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Options</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight text-center">Product Variants</h2>
-            </Reveal>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Reveal delay={120}>
-                <div className="bg-gray-50 p-6 rounded-lg h-full">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Standard Patch Packs</h3>
-                  <p className="text-gray-700">
-                    Designed for standard cold asphalt patch repairs on asphalt and concrete pavement. Ideal for most pothole and spall repairs on roads, parking lots, and driveways throughout Northern Ohio.
-                  </p>
+              <div className="flex justify-center items-start">
+                <div className="bg-white rounded-lg p-8 shadow-lg">
+                  <img
+                    src="/images/products/patch-packs.png"
+                    alt="Patch Packs cold-applied pothole repair"
+                    className="w-full max-w-md h-auto max-h-[280px] object-contain"
+                  />
                 </div>
-              </Reveal>
-              <Reveal delay={240}>
-                <div className="bg-gray-50 p-6 rounded-lg h-full">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Flex Patch Packs</h3>
-                  <p className="text-gray-700">
-                    Enhanced flexibility for areas with greater movement or thermal expansion. The preferred bridge deck repair material for surfaces subject to heavy loads and temperature fluctuations.
-                  </p>
-                </div>
-              </Reveal>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Why Repair Potholes Section */}
-        <section className="py-20 md:py-24 px-6 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <Reveal>
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Why it matters</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">Why Repair Potholes Quickly?</h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Potholes cause vehicle damage, create safety hazards, and accelerate pavement deterioration. Water entering through potholes undermines the base layers, leading to larger failures and more expensive repairs. In freeze-thaw climates like Northern Ohio, this cycle can cause rapid pavement breakdown—making emergency pavement repair essential.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Addressing potholes promptly with an effective cold patch asphalt solution like Patch Packs protects your pavement investment and reduces liability exposure. Quick all-weather pothole repair also improves the driving experience and public perception of road conditions.
-              </p>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
+        {/* Built for crews */}
         <section className="py-20 md:py-24 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <Reveal className="mb-8">
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">FAQ</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight text-center">Pothole Repair FAQ</h2>
+          <div className="max-w-7xl mx-auto">
+            <Reveal className="mb-10 text-center">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                Who it&rsquo;s for
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">
+                Built for Crews That Can&rsquo;t Wait on a Paving Contractor
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                When a pothole becomes a safety concern, waiting days for a paving crew is not always an option.
+                Patch Packs allow your existing maintenance crew to complete targeted repairs with basic hand
+                tools&mdash;helping reduce downtime, outside mobilization, and repeat emergency calls.
+              </p>
             </Reveal>
-            <div className="space-y-6">
-              {faqData.map((faq, index) => (
-                <Reveal key={index} delay={index * 60}>
-                  <div className="border-b border-gray-200 pb-6 last:border-b-0">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {audienceCards.map((card, i) => (
+                <Reveal key={card.title} delay={i * 60}>
+                  <div className="h-full bg-gray-50 border border-gray-200 rounded p-6 hover:border-[#00c97e] transition-colors">
+                    <div className="w-10 h-10 rounded bg-[#00c97e]/10 text-[#00c97e] flex items-center justify-center mb-4">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{card.title}</h3>
+                    <p className="text-gray-700 leading-relaxed text-sm">{card.body}</p>
                   </div>
                 </Reveal>
               ))}
@@ -351,60 +290,381 @@ export default function PatchPacks() {
           </div>
         </section>
 
-        {/* Serving Northern Ohio Section */}
+        {/* Problem vs solution */}
         <section className="py-20 md:py-24 px-6 bg-gray-50">
-          <div className="max-w-4xl mx-auto text-center">
-            <Reveal>
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Coverage</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Pothole Repair Supplier Serving Northern Ohio</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                We stock Patch Packs cold asphalt patch at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours. Contact us for current availability and to discuss your pothole repair needs.
-              </p>
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="mb-10 text-center">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                Problem vs. solution
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
+                Keep Repairs Moving Without the Usual Headaches
+              </h2>
             </Reveal>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Reveal delay={80}>
+                <div className="h-full bg-white border border-gray-200 rounded p-6 md:p-8">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 mb-2">
+                    Traditional repair problems
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-5">The usual bottlenecks</h3>
+                  <ul className="space-y-3">
+                    {traditionalProblems.map((p) => (
+                      <li key={p} className="flex items-start gap-3 text-gray-800">
+                        <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center">
+                          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </span>
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+              <Reveal delay={160}>
+                <div className="h-full bg-[#1a1a1a] text-white rounded p-6 md:p-8 border border-[#00c97e]/40">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[#00c97e] mb-2">
+                    Patch Packs advantages
+                  </div>
+                  <h3 className="text-xl font-bold mb-5">What Patch Packs change</h3>
+                  <ul className="space-y-3">
+                    {patchPackAdvantages.map((p) => (
+                      <li key={p} className="flex items-start gap-3 text-gray-100">
+                        <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#00c97e] text-[#1a1a1a] flex items-center justify-center">
+                          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </section>
 
-        {/* Lunch & Learn CTA Section */}
+        {/* How it works + video */}
         <section className="py-20 md:py-24 px-6 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <Reveal>
-              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Learn</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Want to Learn More?</h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Schedule a free Lunch & Learn for your team. We provide expert training on cold asphalt patch products, pavement repair solutions, and geosynthetics—plus free lunch and PDH credits for engineers.
-              </p>
-              <Link
-                href="/lunch-and-learn"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
-              >
-                Schedule a Lunch & Learn
-                <span className="transition-transform group-hover:translate-x-1">→</span>
-              </Link>
+          <div className="max-w-7xl mx-auto">
+            <Reveal className="mb-10 text-center">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                How it works
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
+                Three Steps. Then Reopen the Area.
+              </h2>
             </Reveal>
+
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              <div className="space-y-6">
+                {[
+                  {
+                    n: '1',
+                    title: 'Clean the Repair',
+                    body: 'Remove loose debris and standing material from the damaged area.',
+                  },
+                  {
+                    n: '2',
+                    title: 'Place and Compact',
+                    body:
+                      'Add the Patch Pack material and compact it firmly using an appropriate hand tamper, plate compactor, or vehicle tire where suitable.',
+                  },
+                  {
+                    n: '3',
+                    title: 'Reopen to Traffic',
+                    body: 'The repaired area can return to traffic immediately after proper compaction.',
+                  },
+                ].map((step, i) => (
+                  <Reveal key={step.n} delay={i * 90}>
+                    <div className="flex gap-5">
+                      <div className="flex-shrink-0 w-12 h-12 rounded bg-[#00c97e] text-[#1a1a1a] flex items-center justify-center text-xl font-bold">
+                        {step.n}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-1">{step.title}</h3>
+                        <p className="text-gray-700 leading-relaxed">{step.body}</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+
+              <Reveal delay={120}>
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-gray-100">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube-nocookie.com/embed/k2-_wDHrnk8"
+                    title="Patch Packs: Road Repairs without Tools"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </Reveal>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-10">
+              <Link
+                href="#quote"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
+              >
+                Get Patch Pack Pricing
+              </Link>
+              <Link
+                href="#schedule-demo"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-[#1a1a1a] border border-[#1a1a1a]/20 hover:border-[#00c97e] hover:text-[#00c97e] rounded transition-colors duration-200"
+              >
+                Schedule a Free Demo
+              </Link>
+            </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <Reveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Ready to Order Patch Packs?</h2>
-              <p className="text-lg text-gray-300 mb-8">Get competitive pricing on cold asphalt patch and expert support from your Northern Ohio asphalt repair supply distributor</p>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
-                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
-                  Request a Quote
-                  <span className="transition-transform group-hover:translate-x-1">→</span>
-                </Link>
-                <Link href="tel:4403681420" className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors group">
-                  <span>(440) 368-1420</span>
-                  <span className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
-                </Link>
+        {/* Demo section */}
+        <section id="schedule-demo" className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white scroll-mt-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <Reveal>
+                <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                  Free on-site demonstration
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-5 leading-tight tracking-tight">
+                  See Patch Packs Repair a Real Pothole
+                </h2>
+                <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                  Have a pothole at your commercial property, facility, municipality, or contractor yard? We&rsquo;ll
+                  come out and demonstrate Patch Packs on an actual damaged area so your team can see how simple
+                  the installation process is.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {demoBenefits.map((b) => (
+                    <li key={b} className="flex items-start gap-3 text-gray-100">
+                      <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#00c97e] text-[#1a1a1a] flex items-center justify-center">
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm text-gray-400">
+                  Available for qualifying commercial, contractor, facility, and municipal locations in Northern Ohio.
+                </p>
+              </Reveal>
+              <Reveal delay={120}>
+                <PatchPackQuoteForm mode="demo" />
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Standard vs Flex */}
+        <section className="py-20 md:py-24 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="mb-10 text-center">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                Product options
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
+                Choose the Right Patch Pack
+              </h2>
+            </Reveal>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <Reveal delay={80}>
+                <div className="h-full bg-gray-50 border border-gray-200 rounded p-6 md:p-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Standard Patch Packs</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    For common potholes, pavement defects, spalls, parking lots, driveways, roads, and general
+                    commercial pavement repairs.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal delay={160}>
+                <div className="h-full bg-gray-50 border border-gray-200 rounded p-6 md:p-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Flex Patch Packs</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    For repair areas exposed to greater movement, thermal expansion, heavy loading, bridge-deck
+                    conditions, or other demanding applications.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
+            <Reveal delay={220}>
+              <div className="text-center bg-gray-50 border border-dashed border-gray-300 rounded p-6">
+                <p className="text-gray-800 mb-4">
+                  Not sure which one you need? Send us photos of the damaged area and we&rsquo;ll help you select
+                  the right material.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                  <Link
+                    href="#quote"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors"
+                  >
+                    Request Pricing
+                  </Link>
+                  <Link
+                    href="#schedule-demo"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-[#1a1a1a] border border-[#1a1a1a]/20 hover:border-[#00c97e] hover:text-[#00c97e] rounded transition-colors"
+                  >
+                    Schedule a Demo
+                  </Link>
+                </div>
               </div>
             </Reveal>
           </div>
         </section>
+
+        {/* Local inventory + service */}
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
+          <div className="max-w-5xl mx-auto">
+            <Reveal className="text-center mb-10">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                Local supply
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">
+                Local Material. Local Support.
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                Patch Packs are stocked at Asphalt Fabrics &amp; Supply in Glenwillow, Ohio. We support
+                contractors, maintenance departments, commercial facilities, and municipalities throughout
+                Cleveland, Akron, Canton, Youngstown, Toledo, and Northern Ohio.
+              </p>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className="bg-white border border-gray-200 rounded p-6 md:p-8">
+                <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+                  {localBullets.map((b) => (
+                    <li key={b} className="flex items-start gap-3 text-gray-800">
+                      <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#00c97e]/15 text-[#00c97e] flex items-center justify-center">
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 pt-6 border-t border-gray-200 text-sm text-gray-700 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <div>
+                    <div className="font-semibold text-gray-900">Asphalt Fabrics &amp; Supply</div>
+                    <div>7620 Bond Street, Glenwillow, OH 44139</div>
+                  </div>
+                  <div className="text-right">
+                    <a href="tel:4403681420" className="block text-[#00c97e] font-semibold hover:underline">
+                      440-368-1420
+                    </a>
+                    <a
+                      href="mailto:jstone@asphaltfabrics.com"
+                      className="block text-[#00c97e] font-semibold hover:underline"
+                    >
+                      jstone@asphaltfabrics.com
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-6 text-center">
+                  <Link
+                    href="#quote"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors"
+                  >
+                    Request Pricing or a Demonstration
+                  </Link>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-20 md:py-24 px-6 bg-[#1a1a1a] text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">
+                Have a Pothole You Need to Repair?
+              </h2>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                Tell us how many damaged areas you have&mdash;or send us a few photos. We&rsquo;ll help estimate
+                the material, recommend Standard or Flex, and provide a same-day quote whenever possible.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
+                <Link
+                  href="#quote"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group"
+                >
+                  Request a Quote
+                  <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                </Link>
+                <Link
+                  href="#schedule-demo"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white border border-white/40 hover:border-[#00c97e] hover:text-[#00c97e] rounded transition-colors duration-200"
+                >
+                  Schedule a Free Demo
+                </Link>
+                <a
+                  href="tel:4403681420"
+                  className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#00c97e] transition-colors"
+                >
+                  <span>Call Josh: 440-368-1420</span>
+                  <span className="opacity-60">&rarr;</span>
+                </a>
+              </div>
+              <p className="text-sm text-gray-400 mt-6">
+                Local pickup in Glenwillow and delivery available throughout Northern Ohio.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Quote form */}
+        <section id="quote" className="py-20 md:py-24 px-6 bg-white scroll-mt-20">
+          <div className="max-w-3xl mx-auto">
+            <Reveal className="mb-8 text-center">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                Request pricing
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
+                Get a Patch Packs Quote
+              </h2>
+              <p className="text-gray-700 mt-3">
+                Volume pricing available for contractors, facilities, and municipalities.
+              </p>
+            </Reveal>
+            <Reveal delay={80}>
+              <PatchPackQuoteForm mode="quote" />
+            </Reveal>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-20 md:py-24 px-6 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <Reveal className="mb-8 text-center">
+              <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+                FAQ
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
+                Patch Packs FAQ
+              </h2>
+            </Reveal>
+            <div className="space-y-6">
+              {faqData.map((faq, index) => (
+                <Reveal key={faq.question} delay={index * 40}>
+                  <div className="bg-white border border-gray-200 rounded p-6">
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
+      <PatchPackStickyMobileBar />
     </div>
   );
 }
