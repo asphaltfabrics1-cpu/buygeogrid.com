@@ -4,6 +4,7 @@ import Reveal from '@/components/Reveal';
 import Link from 'next/link';
 import PatchPackQuoteForm from '@/components/PatchPackQuoteForm';
 import PatchPackStickyMobileBar from '@/components/PatchPackStickyMobileBar';
+import PatchPackAnalytics from '@/components/PatchPackAnalytics';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -144,7 +145,7 @@ const audienceCards = [
   },
   {
     title: 'Warehouses and distribution centers',
-    body: 'Repair fork-truck impact damage, dock approaches, and yard drive lanes without shutting them down.',
+    body: 'Repair potholes, dock approaches, and damaged yard drive lanes without extended shutdowns.',
   },
   {
     title: 'Paving and sealcoating contractors',
@@ -566,12 +567,18 @@ export default function PatchPacks() {
                     </a>
                   </div>
                 </div>
-                <div className="mt-6 text-center">
+                <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                   <Link
                     href="#quote"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors"
                   >
-                    Request Pricing or a Demonstration
+                    Get Patch Pack Pricing
+                  </Link>
+                  <Link
+                    href="#schedule-demo"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-[#1a1a1a] border border-[#1a1a1a]/20 hover:border-[#00c97e] hover:text-[#00c97e] rounded transition-colors"
+                  >
+                    Schedule a Free Demo
                   </Link>
                 </div>
               </div>
@@ -663,8 +670,9 @@ export default function PatchPacks() {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer variant="patch-packs" />
       <PatchPackStickyMobileBar />
+      <PatchPackAnalytics />
     </div>
   );
 }

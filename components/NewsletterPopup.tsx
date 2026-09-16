@@ -10,7 +10,7 @@ const DISMISS_TTL_DAYS = 30;
 const TIME_TRIGGER_MS = 400; // open quickly after page paint
 
 // Routes the popup should NEVER appear on
-const HIDDEN_PATHS = ['/admin', '/trade-show', '/unsubscribe'];
+const HIDDEN_PATHS = ['/admin', '/trade-show', '/unsubscribe', '/patch-packs'];
 
 export default function NewsletterPopup() {
   const pathname = usePathname();

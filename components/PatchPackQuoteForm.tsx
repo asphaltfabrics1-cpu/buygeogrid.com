@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { trackEvent } from '@/lib/analytics';
 
 const BUYER_TYPES = [
   'Contractor',
@@ -98,12 +99,28 @@ export default function PatchPackQuoteForm({ mode = 'quote', id }: PatchPackQuot
         throw new Error(data.error || 'Failed to submit request');
       }
 
+      trackEvent(isDemo ? 'patch_pack_demo_submitted' : 'patch_pack_quote_submitted', {
+        page: '/patch-packs',
+        buyer_type: buyerType || 'unspecified',
+        product_interest: productInterest || 'unspecified',
+        has_location: location.trim() ? 'true' : 'false',
+      });
+
       router.push(isDemo ? '/contact/success?type=demo' : '/contact/success');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong');
       setSubmitting(false);
     }
   }
+
+  // Prevent selecting a date in the past. Requested date only — Josh confirms scheduling.
+  const todayIso = useMemo(() => {
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = String(now.getMonth() + 1).padStart(2, '0');
+    const d = String(now.getDate()).padStart(2, '0');
+    return `${y}-${m}-${d}`;
+  }, []);
 
   const inputClass =
     'w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-[#00c97e] focus:border-[#00c97e] transition-all disabled:bg-gray-100 text-base text-gray-900 placeholder:text-gray-400';
@@ -280,13 +297,14 @@ export default function PatchPackQuoteForm({ mode = 'quote', id }: PatchPackQuot
             <input
               id={`pp-date-${mode}`}
               type="date"
+              min={todayIso}
               value={preferredDate}
               onChange={(e) => setPreferredDate(e.target.value)}
               disabled={submitting}
               className={inputClass}
             />
             <p className="text-xs text-gray-500 mt-2">
-              We&apos;ll follow up to confirm a time that works for both teams.
+              Requested date only. Josh will contact you to confirm the location, qualification, availability, and final demonstration time.
             </p>
           </div>
         ) : (

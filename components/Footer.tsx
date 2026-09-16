@@ -1,7 +1,10 @@
 import Link from 'next/link';
 
-export default function Footer() {
+type FooterVariant = 'default' | 'patch-packs';
+
+export default function Footer({ variant = 'default' }: { variant?: FooterVariant } = {}) {
   const currentYear = new Date().getFullYear();
+  const isPatchPacks = variant === 'patch-packs';
 
   return (
     <footer className="bg-[#1a1a1a] text-white border-t-2 border-[#00c97e]">
@@ -75,27 +78,50 @@ export default function Footer() {
           {/* CTA */}
           <div>
             <div className="text-[#00c97e] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Get in touch</div>
-            <p className="text-gray-300 text-sm leading-relaxed mb-5">
-              Call for a same-day quote or request a free on-site DCP test.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#00c97e] hover:bg-[#00b36f] text-white text-sm font-semibold rounded transition-colors group mb-4"
-            >
-              Request a Quote
-              <span className="transition-transform group-hover:translate-x-1">→</span>
-            </Link>
+            {isPatchPacks ? (
+              <>
+                <p className="text-gray-300 text-sm leading-relaxed mb-5">
+                  Call for Patch Pack pricing or schedule a free on-site demonstration.
+                </p>
+                <Link
+                  href="/patch-packs#quote"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#00c97e] hover:bg-[#00b36f] text-white text-sm font-semibold rounded transition-colors group mb-3"
+                >
+                  Get Patch Pack Pricing
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+                <Link
+                  href="/patch-packs#schedule-demo"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-white/40 hover:border-[#00c97e] hover:text-[#00c97e] text-white text-sm font-semibold rounded transition-colors group"
+                >
+                  Schedule a Free Demo
+                </Link>
+              </>
+            ) : (
+              <>
+                <p className="text-gray-300 text-sm leading-relaxed mb-5">
+                  Call for a same-day quote or request a free on-site DCP test.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#00c97e] hover:bg-[#00b36f] text-white text-sm font-semibold rounded transition-colors group mb-4"
+                >
+                  Request a Quote
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </Link>
 
-            <a
-              href="/docs/asphalt-fabrics-supply-flyer.pdf"
-              download
-              className="flex items-center gap-2 text-gray-300 hover:text-[#00c97e] text-sm transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-              Download capabilities flyer
-            </a>
+                <a
+                  href="/docs/asphalt-fabrics-supply-flyer.pdf"
+                  download
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#00c97e] text-sm transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                  Download capabilities flyer
+                </a>
+              </>
+            )}
           </div>
         </div>
 
