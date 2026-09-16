@@ -36,8 +36,8 @@ const faqData = [
     answer: "Yes. Unlike hot mix asphalt, which requires heated material and specific temperature conditions, Patch Packs cold asphalt patch works in any weather — including freezing temperatures, rain, and snow. This makes it the go-to solution for emergency winter pothole repairs when hot mix plants are closed."
   },
   {
-    question: "How long does a Patch Packs repair last?",
-    answer: "A properly compacted Patch Packs repair can last several years. The key to durability is cleaning the pothole of loose debris before application and compacting the material firmly — either with a hand tamper or by driving a vehicle tire over the repair. For potholes deeper than 4 inches, applying in 2-inch lifts with compaction between each layer produces the most durable result."
+    question: "How do I make a Patch Packs repair hold up?",
+    answer: "The two things that decide how well a Patch Packs repair holds up are prep and compaction. Clean loose debris and standing material out of the pothole before you place the patch, then compact firmly — with a hand tamper, plate compactor, or a vehicle tire where appropriate. For potholes deeper than 4 inches, place and compact in 2-inch lifts rather than filling the hole in one pour."
   },
   {
     question: "Do I need special equipment to apply Patch Packs?",
@@ -114,7 +114,7 @@ export default function PatchPacksBlog() {
                 <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Overview</div>
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight tracking-tight">What Are Patch Packs?</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  Patch Packs are a cold asphalt patch product designed for fast, permanent pothole and pavement defect repair. They are made from 100% recycled aggregate combined with a non-volatile binder — meaning the formula contains zero VOCs (volatile organic compounds).
+                  Patch Packs are a cold-applied asphalt patch designed for fast pothole and pavement defect repair. They are made from 100% recycled aggregate combined with a non-volatile binder — meaning the formula contains zero VOCs (volatile organic compounds).
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Unlike hot mix asphalt, which requires heated material and warm-weather application conditions, Patch Packs work in any weather — including freezing temperatures, rain, and wet conditions. This makes them a critical tool for emergency winter pavement repair when hot mix plants are closed and potholes are at their worst.

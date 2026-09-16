@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Why Potholes Keep Coming Back (And How to Stop It) | Ohio',
   description: 'Filling potholes with cold patch every spring is a losing game. The real fix is stopping water from reaching the base. Petrotac interlayer + Patch Packs cold asphalt. Ohio distributor.',
-  keywords: ['potholes keep coming back', 'permanent pothole fix', 'stop potholes returning', 'cold patch that lasts', 'Patch Packs Ohio', 'Petrotac crack repair', 'reflective cracking', 'Ohio pothole solution'],
+  keywords: ['potholes keep coming back', 'stop potholes returning', 'cold pothole repair', 'winter pothole repair', 'Patch Packs Ohio', 'Petrotac crack repair', 'reflective cracking', 'Ohio pothole solution'],
   alternates: { canonical: 'https://www.buygeogrid.com/potholes-keep-coming-back' },
   openGraph: {
     title: 'Why Potholes Keep Coming Back',
@@ -89,7 +89,7 @@ export default function PotholesKeepComingBack() {
           <div className="max-w-4xl mx-auto">
             <Reveal className="mb-8">
               <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">The fix</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">The Two-Step Permanent Fix</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">The Two-Step Fix</h2>
             </Reveal>
             <div className="grid md:grid-cols-2 gap-6">
               <Reveal delay={120}>
