@@ -6,7 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Subgrade Stabilization Toledo Ohio | Tensar Geogrid | BuyGeogrid',
+  title: 'Subgrade Stabilization Toledo Ohio | Tensar Geogrid',
   description: 'Toledo lake-plain clay subgrade fails proof rolls on almost every commercial job. Tensar geogrid stabilizes it before you pave — faster and cheaper than dig-and-replace. Northern Ohio distributor with same-week delivery.',
   keywords: ['subgrade stabilization Toledo', 'weak subgrade Ohio', 'Toledo geogrid', 'proof roll failure Toledo', 'Lucas County subgrade', 'Toledo commercial paving', 'Perrysburg soil', 'Maumee stabilization'],
   alternates: { canonical: 'https://www.buygeogrid.com/subgrade-stabilization-toledo' },
@@ -28,7 +28,7 @@ const faqData = [
   },
   {
     question: 'How quickly can you supply material to a Toledo project?',
-    answer: 'Our warehouse is in Solon (about 2 hours east). Standard SKUs — Tensar NX650, NX750, NX850, TX190L, Mirafi 500X/600X — are typically in stock and can ship next-day or you can send a truck for pickup. For DOT or large commercial jobs we can arrange direct freight from Tensar\'s regional manufacturing to your Toledo site.',
+    answer: 'Our warehouse is in Glenwillow (about 2 hours east). Standard SKUs — Tensar NX650, NX750, NX850, TX190L, Mirafi 500X/600X — are typically in stock and can ship next-day or you can send a truck for pickup. For DOT or large commercial jobs we can arrange direct freight from Tensar\'s regional manufacturing to your Toledo site.',
   },
   {
     question: 'Do you support engineer specifications on DOT and large commercial jobs?',
@@ -147,7 +147,7 @@ export default function SubgradeStabilizationToledo() {
               ))}
             </div>
             <p className="text-center mt-6 text-gray-600 text-sm">
-              Solon, OH warehouse. Next-day delivery to Toledo standard SKUs. Direct-from-manufacturer freight for large orders.
+              Glenwillow, OH warehouse. Next-day delivery to Toledo standard SKUs. Direct-from-manufacturer freight for large orders.
             </p>
           </div>
         </section>

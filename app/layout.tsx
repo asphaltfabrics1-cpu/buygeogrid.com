@@ -75,7 +75,7 @@ const structuredData = {
   address: {
     '@type': 'PostalAddress',
     streetAddress: '7620 Bond Street',
-    addressLocality: 'Solon',
+    addressLocality: 'Glenwillow',
     addressRegion: 'OH',
     postalCode: '44139',
     addressCountry: 'US'

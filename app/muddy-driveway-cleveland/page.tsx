@@ -6,8 +6,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Muddy Driveway Fix Cleveland Ohio | Geogrid + Fabric | BuyGeogrid',
-  description: 'Muddy driveway in Cleveland, Lakewood, Parma, or the East Side? The problem is our heavy clay soil — soft ground (also called soft earth) — pumping up through your gravel. Geogrid + geotextile stops it. Local pickup from Solon, OH.',
+  title: 'Muddy Driveway Fix Cleveland Ohio | Geogrid + Fabric',
+  description: 'Muddy driveway in Cleveland, Lakewood, Parma, or the East Side? The problem is our heavy clay soil — soft ground (also called soft earth) — pumping up through your gravel. Geogrid + geotextile stops it. Local pickup from our Glenwillow, OH warehouse.',
   keywords: ['muddy driveway Cleveland', 'gravel driveway Cleveland Ohio', 'muddy driveway Lakewood', 'driveway repair Parma', 'clay soil driveway Ohio', 'Cleveland driveway stabilization', 'East Side driveway mud', 'soft earth', 'soft earth solutions'],
   alternates: { canonical: 'https://www.buygeogrid.com/muddy-driveway-cleveland' },
   openGraph: {
@@ -28,7 +28,7 @@ const faqData = [
   },
   {
     question: 'Do you serve my Cleveland neighborhood?',
-    answer: 'Yes — every neighborhood in Greater Cleveland including West Side (Lakewood, Rocky River, Westlake, Bay Village), East Side (Cleveland Heights, Shaker Heights, University Circle), South (Parma, Broadview Heights, North Royalton), and the outer suburbs (Solon, Chagrin Falls, Aurora). Our warehouse is in Solon, OH — most Cleveland delivery is next-day, pickup is same-day.',
+    answer: 'Yes — every neighborhood in Greater Cleveland including West Side (Lakewood, Rocky River, Westlake, Bay Village), East Side (Cleveland Heights, Shaker Heights, University Circle), South (Parma, Broadview Heights, North Royalton), and the outer suburbs (Solon, Chagrin Falls, Aurora). Our warehouse is in Glenwillow, OH — most Cleveland delivery is next-day, pickup is same-day.',
   },
   {
     question: 'How much does a fix cost for an average Cleveland driveway?',
@@ -62,7 +62,7 @@ export default function MuddyDrivewayCleveland() {
       <main className="flex-grow">
         <PageHero
           title="Muddy Driveway Fix — Cleveland, Ohio"
-          description="Cleveland's heavy clay soil is why your gravel keeps disappearing. It's not your gravel — it's the ground beneath, pumping up through the stone every time you drive over it. Local warehouse in Solon."
+          description="Cleveland's heavy clay soil is why your gravel keeps disappearing. It's not your gravel — it's the ground beneath, pumping up through the stone every time you drive over it. Local warehouse in Glenwillow."
           ctaText="Get a Free Quote"
           ctaLink="/contact"
           secondaryCtaText="Call (440) 368-1420"
@@ -109,7 +109,7 @@ export default function MuddyDrivewayCleveland() {
               ))}
             </div>
             <p className="text-center mt-8 text-gray-600 text-sm">
-              Warehouse: Solon, OH. Same-day pickup, next-day delivery to most of Greater Cleveland.
+              Warehouse: Glenwillow, OH. Same-day pickup, next-day delivery to most of Greater Cleveland.
             </p>
           </div>
         </section>
@@ -166,7 +166,7 @@ export default function MuddyDrivewayCleveland() {
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Fix It Once, Cleveland</h2>
-              <p className="text-lg text-gray-300 mb-8">Local warehouse. Local delivery. Same-day pickup from our Solon warehouse.</p>
+              <p className="text-lg text-gray-300 mb-8">Local warehouse. Local delivery. Same-day pickup from our Glenwillow warehouse.</p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
                 <Link href="/residential" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
                   Driveway Cost Calculator

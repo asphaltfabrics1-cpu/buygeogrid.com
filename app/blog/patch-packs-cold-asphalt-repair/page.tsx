@@ -6,7 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Patch Packs Cold Asphalt Patch: How It Works & When to Use It | BuyGeogrid',
+  title: 'Patch Packs Cold Asphalt Patch: How It Works & When to Use It',
   description: 'Patch Packs cold asphalt patch explained — how it works, what it repairs, Standard vs Flex variants, and why Ohio contractors and municipalities use it for year-round pothole repair.',
   keywords: ['Patch Packs', 'cold asphalt patch', 'pothole repair', 'cold patch asphalt', 'winter pothole repair', 'VOC-free asphalt', 'recycled aggregate patch', 'Ohio pothole repair', 'bridge deck repair', 'emergency pavement repair'],
   alternates: {
@@ -45,7 +45,7 @@ const faqData = [
   },
   {
     question: "Where can I buy Patch Packs in Ohio?",
-    answer: "BuyGeogrid.com stocks Patch Packs at our Solon, Ohio warehouse. We deliver throughout Northern Ohio — Cleveland, Akron, Canton, Youngstown, Toledo, and surrounding areas. Most orders ship or are available for pickup within 24-48 hours. Call (440) 368-1420 for pricing and availability."
+    answer: "BuyGeogrid.com stocks Patch Packs at our Glenwillow, Ohio warehouse. We deliver throughout Northern Ohio — Cleveland, Akron, Canton, Youngstown, Toledo, and surrounding areas. Most orders ship or are available for pickup within 24-48 hours. Call (440) 368-1420 for pricing and availability."
   }
 ];
 
@@ -199,7 +199,7 @@ export default function PatchPacksBlog() {
                 <div className="bg-gray-50 border border-gray-200 rounded p-6 mt-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Order Patch Packs</h3>
                   <p className="text-gray-700 mb-4">
-                    We stock Patch Packs at our Solon, Ohio warehouse with delivery throughout Northern Ohio. Most orders ship or are available for pickup within 24-48 hours.
+                    We stock Patch Packs at our Glenwillow, Ohio warehouse with delivery throughout Northern Ohio. Most orders ship or are available for pickup within 24-48 hours.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors">

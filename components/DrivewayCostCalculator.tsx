@@ -341,8 +341,8 @@ export default function DrivewayCostCalculator() {
               What NX850 adds
             </div>
             <p className="text-base text-gray-200 mt-2 leading-relaxed">
-              {results.lifeExtension}. Prevents subgrade pumping and helps keep the base
-              locked in place on soft Northern Ohio clay.
+              {results.lifeExtension}. Helps reduce subgrade pumping and aggregate movement over
+              soft Northern Ohio clay.
             </p>
             <p className="text-sm text-gray-400 mt-3 leading-relaxed">
               Text your project dimensions to{' '}

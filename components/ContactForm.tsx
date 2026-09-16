@@ -166,8 +166,11 @@ export default function ContactForm() {
             <option value="">Select a product/service</option>
             <option value="Geogrids">Geogrids</option>
             <option value="Woven Fabrics">Woven Fabrics</option>
-            <option value="Non-Woven Fabrics">Non-Woven Fabrics</option>
+            <option value="Nonwoven Fabrics">Nonwoven Fabrics</option>
             <option value="Interlayers">Interlayers</option>
+            <option value="Patch Packs">Patch Packs</option>
+            <option value="Residential or Partial-Roll Geogrid">Residential or Partial-Roll Geogrid</option>
+            <option value="Free DCP Testing">Free DCP Testing</option>
             <option value="Lunch & Learn Request">Lunch & Learn Request</option>
             <option value="Other">Other</option>
           </select>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'DCP Testing & Tensar Plus: How They Work Together | BuyGeogrid',
+  title: 'DCP Testing & Tensar Plus: How They Work Together',
   description: 'Learn how Dynamic Cone Penetrometer (DCP) testing is used with Tensar Plus geogrid design software to engineer the right geogrid solution for your subgrade. ASTM D6951 explained.',
   keywords: ['DCP testing', 'Dynamic Cone Penetrometer', 'Tensar Plus', 'subgrade testing', 'CBR value', 'geogrid design', 'ASTM D6951', 'soil strength testing', 'mechanically stabilized layer', 'Ohio geogrid'],
   alternates: {
@@ -41,7 +41,7 @@ const faqData = [
   },
   {
     question: "Can BuyGeogrid perform DCP testing on my site?",
-    answer: "Yes. Asphalt Fabrics & Supply offers on-site DCP testing as part of our geogrid design support. We test your subgrade, run the results through Tensar Plus, and provide an engineered recommendation for the right geogrid product and aggregate depth. Call (440) 368-1420 to schedule a site assessment."
+    answer: "Yes. Asphalt Fabrics & Supply offers on-site DCP testing as part of our geogrid design support. We test your subgrade, run the results through Tensar+, and provide a site-specific product and aggregate recommendation developed using DCP results and Tensar+ design software. Call (440) 368-1420 to schedule a site assessment."
   }
 ];
 

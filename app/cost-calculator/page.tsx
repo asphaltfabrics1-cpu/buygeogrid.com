@@ -323,7 +323,7 @@ export default function CostCalculatorPage() {
               </h2>
               <p className="text-gray-300 mb-6 max-w-xl mx-auto">
                 We offer free DCP testing throughout Ohio. We&apos;ll test your subgrade, run the data through Tensar+ design software,
-                and give you an engineered recommendation — no cost, no obligation.
+                and provide a site-specific product and aggregate recommendation — no cost, no obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
                 <Link

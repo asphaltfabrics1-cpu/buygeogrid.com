@@ -6,7 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Soft Ground Solutions Akron Ohio | Geogrid + Fabric | BuyGeogrid',
+  title: 'Soft Ground Solutions Akron Ohio | Geogrid + Fabric',
   description: 'Working over soft ground (or soft earth) in Akron, Summit County, or the Portage Lakes area? Geogrid stabilizes weak subgrade for driveways, farm lanes, and construction access. Northern Ohio distributor. Free on-site DCP testing.',
   keywords: ['soft ground Akron', 'soil stabilization Akron Ohio', 'Summit County geogrid', 'Portage Lakes driveway', 'weak subgrade Akron', 'Akron gravel driveway', 'Cuyahoga Falls', 'Stow soil', 'soft earth', 'soft earth solutions'],
   alternates: { canonical: 'https://www.buygeogrid.com/soft-ground-akron' },
@@ -27,8 +27,8 @@ const faqData = [
     answer: 'Residential driveways in Fairlawn, Bath, and the West Hill neighborhoods; farm and pole-barn access lanes across Summit and Portage counties; small commercial parking lots along Market Street and Arlington; and DOT sub-contractor work on state and county highway projects. The material and design approach is the same — subgrade CBR determines the exact spec.',
   },
   {
-    question: 'How fast can I get material from your Solon warehouse to Akron?',
-    answer: 'Same-day pickup at the warehouse in Solon (about 35 minutes north). Next-day delivery to most Akron addresses. If you\'re in a rush and can send a pickup truck, we\'ll have your rolls staged and ready.',
+    question: 'How fast can I get material from your Glenwillow warehouse to Akron?',
+    answer: 'Same-day pickup at the warehouse in Glenwillow (about 35 minutes north). Next-day delivery to most Akron addresses. If you\'re in a rush and can send a pickup truck, we\'ll have your rolls staged and ready.',
   },
   {
     question: 'Do you handle proof-roll failures on Akron commercial jobs?',
@@ -62,7 +62,7 @@ export default function SoftGroundAkron() {
       <main className="flex-grow">
         <PageHero
           title="Soft Ground Solutions — Akron, Ohio"
-          description="Summit County soft-ground problems are common here — the post-glacial geology practically guarantees it. Geogrid stabilizes weak subgrade for driveways, farm lanes, and construction access. Local delivery from our Solon warehouse."
+          description="Summit County soft-ground problems are common here — the post-glacial geology practically guarantees it. Geogrid stabilizes weak subgrade for driveways, farm lanes, and construction access. Local delivery from our Glenwillow warehouse."
           ctaText="Get a Free Site Visit"
           ctaLink="/contact"
           secondaryCtaText="Call (440) 368-1420"
@@ -158,7 +158,7 @@ export default function SoftGroundAkron() {
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Stabilize It Before You Build</h2>
-              <p className="text-lg text-gray-300 mb-8">Free on-site DCP testing across Summit, Portage, and Medina counties. Same-day pickup from Solon warehouse.</p>
+              <p className="text-lg text-gray-300 mb-8">Free on-site DCP testing across Summit, Portage, and Medina counties. Same-day pickup from our Glenwillow warehouse.</p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
                   Request a Site Visit

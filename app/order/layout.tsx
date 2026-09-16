@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Place an Order | BuyGeogrid',
+  title: 'Place an Order',
   description: 'Submit an order request for products from Asphalt Fabrics & Supply.',
   robots: { index: false, follow: false },
 };

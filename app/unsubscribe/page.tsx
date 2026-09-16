@@ -5,7 +5,7 @@ interface SearchParams {
 }
 
 export const metadata = {
-  title: 'Unsubscribe | BuyGeogrid',
+  title: 'Unsubscribe',
   robots: { index: false, follow: false },
 };
 

@@ -6,8 +6,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Soft Earth Solutions Cleveland Ohio | Geogrid + Fabric for Weak Soil | BuyGeogrid',
-  description: 'Soft earth in Cleveland, Lakewood, Parma, or Cleveland Heights? Northeast Ohio\'s heavy clay is the classic soft-earth subgrade. Geogrid + geotextile stabilizes it — before you pave, gravel, or build. Free on-site DCP testing. Same-day pickup in Solon.',
+  title: 'Soft Earth Solutions Cleveland Ohio | Geogrid + Fabric for Weak Soil',
+  description: 'Soft earth in Cleveland, Lakewood, Parma, or Cleveland Heights? Northeast Ohio\'s heavy clay is the classic soft-earth subgrade. Geogrid + geotextile stabilizes it — before you pave, gravel, or build. Free on-site DCP testing. Same-day pickup in Glenwillow.',
   keywords: [
     'soft earth solutions Cleveland',
     'soft earth Cleveland Ohio',
@@ -49,7 +49,7 @@ const faqData = [
   },
   {
     question: 'Do you deliver to my Cleveland neighborhood?',
-    answer: 'Yes — every neighborhood in Greater Cleveland from our Solon warehouse. Same-day pickup in Solon; next-day delivery to most Cleveland-area addresses including the East Side, West Side, Downtown, and outer suburbs. Call (440) 368-1420 for scheduling or if you need it faster.',
+    answer: 'Yes — every neighborhood in Greater Cleveland from our Glenwillow warehouse. Same-day pickup in Glenwillow; next-day delivery to most Cleveland-area addresses including the East Side, West Side, Downtown, and outer suburbs. Call (440) 368-1420 for scheduling or if you need it faster.',
   },
   {
     question: 'How much does a soft-earth fix cost on a residential job?',
@@ -75,7 +75,7 @@ export default function SoftEarthSolutionsCleveland() {
       <main className="flex-grow">
         <PageHero
           title="Soft Earth Solutions — Cleveland, Ohio"
-          description="Northeast Ohio's heavy glacial clay is the classic soft earth. Every gravel driveway that keeps sinking, every proof roll that fails, every muddy spring — same problem. Geogrid stabilizes it in place, no excavation needed. Same-day pickup in Solon."
+          description="Northeast Ohio's heavy glacial clay is the classic soft earth. Every gravel driveway that keeps sinking, every proof roll that fails, every muddy spring — same problem. Geogrid stabilizes it in place, no excavation needed. Same-day pickup in Glenwillow."
           ctaText="Get a Free Site Visit"
           ctaLink="/contact"
           secondaryCtaText="Call (440) 368-1420"
@@ -170,7 +170,7 @@ export default function SoftEarthSolutionsCleveland() {
               ))}
             </div>
             <p className="text-center mt-8 text-gray-600 text-sm">
-              Warehouse: Solon, OH. Same-day pickup, next-day delivery to most of Greater Cleveland.
+              Warehouse: Glenwillow, OH. Same-day pickup, next-day delivery to most of Greater Cleveland.
             </p>
           </div>
         </section>

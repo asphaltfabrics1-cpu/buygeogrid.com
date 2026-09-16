@@ -36,7 +36,7 @@ const faqData = [
   },
   {
     question: 'What widths does Petrotac come in?',
-    answer: 'Three: 1ft (12"), 1.5ft (18") — note the misleading "petrotac-15ft" URL but the product is 1.5 ft not 15 ft — and 4ft (48"). All rolls are 108 ft long, all peel-and-stick. 1ft handles narrow cracks, 1.5ft is the workhorse, 4ft is for wider joints and utility-cut patches. In stock at our Solon, OH warehouse.',
+    answer: 'Three: 1ft (12"), 1.5ft (18") — note the misleading "petrotac-15ft" URL but the product is 1.5 ft not 15 ft — and 4ft (48"). All rolls are 108 ft long, all peel-and-stick. 1ft handles narrow cracks, 1.5ft is the workhorse, 4ft is for wider joints and utility-cut patches. In stock at our Glenwillow, OH warehouse.',
   },
   {
     question: 'Does BuyGeogrid sell contractor-grade paving fabric?',

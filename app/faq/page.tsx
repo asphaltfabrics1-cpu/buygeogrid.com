@@ -46,11 +46,11 @@ export default function FAQ() {
     },
     {
       question: 'How do I request a quote?',
-      answer: 'Visit any product page and click the green "Request a Quote" button. Or call us at (440) 368-1420 or email Conradbar@asphaltfabrics.com.',
+      answer: 'Visit any product page and click the green "Request a Quote" button. Or call us at (440) 368-1420 or email jstone@asphaltfabrics.com.',
     },
     {
       question: 'Do you offer price matching?',
-      answer: "Yes! We guarantee competitive pricing and will do our best to beat any verified quote. Just let us know what you found and where.",
+      answer: "We offer competitive contractor and project pricing. Send us your product, quantity, project location, and delivery requirements, and we'll provide a quote based on your specific needs.",
     },
     {
       question: 'Where do you ship?',

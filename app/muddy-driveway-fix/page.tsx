@@ -175,7 +175,7 @@ export default function MuddyDrivewayFix() {
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Ready to Fix It Once?</h2>
-              <p className="text-lg text-gray-300 mb-8">Northern Ohio distributor. Same-day pickup from our Solon warehouse.</p>
+              <p className="text-lg text-gray-300 mb-8">Northern Ohio distributor. Same-day pickup from our Glenwillow warehouse.</p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
                   Get a Quote

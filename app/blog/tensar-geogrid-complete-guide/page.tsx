@@ -205,7 +205,7 @@ export default function TensarGeogridGuide() {
               <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Ohio</div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Tensar Geogrid Distributor in Ohio</h2>
               <p className="text-gray-700 mb-4">
-                As an authorized Tensar distributor, we stock a full range of Tensar geogrid products at our Solon, Ohio warehouse. We serve contractors, engineers, and municipalities throughout Northern Ohio including Cleveland, Akron, Canton, Youngstown, and Toledo.
+                As an authorized Tensar distributor, we stock a full range of Tensar geogrid products at our Glenwillow, Ohio warehouse. We serve contractors, engineers, and municipalities throughout Northern Ohio including Cleveland, Akron, Canton, Youngstown, and Toledo.
               </p>
               <p className="text-gray-700 mb-4">
                 Our services include:

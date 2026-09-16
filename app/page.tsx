@@ -6,7 +6,7 @@ import Script from 'next/script';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Geogrid Ohio | Tensar Distributor | BuyGeogrid',
+  title: 'Geogrid Ohio | Tensar Distributor',
   description: 'Northern Ohio Geogrid distributor. Authorized Tensar & Solmax dealer. Free DCP soil testing and expert consultation. Cleveland, Akron, Toledo.',
   keywords: ['Geogrid Cleveland', 'Cleveland Geogrid', 'Geogrid Ohio', 'Tensar Geogrids Cleveland', 'Tensar Geogrids', 'Geogrid Northern Ohio', 'Northern Ohio Geogrid', 'Geogrid Akron', 'Geogrid Toledo', 'Buy Tensar Geogrid', 'Geogrid distributor Ohio', 'InterAx Geogrid', 'TriAx Geogrid', 'Biaxial Geogrid', 'Tensar authorized distributor', 'soil stabilization Ohio', 'Geogrid supplier Cleveland', 'NX850 Geogrid', 'TX190 Geogrid', 'BuyGeogrid'],
   alternates: {
@@ -30,9 +30,9 @@ export default function Home() {
       cta: 'Request a DCP test',
     },
     {
-      eyebrow: 'Engineered design',
+      eyebrow: 'Design support',
       title: 'Tensar+ Design Support',
-      desc: 'We run your soil data through Tensar Plus and give you an engineered recommendation.',
+      desc: 'Site-specific Tensar+ design support developed using DCP results and manufacturer software.',
       href: '/blog/dcp-testing-tensar-plus',
       cta: 'How the design works',
     },
@@ -65,7 +65,8 @@ export default function Home() {
       "telephone": "+14403681420",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Cleveland",
+        "streetAddress": "7620 Bond Street",
+        "addressLocality": "Glenwillow",
         "addressRegion": "OH",
         "postalCode": "44139",
         "addressCountry": "US"
@@ -95,8 +96,8 @@ export default function Home() {
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Solon",
-      "addressLocality": "Cleveland",
+      "streetAddress": "7620 Bond Street",
+      "addressLocality": "Glenwillow",
       "addressRegion": "OH",
       "postalCode": "44139",
       "addressCountry": "US"
@@ -158,13 +159,13 @@ export default function Home() {
           <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-32 lg:py-40">
             <div className="max-w-3xl">
               <div className="inline-block text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-6">
-                Northern Ohio · Solon Warehouse
+                Northern Ohio · Glenwillow Warehouse
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
-                Geogrids, geotextiles, and interlayers — stocked in Solon.
+                Geogrids, geotextiles, and interlayers&mdash;stocked in Glenwillow.
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
-                Authorized Tensar and Solmax distributor serving contractors across Northern Ohio. Free on-site DCP testing. Pickup at our Solon warehouse.
+                Authorized Tensar and Solmax distributor serving contractors across Northern Ohio. Free on-site DCP testing and local pickup from our Glenwillow warehouse.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
                 <Link
@@ -222,7 +223,7 @@ export default function Home() {
               </Reveal>
               <Reveal delay={120}>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  We test your subgrade with a DCP — at no cost to you — run the results through Tensar Plus design software, and give you an engineered recommendation — the right product and the right aggregate thickness for your actual site conditions. When you fail a proof roll, we show up with a solution. When your engineers need PDH credits, we bring lunch and training. That&apos;s the difference between a local Ohio distributor and a supply house.
+                  We test your subgrade with a DCP — at no cost to you — run the results through Tensar Plus design software, and provide a site-specific product and aggregate recommendation developed using DCP results and Tensar+ design software. When you fail a proof roll, we show up with a solution. When your engineers need PDH credits, we bring lunch and training. That&apos;s the difference between a local Ohio distributor and a supply house.
                 </p>
                 <Link
                   href="/contact"
@@ -315,7 +316,7 @@ export default function Home() {
                   Serving Northern Ohio
                 </h2>
                 <p className="text-base text-gray-700 leading-relaxed">
-                  We stock Tensar Geogrids and Solmax Mirafi Geotextiles at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours. For time-sensitive projects, call us directly and we&apos;ll work to meet your schedule. We also provide on-site DCP soil testing and technical consultations at no charge throughout Northern Ohio.
+                  We stock Tensar Geogrids and Solmax Mirafi Geotextiles at our Glenwillow warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours. For time-sensitive projects, call us directly and we&apos;ll work to meet your schedule. We also provide on-site DCP soil testing and technical consultations at no charge throughout Northern Ohio.
                 </p>
               </Reveal>
             </div>

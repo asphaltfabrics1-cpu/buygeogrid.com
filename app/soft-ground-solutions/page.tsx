@@ -40,7 +40,7 @@ const faqData = [
   },
   {
     question: 'How fast can I get material?',
-    answer: 'Standard SKUs — Tensar TX190L, NX650, Mirafi 500X, 135N — are typically in stock at our Solon, OH warehouse. Local pickup same-day or next-day, delivery throughout Cleveland, Akron, Toledo, Youngstown, and Canton within a few days. Call (440) 368-1420 for current stock.',
+    answer: 'Standard SKUs — Tensar TX190L, NX650, Mirafi 500X, 135N — are typically in stock at our Glenwillow warehouse. Local pickup same-day or next-day, delivery throughout Cleveland, Akron, Toledo, Youngstown, and Canton within a few days. Call (440) 368-1420 for current stock.',
   },
 ];
 

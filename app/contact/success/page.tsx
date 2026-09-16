@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Thank You | Contact Form Submitted | BuyGeogrid.com',
+  title: 'Thank You | Contact Form Submitted',
   description: 'Thank you for contacting us. We will get back to you shortly with a quote.',
 };
 

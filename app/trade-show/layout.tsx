@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Stay Up to Date | BuyGeogrid',
+  title: 'Stay Up to Date',
   description: 'Join our email list for product updates and occasional discounts.',
   robots: {
     index: false,

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Request Access | BuyGeogrid.com',
+  title: 'Request Access',
   description: 'Request access to premium features and resources from Asphalt Fabrics & Supply.',
   robots: {
     index: false,

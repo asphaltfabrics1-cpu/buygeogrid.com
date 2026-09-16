@@ -55,7 +55,7 @@ export default function Contact() {
                       <p className="text-gray-700">
                         7620 Bond Street
                         <br />
-                        Solon, OH 44139
+                        Glenwillow, OH 44139
                       </p>
                     </div>
 

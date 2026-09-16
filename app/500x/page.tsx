@@ -7,7 +7,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Buy Mirafi 500X Woven Geotextile | Ohio Distributor | BuyGeogrid',
+  title: 'Buy Mirafi 500X Woven Geotextile | Ohio Distributor',
   description: 'Buy Solmax Mirafi 500X woven geotextile for soil separation and stabilization. 200 lbs grab tensile, 700 lbs CBR puncture strength. UV stabilized polypropylene. Ohio distributor.',
   keywords: ['Mirafi 500X', 'woven geotextile', 'geotextile Ohio', 'separation fabric', 'Cleveland', 'Akron'],
   alternates: {

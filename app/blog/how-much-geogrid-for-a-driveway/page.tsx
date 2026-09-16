@@ -91,7 +91,7 @@ export default function HowMuchGeogridForDriveway() {
               </table>
             </div>
             <p className="text-sm text-gray-600 mt-4">
-              We keep half and quarter rolls in stock at our Solon warehouse for pickup. Full-roll orders are quoted
+              We keep half and quarter rolls in stock at our Glenwillow warehouse for pickup. Full-roll orders are quoted
               by phone. Text your driveway dimensions to (440) 384-1897 and we&apos;ll tell you which format fits.
             </p>
             </Reveal>

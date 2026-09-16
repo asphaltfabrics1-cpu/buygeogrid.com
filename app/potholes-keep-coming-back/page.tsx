@@ -97,7 +97,7 @@ export default function PotholesKeepComingBack() {
                   <div className="text-sm font-semibold text-[#00c97e] uppercase tracking-wide mb-2">Step 1 — Seal the Cracks</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Petrotac Peel-and-Stick Interlayer</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Petrotac bridges cracks so they don&apos;t reflect back through your next overlay or seal coat. Peel the release liner, position it over the crack, warm with a torch or heat gun, roll it down. Three widths — 1ft, 1.5ft, and 4ft — stocked at our Solon warehouse.
+                    Petrotac bridges cracks so they don&apos;t reflect back through your next overlay or seal coat. Peel the release liner, position it over the crack, warm with a torch or heat gun, roll it down. Three widths — 1ft, 1.5ft, and 4ft — stocked at our Glenwillow warehouse.
                   </p>
                   <Link href="/interlayers" className="inline-flex items-center gap-1 text-[#00c97e] font-semibold hover:gap-2 transition-all">
                     See Petrotac options <span>→</span>

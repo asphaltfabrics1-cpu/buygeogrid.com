@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Can geogrid fix a soft or muddy driveway?',
-    a: 'Yes. A biaxial geogrid like Tensar NX850 is laid directly over the soft subgrade, then covered with your aggregate base. The grid confines the stone and distributes vehicle loads across a wider area, so the base does not punch down into the soft soil. This bridges soft clay and prevents the ruts, sinking, and stone migration that show up after the first wet season.',
+    a: 'Yes. A biaxial geogrid like Tensar NX850 is laid directly over the soft subgrade, then covered with your aggregate base. The grid confines the stone and helps distribute vehicle loads across a wider area, reducing how much the base punches down into the soft soil. This helps bridge soft clay and reduce the ruts, sinking, and stone migration that show up after the first wet season, when properly selected and installed for site conditions.',
   },
   {
     q: 'How much geogrid do I need for a residential driveway?',
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: 'What is Tensar NX850 geogrid?',
-    a: 'NX850 is a multi-axial (InterAx) geogrid manufactured by Tensar. It is a punched-and-drawn polymer sheet with hexagonal, triangular, and trapezoidal apertures that interlock aggregate on both sides. It is spec’d on ODOT roadway, airport, and heavy commercial jobs, and the same product works under residential driveways and patios.',
+    a: 'NX850 is a multi-axial (InterAx) geogrid manufactured by Tensar. It is a punched-and-drawn polymer sheet with hexagonal, triangular, and trapezoidal apertures that interlock aggregate on both sides. Residential customers receive the same professional-grade Tensar InterAx NX850 product used for demanding roadway, parking, and site-development applications — there is no separate residential-grade version.',
   },
   {
     q: 'Do you sell partial rolls of geogrid?',
@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     q: 'Will geogrid work under pavers or a patio base?',
-    a: 'Yes. Under a paver patio, the grid keeps your compacted aggregate base from spreading and settling as freeze-thaw cycles hit. It is one of the most effective ways to prevent the low spots and shifted pavers that show up after a couple Ohio winters on soft or wet ground.',
+    a: 'Yes. Under a paver patio, the grid helps confine your compacted aggregate base against spreading and settling as freeze-thaw cycles hit. When properly selected and installed, it can help reduce the low spots and shifted pavers that show up after a couple Ohio winters on soft or wet ground.',
   },
   {
     q: 'Can I use geogrid under a gravel RV or boat/trailer parking pad?',
@@ -179,7 +179,7 @@ export default function ResidentialPage() {
           description="Hit soft clay on a driveway, gravel parking pad, or patio job? Stop undercutting. Roll Tensar NX850 over the soft spot, place your stone, compact. Partial rolls stocked in Glenwillow, OH."
           ctaText="Get a same-day quote"
           ctaLink="#quote"
-          secondaryCtaText={`Call/Text ${PHONE_DISPLAY}`}
+          secondaryCtaText={`Call or text Josh directly: ${PHONE_DISPLAY}`}
           secondaryCtaLink={PHONE_TEL}
           badge="Residential"
         />
@@ -191,8 +191,8 @@ export default function ResidentialPage() {
               <p className="text-lg text-gray-800 leading-relaxed">
                 <strong>Short answer:</strong> Tensar NX850 geogrid rolled over soft clay or mud subgrade
                 lets you build a stable gravel driveway, parking pad, or patio base without undercutting.
-                The grid bridges the weak zone and confines your aggregate, so the base doesn&apos;t punch
-                down, rut, or migrate. We stock partial rolls — quarter and half — out of Glenwillow, OH
+                The grid bridges the weak zone and confines your aggregate, helping reduce base deformation,
+                rutting, and aggregate migration. We stock partial rolls — quarter and half — out of Glenwillow, OH
                 (44139) for residential contractors, small commercial jobs, and homeowners across Northern
                 Ohio.
               </p>
@@ -218,7 +218,7 @@ export default function ResidentialPage() {
                 or patio, you roll the grid across the soft area, place your stone on top, and compact
                 like normal. The NX850&apos;s multi-axial apertures interlock the aggregate on both faces,
                 so the base behaves like a stiff platform instead of loose stone sitting on jelly. A
-                15-minute install replaces a half-day fix.
+                Installation can be significantly faster and less disruptive than extensive undercutting and material replacement.
               </p>
             </Reveal>
           </div>
@@ -262,8 +262,7 @@ export default function ResidentialPage() {
             </div>
             <Reveal delay={360}>
               <p className="text-sm text-gray-600 mt-6">
-                Same InterAx NX850 grid spec&apos;d on ODOT roadway and airport projects — no residential
-                downgrade. Pricing by square footage and pickup vs. delivery. Text your sq ft to{' '}
+                Residential customers receive the same professional-grade Tensar InterAx NX850 product used for demanding roadway, parking, and site-development applications&mdash;there is no separate residential-grade version. Pricing by square footage and pickup vs. delivery. Text your sq ft to{' '}
                 <a href={PHONE_TEL} className="text-[#00c97e] font-semibold hover:underline">
                   {PHONE_DISPLAY}
                 </a>{' '}
@@ -281,8 +280,8 @@ export default function ResidentialPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Where residential geogrid pays off</h2>
               <ul className="space-y-3 text-lg text-gray-700 leading-relaxed">
                 <li>
-                  <strong>Gravel and stone driveways</strong> — stops stone migration into soft subgrade,
-                  prevents ruts and washouts.
+                  <strong>Gravel and stone driveways</strong> &mdash; helps reduce aggregate migration,
+                  rutting, and surface deformation over soft subgrade.
                 </li>
                 <li>
                   <strong>New asphalt and concrete driveways</strong> — stabilizes the base course so the
@@ -325,9 +324,12 @@ export default function ResidentialPage() {
                 into the mud.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Rolling NX850 under the base fixes it. The grid confines the aggregate so it stays put
-                under long-parked loads, and it bridges the soft spots that would otherwise rut. Same
-                product, same install, half the stone.
+                Installing NX850 beneath the aggregate helps stabilize the base over weak subgrade. The grid
+                interlocks the aggregate so it&rsquo;s less likely to migrate under long-parked loads, and it can
+                bridge soft spots that would otherwise rut. The same NX850 product can help reduce excavation
+                and aggregate requirements where site conditions, subgrade strength, moisture, traffic loading,
+                drainage, local building requirements, product selection, and proper design and installation
+                all support it.
               </p>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Typical parking pad sizes</h3>
               <ul className="space-y-2 text-gray-700 mb-6">

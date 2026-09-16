@@ -7,7 +7,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Buy Mirafi 135N Nonwoven Geotextile | Ohio Distributor | BuyGeogrid',
+  title: 'Buy Mirafi 135N Nonwoven Geotextile | Ohio Distributor',
   description: 'Buy Solmax Mirafi 135N nonwoven geotextile for drainage and filtration. Lightweight needlepunched polypropylene with 155 gal/min/ft² flow rate. BABA compliant. Ohio distributor serving Cleveland, Akron, Toledo.',
   keywords: ['Mirafi 135N', 'nonwoven geotextile', 'drainage fabric', 'geotextile Ohio', 'Cleveland', 'Akron'],
   alternates: {

@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Gravel Driveway Stabilization | Stop Sinking Stone with Geogrid | Ohio',
-  description: 'Gravel driveway keeps sinking, rutting, or getting swallowed by mud? Geogrid stabilizes the stone into a stiff platform so it stays where you put it. Northern Ohio distributor. Same-day pickup from Solon.',
+  description: 'Gravel driveway keeps sinking, rutting, or getting swallowed by mud? Geogrid stabilizes the stone into a stiff platform so it stays where you put it. Northern Ohio distributor. Same-day pickup from Glenwillow.',
   keywords: ['gravel driveway stabilization', 'stop gravel from sinking', 'geogrid gravel driveway', 'driveway rutting fix', 'how to stabilize a gravel driveway', 'Cleveland gravel driveway', 'long driveway ruts'],
   alternates: { canonical: 'https://www.buygeogrid.com/gravel-driveway-stabilization' },
   openGraph: {
@@ -137,7 +137,7 @@ export default function GravelDrivewayStabilization() {
                 Either works. Homeowners with a compact tractor or small skid steer install geogrid + geotextile all the time — the material rolls out flat, doesn&apos;t need fasteners, and gets buried under aggregate on the same day. If you&apos;d rather have a residential contractor do the excavation and grading, we&apos;ll spec the material list for them at no charge.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Either way, you buy the material from us — a distributor with in-stock inventory in Solon, OH — instead of paying a middleman markup through a landscape supply chain.
+                Either way, you buy the material from us — a distributor with in-stock inventory in Glenwillow, OH — instead of paying a middleman markup through a landscape supply chain.
               </p>
             </Reveal>
           </div>
@@ -166,7 +166,7 @@ export default function GravelDrivewayStabilization() {
           <div className="max-w-4xl mx-auto text-center">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight tracking-tight">Build the Driveway You Meant to Build</h2>
-              <p className="text-lg text-gray-300 mb-8">Northern Ohio distributor. In-stock at our Solon warehouse.</p>
+              <p className="text-lg text-gray-300 mb-8">Northern Ohio distributor. In-stock at our Glenwillow warehouse.</p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:items-center">
                 <Link href="/residential" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200 group">
                   Driveway Cost Calculator

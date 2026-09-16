@@ -6,7 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'How to Pass a Proof Roll | Geogrid Aggregate Thickness Guide | BuyGeogrid',
+  title: 'How to Pass a Proof Roll | Geogrid Aggregate Thickness Guide',
   description: 'Proof roll failing? Use this chart to determine the right geogrid and aggregate thickness based on your subgrade CBR. Tensar InterAx, H-Series, and BX solutions compared.',
   keywords: ['proof roll', 'proof roll test', 'failing proof roll', 'subgrade stabilization', 'aggregate thickness', 'CBR', 'geogrid proof roll', 'Tensar InterAx', 'Tensar H-Series', 'pass proof roll', 'soft soil stabilization', 'Ohio geogrid'],
   alternates: {

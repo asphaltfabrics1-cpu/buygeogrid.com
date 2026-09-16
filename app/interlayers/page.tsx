@@ -8,14 +8,14 @@ import type { Metadata} from 'next';
 
 export const metadata: Metadata = {
   title: 'Petrotac Interlayers Ohio | Paving Fabric',
-  description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Prevent reflective cracking and extend asphalt pavement life. Cleveland, Akron, Toledo.',
+  description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Help delay reflective cracking and extend asphalt pavement life. Cleveland, Akron, Toledo.',
   keywords: ['Propex Petrotac Ohio', 'paving interlayer', 'pavement fabric', 'crack prevention', 'Cleveland paving', 'Ohio asphalt'],
   alternates: {
     canonical: 'https://www.buygeogrid.com/interlayers',
   },
   openGraph: {
     title: 'Petrotac Interlayers Ohio | Paving Fabric',
-    description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Prevent reflective cracking and extend asphalt pavement life. Cleveland, Akron, Toledo.',
+    description: 'Propex Petrotac paving interlayer distributor in Northern Ohio. Help delay reflective cracking and extend asphalt pavement life. Cleveland, Akron, Toledo.',
     images: ['/images/products/petrotac.jpg'],
   }
 };
@@ -45,7 +45,7 @@ export default function Interlayers() {
       <main className="flex-grow">
         <PageHero
           title="Propex Petrotac Paving Interlayers"
-          description="Propex Petrotac paving interlayer distributor. Self-adhesive paving membranes engineered to prevent reflective cracking and provide moisture protection for asphalt overlays. Easy peel-and-stick installation. Competitive pricing and expert support throughout Northern Ohio."
+          description="Propex Petrotac paving interlayer distributor. Self-adhesive paving membranes designed to help delay and mitigate reflective cracking and provide moisture protection for asphalt overlays. Easy peel-and-stick installation. Competitive pricing and expert support throughout Northern Ohio."
           ctaText="Request a Quote"
           ctaLink="/contact"
           secondaryCtaText="Call (440) 368-1420"
@@ -82,7 +82,7 @@ export default function Interlayers() {
               <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">Overview</div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">What Are Paving Interlayers?</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Paving interlayers are geotextile membranes installed between pavement layers to prevent cracks from reflecting up through new asphalt overlays. When existing pavement has joints, cracks, or localized damage, those weak points tend to telegraph through fresh asphalt over time. Interlayers absorb stress at these locations and create a moisture barrier that protects the pavement structure from water infiltration.
+                Paving interlayers are geotextile membranes installed between pavement layers to help delay cracks from reflecting up through new asphalt overlays. When existing pavement has joints, cracks, or localized damage, those weak points tend to telegraph through fresh asphalt over time. Interlayers help absorb stress at these locations and provide a moisture barrier that helps limit water infiltration into the pavement structure.
               </p>
             </Reveal>
           </div>
@@ -95,7 +95,7 @@ export default function Interlayers() {
               <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3 text-center">How it works</div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight text-center">How Petrotac Works</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Petrotac is a self-adhesive paving membrane with an asphalt coating on the top side that bonds directly to the overlay. The peel-and-stick design allows a two-person crew to install it quickly without special equipment. Once in place, the membrane absorbs movement at joints and cracks, preventing them from reflecting into the new surface. It also blocks water from penetrating into the base layers—a leading cause of pavement deterioration.
+                Petrotac is a self-adhesive paving membrane with an asphalt coating on the top side that bonds directly to the overlay. The peel-and-stick design allows a two-person crew to install it quickly without special equipment. Petrotac is designed to help delay and mitigate reflective cracking while providing moisture protection beneath asphalt overlays. Once in place, the membrane helps absorb movement at joints and cracks, helping delay or reduce their reflection into the new surface. It also provides a moisture barrier that helps limit water infiltration into the base layers—a leading cause of pavement deterioration.
               </p>
             </Reveal>
           </div>
@@ -152,7 +152,7 @@ export default function Interlayers() {
               <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Coverage</div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Serving Northern Ohio</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                We stock Propex Petrotac at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours.
+                We stock Propex Petrotac at our Glenwillow warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours.
               </p>
             </Reveal>
           </div>

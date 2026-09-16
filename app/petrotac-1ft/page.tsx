@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Petrotac 1ft Roll Ohio | Paving Interlayer',
-    description: 'Prevent reflective cracking in asphalt overlays. Ohio distributor.',
+    description: 'Help delay reflective cracking in asphalt overlays. Ohio distributor.',
     images: ['/images/products/petrotac.jpg'],
   },
 };

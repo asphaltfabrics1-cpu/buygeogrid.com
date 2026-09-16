@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Aggregate Cost Savings Calculator | BuyGeogrid',
+  title: 'Aggregate Cost Savings Calculator',
   description: 'Calculate how much you can save using Tensar geogrid vs. over-excavation. Compare aggregate thickness and costs for different soil conditions and geogrid products.',
   keywords: ['geogrid cost calculator', 'aggregate savings calculator', 'Tensar geogrid savings', 'proof roll cost', 'over-excavation cost', 'subgrade stabilization cost', 'Ohio geogrid calculator'],
   alternates: {

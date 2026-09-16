@@ -6,7 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Freeze-Thaw & Frost Heave in Ohio | Geogrid, Patch Packs & Interlayer | BuyGeogrid',
+  title: 'Freeze-Thaw & Frost Heave in Ohio | Geogrid, Patch Packs & Interlayer',
   description: 'Why Northern Ohio pavements crack and pump every spring — and the three-layer playbook with geogrid, Patch Packs, and Petrotac interlayer to stop the cycle.',
   keywords: ['frost heave Ohio', 'freeze thaw Ohio', 'spring breakup pavement', 'frost susceptible soil', 'geogrid frost heave', 'Cuyahoga County soils', 'Summit County soils', 'Northern Ohio frost depth', 'silty clay frost heave', 'geogrid Ohio', 'pavement freeze thaw', 'Patch Packs pothole repair', 'Petrotac interlayer Ohio', 'reflective cracking prevention', 'crack seal Ohio'],
   alternates: {

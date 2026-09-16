@@ -189,7 +189,7 @@ export default function Geogrid() {
               <div className="text-[#00c97e] text-xs md:text-sm font-semibold uppercase tracking-[0.2em] mb-3">Coverage</div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">Serving Northern Ohio</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                We stock Tensar Geogrids at our Solon warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours.
+                We stock Tensar Geogrids at our Glenwillow warehouse and deliver throughout Cleveland, Akron, Canton, Youngstown, Toledo, and the surrounding areas. Most orders ship or are available for pickup within 24–48 hours.
               </p>
             </Reveal>
           </div>
