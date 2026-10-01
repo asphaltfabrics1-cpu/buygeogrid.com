@@ -222,12 +222,6 @@ export default function Header() {
               </Link>
             </li>
 
-            <li>
-              <Link href="/open-account" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Open an Account
-              </Link>
-            </li>
-
             {/* Resources Dropdown */}
             <li
               className="relative group"
@@ -275,7 +269,7 @@ export default function Header() {
         <div className="flex-shrink-0 flex items-center gap-2">
           <Link
             href="/open-account"
-            className="hidden lg:inline-flex items-center px-4 py-2 border border-[#00c97e] text-[#00c97e] hover:bg-[#00c97e] hover:text-white rounded font-semibold transition-colors duration-200 whitespace-nowrap"
+            className="hidden md:inline-flex items-center px-4 py-2 border border-[#00c97e] text-[#00c97e] hover:bg-[#00c97e] hover:text-white rounded font-semibold transition-colors duration-200 whitespace-nowrap text-sm lg:text-base"
           >
             Open an Account
           </Link>
