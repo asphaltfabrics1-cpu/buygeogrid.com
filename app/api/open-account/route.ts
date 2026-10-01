@@ -193,6 +193,15 @@ export async function POST(request: NextRequest) {
     }
 
     const resend = new Resend(apiKey);
+    console.log('open-account: sending email', {
+      to: NOTIFY_TO,
+      from: FROM,
+      replyTo: plain(d.contactEmail),
+      subject,
+      company: plain(d.company),
+      credit,
+    });
+
     const result = await resend.emails.send({
       from: FROM,
       replyTo: plain(d.contactEmail),
@@ -208,6 +217,11 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+
+    console.log('open-account: resend accepted', {
+      id: result.data?.id,
+      company: plain(d.company),
+    });
 
     return NextResponse.json({ ok: true, credit });
   } catch (err) {
