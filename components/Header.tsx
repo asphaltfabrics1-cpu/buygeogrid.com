@@ -222,6 +222,12 @@ export default function Header() {
               </Link>
             </li>
 
+            <li>
+              <Link href="/open-account" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
+                Open an Account
+              </Link>
+            </li>
+
             {/* Resources Dropdown */}
             <li
               className="relative group"
@@ -265,8 +271,14 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Right - Call Now Button */}
-        <div className="flex-shrink-0">
+        {/* Right - CTAs */}
+        <div className="flex-shrink-0 flex items-center gap-2">
+          <Link
+            href="/open-account"
+            className="hidden lg:inline-flex items-center px-4 py-2 border border-[#00c97e] text-[#00c97e] hover:bg-[#00c97e] hover:text-white rounded font-semibold transition-colors duration-200 whitespace-nowrap"
+          >
+            Open an Account
+          </Link>
           <Link
             href="tel:4403681420"
             className="inline-flex items-center px-5 py-2 bg-[#00c97e] hover:bg-[#00b36f] text-white rounded font-semibold transition-colors duration-200 whitespace-nowrap"
@@ -346,6 +358,11 @@ export default function Header() {
             <li>
               <Link href="/contact" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/open-account" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
+                Open an Account
               </Link>
             </li>
             <li>
