@@ -71,7 +71,6 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
               <li><Link href="/interlayers" className="text-gray-300 hover:text-[#00c97e] transition-colors">Interlayers</Link></li>
               <li><Link href="/patch-packs" className="text-gray-300 hover:text-[#00c97e] transition-colors">Patch Packs</Link></li>
               <li><Link href="/cost-calculator" className="text-gray-300 hover:text-[#00c97e] transition-colors">Cost Calculator</Link></li>
-              <li><Link href="/open-account" className="text-gray-300 hover:text-[#00c97e] transition-colors">Open an Account</Link></li>
               <li><Link href="/faq" className="text-gray-300 hover:text-[#00c97e] transition-colors">FAQ</Link></li>
             </ul>
           </div>

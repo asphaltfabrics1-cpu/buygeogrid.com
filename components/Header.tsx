@@ -252,9 +252,6 @@ export default function Header() {
                   <Link href="/cost-calculator" className="block px-4 py-2 hover:bg-white/10 transition-colors">
                     Cost Calculator
                   </Link>
-                  <Link href="/open-account" className="block px-4 py-2 hover:bg-white/10 transition-colors">
-                    Open an Account
-                  </Link>
                   <a
                     href="/docs/asphalt-fabrics-supply-flyer.pdf"
                     download
@@ -349,11 +346,6 @@ export default function Header() {
             <li>
               <Link href="/contact" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
                 Contact Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/open-account" className="block px-3 py-4 hover:bg-white/10 transition-colors font-semibold text-base">
-                Open an Account
               </Link>
             </li>
             <li>

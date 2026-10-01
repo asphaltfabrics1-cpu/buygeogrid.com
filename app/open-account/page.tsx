@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.buygeogrid.com/open-account',
   },
+  // Not linked publicly — Josh and Kellie share the URL directly with
+  // new customers via email/text. Keep it out of Google and other crawlers.
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function OpenAccount() {
