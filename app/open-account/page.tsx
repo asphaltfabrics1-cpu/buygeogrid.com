@@ -4,9 +4,9 @@ import OpenAccountForm from '@/components/OpenAccountForm';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Open an Account',
+  title: 'New Customer Application',
   description:
-    'Open a customer account with Asphalt Fabrics & Supply. Required before your first order.',
+    'New customer application for Asphalt Fabrics & Supply. Required before your first order.',
   alternates: {
     canonical: 'https://www.buygeogrid.com/open-account',
   },
@@ -29,11 +29,11 @@ export default function OpenAccount() {
               Asphalt Fabrics &amp; Supply
             </div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-5">
-              Open an Account
+              New Customer Application
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">
-              All new customers complete this form before their first order. Applying for Net 30
-              terms? Have your bank and two supplier references ready.
+              All new customers complete this application before their first order. Applying for
+              Net 30 terms? Have your bank and two supplier references ready.
             </p>
           </div>
         </section>
@@ -42,7 +42,7 @@ export default function OpenAccount() {
           <div className="max-w-4xl mx-auto px-6 py-12 md:py-16">
             <OpenAccountForm />
             <p className="text-sm text-gray-600 mt-6">
-              Questions about the form? Call{' '}
+              Questions about the application? Call{' '}
               <a href="tel:4403681420" className="text-[#00c97e] font-semibold hover:underline">
                 (440) 368-1420
               </a>{' '}

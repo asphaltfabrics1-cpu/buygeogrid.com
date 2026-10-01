@@ -125,15 +125,15 @@ export default function Resources() {
                   </div>
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">New Customer Account Setup</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">New Customer Application</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    All new customers complete our account form before their first order. Takes about 5 minutes online. Net 30 terms available with bank and two trade references.
+                    All new customers complete our application before their first order. Takes about 5 minutes online. Net 30 terms available with bank and two trade references.
                   </p>
                   <Link
                     href="/open-account"
                     className="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#00c97e] hover:bg-[#00b36f] rounded transition-colors duration-200"
                   >
-                    Fill Out the Form
+                    Fill Out the Application
                     <span aria-hidden="true">→</span>
                   </Link>
                 </div>

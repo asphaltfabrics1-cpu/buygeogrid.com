@@ -147,7 +147,7 @@ export default function OpenAccountForm() {
   if (done) {
     return (
       <div className="bg-white border border-gray-200 rounded p-8 shadow-sm">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Thanks, your account form is in.</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Thanks, your application is in.</h2>
         <p className="text-gray-700 leading-relaxed">
           {doneIsCredit
             ? "We'll review your credit references and let you know when Net 30 terms are approved. You can still order and pay by check in the meantime."
