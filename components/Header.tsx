@@ -252,6 +252,9 @@ export default function Header() {
                   <Link href="/cost-calculator" className="block px-4 py-2 hover:bg-white/10 transition-colors">
                     Cost Calculator
                   </Link>
+                  <Link href="/open-account" className="block px-4 py-2 hover:bg-white/10 transition-colors">
+                    Open an Account
+                  </Link>
                   <a
                     href="/docs/asphalt-fabrics-supply-flyer.pdf"
                     download
@@ -265,14 +268,8 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Right - CTAs */}
-        <div className="flex-shrink-0 flex items-center gap-2">
-          <Link
-            href="/open-account"
-            className="hidden md:inline-flex items-center px-4 py-2 border border-[#00c97e] text-[#00c97e] hover:bg-[#00c97e] hover:text-white rounded font-semibold transition-colors duration-200 whitespace-nowrap text-sm lg:text-base"
-          >
-            Open an Account
-          </Link>
+        {/* Right - Call Now Button */}
+        <div className="flex-shrink-0">
           <Link
             href="tel:4403681420"
             className="inline-flex items-center px-5 py-2 bg-[#00c97e] hover:bg-[#00b36f] text-white rounded font-semibold transition-colors duration-200 whitespace-nowrap"
